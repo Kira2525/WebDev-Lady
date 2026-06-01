@@ -1,0 +1,116 @@
+@media (max-width: 1000px) {
+
+  /* HERO */
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  /* CARDS */
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* FEATURED SECTIONS */
+
+  .featured-product {
+    grid-template-columns: 1fr;
+  }
+
+  .product-preview-card {
+    justify-self: center;
+    max-width: 600px;
+  }
+
+  /* TEMPLATE PAGE */
+
+  .template-card {
+    grid-template-columns: 1fr;
+  }
+
+  .template-price-box {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* CONTACT PAGE */
+
+  #project-form .featured-product {
+    grid-template-columns: 1fr;
+  }
+
+  #project-form .product-content {
+    max-width: 100%;
+  }
+
+  #project-form .product-price {
+    position: static;
+    max-width: 100%;
+  }
+
+  /* PRICING PAGE */
+
+  #pricing-details .featured-product {
+    grid-template-columns: 1fr;
+  }
+
+  #pricing-details .product-price {
+    max-width: 100%;
+  }
+
+  /* SUCCESS PAGE */
+
+  .success-main {
+    min-height: auto;
+    padding: 80px 6%;
+  }
+
+  .success-card {
+    max-width: 720px;
+  }
+
+  .success-card h1 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 760px) {
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    margin: 0 auto 15px;
+  }
+
+}

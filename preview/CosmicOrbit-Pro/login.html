@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Demo | CosmicOrbit Pro</title>
+  <meta
+    name="description"
+    content="Preview the premium login demo included with CosmicOrbit Pro. No backend or authentication system is included."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width: 1024px)" />
+  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 650px)" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#02030a" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="spaceScene" aria-hidden="true"></div>
+  <div class="page-glow" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">CosmicOrbit<span>Pro</span></a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html" class="active" aria-current="page">Login</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-expanded="false"
+      aria-controls="navLinks"
+      aria-label="Open navigation menu"
+    >
+      <span aria-hidden="true">Menu</span>
+    </button>
+  </header>
+
+  <main id="main-content">
+    <section class="section contact">
+      <div class="login-card tilt-card">
+        <p class="eyebrow">Login Demo</p>
+        <h1>Preview the client login experience.</h1>
+        <p class="section-lead">
+          This screen is included as a front-end demo. Authentication, account creation,
+          password recovery, and backend logic are not included in the template package.
+        </p>
+        <p class="helper-text">Use any email address and password to continue to the dashboard preview.</p>
+
+        <form class="login-form" action="dashboard.html" method="get">
+          <div class="field-group">
+            <label class="field-label" for="login-email">Email Address</label>
+            <input
+              id="login-email"
+              type="email"
+              class="login-input"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="login-password">Password</label>
+            <input
+              id="login-password"
+              type="password"
+              class="login-input"
+              placeholder="Enter any password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn primary login-submit">Open Dashboard Demo</button>
+        </form>
+
+        <p class="login-footer">
+          Need a production-ready sign-in flow?
+          <a href="contact.html#custom">Request custom branding and integration guidance</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span data-current-year>2026</span> CosmicOrbit Pro. Premium HTML template for
+      SaaS, software, and digital product brands.
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"
+      }
+    }
+  </script>
+
+  <script type="module" src="js/space-scene.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Gallery | Abyssal Blue</title>
+
+  <meta
+    name="description"
+    content="Explore the Abyssal Blue underwater gallery with sharks, coral reefs, divers, sea turtles, shipwrecks, and cinematic ocean scenes."
+  />
+  <meta name="theme-color" content="#02111c" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/gallery.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gallery | Abyssal Blue" />
+  <meta property="og:description" content="Explore the Abyssal Blue underwater gallery with sharks, coral reefs, divers, sea turtles, shipwrecks, and cinematic ocean scenes." />
+  <meta property="og:url" content="https://example.com/gallery.html" />
+  <meta property="og:image" content="https://example.com/images/hero-shark.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="images/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <!-- PREMIUM ANIMATED BACKGROUND -->
+  <div class="ocean-scene" id="oceanScene">
+    <canvas id="oceanCanvas"></canvas>
+
+    <img src="images/coral-placeholder.jpg" class="coral-bg" alt="">
+    <div class="ocean-tint"></div>
+    <div class="light-rays"></div>
+    <div class="depth-fog"></div>
+    <div class="bubble-layer" id="bubbleLayer"></div>
+    <div class="fish-layer" id="fishLayer"></div>
+  </div>
+
+   <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Abyssal Blue Home">
+      <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="oceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7cf7ff"/>
+            <stop offset="50%" stop-color="#00ffd5"/>
+            <stop offset="100%" stop-color="#087f9e"/>
+          </linearGradient>
+        </defs>
+
+        <circle
+          cx="32"
+          cy="32"
+          r="23"
+          fill="none"
+          stroke="url(#oceanLogo)"
+          stroke-width="5"
+        />
+
+        <path
+          d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z"
+          fill="url(#oceanLogo)"
+        />
+
+        <circle
+          cx="39"
+          cy="30"
+          r="2.8"
+          fill="#02111c"
+        />
+
+        <path
+          d="M12 33 L22 26 L22 40Z"
+          fill="#00ffd5"
+        />
+      </svg>
+
+      <span>Abyssal Blue</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="wildlife.html">Wildlife</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="booking.html">Book Dive</a>
+      <a href="contact.html">Contact</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <p class="eyebrow">Ocean Photography</p>
+
+      <h1>Explore the Deep Gallery.</h1>
+
+      <p>
+        A premium image-focused gallery for sharks, coral reefs, divers,
+        shipwrecks, sea turtles, wildlife encounters, aquarium exhibits,
+        resort adventures, and glowing underwater scenes.
+      </p>
+    </section>
+
+    <!-- GALLERY FILTERS -->
+    <section class="gallery-filter-bar glass-card" aria-label="Gallery filters">
+      <button class="active" type="button" data-filter="all" aria-pressed="true">All Scenes</button>
+      <button type="button" data-filter="wildlife" aria-pressed="false">Wildlife</button>
+      <button type="button" data-filter="reef" aria-pressed="false">Coral Reefs</button>
+      <button type="button" data-filter="shipwreck" aria-pressed="false">Shipwrecks</button>
+      <button type="button" data-filter="dives" aria-pressed="false">Guided Dives</button>
+    </section>
+
+    <!-- MAIN GALLERY -->
+    <section class="gallery-grid premium-gallery-grid">
+
+      <article class="gallery-card tall" data-category="wildlife">
+        <img src="images/hero-shark.jpg" alt="Shark swimming underwater" />
+        <button type="button" class="gallery-open" aria-label="Open Deep Sea Shark image"></button>
+
+        <div>
+          <span>Wildlife Encounter</span>
+          <h2>Deep Sea Shark</h2>
+          <p>Powerful ocean predator in cinematic blue light.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="reef">
+        <img src="images/coral-placeholder.jpg" alt="Colorful coral reef underwater" />
+        <button type="button" class="gallery-open" aria-label="Open Coral Reef image"></button>
+
+        <div>
+          <span>Living Reef</span>
+          <h2>Coral Reef</h2>
+          <p>Bright reef textures and natural marine color.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="dives">
+        <img src="images/diver-placeholder.jpg" alt="Scuba diver underwater" />
+        <button type="button" class="gallery-open" aria-label="Open Guided Dive image"></button>
+
+        <div>
+          <span>Guided Tour</span>
+          <h2>Guided Dive</h2>
+          <p>Professional diving experience for ocean explorers.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card wide" data-category="shipwreck">
+        <img src="images/shipwreck-placeholder.jpg" alt="Underwater shipwreck" />
+        <button type="button" class="gallery-open" aria-label="Open Lost Shipwreck image"></button>
+
+        <div>
+          <span>Adventure Route</span>
+          <h2>Lost Shipwreck</h2>
+          <p>A mysterious underwater scene with strong visual storytelling.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="wildlife">
+        <img src="images/turtle-placeholder.jpg" alt="Sea turtle underwater" />
+        <button type="button" class="gallery-open" aria-label="Open Sea Turtle image"></button>
+
+        <div>
+          <span>Conservation</span>
+          <h2>Sea Turtle</h2>
+          <p>Calm ocean wildlife for a softer nature-focused section.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="reef">
+        <img src="images/coral-placeholder.jpg" alt="Blue coral reef landscape" />
+        <button type="button" class="gallery-open" aria-label="Open Blue Reef Wall image"></button>
+
+        <div>
+          <span>Ocean Texture</span>
+          <h2>Blue Reef Wall</h2>
+          <p>Perfect for aquariums, resorts, and education pages.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card wide" data-category="dives reef">
+        <img src="images/diver-placeholder.jpg" alt="Scuba diver near ocean reef" />
+        <button type="button" class="gallery-open" aria-label="Open Premium Dive Tour image"></button>
+
+        <div>
+          <span>Human Experience</span>
+          <h2>Premium Dive Tour</h2>
+          <p>Shows visitors what the adventure feels like before they book.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card" data-category="wildlife reef">
+        <img src="images/turtle-placeholder.jpg" alt="Sea turtle swimming over reef" />
+        <button type="button" class="gallery-open" aria-label="Open Turtle Sanctuary image"></button>
+
+        <div>
+          <span>Wildlife</span>
+          <h2>Turtle Sanctuary</h2>
+          <p>A peaceful conservation-focused gallery image block.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+      <div class="gallery-lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+        <div class="gallery-lightbox-media">
+          <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close gallery preview">&times;</button>
+          <img id="lightboxImage" src="" alt="">
+        </div>
+        <div class="gallery-lightbox-content">
+          <p class="eyebrow">Expanded Preview</p>
+          <h2 id="lightboxTitle">Gallery Preview</h2>
+          <p id="lightboxDescription">A closer look at the cinematic underwater visuals included with Abyssal Blue.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURED PHOTO STORY -->
+<section class="split-section premium-split">
+  <div>
+    <p class="eyebrow">Featured Story</p>
+
+    <h2>Every dive begins with a sense of wonder.</h2>
+
+    <p>
+      From vibrant coral reefs to historic shipwrecks and unforgettable wildlife
+      encounters, these moments capture the beauty, mystery, and excitement of
+      exploring the underwater world.
+    </p>
+
+    <div class="mini-feature-list">
+      <span>Marine wildlife</span>
+      <span>Coral ecosystems</span>
+      <span>Historic shipwrecks</span>
+      <span>Guided adventures</span>
+    </div>
+  </div>
+
+  <img src="images/shipwreck-placeholder.jpg" alt="Cinematic underwater shipwreck">
+</section>
+
+    <!-- CTA -->
+<section class="cta-band home-final-cta">
+  <p class="eyebrow">Inspired by the Ocean?</p>
+
+  <h2>Ready to experience it for yourself?</h2>
+
+  <p>
+    Explore marine wildlife, discover hidden reefs, and join a guided underwater
+    adventure designed to bring you closer to the ocean than ever before.
+  </p>
+
+  <div class="hero-buttons center-buttons">
+    <a href="wildlife.html" class="btn secondary-btn">Meet Wildlife</a>
+    <a href="booking.html" class="btn primary-btn">Book a Dive</a>
+  </div>
+</section>
+
+  </main>
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+
+  <div class="footer-simple">
+
+ <a href="index.html" class="footer-logo" aria-label="Abyssal Blue Home">
+  <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="footerOceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#7cf7ff"/>
+        <stop offset="50%" stop-color="#00ffd5"/>
+        <stop offset="100%" stop-color="#087f9e"/>
+      </linearGradient>
+    </defs>
+
+    <circle cx="32" cy="32" r="23" fill="none" stroke="url(#footerOceanLogo)" stroke-width="5"/>
+    <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#footerOceanLogo)"/>
+    <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+    <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+  </svg>
+
+  <span>Abyssal Blue</span>
+</a>
+
+    <p>
+      Premium underwater website template designed for aquariums,
+      dive tours, resorts, marine parks, and ocean adventure brands.
+    </p>
+
+    <div class="footer-bottom">
+      &copy; 2026 Abyssal Blue. All rights reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+  <a href="booking.html#dive-packages" class="floating-book-btn" aria-label="Book a dive package">
+    Book Dive
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

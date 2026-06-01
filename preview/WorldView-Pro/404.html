@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 | WorldView Pro</title>
+  <meta
+    name="description"
+    content="WorldView Pro branded 404 page with navigation back to the homepage, pricing, and contact flow."
+  />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body data-page="404">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="space-scene" id="worldBackground" aria-hidden="true">
+    <div class="space-noise"></div>
+    <div class="stars"></div>
+    <div class="glow-orb glow-orb--left"></div>
+    <div class="glow-orb glow-orb--right"></div>
+    <div class="earth-stage" id="earthStage">
+      <div class="planet-ring planet-ring--outer"></div>
+      <div class="planet-ring planet-ring--inner"></div>
+      <div class="satellite-dot"></div>
+      <div class="earth" id="earth">
+        <div class="earth-map"><div class="map-strip"></div></div>
+        <div class="earth-clouds"><div class="cloud-strip"></div></div>
+        <div class="earth-lights"></div>
+        <div class="earth-glow"></div>
+        <div class="night-shade"></div>
+      </div>
+    </div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <main class="site-shell" id="main-content">
+    <header class="site-header reveal">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-worldview.svg" alt="WorldView Pro globe logo" />
+        <span class="brand-copy">
+          <span class="brand-title">WORLDVIEW PRO</span>
+          <span class="brand-tagline">Animated Earth Template</span>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <div class="nav-links">
+          <a class="page-link" data-page-link="home" href="index.html">Home</a>
+          <a class="page-link" data-page-link="about" href="about.html">About</a>
+          <a class="page-link" data-page-link="features" href="features.html">Features</a>
+          <a class="page-link" data-page-link="showcase" href="showcase.html">Showcase</a>
+          <a class="page-link" data-page-link="faq" href="faq.html">FAQ</a>
+          <a class="page-link" data-page-link="pricing" href="pricing.html">Pricing</a>
+          <a class="page-link" data-page-link="contact" href="contact.html">Contact</a>
+        </div>
+      </nav>
+      <div class="nav-actions">
+        <a class="button button--primary button--sm" href="pricing.html#purchase-panel">Buy Template</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu" data-nav-toggle>
+          <span class="nav-toggle-bar"></span>
+          <span class="sr-only">Open navigation</span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu" hidden data-mobile-menu>
+        <nav class="mobile-nav" aria-label="Mobile">
+          <a class="page-link" data-page-link="home" href="index.html">Home</a>
+          <a class="page-link" data-page-link="about" href="about.html">About</a>
+          <a class="page-link" data-page-link="features" href="features.html">Features</a>
+          <a class="page-link" data-page-link="showcase" href="showcase.html">Showcase</a>
+          <a class="page-link" data-page-link="faq" href="faq.html">FAQ</a>
+          <a class="page-link" data-page-link="pricing" href="pricing.html">Pricing</a>
+          <a class="page-link" data-page-link="contact" href="contact.html">Contact</a>
+        </nav>
+        <a class="button button--primary button--sm" href="pricing.html#purchase-panel">Buy Template</a>
+      </div>
+    </header>
+
+    <section class="hero reveal">
+      <article class="hero-card">
+        <div class="eyebrow"><span class="pulse"></span>Page Not Found</div>
+        <h1>
+          This orbit broke.
+          <span class="gradient-text">Let&rsquo;s get you back on course.</span>
+        </h1>
+        <p class="lead">
+          The page you were looking for is missing, moved, or never existed. The rest of the WorldView Pro package is
+          still available and fully branded.
+        </p>
+        <div class="button-row">
+          <a class="button button--primary" href="index.html">Go Home</a>
+          <a class="button button--secondary" href="contact.html?intent=contact&amp;source=404">Report A Broken Link</a>
+        </div>
+      </article>
+      <aside class="stat-stack">
+        <div class="stat-card"><strong>Try Pricing</strong><span>Jump back into the purchase flow if you were headed toward the template offer.</span></div>
+        <div class="stat-card"><strong>Try FAQ</strong><span>Browse common buyer questions around hosting, licensing, and customization.</span></div>
+        <div class="stat-card"><strong>Try Contact</strong><span>Use the inquiry form if you need help tracking the right page down.</span></div>
+      </aside>
+    </section>
+
+    <footer class="site-footer reveal">
+      <div class="footer-panel footer-panel--compact">
+        <a class="footer-brand" href="index.html">
+          <img src="assets/logo-worldview.svg" alt="WorldView Pro globe logo" />
+          <span>WorldView Pro</span>
+        </a>
+        <p class="footer-copy">Premium animated Earth website template for modern brands, startups, agencies, and digital products.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">Commercial License Included</span>
+        </div>
+        <p class="footer-meta">&copy; <span data-current-year>2026</span> WorldView Pro. Commercial template package.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CosmicOrbit Pro | Premium Three.js Website Template</title>
+  <meta
+    name="description"
+    content="Premium HTML template with a Three.js space scene, polished marketing pages, and demo login and dashboard screens for SaaS brands."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width: 1024px)" />
+  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 650px)" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#02030a" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="spaceScene" aria-hidden="true"></div>
+  <div class="page-glow" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">CosmicOrbit<span>Pro</span></a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-expanded="false"
+      aria-controls="navLinks"
+      aria-label="Open navigation menu"
+    >
+      <span aria-hidden="true">Menu</span>
+    </button>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Premium HTML Website Template</p>
+        <h1>Launch a modern software brand site with a cinematic 3D edge.</h1>
+        <p class="hero-text">
+          CosmicOrbit Pro is a polished multi-page template built for SaaS teams,
+          startup launches, product studios, and technology brands that want a
+          stronger first impression without moving into a framework rebuild.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="coming-soon.html" class="btn primary">Buy Template</a>
+          <a href="contact.html#custom" class="btn secondary">Custom Branding</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>8</strong>
+            <span>Included pages</span>
+          </div>
+          <div>
+            <strong>3D</strong>
+            <span>Three.js hero background</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Responsive layout system</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card tilt-card">
+        <p class="card-label">Template Includes</p>
+        <h2>A complete front-end launch kit.</h2>
+        <ul>
+          <li>Multi-page marketing site with shared navigation</li>
+          <li>Pricing, contact, login, dashboard, 404, and checkout placeholder pages</li>
+          <li>Organized CSS, JavaScript, images, and written documentation</li>
+          <li>Editable HTML structure that is easy to hand off to clients or teams</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <p class="eyebrow">Why It Sells</p>
+      <h2>Designed to feel premium without feeling overbuilt.</h2>
+
+      <div class="feature-grid">
+        <article class="feature-card tilt-card">
+          <span>01</span>
+          <h3>Distinct Visual Depth</h3>
+          <p>
+            A real Three.js scene gives the site presence while the glass panels and
+            restrained motion keep the interface usable and professional.
+          </p>
+        </article>
+
+        <article class="feature-card tilt-card">
+          <span>02</span>
+          <h3>Conversion-Ready Structure</h3>
+          <p>
+            Homepage, pricing, contact, and checkout handoff pages are already set up
+            to support a clean sales journey from first visit to purchase intent.
+          </p>
+        </article>
+
+        <article class="feature-card tilt-card">
+          <span>03</span>
+          <h3>Easy to Customize</h3>
+          <p>
+            Buyers can update content, colors, screenshots, links, and branding
+            quickly without learning a framework or untangling duplicate code.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split" id="about">
+      <div>
+        <p class="eyebrow">Best For</p>
+        <h2>Built for SaaS launches, productized services, and software marketing sites.</h2>
+      </div>
+
+      <div>
+        <p class="section-lead">
+          The template is a strong fit for startups, technology companies, digital products,
+          agencies, and internal product teams that want a high-fidelity visual identity
+          without taking on a custom front-end build from scratch.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="preview">
+      <p class="eyebrow">Page Preview</p>
+      <h2>More than a landing page.</h2>
+
+      <div class="preview-grid">
+        <a href="index.html" class="preview-card tilt-card">
+          <img
+            src="assets/images/home-preview.png"
+            alt="Homepage preview for CosmicOrbit Pro"
+            loading="lazy"
+          />
+          <strong>Homepage</strong>
+          <p>Hero, features, testimonials, pricing, and contact CTA sections.</p>
+        </a>
+
+        <a href="pricing.html" class="preview-card tilt-card">
+          <img
+            src="assets/images/pricing-preview.png"
+            alt="Pricing page preview for CosmicOrbit Pro"
+            loading="lazy"
+          />
+          <strong>Pricing</strong>
+          <p>Clear package comparison for the template license and custom branding offer.</p>
+        </a>
+
+        <a href="dashboard.html" class="preview-card tilt-card">
+          <img
+            src="assets/images/dashboard-preview.png"
+            alt="Dashboard preview for CosmicOrbit Pro"
+            loading="lazy"
+          />
+          <strong>Dashboard Demo</strong>
+          <p>Premium app-style layout to increase perceived value and product readiness.</p>
+        </a>
+
+        <a href="login.html" class="preview-card tilt-card">
+          <img
+            src="assets/images/login-preview.png"
+            alt="Login page preview for CosmicOrbit Pro"
+            loading="lazy"
+          />
+          <strong>Login Demo</strong>
+          <p>Static login screen included for polished product storytelling and demos.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">Buyer Feedback Style</p>
+      <h2>Positioned for founders, agencies, and product teams.</h2>
+
+      <div class="feature-grid">
+        <article class="feature-card tilt-card">
+          <span>01</span>
+          <h3>Agency-Friendly</h3>
+          <p>
+            The page structure feels organized enough to present to a client, customize quickly,
+            and launch without reworking the entire front end.
+          </p>
+        </article>
+
+        <article class="feature-card tilt-card">
+          <span>02</span>
+          <h3>Product-Ready</h3>
+          <p>
+            The dashboard and login demos help software brands show where the product goes next,
+            not just where the marketing page ends.
+          </p>
+        </article>
+
+        <article class="feature-card tilt-card">
+          <span>03</span>
+          <h3>Built for Handoff</h3>
+          <p>
+            Clean files, shared navigation, and updated documentation make the template easier
+            to sell, adapt, and support after purchase.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <p class="eyebrow">Pricing</p>
+      <h2>Two clear ways to buy.</h2>
+
+      <div class="pricing-grid">
+        <article class="pricing-card tilt-card">
+          <p class="card-label">$99 Template License</p>
+          <h3>CosmicOrbit Pro</h3>
+          <p class="price">$99</p>
+
+          <ul class="pricing-features">
+            <li>All 8 HTML pages and shared responsive styles</li>
+            <li>Three.js background, animations, and premium UI components</li>
+            <li>Dashboard and login demo pages included</li>
+            <li>Updated documentation, setup guidance, and license file</li>
+            <li>Commercial-ready front-end structure for editing and delivery</li>
+          </ul>
+
+          <a href="coming-soon.html" class="btn primary">Buy Template</a>
+        </article>
+
+        <article class="pricing-card featured tilt-card">
+          <p class="card-label">$299 Template + Branding</p>
+          <h3>Template + Branding</h3>
+          <p class="price">$299</p>
+
+          <ul class="pricing-features">
+            <li>Everything included in the template license</li>
+            <li>Brand color and visual refinement support</li>
+            <li>Logo placement and content cleanup</li>
+            <li>CTA, navigation, and page copy adjustments</li>
+            <li>Launch-ready handoff for your chosen business or product</li>
+          </ul>
+
+          <a href="contact.html#custom" class="btn primary">Custom Branding</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Need Help Launching?</p>
+        <h2>Use the template as-is or brand it before it goes live.</h2>
+      </div>
+
+      <div>
+        <p class="section-lead">
+          The base package is ready for buyers who want a strong front-end template immediately.
+          The branding package adds guided polish for teams that want a cleaner, more tailored launch.
+        </p>
+
+        <div class="section-actions">
+          <a href="contact.html#custom" class="btn primary">Start Custom Branding</a>
+          <a href="pricing.html" class="btn secondary">Compare Packages</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span data-current-year>2026</span> CosmicOrbit Pro. Premium HTML template for
+      SaaS, software, and digital product brands.
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"
+      }
+    }
+  </script>
+
+  <script type="module" src="js/space-scene.js"></script>
+</body>
+</html>

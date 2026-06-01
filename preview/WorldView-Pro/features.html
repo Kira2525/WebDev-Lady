@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features | WorldView Pro</title>
+  <meta
+    name="description"
+    content="Explore the premium feature set inside WorldView Pro, including animation, responsive navigation, polished documentation, and launch-ready page patterns."
+  />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body data-page="features">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="space-scene" id="worldBackground" aria-hidden="true">
+    <div class="space-noise"></div>
+    <div class="stars"></div>
+    <div class="glow-orb glow-orb--left"></div>
+    <div class="glow-orb glow-orb--right"></div>
+    <div class="earth-stage" id="earthStage">
+      <div class="planet-ring planet-ring--outer"></div>
+      <div class="planet-ring planet-ring--inner"></div>
+      <div class="satellite-dot"></div>
+      <div class="earth" id="earth">
+        <div class="earth-map"><div class="map-strip"></div></div>
+        <div class="earth-clouds"><div class="cloud-strip"></div></div>
+        <div class="earth-lights"></div>
+        <div class="earth-glow"></div>
+        <div class="night-shade"></div>
+      </div>
+    </div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <main class="site-shell" id="main-content">
+    <header class="site-header reveal">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-worldview.svg" alt="WorldView Pro globe logo" />
+        <span class="brand-copy">
+          <span class="brand-title">WORLDVIEW PRO</span>
+          <span class="brand-tagline">Animated Earth Template</span>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <div class="nav-links">
+          <a class="page-link" data-page-link="home" href="index.html">Home</a>
+          <a class="page-link" data-page-link="about" href="about.html">About</a>
+          <a class="page-link" data-page-link="features" href="features.html">Features</a>
+          <a class="page-link" data-page-link="showcase" href="showcase.html">Showcase</a>
+          <a class="page-link" data-page-link="faq" href="faq.html">FAQ</a>
+          <a class="page-link" data-page-link="pricing" href="pricing.html">Pricing</a>
+          <a class="page-link" data-page-link="contact" href="contact.html">Contact</a>
+        </div>
+      </nav>
+      <div class="nav-actions">
+        <a class="button button--primary button--sm" href="pricing.html#purchase-panel">Buy Template</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu" data-nav-toggle>
+          <span class="nav-toggle-bar"></span>
+          <span class="sr-only">Open navigation</span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu" hidden data-mobile-menu>
+        <nav class="mobile-nav" aria-label="Mobile">
+          <a class="page-link" data-page-link="home" href="index.html">Home</a>
+          <a class="page-link" data-page-link="about" href="about.html">About</a>
+          <a class="page-link" data-page-link="features" href="features.html">Features</a>
+          <a class="page-link" data-page-link="showcase" href="showcase.html">Showcase</a>
+          <a class="page-link" data-page-link="faq" href="faq.html">FAQ</a>
+          <a class="page-link" data-page-link="pricing" href="pricing.html">Pricing</a>
+          <a class="page-link" data-page-link="contact" href="contact.html">Contact</a>
+        </nav>
+        <a class="button button--primary button--sm" href="pricing.html#purchase-panel">Buy Template</a>
+      </div>
+    </header>
+
+    <section class="hero reveal">
+      <article class="hero-card" data-tilt>
+        <div class="eyebrow"><span class="pulse"></span>Premium Feature Set</div>
+        <h1>
+          Every layer tuned for a
+          <span class="gradient-text">strong buyer impression.</span>
+        </h1>
+        <p class="lead">
+          WorldView Pro combines cinematic visuals, stable front-end code, responsive navigation, and polished page
+          architecture so the template feels complete before a buyer changes a single line.
+        </p>
+        <div class="button-row">
+          <a class="button button--primary" href="pricing.html">View Pricing</a>
+          <a class="button button--secondary" href="showcase.html">Browse Use Cases</a>
+        </div>
+      </article>
+      <aside class="stat-stack">
+        <div class="stat-card" data-tilt>
+          <strong>Scroll Reveal</strong>
+          <span>Subtle motion layers create premium pacing without leaning on heavy effects or libraries.</span>
+        </div>
+        <div class="stat-card" data-tilt>
+          <strong>Responsive Nav</strong>
+          <span>Accessible desktop and hamburger navigation patterns across tablet and mobile breakpoints.</span>
+        </div>
+        <div class="stat-card" data-tilt>
+          <strong>Defensive JS</strong>
+          <span>Motion, menu, CTA routing, and personalization all guard safely for missing elements.</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-header">
+        <span class="section-label">Front-End Foundations</span>
+        <h2>Core systems that make the template feel premium.</h2>
+      </div>
+      <div class="card-grid card-grid--4">
+        <article class="card"><h3>Shared CSS Tokens</h3><p>Color, typography, spacing, radius, and surface treatments stay consistent across the package.</p></article>
+        <article class="card"><h3>Earth Scene</h3><p>Improved landmass patterns, slower rotation, softer cloud layers, and stronger atmospheric edge lighting.</p></article>
+        <article class="card"><h3>Accessible Focus</h3><p>Visible focus states, keyboard-friendly navigation, and better menu behavior across breakpoints.</p></article>
+        <article class="card"><h3>CTA Flow</h3><p>Sales buttons, inquiry routing, thank-you confirmation, and purchase guidance all connect intentionally.</p></article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-header">
+        <span class="section-label">Motion and Interaction</span>
+        <h2>Subtle effects that add polish without sacrificing control.</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card" data-tilt>
+          <div class="card-header"><h3>Cursor Glow</h3><span class="tag">Smooth</span></div>
+          <p>Interpolated motion keeps the ambient glow soft and natural instead of snapping around the viewport.</p>
+        </article>
+        <article class="card" data-tilt>
+          <div class="card-header"><h3>Card Tilt</h3><span class="tag">Local</span></div>
+          <p>Each card calculates tilt from its own pointer position, which creates a more believable depth response.</p>
+        </article>
+        <article class="card" data-tilt>
+          <div class="card-header"><h3>Reduced Motion</h3><span class="tag">Respectful</span></div>
+          <p>Users who prefer less motion get a calmer experience automatically without breaking layout or clarity.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="panel">
+        <span class="section-label">Code Quality</span>
+        <h2>Organized for template buyers, not just developers.</h2>
+        <p>
+          A premium template should be easy to understand after purchase. The CSS is centralized, repeated inline
+          styles have been removed, and the JavaScript keeps related behavior grouped together so edits are predictable.
+        </p>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <strong>Organized</strong>
+            <span>Shared classes cover cards, forms, CTAs, lists, and layout sections across all pages.</span>
+          </div>
+          <div class="metric-card">
+            <strong>Stable</strong>
+            <span>Animation loops pause when hidden and interactive features handle missing nodes gracefully.</span>
+          </div>
+          <div class="metric-card">
+            <strong>Editable</strong>
+            <span>Clear headings, readable copy blocks, and practical docs lower the handoff cost for buyers.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-header">
+        <span class="section-label">Included Pages</span>
+        <h2>A full launch path from first impression to inquiry.</h2>
+      </div>
+      <div class="card-grid card-grid--4">
+        <article class="card"><h3>Home</h3><p>Sales-focused sections that introduce the product, value, and purchase path.</p></article>
+        <article class="card"><h3>About</h3><p>Context that explains the package quality, structure, and buyer positioning.</p></article>
+        <article class="card"><h3>Features</h3><p>Product detail page that breaks down the technical and visual strengths.</p></article>
+        <article class="card"><h3>Showcase</h3><p>Industry-targeted presentation cards that help buyers imagine the template in use.</p></article>
+        <article class="card"><h3>FAQ</h3><p>Professional pre-purchase questions covering licensing, editing, hosting, and support.</p></article>
+        <article class="card"><h3>Pricing</h3><p>Tiered purchase options, CTA routing, and clearer services for setup help and custom branding.</p></article>
+        <article class="card"><h3>Contact</h3><p>Inquiry form with intent-based routing for checkout, support, setup help, and custom branding conversations.</p></article>
+        <article class="card"><h3>Thank You &amp; 404</h3><p>Both post-submit and error states stay branded and consistent with the overall system.</p></article>
+      </div>
+    </section>
+
+    <footer class="site-footer reveal">
+      <div class="footer-panel footer-panel--compact">
+        <a class="footer-brand" href="index.html">
+          <img src="assets/logo-worldview.svg" alt="WorldView Pro globe logo" />
+          <span>WorldView Pro</span>
+        </a>
+        <p class="footer-copy">Premium animated Earth website template for modern brands, startups, agencies, and digital products.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">Commercial License Included</span>
+        </div>
+        <p class="footer-meta">&copy; <span data-current-year>2026</span> WorldView Pro. Commercial template package.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

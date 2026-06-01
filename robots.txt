@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /cart.html
+Disallow: /thank-you-lite.html
+Disallow: /thank-you-pro.html
+
+Sitemap: https://webdevlady.netlify.app/sitemap.xml

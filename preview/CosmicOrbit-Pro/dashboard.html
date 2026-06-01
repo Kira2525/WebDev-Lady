@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Demo | CosmicOrbit Pro</title>
+  <meta
+    name="description"
+    content="Preview the premium dashboard demo included with CosmicOrbit Pro, built for SaaS and product brands that need app-ready presentation."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width: 1024px)" />
+  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 650px)" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#02030a" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="spaceScene" aria-hidden="true"></div>
+  <div class="page-glow" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">CosmicOrbit<span>Pro</span></a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="dashboard.html" class="active" aria-current="page">Dashboard</a>
+      <a href="login.html">Login</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-expanded="false"
+      aria-controls="navLinks"
+      aria-label="Open navigation menu"
+    >
+      <span aria-hidden="true">Menu</span>
+    </button>
+  </header>
+
+  <main id="main-content">
+    <section class="section">
+      <p class="eyebrow">Dashboard Demo</p>
+      <h1>A premium app-style layout included in the template.</h1>
+      <p class="hero-text">
+        This page is a static dashboard preview designed to raise perceived value and show how the
+        visual system extends beyond marketing pages. It is ideal for SaaS, memberships, and product demos.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="dashboard-layout">
+        <aside class="dashboard-sidebar tilt-card">
+          <p class="card-label">Demo Workspace</p>
+          <h3>Orbit Analytics</h3>
+          <p class="small-note">
+            Front-end dashboard example only. Connect your own data, authentication, and product logic
+            when building a production app.
+          </p>
+
+          <div class="dashboard-menu">
+            <div class="dashboard-link active">
+              <span>Overview</span>
+              <span>Live</span>
+            </div>
+            <div class="dashboard-link">
+              <span>Revenue</span>
+              <span>Q2</span>
+            </div>
+            <div class="dashboard-link">
+              <span>Customers</span>
+              <span>1.2k</span>
+            </div>
+            <div class="dashboard-link">
+              <span>Reports</span>
+              <span>12</span>
+            </div>
+            <div class="dashboard-link">
+              <span>Settings</span>
+              <span>Beta</span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="dashboard-main">
+          <div class="dashboard-stats">
+            <article class="feature-card tilt-card">
+              <span>Monthly recurring revenue</span>
+              <p class="stat-value">$48,260</p>
+              <p class="stat-trend">Up 8.4% vs last month</p>
+            </article>
+
+            <article class="feature-card tilt-card">
+              <span>Active workspaces</span>
+              <p class="stat-value">1,284</p>
+              <p class="stat-trend">54 new this week</p>
+            </article>
+
+            <article class="feature-card tilt-card">
+              <span>Trial to paid</span>
+              <p class="stat-value">14.6%</p>
+              <p class="stat-trend">Above target range</p>
+            </article>
+
+            <article class="feature-card tilt-card">
+              <span>Platform uptime</span>
+              <p class="stat-value">99.98%</p>
+              <p class="stat-trend">Stable this month</p>
+            </article>
+          </div>
+
+          <section class="chart-card tilt-card">
+            <div class="chart-header">
+              <div>
+                <p class="card-label">Performance</p>
+                <h3>30-day growth trend</h3>
+              </div>
+              <span class="small-note">Updated every 24 hours</span>
+            </div>
+
+            <div class="fake-chart" aria-hidden="true">
+              <div class="bar" style="height: 42%;"></div>
+              <div class="bar" style="height: 55%;"></div>
+              <div class="bar" style="height: 48%;"></div>
+              <div class="bar" style="height: 66%;"></div>
+              <div class="bar" style="height: 61%;"></div>
+              <div class="bar" style="height: 88%;"></div>
+              <div class="bar" style="height: 74%;"></div>
+              <div class="bar" style="height: 92%;"></div>
+            </div>
+          </section>
+
+          <div class="dashboard-panel-grid">
+            <section class="mini-card tilt-card">
+              <p class="card-label">Recent Activity</p>
+              <h3>Latest account events</h3>
+              <div class="activity-list">
+                <div class="activity-item">
+                  Enterprise plan upgraded
+                  <span class="activity-meta">12 minutes ago</span>
+                </div>
+                <div class="activity-item">
+                  Billing export delivered
+                  <span class="activity-meta">46 minutes ago</span>
+                </div>
+                <div class="activity-item">
+                  New trial workspace created
+                  <span class="activity-meta">1 hour ago</span>
+                </div>
+                <div class="activity-item">
+                  Branding inquiry submitted
+                  <span class="activity-meta">Today at 9:18 AM</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="mini-card tilt-card">
+              <p class="card-label">Launch Checklist</p>
+              <h3>Recommended next steps</h3>
+              <ul class="list-clean">
+                <li>Connect product analytics and billing data</li>
+                <li>Replace demo metrics with real business reporting</li>
+                <li>Hook up sign-in and account permissions</li>
+                <li>Adjust labels and cards for your workflow</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span data-current-year>2026</span> CosmicOrbit Pro. Premium HTML template for
+      SaaS, software, and digital product brands.
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"
+      }
+    }
+  </script>
+
+  <script type="module" src="js/space-scene.js"></script>
+</body>
+</html>

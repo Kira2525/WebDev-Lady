@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | VelvetUI Pro</title>
+  <meta
+    name="description"
+    content="Use VelvetUI Pro's polished contact page with a premium form layout, sidebar details, and a thank-you page flow."
+  />
+  <meta name="theme-color" content="#0d0514" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact VelvetUI Pro" />
+  <meta property="og:description" content="A premium contact page template with a polished form and reusable inquiry sidebar." />
+  <meta property="og:image" content="assets/img/velvetui-og.svg" />
+  <meta property="og:site_name" content="VelvetUI" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact VelvetUI Pro" />
+  <meta name="twitter:description" content="Use a premium contact form and sidebar layout for modern service or product inquiries." />
+  <meta name="twitter:image" content="assets/img/velvetui-og.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/velvetui-favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/img/velvetui-favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-canvas-mode="hero">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="nav glass-card">
+      <a class="logo" href="index.html" aria-label="VelvetUI Pro home">
+        <span class="logo-mark" aria-hidden="true">&#9670;</span>
+        <span>VelvetUI Pro</span>
+      </a>
+      <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Contact Page</p>
+        <h1>Turn premium presentation<br class="headline-break" />into a clear<br class="headline-break" />inquiry flow.</h1>
+        <p class="lead">
+          Use this page for sales inquiries, consultation requests, onboarding calls, waitlists, or custom project conversations. The layout is ready for a backend connection whenever the buyer needs it.
+        </p>
+        <div class="button-row">
+          <a class="btn-primary" href="#contact-form">Start the form</a>
+          <a class="btn-secondary" href="thank-you.html">View the thank-you page</a>
+        </div>
+      </div>
+
+      <aside class="glass-card page-aside">
+        <p class="card-label">Contact goals</p>
+        <h2>Keep the form clean, the context clear, and the next step easy to trust.</h2>
+        <ul class="feature-listing">
+          <li>Works as a quote request, contact form, or consultation intake</li>
+          <li>Can route to a thank-you page without a backend during demo use</li>
+          <li>Easy to connect to hosted form tools or a custom endpoint later</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Contact Signals</p>
+        <h2>Trustworthy details help the form feel intentional instead of generic.</h2>
+      </div>
+      <div class="value-grid">
+        <article class="glass-card value-card">
+          <p class="section-tag">Professional</p>
+          <h3>Clear intake structure keeps the form easy to complete.</h3>
+          <p>Visitors can understand what information to share without feeling overwhelmed by the layout.</p>
+        </article>
+        <article class="glass-card value-card">
+          <p class="section-tag">Trustworthy</p>
+          <h3>Support cues and response expectations reduce hesitation.</h3>
+          <p>Sidebar notes, reply timing, and alternate contact methods make the page feel handled and credible.</p>
+        </article>
+        <article class="glass-card value-card">
+          <p class="section-tag">Flexible</p>
+          <h3>Works for quotes, consultations, demos, and high-touch inquiries.</h3>
+          <p>The same page can serve product waitlists, service inquiries, or premium project intake with minimal edits.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="contact-layout">
+        <article class="glass-card form-card" id="contact-form">
+          <p class="eyebrow">Send An Inquiry</p>
+          <h3>Start the conversation</h3>
+          <p class="form-note">This demo form currently routes to the thank-you page. Replace the action and method when connecting a real form backend.</p>
+          <!-- Replace the action below with a Formspree endpoint, Netlify Forms setup, or your own backend route when ready. -->
+          <!-- Example options:
+            1. Formspree: action to your Formspree endpoint with method POST
+            2. Netlify Forms: add netlify to the form tag and keep method POST
+            3. Custom backend: point the form action to your own contact API route
+          -->
+          <form action="thank-you.html" method="get">
+            <div class="form-grid two-column">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+            </div>
+            <div class="form-grid two-column">
+              <label>
+                Company
+                <input type="text" name="company" placeholder="Brand or company" />
+              </label>
+              <label>
+                Project Type
+                <select name="project-type">
+                  <option value="launch">Product launch</option>
+                  <option value="service">Service site</option>
+                  <option value="portfolio">Portfolio</option>
+                  <option value="other">Other</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-grid">
+              <label>
+                Project Goals
+                <textarea name="goals" placeholder="Tell us about the offer, audience, and what success looks like."></textarea>
+              </label>
+            </div>
+            <div class="button-row">
+              <button class="btn-primary" type="submit">Send Inquiry</button>
+              <a class="btn-secondary" href="thank-you.html">Preview success state</a>
+            </div>
+          </form>
+        </article>
+
+        <aside class="glass-card sidebar-card">
+          <p class="eyebrow">Contact Sidebar</p>
+          <h3>Helpful context for the buyer</h3>
+          <p>Use the sidebar for expectations, response windows, alternate contact methods, or premium support notes.</p>
+          <div class="contact-meta">
+            <div>
+              <strong>Reply window</strong>
+              <p>Within 1 to 2 business days for most inquiries.</p>
+            </div>
+            <div>
+              <strong>Best fit</strong>
+              <p>Product launches, premium service brands, digital offers, and modern studio websites.</p>
+            </div>
+            <div>
+              <strong>Alternate contact</strong>
+              <p>hello@velvetui.example</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-copy">
+        <strong>&#9670; VelvetUI Pro</strong>
+        <p>Premium multi-page template for modern brands, digital products, service offers, and polished launches.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

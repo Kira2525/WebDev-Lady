@@ -1,0 +1,19 @@
+VelvetUI Lite Customization Guide
+
+Text:
+- Update headlines, paragraphs, FAQ items, and button text in index.html.
+
+Colors:
+- Change the root variables at the top of css/style.css.
+
+Layout:
+- Reorder or remove sections directly in index.html.
+- Keep section IDs matched to navigation anchors.
+
+Animation:
+- Edit the words array in js/script.js.
+- Keep the canvas element in index.html if you want the signature VelvetUI effect.
+
+Lite vs Pro:
+- Lite is a one-page starter setup.
+- Pro includes the full multi-page website system.

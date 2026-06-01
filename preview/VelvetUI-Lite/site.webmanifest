@@ -1,0 +1,17 @@
+{
+  "name": "VelvetUI Lite",
+  "short_name": "VelvetUI",
+  "description": "Premium one-page starter website template with animated diamond text and glassmorphism styling.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#09020f",
+  "theme_color": "#0d0514",
+  "icons": [
+    {
+      "src": "assets/velvetui-favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Abyssal Blue | Premium Underwater Website Template</title>
+
+  <meta
+    name="description"
+    content="A cinematic underwater website template for scuba diving tours, aquariums, marine parks, resorts, conservation brands, and ocean adventure businesses."
+  />
+  <meta name="theme-color" content="#02111c" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abyssal Blue | Premium Underwater Website Template" />
+  <meta property="og:description" content="A cinematic underwater website template for scuba diving tours, aquariums, marine parks, resorts, conservation brands, and ocean adventure businesses." />
+  <meta property="og:url" content="https://example.com/index.html" />
+  <meta property="og:image" content="https://example.com/images/hero-shark.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="images/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <!-- PREMIUM ANIMATED BACKGROUND -->
+  <div class="ocean-scene" id="oceanScene">
+    <canvas id="oceanCanvas"></canvas>
+    <img src="images/coral-placeholder.jpg" class="coral-bg" alt="">
+    <div class="ocean-tint"></div>
+    <div class="light-rays"></div>
+    <div class="depth-fog"></div>
+    <div class="bubble-layer" id="bubbleLayer"></div>
+    <div class="fish-layer" id="fishLayer"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Abyssal Blue Home">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="oceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7cf7ff"/>
+              <stop offset="50%" stop-color="#00ffd5"/>
+              <stop offset="100%" stop-color="#087f9e"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo)" stroke-width="5"/>
+          <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo)"/>
+          <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+          <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+        </svg>
+      </span>
+
+      <span class="logo-text">Abyssal Blue</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="wildlife.html">Wildlife</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book Dive</a>
+      <a href="contact.html">Contact</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- HERO -->
+    <section class="hero-section premium-hero">
+      <div class="hero-content glass-card">
+        <p class="eyebrow">Luxury Ocean Adventures</p>
+
+        <h1>Explore Reefs, Shipwrecks & Marine Wildlife.</h1>
+
+        <p class="hero-text">
+          A premium underwater website template built for scuba diving tours,
+          aquariums, marine parks, ocean resorts, conservation brands, and
+          adventure travel companies.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="booking.html" class="btn primary-btn">Book a Dive</a>
+          <a href="gallery.html" class="btn secondary-btn">View Gallery</a>
+        </div>
+
+        <div class="hero-trust-row">
+          <span>5-star guest rating</span>
+          <span>Certified guides</span>
+          <span>Eco-focused experiences</span>
+        </div>
+      </div>
+
+      <div class="hero-slider">
+        <img src="images/hero-shark.jpg" class="slide active" alt="Shark swimming underwater">
+        <img src="images/turtle-placeholder.jpg" class="slide" alt="Sea turtle swimming underwater">
+        <img src="images/shipwreck-placeholder.jpg" class="slide" alt="Underwater shipwreck">
+        <img src="images/coral-placeholder.jpg" class="slide" alt="Colorful coral reef underwater">
+        <img src="images/diver-placeholder.jpg" class="slide" alt="Scuba diver exploring underwater">
+        <img src="images/tropical-fish.jpg" class="slide" alt="Tropical fish in underwater scene">
+
+        <div class="slider-caption">
+          <span>Cinematic Ocean Scenes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK BOOKING BAR -->
+    <section class="booking-strip glass-card">
+      <div>
+        <span class="strip-label">Next Available Dive</span>
+        <strong>Tomorrow at 9:00 AM</strong>
+      </div>
+
+      <div>
+        <span class="strip-label">Top Package</span>
+        <strong>Advanced Reef Dive</strong>
+      </div>
+
+      <div>
+        <span class="strip-label">Starting At</span>
+        <strong>$99</strong>
+      </div>
+
+      <a href="booking.html#dive-packages" class="btn primary-btn">Reserve Now</a>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+      <div class="stat-card">
+        <h2>50+</h2>
+        <p>Marine Species</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>25K+</h2>
+        <p>Annual Visitors</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>4.9/5</h2>
+        <p>Customer Rating</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>100%</h2>
+        <p>Eco Focused</p>
+      </div>
+    </section>
+
+    <!-- FEATURED EXPERIENCES -->
+    <section class="section-header">
+      <p class="eyebrow">Featured Experiences</p>
+
+      <h2>Built for Real Ocean Businesses.</h2>
+
+      <p>
+        These sections make the template easier to sell because buyers can instantly
+        picture their services, prices, and bookings inside the design.
+      </p>
+    </section>
+
+    <section class="experience-grid">
+      <article class="experience-card">
+        <img src="images/hero-shark.jpg" alt="Shark encounter dive">
+
+        <div class="experience-content">
+          <span>Advanced</span>
+
+          <h3>Shark Encounter</h3>
+
+          <p>
+            A dramatic guided dive experience designed for premium adventure brands.
+          </p>
+
+          <ul>
+            <li>Certified dive guides</li>
+            <li>Small group experience</li>
+            <li>Photo add-on available</li>
+          </ul>
+
+          <a href="booking.html#dive-packages">Book Experience</a>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <img src="images/shipwreck-placeholder.jpg" alt="Shipwreck expedition">
+
+        <div class="experience-content">
+          <span>Premium</span>
+
+          <h3>Shipwreck Expedition</h3>
+
+          <p>
+            A cinematic section for historical wreck dives, deep sea tours, and ocean
+            exploration packages.
+          </p>
+
+          <ul>
+            <li>Guided route</li>
+            <li>Advanced dive option</li>
+            <li>Private charter upgrade</li>
+          </ul>
+
+          <a href="booking.html#dive-packages">View Package</a>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <img src="images/turtle-placeholder.jpg" alt="Sea turtle sanctuary tour">
+
+        <div class="experience-content">
+          <span>Family Friendly</span>
+
+          <h3>Turtle Sanctuary Tour</h3>
+
+          <p>
+            A softer conservation-focused experience for aquariums, resorts, and
+            eco-tour companies.
+          </p>
+
+          <ul>
+            <li>Wildlife education</li>
+            <li>Beginner friendly</li>
+            <li>Conservation focused</li>
+          </ul>
+
+          <a href="wildlife.html">Meet Wildlife</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- TEMPLATE VALUE FEATURES -->
+    <section class="feature-grid">
+      <article class="feature-card">
+        <h2>Realistic Visual Style</h2>
+
+        <p>
+          Uses cinematic photography, dark ocean gradients, glass panels, glowing
+          accents, and layered movement for a premium underwater feel.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <h2>Animated Ocean Depth</h2>
+
+        <p>
+          Floating bubbles, drifting fish, mouse movement, and lighting effects
+          create a living underwater scene without making the layout feel crowded.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <h2>Ready to Sell</h2>
+
+        <p>
+          Includes multiple pages, booking layout, pricing cards, gallery,
+          testimonials, wildlife sections, mobile styling, and reusable components.
+        </p>
+      </article>
+    </section>
+
+    <section class="template-proof-band">
+      <article class="proof-card">
+        <strong>8 Core Pages</strong>
+        <p>Homepage, about, wildlife, gallery, booking, contact, pricing, and FAQ content are all included and cross-linked.</p>
+      </article>
+
+      <article class="proof-card">
+        <strong>Support Pages</strong>
+        <p>Includes a thank-you flow, a polished 404 page, and a style guide page to help buyers customize faster.</p>
+      </article>
+
+      <article class="proof-card">
+        <strong>Launch Utilities</strong>
+        <p>Manifest, sitemap, robots file, seller docs, and marketplace-friendly setup guidance are ready to hand off.</p>
+      </article>
+
+      <article class="proof-card">
+        <strong>Premium Motion</strong>
+        <p>Layered particles, floating fish, gallery filtering, and cinematic transitions increase perceived production value.</p>
+      </article>
+    </section>
+
+    <section class="section-header">
+      <p class="eyebrow">Included Pages</p>
+
+      <h2>A complete buyer-ready page set.</h2>
+
+      <p>
+        Buyers can preview the structure quickly, understand what is included,
+        and jump straight to the page they want to customize first.
+      </p>
+    </section>
+
+    <section class="page-directory-grid">
+      <article class="page-directory-card">
+        <span>Landing</span>
+        <h3>Homepage</h3>
+        <p>Hero, featured experiences, proof sections, testimonials, and clear conversion paths.</p>
+        <a href="index.html">Preview page</a>
+      </article>
+
+      <article class="page-directory-card">
+        <span>Brand Story</span>
+        <h3>About</h3>
+        <p>Mission, process, trust-building content, and a premium team-led narrative layout.</p>
+        <a href="about.html">Preview page</a>
+      </article>
+
+      <article class="page-directory-card">
+        <span>Content</span>
+        <h3>Wildlife</h3>
+        <p>Educational species cards, conservation messaging, and high-value niche storytelling.</p>
+        <a href="wildlife.html">Preview page</a>
+      </article>
+
+      <article class="page-directory-card">
+        <span>Visuals</span>
+        <h3>Gallery</h3>
+        <p>Filterable gallery cards plus a lightbox-ready image preview experience for richer demos.</p>
+        <a href="gallery.html">Preview page</a>
+      </article>
+
+      <article class="page-directory-card">
+        <span>Conversion</span>
+        <h3>Booking</h3>
+        <p>Package pricing, reservation form, and a guided path from interest to inquiry.</p>
+        <a href="booking.html#dive-packages">Preview page</a>
+      </article>
+
+      <article class="page-directory-card">
+        <span>Support</span>
+        <h3>Contact</h3>
+        <p>Quick contact methods, inquiry form, visitor details, and support-oriented content blocks.</p>
+        <a href="contact.html">Preview page</a>
+      </article>
+
+      <article class="page-directory-card">
+        <span>Commerce</span>
+        <h3>Pricing</h3>
+        <p>Tiered packages, add-ons, and a comparison table for faster buyer evaluation.</p>
+        <a href="pricing.html">Preview page</a>
+      </article>
+
+      <article class="page-directory-card">
+        <span>Help Center</span>
+        <h3>FAQ</h3>
+        <p>Expandable answers that make the template feel complete and reduce uncertainty before booking.</p>
+        <a href="faq.html">Preview page</a>
+      </article>
+
+      <article class="page-directory-card">
+        <span>Buyer Bonus</span>
+        <h3>Style Guide</h3>
+        <p>A dedicated component reference page so buyers can scan buttons, cards, forms, and page patterns faster.</p>
+        <a href="style-guide.html">Preview page</a>
+      </article>
+    </section>
+
+    <!-- CONSERVATION SPLIT -->
+    <section class="split-section premium-split">
+      <div>
+        <p class="eyebrow">Ocean Conservation</p>
+
+        <h2>Designed for beauty, education, and action.</h2>
+
+        <p>
+          Abyssal Blue can be used for scuba companies, aquariums, marine parks,
+          eco-tourism brands, research centers, resorts, and conservation organizations.
+          The design gives buyers a polished website they can customize quickly.
+        </p>
+
+        <div class="mini-feature-list">
+          <span>Marine education pages</span>
+          <span>Wildlife showcase cards</span>
+          <span>Booking-ready layout</span>
+          <span>Premium glass UI</span>
+        </div>
+      </div>
+
+      <img src="images/coral-placeholder.jpg" alt="Colorful coral reef underwater">
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="section-header">
+      <p class="eyebrow">Expert Team</p>
+
+      <h2>Meet the Ocean Guides.</h2>
+
+      <p>
+        Buyers trust templates more when the design includes people, roles, and
+        credibility sections.
+      </p>
+    </section>
+
+    <section class="team-grid">
+      <article class="team-card">
+        <div class="team-avatar">AM</div>
+        <h3>Ava Morgan</h3>
+        <p>Lead Dive Instructor</p>
+        <span>10+ years of guided dive experience</span>
+      </article>
+
+      <article class="team-card">
+        <div class="team-avatar">LC</div>
+        <h3>Liam Carter</h3>
+        <p>Marine Wildlife Specialist</p>
+        <span>Focuses on reef safety and education</span>
+      </article>
+
+      <article class="team-card">
+        <div class="team-avatar">SR</div>
+        <h3>Sofia Rivera</h3>
+        <p>Conservation Director</p>
+        <span>Leads eco-tourism and reef protection programs</span>
+      </article>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="testimonial-header">
+        <p class="eyebrow">Guest Reviews</p>
+        <h2>What Visitors Are Saying</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <div class="stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+          <p>
+            The most incredible underwater experience I've ever had. The reef,
+            the guides, and the photos were all unforgettable.
+          </p>
+
+          <strong>Sarah Mitchell</strong>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+          <p>
+            Beautiful reefs, amazing staff, and a smooth booking experience from
+            start to finish.
+          </p>
+
+          <strong>James Carter</strong>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars" aria-label="Five star review">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+          <p>
+            The shipwreck tour was the highlight of our vacation. This felt like
+            a luxury ocean adventure.
+          </p>
+
+          <strong>Emily Rodriguez</strong>
+        </article>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-band home-final-cta">
+      <p class="eyebrow">Ready to Launch?</p>
+
+      <h2>A premium ocean website template built to impress buyers.</h2>
+
+      <p>
+        Use this homepage for dive tours, aquariums, resorts, marine parks,
+        conservation brands, and underwater adventure businesses.
+      </p>
+
+      <a href="booking.html#dive-packages" class="btn primary-btn">Start Booking</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-simple">
+
+      <a href="index.html" class="footer-logo" aria-label="Abyssal Blue Home">
+        <span class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="footerOceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7cf7ff"/>
+                <stop offset="50%" stop-color="#00ffd5"/>
+                <stop offset="100%" stop-color="#087f9e"/>
+              </linearGradient>
+            </defs>
+
+            <circle cx="32" cy="32" r="23" fill="none" stroke="url(#footerOceanLogo)" stroke-width="5"/>
+            <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#footerOceanLogo)"/>
+            <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+            <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+          </svg>
+        </span>
+
+        <span class="logo-text">Abyssal Blue</span>
+      </a>
+
+      <p>
+        Premium underwater website template designed for aquariums,
+        dive tours, resorts, marine parks, and ocean adventure brands.
+      </p>
+
+      <div class="footer-bottom">
+        &copy; 2026 Abyssal Blue. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="booking.html#dive-packages" class="floating-book-btn" aria-label="Book a dive package">
+    Book Dive
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

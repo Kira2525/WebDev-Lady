@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">VelvetUI mark</title>
+  <desc id="desc">Diamond logo mark for VelvetUI Pro.</desc>
+  <defs>
+    <linearGradient id="diamond" x1="10%" y1="8%" x2="88%" y2="92%">
+      <stop offset="0%" stop-color="#fff5fb" />
+      <stop offset="42%" stop-color="#ffc6de" />
+      <stop offset="100%" stop-color="#ff4d94" />
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#ff4d94" flood-opacity="0.45" />
+    </filter>
+  </defs>
+  <rect width="96" height="96" rx="24" fill="#12061a" />
+  <path d="M48 12 84 48 48 84 12 48Z" fill="url(#diamond)" filter="url(#glow)" />
+</svg>

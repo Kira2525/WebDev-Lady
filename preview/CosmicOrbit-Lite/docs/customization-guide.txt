@@ -1,0 +1,109 @@
+COSMICORBIT LITE CUSTOMIZATION GUIDE
+
+BRAND NAME
+
+Open `index.html` and update the text:
+
+CosmicOrbit Lite
+
+Replace it with your own product or company name if desired.
+
+COLORS AND VISUAL TOKENS
+
+Open:
+
+`css/style.css`
+
+Edit the variables inside `:root` to change:
+
+- Background colors
+- Accent colors
+- Border colors
+- Text colors
+- Radius and shadow values
+
+TYPOGRAPHY
+
+The template uses Space Grotesk from Google Fonts.
+
+If you want to self-host or switch fonts:
+
+1. Update the font links in `index.html`.
+2. Update `--font-body` in `css/style.css`.
+
+TEXT CONTENT
+
+All text content is directly editable in:
+
+`index.html`
+
+Recommended sections to update first:
+
+- Hero
+- Features
+- Pricing
+- Contact
+
+NAVIGATION
+
+CosmicOrbit Lite uses one-page anchor navigation.
+
+Current section links:
+
+- `#hero`
+- `#features`
+- `#preview`
+- `#pricing`
+- `#contact`
+
+Update the section IDs and links together if you rename sections.
+
+CONTACT FORM
+
+The form in `index.html` uses demo behavior from:
+
+`js/main.js`
+
+Current behavior:
+
+- Prevents real submission
+- Shows a success message
+- Resets the form
+
+Connect it to a real endpoint before launch.
+
+THREE.JS BACKGROUND
+
+The animated space scene is controlled by:
+
+`js/space-scene.js`
+
+You can customize:
+
+- Planet placement
+- Light colors
+- Star density
+- Motion intensity
+- Mobile behavior
+
+RESPONSIVE DESIGN
+
+Desktop styles:
+
+`css/style.css`
+
+Tablet overrides:
+
+`css/tablet.css`
+
+Mobile overrides:
+
+`css/mobile.css`
+
+SCREENSHOTS AND PREVIEWS
+
+Included preview images are stored in:
+
+`assets/images/`
+
+Replace them with your own screenshots if you create a branded version.

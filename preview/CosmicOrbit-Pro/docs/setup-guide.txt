@@ -1,0 +1,59 @@
+COSMICORBIT PRO SETUP GUIDE
+
+GETTING STARTED
+
+1. Download and extract the template ZIP.
+2. Open the project folder in your code editor.
+3. Run the site through a local server such as VS Code Live Server.
+4. Open `index.html` in your browser.
+
+REQUIREMENTS
+
+- Modern browser
+- Code editor such as Visual Studio Code
+- Local server for previewing pages during editing
+
+No backend is required.
+No database is required.
+No package installation is required.
+
+FILES YOU WILL EDIT MOST OFTEN
+
+HTML
+
+- `index.html`
+- `about.html`
+- `pricing.html`
+- `contact.html`
+- `login.html`
+- `dashboard.html`
+- `coming-soon.html`
+- `404.html`
+
+CSS
+
+- `css/style.css`
+- `css/tablet.css`
+- `css/mobile.css`
+
+JAVASCRIPT
+
+- `js/main.js`
+- `js/space-scene.js`
+
+ASSETS
+
+- Preview images are in `assets/images/`
+- Favicon files are in `assets/`
+
+DEPENDENCY NOTES
+
+- The Three.js scene is loaded from jsDelivr through the import map in each HTML page.
+- The font is loaded from Google Fonts.
+- If you want fully self-hosted assets, download those dependencies and update the links.
+
+IMPORTANT
+
+- The login page and dashboard page are demo interfaces only.
+- The contact form is a demo interaction and should be connected to your preferred form service.
+- The checkout flow currently routes to `coming-soon.html`, which acts as a polished cart placeholder.

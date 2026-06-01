@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact Web Dev Lady | Website Templates and Custom Website Help</title>
+
+  <meta
+    name="description"
+    content="Contact Web Dev Lady for website templates, template customization, custom builds, launch questions, and website support."
+  />
+  <meta
+    name="keywords"
+    content="contact Web Dev Lady, website templates support, custom website help, template customization contact"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Web Dev Lady" />
+
+  <link rel="canonical" href="https://webdevlady.netlify.app/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact Web Dev Lady | Website Templates and Custom Website Help" />
+  <meta
+    property="og:description"
+    content="Contact Web Dev Lady for website templates, template customization, custom builds, launch questions, and website support."
+  />
+  <meta property="og:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
+  <meta property="og:url" content="https://webdevlady.netlify.app/contact.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Web Dev Lady | Website Templates and Custom Website Help" />
+  <meta
+    name="twitter:description"
+    content="Contact Web Dev Lady for website templates, template customization, custom builds, launch questions, and website support."
+  />
+  <meta name="twitter:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Web Dev Lady",
+      "url": "https://webdevlady.netlify.app",
+      "logo": "https://webdevlady.netlify.app/images/webdevlady-logo.png"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Web Dev Lady",
+      "url": "https://webdevlady.netlify.app"
+    }
+  </script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body>
+  <canvas id="pinkCanvas"></canvas>
+  <div class="bg-overlay"></div>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="images/webdevlady-logo.png" alt="Web Dev Lady Logo">
+      <span>WEB DEV <strong>LADY</strong></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="templates.html">Templates</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" class="active">Contact</a>
+
+      <a href="cart.html" class="cart-icon-link" aria-label="Shopping Cart">
+        🛒
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="tagline">CONTACT WEB DEV LADY</p>
+
+        <h1>Tell me what you need built.</h1>
+
+        <p class="hero-text">
+          Request template customization, ask a question, get website help, or
+          start a custom website project.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#project-form" class="btn primary">Start Request</a>
+          <a href="templates.html" class="btn secondary">Browse Templates</a>
+        </div>
+      </div>
+
+      <div class="hero-logo-card">
+        <img
+          src="images/webdevlady.png"
+          alt="Web Dev Lady Digital Website Studio"
+        />
+      </div>
+    </section>
+
+    <section class="section" id="project-form">
+      <p class="section-tag">PROJECT REQUEST</p>
+      <h2>Send your request.</h2>
+
+      <div class="contact-request-card">
+        <div class="contact-form-layout">
+
+  <form
+  id="contactForm"
+  class="contact-form"
+  name="project-request"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="thank-you.html"
+>
+
+  <input
+    type="hidden"
+    name="form-name"
+    value="project-request"
+  />
+
+  <p class="hidden">
+    <label>
+      Don't fill this out if you're human:
+      <input name="bot-field" />
+    </label>
+  </p>
+
+  <div class="form-row">
+    <label class="sr-only" for="contact-name">Full name</label>
+    <input
+      id="contact-name"
+      type="text"
+      name="name"
+      placeholder="Full Name"
+      autocomplete="name"
+      required
+    />
+
+    <label class="sr-only" for="contact-email">Email address</label>
+    <input
+      id="contact-email"
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      autocomplete="email"
+      required
+    />
+  </div>
+
+  <div class="form-row">
+    <label class="sr-only" for="contact-business">Business name or website name</label>
+    <input
+      id="contact-business"
+      type="text"
+      name="business"
+      placeholder="Business Name or Website Name"
+      autocomplete="organization"
+    />
+
+    <label class="sr-only" for="contact-website">Current website link</label>
+    <input
+      id="contact-website"
+      type="url"
+      name="website"
+      placeholder="Current Website Link, if you have one"
+      autocomplete="url"
+    />
+  </div>
+
+  <div class="form-row">
+    <label class="sr-only" for="request-type">What can I help with?</label>
+    <select id="request-type" name="requestType" required>
+      <option value="">What can I help with?</option>
+      <option value="purchase-template">Purchase a Template</option>
+      <option value="template-customization">Template Customization</option>
+      <option value="custom-website-build">Custom Website Build</option>
+      <option value="website-redesign">Website Redesign</option>
+      <option value="website-help">Website Support / Help</option>
+      <option value="bug-fixes">Bug Fixes</option>
+      <option value="pricing-question">Pricing Question</option>
+      <option value="general-question">General Question</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label class="sr-only" for="template-name">Template name</label>
+    <select id="template-name" name="templateName">
+      <option value="">Template Name, if applicable</option>
+      <option value="CosmicOrbit Lite">CosmicOrbit Lite</option>
+      <option value="CosmicOrbit Pro">CosmicOrbit Pro</option>
+      <option value="Abyssal Blue Pro">Abyssal Blue Pro</option>
+      <option value="Not Sure Yet">Not Sure Yet</option>
+      <option value="Not Template Related">Not Template Related</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label class="sr-only" for="project-budget">Budget range</label>
+    <select id="project-budget" name="budget">
+      <option value="">Budget Range</option>
+      <option>$59-$250</option>
+      <option>$250-$500</option>
+      <option>$500-$1,000</option>
+      <option>$1,000+</option>
+    </select>
+
+    <label class="sr-only" for="project-timeline">Timeline</label>
+    <select id="project-timeline" name="timeline">
+      <option value="">Timeline</option>
+      <option>ASAP</option>
+      <option>1-2 Weeks</option>
+      <option>1 Month</option>
+      <option>Flexible</option>
+    </select>
+  </div>
+
+  <div class="form-customizations">
+    <p>Choose any customizations you need</p>
+
+    <div class="customization-pills">
+
+      <label class="pill-option">
+        <input type="checkbox" name="customizations[]" value="Add Logo">
+        <span>Add Logo</span>
+      </label>
+
+      <label class="pill-option">
+        <input type="checkbox" name="customizations[]" value="Change Colors">
+        <span>Change Colors</span>
+      </label>
+
+      <label class="pill-option">
+        <input type="checkbox" name="customizations[]" value="Rewrite Text">
+        <span>Rewrite Text</span>
+      </label>
+
+      <label class="pill-option">
+        <input type="checkbox" name="customizations[]" value="Replace Images">
+        <span>Replace Images</span>
+      </label>
+
+      <label class="pill-option">
+        <input type="checkbox" name="customizations[]" value="Add Extra Pages">
+        <span>Add Extra Pages</span>
+      </label>
+
+      <label class="pill-option">
+        <input type="checkbox" name="customizations[]" value="SEO Setup">
+        <span>SEO Setup</span>
+      </label>
+
+      <label class="pill-option">
+        <input type="checkbox" name="customizations[]" value="Custom Favicon">
+        <span>Custom Favicon</span>
+      </label>
+
+      <label class="pill-option">
+        <input type="checkbox" name="customizations[]" value="Contact Form">
+        <span>Contact Form</span>
+      </label>
+
+      <label class="pill-option">
+        <input type="checkbox" name="customizations[]" value="Social Media Links">
+        <span>Social Media Links</span>
+      </label>
+
+      <label class="pill-option">
+        <input type="checkbox" name="customizations[]" value="Not Sure Yet">
+        <span>Not Sure Yet</span>
+      </label>
+
+    </div>
+  </div>
+
+  <label class="sr-only" for="project-message">Project details</label>
+  <textarea
+    id="project-message"
+    name="message"
+    rows="7"
+    placeholder="Tell me what you need. Include your template name, colors, business type, questions, issues, pages, or customization details..."
+    required
+  ></textarea>
+
+  <p class="form-note">
+    No obligation. Send the request and I'll point you toward the best option.
+  </p>
+
+  <button type="submit" class="btn primary contact-submit">
+    Request Project Review
+  </button>
+
+</form>
+
+          <aside class="contact-side-card">
+            <p class="tagline">GOOD TO KNOW</p>
+
+            <h3>Need help deciding?</h3>
+
+            <p>
+              Pick the closest option and explain what you need. I’ll help you
+              decide whether a template, customization, or custom build makes
+              the most sense.
+            </p>
+
+            <ul class="feature-list">
+              <li>24–48h response time</li>
+              <li>Template customization starts at $249</li>
+              <li>Custom websites start at $1,200+</li>
+              <li>Questions are welcome</li>
+              <li>No pressure to book</li>
+            </ul>
+
+            <a href="pricing.html" class="btn secondary">
+              View Pricing
+            </a>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-tag">AFTER YOU SUBMIT</p>
+      <h2>Here’s what happens next.</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <span>01</span>
+          <h3>I review your request</h3>
+          <p>I look over your project type, budget, timeline, and details.</p>
+        </article>
+
+        <article class="card">
+          <span>02</span>
+          <h3>You get clear options</h3>
+          <p>I’ll let you know whether a template, customization, or custom build makes the most sense.</p>
+        </article>
+
+        <article class="card">
+          <span>03</span>
+          <h3>You decide what to do</h3>
+          <p>You’ll get next steps or a quote before any work begins.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <p class="section-tag">NOT SURE YET?</p>
+
+      <h2>Start by browsing the templates.</h2>
+
+      <p>
+        Choose a template first, then request customization if you want it changed for your brand.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="templates.html" class="btn primary">Browse Templates</a>
+        <a href="pricing.html" class="btn secondary">View Pricing</a>
+      </div>
+    </section>
+  </main>
+
+ <footer>
+
+  <div class="footer-content">
+
+    <div class="footer-brand">
+      <img
+        src="images/webdevlady-logo.png"
+        alt="Web Dev Lady Logo"
+        class="footer-logo"
+      >
+
+      <h3>WEB DEV LADY</h3>
+
+      <p>
+        Premium website templates, custom website builds,
+        and website customization services.
+      </p>
+    </div>
+
+    <div class="footer-links">
+
+      <h4>Navigation</h4>
+
+        <a href="index.html">Home</a>
+        <a href="templates.html">Templates</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+    <div class="footer-links">
+
+      <h4>Services</h4>
+
+      <a href="templates.html">Website Templates</a>
+      <a href="pricing.html#template-customization">Template Customization</a>
+      <a href="pricing.html#custom-website-builds">Custom Website Builds</a>
+      <a href="contact.html#project-form">Website Support</a>
+
+    </div>
+
+    <div class="footer-links">
+
+      <h4>Follow</h4>
+
+      <a
+  href="https://www.tiktok.com/@webdevlady"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  TikTok (@webdevlady)
+</a>
+
+      <a href="mailto:webdevlady26@gmail.com">
+        Email
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 Web Dev Lady. Digital Website Studio.
+      All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

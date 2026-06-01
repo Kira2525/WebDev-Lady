@@ -1,0 +1,46 @@
+COSMICORBIT LITE SETUP GUIDE
+
+GETTING STARTED
+
+1. Download and extract the template ZIP.
+2. Open the project folder in your code editor.
+3. Run the site through a local server such as VS Code Live Server.
+4. Open `index.html` in your browser.
+
+REQUIREMENTS
+
+- Modern browser
+- Code editor such as Visual Studio Code
+- Local server for previewing changes during editing
+
+No backend is required.
+No database is required.
+No package installation is required.
+
+FILES INCLUDED
+
+HTML
+
+- `index.html`
+
+CSS
+
+- `css/style.css`
+- `css/tablet.css`
+- `css/mobile.css`
+
+JAVASCRIPT
+
+- `js/main.js`
+- `js/space-scene.js`
+
+ASSETS
+
+- Favicon files in `assets/`
+- Preview images in `assets/images/`
+
+IMPORTANT
+
+- CosmicOrbit Lite is a single-page template.
+- The contact form is a demo interaction and should be connected to your preferred form service.
+- The animated Three.js background loads from the import map included in `index.html`.

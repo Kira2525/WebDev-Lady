@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Download Your Template | Web Dev Lady</title>
+  <meta
+    name="description"
+    content="Your Web Dev Lady Pro template download is ready."
+  />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body class="success-page">
+  <canvas id="pinkCanvas"></canvas>
+  <div class="bg-overlay"></div>
+
+  <main class="success-main">
+    <section class="success-card">
+
+      <p class="eyebrow">Purchase Complete</p>
+
+      <h1>Download Ready</h1>
+
+      <p>
+        Your Pro template is ready to download. Click the button below to get your ZIP file.
+      </p>
+
+      <div class="download-box">
+        <h2 id="productName">Loading your template...</h2>
+
+        <p id="productDescription">
+          Please wait while we prepare your download.
+        </p>
+
+        <a id="downloadBtn" class="btn primary download-btn" href="#" download>
+          Download Template
+        </a>
+      </div>
+
+      <p class="small-note">
+        Save your ZIP file somewhere safe. Your Pro download includes 8 pages,
+        responsive CSS, JavaScript, images, premium animations, commercial use license,
+        and README documentation.
+      </p>
+
+      <a class="home-link" href="templates.html">
+        ← Back to Templates
+      </a>
+
+    </section>
+  </main>
+
+  <footer class="simple-footer">
+    <p>
+      © 2026 Web Dev Lady. Digital Website Studio.
+      All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    const templates = {
+      "cosmicorbit-pro": {
+        name: "CosmicOrbit Pro",
+        description: "8-page cosmic-inspired website template with responsive design, premium animations, clean code, and commercial use license.",
+        file: "downloads/CosmicOrbit-Pro.zip"
+      },
+
+      "abyssalblue-pro": {
+        name: "Abyssal Blue Pro",
+        description: "8-page ocean-inspired website template with underwater visuals, responsive design, premium animations, and commercial use license.",
+        file: "downloads/AbyssalBlue-Pro.zip"
+      },
+
+      "velvetui-pro": {
+        name: "VelvetUI Pro",
+        description: "Multi-page premium glassmorphism website template with polished layouts, animated sections, clean code, and commercial use license.",
+        file: "downloads/VelvetUI-Pro.zip"
+      },
+
+      "worldview-pro": {
+        name: "WorldView Pro",
+        description: "Multi-page premium global business website template with polished responsive layouts, advanced sections, animations, and commercial use license.",
+        file: "downloads/WorldView-Pro.zip"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get("product");
+
+    const productName = document.getElementById("productName");
+    const productDescription = document.getElementById("productDescription");
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    if (product && templates[product]) {
+      productName.textContent = templates[product].name;
+      productDescription.textContent = templates[product].description;
+      downloadBtn.href = templates[product].file;
+      downloadBtn.textContent = "Download " + templates[product].name;
+    } else {
+      productName.textContent = "Template Not Found";
+      productDescription.textContent = "This download link is missing or incorrect. Please contact Web Dev Lady for help.";
+      downloadBtn.style.display = "none";
+    }
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>

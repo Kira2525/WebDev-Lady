@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">VelvetUI favicon</title>
+  <desc id="desc">Diamond brand mark for VelvetUI Pro.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12061a" />
+      <stop offset="55%" stop-color="#1f0d29" />
+      <stop offset="100%" stop-color="#0d0514" />
+    </linearGradient>
+    <linearGradient id="diamond" x1="12%" y1="10%" x2="88%" y2="92%">
+      <stop offset="0%" stop-color="#fff5fb" />
+      <stop offset="45%" stop-color="#ffc2dd" />
+      <stop offset="100%" stop-color="#ff4d94" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)" />
+  <g filter="url(#glow)">
+    <path d="M32 10 50 32 32 54 14 32Z" fill="url(#diamond)" />
+  </g>
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#ff4d94" flood-opacity="0.55" />
+    </filter>
+  </defs>
+</svg>

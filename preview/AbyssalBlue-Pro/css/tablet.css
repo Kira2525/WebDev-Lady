@@ -1,0 +1,154 @@
+/* =========================================================
+   ABYSSAL BLUE - TABLET STYLES
+   Load this AFTER styles.css and BEFORE mobile.css
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+  /* HEADER */
+
+  .site-header {
+    padding: 20px 6%;
+  }
+
+  .logo-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .logo-icon svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .nav-menu {
+    gap: 16px;
+  }
+
+  .nav-menu a {
+    font-size: 0.92rem;
+  }
+
+
+  /* GLOBAL */
+
+  .glass-card {
+    padding: 38px;
+  }
+
+  .section-header {
+    margin: 90px auto 45px;
+  }
+
+
+  /* HERO */
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-slider {
+    height: 500px;
+  }
+
+
+  /* MAIN GRIDS */
+
+  .feature-grid,
+  .about-features,
+  .process-section,
+  .team-grid,
+  .contact-quick-grid,
+  .experience-grid,
+  .pricing-section,
+  .pricing-page-grid,
+  .testimonial-grid,
+  .add-on-grid,
+  .template-proof-band,
+  .page-directory-grid,
+  .style-guide-showcase {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-wrapper,
+  .contact-wrapper,
+  .split-section,
+  .about-story,
+  .wildlife-grid,
+  .info-band {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* GALLERY */
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-card.wide {
+    grid-column: span 1;
+  }
+
+
+  /* FORMS */
+
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  /* PRICING */
+
+  .pricing-page-card.popular,
+  .pricing-card.featured,
+  .featured {
+    transform: none;
+  }
+
+
+  /* COMPARISON TABLE */
+
+  .compare-row {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  }
+
+
+  /* FOOTER */
+
+  .site-footer {
+    margin-bottom: 35px;
+  }
+
+  .footer-simple {
+    padding: 40px;
+  }
+
+  .footer-logo .logo-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .footer-logo .logo-icon svg {
+    width: 58px;
+    height: 58px;
+  }
+
+  .footer-logo .logo-text {
+    font-size: 1.65rem;
+  }
+
+}

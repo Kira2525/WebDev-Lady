@@ -1,0 +1,334 @@
+/* =========================================================
+   ABYSSAL BLUE - MOBILE STYLES
+   Load this AFTER styles.css
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* =========================================================
+     HEADER
+  ========================================================= */
+
+  .site-header {
+    padding: 16px 6%;
+  }
+
+  .logo-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .logo-icon svg {
+    width: 46px;
+    height: 46px;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    position: absolute;
+    top: 76px;
+    left: 6%;
+    right: 6%;
+
+    flex-direction: column;
+    gap: 18px;
+
+    padding: 24px;
+
+    border-radius: 24px;
+
+    background: rgba(0, 18, 30, 0.95);
+
+    border: 1px solid var(--glass-border);
+
+    backdrop-filter: blur(22px);
+
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* =========================================================
+     GLOBAL
+  ========================================================= */
+
+  .glass-card {
+    padding: 28px;
+  }
+
+  .section-header {
+    margin: 75px auto 35px;
+  }
+
+  .section-header h2,
+  .page-hero h1,
+  .hero-content h1 {
+    font-size: 2.7rem;
+    letter-spacing: -1px;
+  }
+
+  .page-hero {
+    margin: 70px auto 45px;
+  }
+
+  /* =========================================================
+     HERO
+  ========================================================= */
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    margin: 55px auto;
+    gap: 32px;
+  }
+
+  .hero-slider {
+    height: 360px;
+  }
+
+  .hero-buttons,
+  .center-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-trust-row {
+    flex-direction: column;
+  }
+
+  /* =========================================================
+     GRIDS
+  ========================================================= */
+
+  .stats-section,
+  .feature-grid,
+  .about-features,
+  .process-section,
+  .team-grid,
+  .contact-quick-grid,
+  .experience-grid,
+  .pricing-section,
+  .pricing-page-grid,
+  .testimonial-grid,
+  .add-on-grid,
+  .template-proof-band,
+  .page-directory-grid,
+  .style-guide-showcase,
+  .wildlife-grid,
+  .booking-wrapper,
+  .contact-wrapper,
+  .split-section,
+  .about-story {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-strip {
+    grid-template-columns: 1fr;
+    padding: 28px;
+  }
+
+  .form-row,
+  .contact-detail-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* =========================================================
+     CARDS
+  ========================================================= */
+
+  .feature-card,
+  .about-feature-card,
+  .process-card,
+  .add-on-card,
+  .team-card,
+  .contact-quick-card,
+  .pricing-card,
+  .pricing-page-card,
+  .booking-info,
+  .booking-form,
+  .contact-info,
+  .contact-form {
+    padding: 28px;
+  }
+
+  .pricing-page-card.popular,
+  .pricing-card.featured,
+  .featured {
+    transform: none;
+  }
+
+  /* =========================================================
+     GALLERY
+  ========================================================= */
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 310px;
+  }
+
+  .gallery-lightbox {
+    padding: 16px;
+  }
+
+  .gallery-lightbox-content {
+    padding: 22px;
+  }
+
+  .gallery-card.tall,
+  .gallery-card.wide {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  .gallery-filter-bar {
+    justify-content: flex-start;
+  }
+
+  /* =========================================================
+     INFO + CTA
+  ========================================================= */
+
+  .info-band {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .cta-band,
+  .about-banner {
+    padding: 35px 25px;
+  }
+
+  .compare-row {
+    grid-template-columns: 1fr;
+    margin-bottom: 14px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .compare-row span:not(:last-child) {
+    border-right: none;
+  }
+
+  .compare-head {
+    display: none;
+  }
+
+  .compare-row span:first-child {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.08);
+    font-weight: 900;
+  }
+
+  /* =========================================================
+     FOOTER
+  ========================================================= */
+
+  .site-footer {
+    margin: 80px auto 30px;
+  }
+
+  .footer-simple {
+    padding: 30px;
+  }
+
+  .footer-logo .logo-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .footer-logo .logo-icon svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .footer-logo .logo-text {
+    font-size: 1.35rem;
+  }
+
+  /* =========================================================
+     FLOATING BUTTON
+  ========================================================= */
+
+  .floating-book-btn {
+    right: 16px;
+    bottom: 16px;
+
+    padding: 14px 20px;
+
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   BOOKING FORM IMPROVEMENTS
+========================= */
+
+.booking-form select,
+.booking-form input,
+.booking-form textarea {
+  color: #ffffff;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.03)
+    );
+}
+
+/* Fix dropdown menu colors */
+
+.booking-form select option {
+  background: #02111c;
+  color: #ffffff;
+}
+
+/* Focus glow */
+
+.booking-form input:focus,
+.booking-form textarea:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: #39f4ff;
+  box-shadow:
+    0 0 0 1px #39f4ff,
+    0 0 25px rgba(57,244,255,.35);
+}
+
+/* Better button */
+
+.booking-form .primary-btn {
+  transition: .35s ease;
+}
+
+.booking-form .primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 30px rgba(57,244,255,.45),
+    0 10px 30px rgba(0,0,0,.35);
+}
+
+/* Form card hover */
+
+.premium-booking-form {
+  transition: .4s ease;
+}
+
+.premium-booking-form:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.35),
+    0 0 40px rgba(57,244,255,.08);
+}

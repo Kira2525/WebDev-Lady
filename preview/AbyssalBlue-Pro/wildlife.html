@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Wildlife | Abyssal Blue</title>
+
+  <meta
+    name="description"
+    content="Explore marine wildlife with Abyssal Blue, including sharks, sea turtles, coral reefs, guided dives, ocean education, and conservation experiences."
+  />
+  <meta name="theme-color" content="#02111c" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/wildlife.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wildlife | Abyssal Blue" />
+  <meta property="og:description" content="Explore marine wildlife with Abyssal Blue, including sharks, sea turtles, coral reefs, guided dives, ocean education, and conservation experiences." />
+  <meta property="og:url" content="https://example.com/wildlife.html" />
+  <meta property="og:image" content="https://example.com/images/hero-shark.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="images/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <!-- PREMIUM ANIMATED BACKGROUND -->
+  <div class="ocean-scene" id="oceanScene">
+    <canvas id="oceanCanvas"></canvas>
+
+    <img src="images/coral-placeholder.jpg" class="coral-bg" alt="">
+    <div class="ocean-tint"></div>
+    <div class="light-rays"></div>
+    <div class="depth-fog"></div>
+    <div class="bubble-layer" id="bubbleLayer"></div>
+    <div class="fish-layer" id="fishLayer"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Abyssal Blue Home">
+      <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="oceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7cf7ff"/>
+            <stop offset="50%" stop-color="#00ffd5"/>
+            <stop offset="100%" stop-color="#087f9e"/>
+          </linearGradient>
+        </defs>
+
+        <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo)" stroke-width="5"/>
+        <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo)"/>
+        <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+        <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+      </svg>
+
+      <span>Abyssal Blue</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="wildlife.html" class="active">Wildlife</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book Dive</a>
+      <a href="contact.html">Contact</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <p class="eyebrow">Marine Wildlife</p>
+
+      <h1>Meet the Life Below the Surface.</h1>
+
+      <p>
+        Explore sharks, turtles, coral reefs, shipwreck habitats, tropical fish,
+        and guided underwater experiences designed for ocean lovers, families,
+        divers, and conservation-focused travelers.
+      </p>
+    </section>
+
+    <!-- WILDLIFE QUICK STATS -->
+    <section class="stats-section">
+      <div class="stat-card">
+        <h2>50+</h2>
+        <p>Marine Species</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>12</h2>
+        <p>Reef Zones</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>4</h2>
+        <p>Dive Experiences</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>100%</h2>
+        <p>Eco Focused</p>
+      </div>
+    </section>
+
+    <!-- WILDLIFE CARDS -->
+    <section class="wildlife-grid premium-wildlife-grid">
+
+      <article class="wildlife-card">
+        <img src="images/hero-shark.jpg" alt="Reef shark swimming underwater" />
+
+        <div class="wildlife-content">
+          <span>Predator</span>
+          <h2>Reef Sharks</h2>
+
+          <p>
+            Powerful, graceful, and essential to healthy ocean ecosystems. Reef sharks
+            bring drama, movement, and excitement to every underwater encounter.
+          </p>
+
+          <ul class="wildlife-facts">
+            <li>Best for advanced dive tours</li>
+            <li>Strong conservation storytelling</li>
+            <li>Creates high-impact underwater visuals</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="wildlife-card">
+        <img src="images/turtle-placeholder.jpg" alt="Sea turtle swimming underwater" />
+
+        <div class="wildlife-content">
+          <span>Gentle Giant</span>
+          <h2>Sea Turtles</h2>
+
+          <p>
+            Calm, peaceful, and unforgettable. Sea turtles are perfect for family-friendly
+            tours, conservation education, and relaxed reef experiences.
+          </p>
+
+          <ul class="wildlife-facts">
+            <li>Great for family-friendly content</li>
+            <li>Works well for conservation messaging</li>
+            <li>Perfect for eco-tourism experiences</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="wildlife-card">
+        <img src="images/coral-placeholder.jpg" alt="Colorful coral reef underwater" />
+
+        <div class="wildlife-content">
+          <span>Living Reef</span>
+          <h2>Coral Systems</h2>
+
+          <p>
+            Bright coral reefs support thousands of marine species and create the
+            colorful underwater landscapes visitors remember long after the dive.
+          </p>
+
+          <ul class="wildlife-facts">
+            <li>Excellent for education sections</li>
+            <li>Supports reef protection messaging</li>
+            <li>Adds natural color and visual texture</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="wildlife-card">
+        <img src="images/diver-placeholder.jpg" alt="Scuba diver exploring underwater wildlife" />
+
+        <div class="wildlife-content">
+          <span>Experience</span>
+          <h2>Guided Dives</h2>
+
+          <p>
+            Guided dives connect visitors with marine life safely while giving them
+            a deeper understanding of the ocean, reef habitats, and wildlife behavior.
+          </p>
+
+          <ul class="wildlife-facts">
+            <li>Connects wildlife to bookings</li>
+            <li>Useful for tour companies</li>
+            <li>Builds trust with real experience imagery</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="wildlife-card">
+        <img src="images/shipwreck-placeholder.jpg" alt="Shipwreck habitat underwater" />
+
+        <div class="wildlife-content">
+          <span>Hidden Habitat</span>
+          <h2>Shipwreck Ecosystems</h2>
+
+          <p>
+            Shipwrecks create cinematic underwater scenes and often become artificial
+            reefs where coral, fish, and marine life gather.
+          </p>
+
+          <ul class="wildlife-facts">
+            <li>Great for adventure storytelling</li>
+            <li>Works for premium dive routes</li>
+            <li>Adds mystery and visual depth</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="wildlife-card">
+        <img src="images/tropical-fish.jpg" alt="Tropical fish swimming near coral reef" />
+
+        <div class="wildlife-content">
+          <span>Reef Life</span>
+          <h2>Tropical Fish</h2>
+
+          <p>
+            Colorful reef fish bring movement, variety, and energy to the page while
+            showing the everyday beauty of healthy marine habitats.
+          </p>
+
+          <ul class="wildlife-facts">
+            <li>Good for family-friendly pages</li>
+            <li>Adds movement and color</li>
+            <li>Flexible for aquariums, resorts, and tours</li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- CONSERVATION BAND -->
+    <section class="info-band premium-info-band">
+      <div>
+        <p class="eyebrow">Ocean Conservation</p>
+        <h2>Protect the reefs. Respect the wildlife. Experience the ocean responsibly.</h2>
+      </div>
+
+      <p>
+        Every dive and exhibit is a chance to teach visitors how marine ecosystems work,
+        why reef protection matters, and how responsible tourism can help preserve the
+        ocean for future generations.
+      </p>
+    </section>
+
+    <!-- SPECIES SPOTLIGHT -->
+    <section class="split-section premium-split">
+      <div>
+        <p class="eyebrow">Species Spotlight</p>
+
+        <h2>Explore marine life with purpose.</h2>
+
+        <p>
+          This wildlife page is built to do more than show pretty ocean images. It gives
+          visitors clear information about animals, habitats, safety, conservation, and
+          underwater experiences they can book.
+        </p>
+
+        <div class="mini-feature-list">
+          <span>Species cards</span>
+          <span>Conservation sections</span>
+          <span>Dive experience blocks</span>
+          <span>Education content</span>
+        </div>
+      </div>
+
+      <img src="images/turtle-placeholder.jpg" alt="Sea turtle swimming over reef">
+    </section>
+
+    <!-- EDUCATION CARDS -->
+    <section class="section-header">
+      <p class="eyebrow">Ocean Education</p>
+
+      <h2>Learn what makes each habitat unique.</h2>
+
+      <p>
+        These content blocks help visitors understand the reef before they ever step
+        into the water.
+      </p>
+    </section>
+
+    <section class="process-section">
+      <div class="process-card">
+        <span>01</span>
+        <h3>Habitats</h3>
+        <p>
+          Learn about coral reefs, shipwreck ecosystems, kelp forests, open ocean zones,
+          and protected marine areas.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <span>02</span>
+        <h3>Conservation</h3>
+        <p>
+          Discover how reef protection, plastic reduction, turtle safety, and responsible
+          tourism help protect marine life.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <span>03</span>
+        <h3>Visitor Safety</h3>
+        <p>
+          Understand wildlife distance rules, dive preparation, equipment basics, and
+          guide instructions before entering the water.
+        </p>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-band home-final-cta">
+      <p class="eyebrow">Ready to See It Up Close?</p>
+
+      <h2>Turn ocean curiosity into an unforgettable dive.</h2>
+
+      <p>
+        Explore the gallery, choose your experience, and book a guided underwater trip
+        through reefs, wildlife zones, and blue-water habitats.
+      </p>
+
+      <div class="hero-buttons center-buttons">
+        <a href="gallery.html" class="btn secondary-btn">View Gallery</a>
+        <a href="booking.html" class="btn primary-btn">Book a Dive</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-simple">
+
+      <a href="index.html" class="footer-logo" aria-label="Abyssal Blue Home">
+        <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="footerOceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7cf7ff"/>
+              <stop offset="50%" stop-color="#00ffd5"/>
+              <stop offset="100%" stop-color="#087f9e"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="32" cy="32" r="23" fill="none" stroke="url(#footerOceanLogo)" stroke-width="5"/>
+          <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#footerOceanLogo)"/>
+          <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+          <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+        </svg>
+
+        <span>Abyssal Blue</span>
+      </a>
+
+      <p>
+        Premium underwater website template designed for aquariums, dive tours,
+        resorts, marine parks, and ocean adventure brands.
+      </p>
+
+      <div class="footer-bottom">
+        &copy; 2026 Abyssal Blue. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="booking.html#dive-packages" class="floating-book-btn" aria-label="Book a dive package">
+    Book Dive
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

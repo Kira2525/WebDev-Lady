@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CosmicOrbit Lite | Premium One-Page Three.js Website Template</title>
+  <meta
+    name="description"
+    content="Premium one-page HTML template with a Three.js space scene, polished sections, responsive layouts, and premium styling for SaaS and software brands."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width: 1024px)" />
+  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 650px)" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#02030a" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="spaceScene" aria-hidden="true"></div>
+  <div class="page-glow" aria-hidden="true"></div>
+
+  <header class="navbar">
+    <a href="#hero" class="logo">CosmicOrbit<span>Lite</span></a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#hero" class="active" aria-current="page">Home</a>
+      <a href="#features">Features</a>
+      <a href="#preview">Preview</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-expanded="false"
+      aria-controls="navLinks"
+      aria-label="Open navigation menu"
+    >
+      <span aria-hidden="true">Menu</span>
+    </button>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Premium One-Page HTML Template</p>
+        <h1>Launch a premium product site with a cinematic 3D backdrop.</h1>
+        <p class="hero-text">
+          CosmicOrbit Lite is a polished one-page template for SaaS startups, software products,
+          digital services, and technology brands that want a premium visual identity in a leaner package.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#pricing" class="btn primary">View Lite Pricing</a>
+          <a href="#contact" class="btn secondary">Request Customization</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <strong>1</strong>
+            <span>High-converting page</span>
+          </div>
+          <div>
+            <strong>3D</strong>
+            <span>Three.js background</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Responsive layout system</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card tilt-card">
+        <p class="card-label">Lite Includes</p>
+        <h2>Everything needed for a premium single-page launch.</h2>
+        <ul>
+          <li>One-page marketing layout with shared anchor navigation</li>
+          <li>Real Three.js animated space scene and glassmorphism styling</li>
+          <li>Feature, preview, pricing, and contact sections built in</li>
+          <li>Responsive CSS and editable HTML, JavaScript, and assets</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <p class="eyebrow">Why Lite Works</p>
+      <h2>Streamlined structure, premium presentation.</h2>
+
+      <div class="feature-grid">
+        <article class="feature-card tilt-card">
+          <span>01</span>
+          <h3>Distinct Visual Depth</h3>
+          <p>
+            The animated space background gives the page immediate visual presence while the
+            glass cards and controlled motion keep the experience professional.
+          </p>
+        </article>
+
+        <article class="feature-card tilt-card">
+          <span>02</span>
+          <h3>One-Page Sales Flow</h3>
+          <p>
+            Navigation, calls to action, pricing, and contact all live on one page, making the
+            Lite version ideal for focused product launches and smaller service offers.
+          </p>
+        </article>
+
+        <article class="feature-card tilt-card">
+          <span>03</span>
+          <h3>Easy to Customize</h3>
+          <p>
+            Update the copy, colors, sections, screenshots, and calls to action quickly without
+            touching a framework or complex build process.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Best For</p>
+        <h2>Made for SaaS launches, startup waitlists, and software product pages.</h2>
+      </div>
+
+      <div>
+        <p class="section-lead">
+          CosmicOrbit Lite keeps the premium visual language of the full product while focusing on
+          a single-page experience that is easier to ship, easier to customize, and ideal for leaner storefronts.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="preview">
+      <p class="eyebrow">Section Preview</p>
+      <h2>A strong one-page experience, not a stripped-down placeholder.</h2>
+
+      <div class="preview-grid">
+        <a href="#hero" class="preview-card tilt-card">
+          <img
+            src="assets/images/home-preview.png"
+            alt="Homepage preview for CosmicOrbit Lite"
+            loading="lazy"
+          />
+          <strong>Hero Experience</strong>
+          <p>Premium opening layout with strong first-impression styling and layered motion.</p>
+        </a>
+
+        <a href="#pricing" class="preview-card tilt-card">
+          <img
+            src="assets/images/pricing-preview.png"
+            alt="Pricing section preview for CosmicOrbit Lite"
+            loading="lazy"
+          />
+          <strong>Pricing Section</strong>
+          <p>Clear offer presentation for a lean template package and optional customization upsell.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow">What Buyers Like</p>
+      <h2>Lean package, premium finish.</h2>
+
+      <div class="feature-grid">
+        <article class="feature-card tilt-card">
+          <span>01</span>
+          <h3>Fast To Launch</h3>
+          <p>
+            A single-page structure keeps edits and deployment simple while still presenting the
+            business like a higher-end custom site.
+          </p>
+        </article>
+
+        <article class="feature-card tilt-card">
+          <span>02</span>
+          <h3>Focused Conversion Path</h3>
+          <p>
+            Every section supports the same goal: explain the value clearly and move visitors
+            toward the pricing and contact calls to action.
+          </p>
+        </article>
+
+        <article class="feature-card tilt-card">
+          <span>03</span>
+          <h3>Seller-Ready Structure</h3>
+          <p>
+            The Lite package ships with the files buyers actually need, along with updated docs
+            that match the exact contents of the template.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <p class="eyebrow">Pricing</p>
+      <h2>Premium one-page template pricing.</h2>
+
+      <div class="pricing-grid">
+        <article class="pricing-card tilt-card">
+          <p class="card-label">$59 Lite License</p>
+          <h3>CosmicOrbit Lite</h3>
+          <p class="price">$59</p>
+
+          <ul class="pricing-features">
+            <li>Single-page HTML template with premium section structure</li>
+            <li>Three.js animated space background included</li>
+            <li>Responsive desktop, tablet, and mobile CSS files</li>
+            <li>Editable navigation, content blocks, and contact section</li>
+            <li>Updated documentation and seller-ready package structure</li>
+          </ul>
+
+          <a href="#contact" class="btn primary">Request Purchase Details</a>
+        </article>
+
+        <article class="pricing-card featured tilt-card">
+          <p class="card-label">Optional Customization</p>
+          <h3>Lite + Branding Support</h3>
+          <p class="price">$149</p>
+
+          <ul class="pricing-features">
+            <li>Everything in the Lite package</li>
+            <li>Brand color and content adjustments</li>
+            <li>Section edits for a tighter product fit</li>
+            <li>CTA and messaging cleanup for launch readiness</li>
+            <li>Lean customization path for smaller projects</li>
+          </ul>
+
+          <a href="#contact" class="btn primary">Ask About Customization</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-form-card tilt-card">
+        <p class="eyebrow">Contact</p>
+        <h2>Ready to launch CosmicOrbit Lite?</h2>
+        <p class="section-lead">
+          This demo form is included to show the contact flow. Connect it to your email service,
+          CRM, or form platform before launch.
+        </p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="field-group">
+            <label class="field-label" for="contact-name">Name</label>
+            <input
+              id="contact-name"
+              name="name"
+              type="text"
+              class="login-input"
+              placeholder="Your name"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="contact-email">Email Address</label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              class="login-input"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="contact-package">Interest</label>
+            <select id="contact-package" name="package" class="login-input" required>
+              <option value="">Select an option</option>
+              <option value="lite">CosmicOrbit Lite template</option>
+              <option value="branding">Lite + branding support</option>
+              <option value="question">General question</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="contact-message">Project Details</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              class="login-input contact-message"
+              placeholder="Tell us about your product, timeline, and what you need customized."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn primary login-submit">Send Inquiry</button>
+        </form>
+
+        <div class="status-message" id="formStatus" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span data-current-year>2026</span> CosmicOrbit Lite. Premium one-page HTML template
+      for SaaS, software, and digital product brands.
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"
+      }
+    }
+  </script>
+
+  <script type="module" src="js/space-scene.js"></script>
+</body>
+</html>

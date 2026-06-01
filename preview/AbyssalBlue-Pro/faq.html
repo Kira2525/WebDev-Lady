@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FAQ | Abyssal Blue</title>
+
+  <meta
+    name="description"
+    content="Frequently asked questions for Abyssal Blue, including dive safety, booking details, weather policies, age requirements, equipment, and visitor preparation."
+  />
+  <meta name="theme-color" content="#02111c" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/faq.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="FAQ | Abyssal Blue" />
+  <meta property="og:description" content="Frequently asked questions for Abyssal Blue, including dive safety, booking details, weather policies, age requirements, equipment, and visitor preparation." />
+  <meta property="og:url" content="https://example.com/faq.html" />
+  <meta property="og:image" content="https://example.com/images/turtle-placeholder.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="images/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <!-- PREMIUM ANIMATED BACKGROUND -->
+  <div class="ocean-scene" id="oceanScene">
+    <canvas id="oceanCanvas"></canvas>
+
+    <img src="images/coral-placeholder.jpg" class="coral-bg" alt="">
+    <div class="ocean-tint"></div>
+    <div class="light-rays"></div>
+    <div class="depth-fog"></div>
+    <div class="bubble-layer" id="bubbleLayer"></div>
+    <div class="fish-layer" id="fishLayer"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Abyssal Blue Home">
+      <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="oceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7cf7ff"/>
+            <stop offset="50%" stop-color="#00ffd5"/>
+            <stop offset="100%" stop-color="#087f9e"/>
+          </linearGradient>
+        </defs>
+
+        <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo)" stroke-width="5"/>
+        <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo)"/>
+        <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+        <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+      </svg>
+
+      <span>Abyssal Blue</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="wildlife.html">Wildlife</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book Dive</a>
+      <a href="contact.html">Contact</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html" class="active">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <p class="eyebrow">Questions & Answers</p>
+
+      <h1>Everything Guests Need Before They Dive.</h1>
+
+      <p>
+        Find answers about dive safety, booking details, weather policies,
+        age requirements, equipment, visitor preparation, private charters,
+        and ocean tour expectations.
+      </p>
+    </section>
+
+    <!-- FAQ QUICK CARDS -->
+    <section class="contact-quick-grid">
+      <div class="contact-quick-card">
+        <span>Safety</span>
+        <strong>Certified Guides</strong>
+        <p>Learn about experience levels, safety briefings, equipment, and guest preparation.</p>
+      </div>
+
+      <div class="contact-quick-card">
+        <span>Booking</span>
+        <strong>Easy Reservations</strong>
+        <p>Review arrival times, group bookings, private charters, and reservation details.</p>
+      </div>
+
+      <div class="contact-quick-card">
+        <span>Weather</span>
+        <strong>Flexible Rescheduling</strong>
+        <p>Understand ocean conditions, weather delays, and rescheduling options.</p>
+      </div>
+    </section>
+
+    <!-- MAIN FAQ -->
+    <section class="faq-section premium-faq-section">
+
+      <details class="faq-item" open>
+        <summary>Do visitors need diving experience?</summary>
+        <p>
+          No. Beginner experiences are designed for first-time divers with trained
+          guides, safety briefings, and shallow-water routes. Advanced packages are
+          available for certified or experienced divers.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is equipment included?</summary>
+        <p>
+          Most guided experiences include essential equipment such as masks, fins,
+          tanks, and safety gear. Specific equipment details may vary by package,
+          so guests should review their booking confirmation before arrival.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What should guests bring?</summary>
+        <p>
+          Guests should bring swimwear, towels, reef-safe sunscreen, water, a valid
+          ID, and any required certification documents for advanced dives.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can children participate?</summary>
+        <p>
+          Some experiences are family-friendly, while others may have age, height,
+          swimming ability, or certification requirements. Contact the team before
+          booking if you are planning a visit with children.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What happens if weather is bad?</summary>
+        <p>
+          Guest safety comes first. If weather or ocean conditions are unsafe, the
+          experience may be rescheduled, credited, or moved to another available time
+          based on the reservation policy.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How early should guests arrive?</summary>
+        <p>
+          Guests should arrive 30 to 45 minutes before the scheduled experience for
+          check-in, equipment fitting, safety instructions, and final weather updates.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are private charters available?</summary>
+        <p>
+          Yes. Private charters are available for couples, families, small groups,
+          school trips, creator shoots, resort excursions, and custom ocean experiences.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can we book a group visit?</summary>
+        <p>
+          Yes. Group visits can be arranged for schools, families, travel groups,
+          aquariums, resorts, and private events. Contact the team with your group
+          size, preferred date, and experience type.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are wildlife encounters guaranteed?</summary>
+        <p>
+          Marine wildlife is unpredictable. Guides choose routes based on safety,
+          conditions, and recent activity, but specific animal sightings cannot be
+          guaranteed.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I change or cancel a reservation?</summary>
+        <p>
+          Contact the team as soon as possible with your reservation details.
+          Changes and cancellations depend on availability, notice period, weather,
+          and the policy listed in your confirmation.
+        </p>
+      </details>
+
+    </section>
+
+    <!-- HELP SECTION -->
+    <section class="split-section premium-split">
+      <div>
+        <p class="eyebrow">Guest Support</p>
+
+        <h2>Clear answers help guests feel ready before they arrive.</h2>
+
+        <p>
+          From safety and equipment to weather and private charters, the FAQ page
+          helps visitors understand what to expect before they reserve an ocean
+          experience.
+        </p>
+
+        <div class="mini-feature-list">
+          <span>Safety answers</span>
+          <span>Booking details</span>
+          <span>Weather policy</span>
+          <span>Visitor preparation</span>
+        </div>
+      </div>
+
+      <img src="images/turtle-placeholder.jpg" alt="Sea turtle swimming underwater">
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-band home-final-cta">
+      <p class="eyebrow">Still Have Questions?</p>
+
+      <h2>Contact the team or reserve your ocean experience.</h2>
+
+      <p>
+        Reach out for help choosing a dive, planning a group visit, booking a private
+        charter, or preparing for your underwater adventure.
+      </p>
+
+      <div class="hero-buttons center-buttons">
+        <a href="contact.html" class="btn secondary-btn">Contact Us</a>
+        <a href="booking.html" class="btn primary-btn">Book a Dive</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-simple">
+
+      <a href="index.html" class="footer-logo" aria-label="Abyssal Blue Home">
+        <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="footerOceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7cf7ff"/>
+              <stop offset="50%" stop-color="#00ffd5"/>
+              <stop offset="100%" stop-color="#087f9e"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="32" cy="32" r="23" fill="none" stroke="url(#footerOceanLogo)" stroke-width="5"/>
+          <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#footerOceanLogo)"/>
+          <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+          <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+        </svg>
+
+        <span>Abyssal Blue</span>
+      </a>
+
+      <p>
+        Premium underwater website template designed for aquariums,
+        dive tours, resorts, marine parks, and ocean adventure brands.
+      </p>
+
+      <div class="footer-bottom">
+        &copy; 2026 Abyssal Blue. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="booking.html#dive-packages" class="floating-book-btn" aria-label="Book a dive package">
+    Book Dive
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

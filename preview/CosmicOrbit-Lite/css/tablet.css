@@ -1,0 +1,53 @@
+@media screen and (max-width: 1024px) {
+  .navbar {
+    width: min(94%, 980px);
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 48px;
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .hero-card {
+    max-width: 720px;
+  }
+
+  h1 {
+    font-size: clamp(2.9rem, 8.5vw, 4.8rem);
+  }
+
+  h2 {
+    font-size: clamp(2.1rem, 6vw, 3.1rem);
+  }
+
+  .feature-grid,
+  .preview-grid,
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-grid,
+  .split,
+  .dashboard-layout,
+  .dashboard-panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .dashboard-sidebar {
+    position: static;
+  }
+
+  .section {
+    margin-bottom: 96px;
+  }
+
+  .section::before {
+    inset: -22px;
+  }
+}

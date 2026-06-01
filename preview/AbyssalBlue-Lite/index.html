@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abyssal Blue Lite | One-Page Ocean Website Template</title>
+  <meta
+    name="description"
+    content="Abyssal Blue Lite is a premium one-page underwater website template for dive tours, aquariums, marine parks, and ocean adventure brands."
+  />
+  <meta name="theme-color" content="#02111c" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abyssal Blue Lite | One-Page Ocean Website Template" />
+  <meta property="og:description" content="A cinematic one-page ocean website template with anchor navigation, glass cards, animated depth effects, and responsive sections." />
+  <meta property="og:image" content="https://example.com/images/hero-shark.jpg" />
+  <link rel="canonical" href="https://example.com/index.html" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <div class="ocean-scene" id="oceanScene">
+    <canvas id="oceanCanvas"></canvas>
+    <img src="images/coral-placeholder.jpg" class="coral-bg" alt="">
+    <div class="ocean-tint"></div>
+    <div class="light-rays"></div>
+    <div class="depth-fog"></div>
+    <div class="bubble-layer" id="bubbleLayer"></div>
+    <div class="fish-layer" id="fishLayer"></div>
+  </div>
+
+  <header class="site-header">
+    <a href="#home" class="logo" aria-label="Abyssal Blue Lite Home">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="oceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7cf7ff"/>
+              <stop offset="50%" stop-color="#00ffd5"/>
+              <stop offset="100%" stop-color="#087f9e"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo)" stroke-width="5"/>
+          <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo)"/>
+          <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+          <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+        </svg>
+      </span>
+      <span class="logo-text">Abyssal Blue Lite</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <section class="hero-section" id="home">
+      <div class="hero-content glass-card">
+        <p class="eyebrow">Lite One-Page Edition</p>
+        <h1>Launch an Ocean Brand With One Premium Page.</h1>
+        <p class="hero-text">
+          Abyssal Blue Lite is a cinematic one-page website template for scuba tours,
+          aquariums, marine parks, and ocean experience brands that need a polished
+          web presence without the full Pro page set.
+        </p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn primary-btn">Explore Packages</a>
+          <a href="#contact" class="btn secondary-btn">Start Inquiry</a>
+        </div>
+        <div class="hero-trust-row">
+          <span>One-page conversion flow</span>
+          <span>Responsive glass interface</span>
+          <span>Animated ocean atmosphere</span>
+        </div>
+      </div>
+
+      <div class="hero-slider">
+        <img src="images/hero-shark.jpg" class="slide active" alt="Shark swimming through deep blue water">
+        <img src="images/diver-placeholder.jpg" class="slide" alt="Scuba diver exploring an underwater reef">
+        <img src="images/turtle-placeholder.jpg" class="slide" alt="Sea turtle swimming in clear ocean water">
+        <img src="images/shipwreck-placeholder.jpg" class="slide" alt="Cinematic underwater shipwreck scene">
+        <div class="slider-caption">Designed to feel immersive from the first screen.</div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stat-card">
+        <h2>1</h2>
+        <p>Focused landing page</p>
+      </div>
+      <div class="stat-card">
+        <h2>7</h2>
+        <p>Anchor-linked sections</p>
+      </div>
+      <div class="stat-card">
+        <h2>100%</h2>
+        <p>Responsive layout</p>
+      </div>
+      <div class="stat-card">
+        <h2>59</h2>
+        <p>Recommended price</p>
+      </div>
+    </section>
+
+    <section class="section-header" id="features">
+      <p class="eyebrow">Highlights</p>
+      <h2>Everything needed for a polished Lite release.</h2>
+      <p>
+        The Lite edition keeps the atmosphere and visual quality of Abyssal Blue
+        while simplifying the product into a fast one-page structure buyers can
+        customize in less time.
+      </p>
+    </section>
+
+    <section class="feature-grid">
+      <article class="feature-card">
+        <h3>Immersive Background</h3>
+        <p>Animated bubbles, swimming fish, ocean particles, lighting layers, and glass cards create instant perceived value.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Simple Buyer Workflow</h3>
+        <p>Anchor navigation keeps the product lean and removes the setup overhead of a full multi-page website.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Commercially Ready</h3>
+        <p>Includes a designed 404 page, manifest, README, and setup docs for a cleaner marketplace package.</p>
+      </article>
+    </section>
+
+    <section class="split-section" id="about">
+      <div>
+        <p class="eyebrow">About the Template</p>
+        <h2>Built for smaller brands that still want a premium first impression.</h2>
+        <p>
+          Abyssal Blue Lite is ideal for local dive operators, boutique ocean tours,
+          marine exhibits, and conservation projects that want a single strong landing
+          page without committing to a larger multi-page site.
+        </p>
+        <p>
+          The layout supports storytelling, service previews, visual credibility, and
+          contact conversion in one streamlined file.
+        </p>
+        <div class="mini-feature-list">
+          <span>Fast customization</span>
+          <span>Lower setup friction</span>
+          <span>Premium ocean look</span>
+          <span>Mobile-first sales flow</span>
+        </div>
+      </div>
+      <img src="images/diver-placeholder.jpg" alt="Diver exploring a bright coral reef">
+    </section>
+
+    <section class="section-header" id="services">
+      <p class="eyebrow">Services</p>
+      <h2>Preview your offers without a full pricing page.</h2>
+      <p>
+        Lite keeps the service section concise while still making it easy for buyers
+        to present tiered packages or featured experiences.
+      </p>
+    </section>
+
+    <section class="services-grid">
+      <article class="service-card">
+        <span>Starter</span>
+        <h3>Reef Explorer</h3>
+        <div class="price">$99</div>
+        <p>Ideal for beginner dives, short tours, and first-time underwater visitors.</p>
+        <ul class="service-list">
+          <li>Guided route</li>
+          <li>Small group feel</li>
+          <li>Perfect for landing pages</li>
+        </ul>
+      </article>
+
+      <article class="service-card featured">
+        <span>Most Popular</span>
+        <h3>Deep Blue Experience</h3>
+        <div class="price">$249</div>
+        <p>For brands that want a premium featured package to anchor their offer section.</p>
+        <ul class="service-list">
+          <li>Hero package emphasis</li>
+          <li>Photo upgrade positioning</li>
+          <li>Stronger CTA focus</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <span>Private</span>
+        <h3>Charter Escape</h3>
+        <div class="price">$599</div>
+        <p>Designed for boutique private tours, family charters, and custom ocean experiences.</p>
+        <ul class="service-list">
+          <li>Private guide concept</li>
+          <li>Flexible schedule messaging</li>
+          <li>Premium positioning</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section-header" id="gallery">
+      <p class="eyebrow">Gallery Preview</p>
+      <h2>Show just enough imagery to sell the experience.</h2>
+      <p>
+        The Lite version uses a compact image grid to create atmosphere while keeping
+        the product simpler than the Pro gallery system.
+      </p>
+    </section>
+
+    <section class="gallery-grid">
+      <article class="gallery-card tall">
+        <img src="images/hero-shark.jpg" alt="Shark gliding through deep ocean water">
+        <div>
+          <span>Wildlife</span>
+          <h3>Open Water Impact</h3>
+          <p>Strong hero-style visuals for dramatic first impressions.</p>
+        </div>
+      </article>
+      <article class="gallery-card">
+        <img src="images/coral-placeholder.jpg" alt="Colorful coral reef scene">
+        <div>
+          <span>Reef</span>
+          <h3>Living Texture</h3>
+          <p>Great for education, eco-tourism, and aquarium positioning.</p>
+        </div>
+      </article>
+      <article class="gallery-card">
+        <img src="images/diver-placeholder.jpg" alt="Diver moving through a reef wall">
+        <div>
+          <span>Guided Tour</span>
+          <h3>Human Perspective</h3>
+          <p>Helps visitors picture themselves inside the experience.</p>
+        </div>
+      </article>
+      <article class="gallery-card wide">
+        <img src="images/turtle-placeholder.jpg" alt="Sea turtle above a sunlit reef">
+        <div>
+          <span>Conservation</span>
+          <h3>Quiet Premium Storytelling</h3>
+          <p>Balances the more dramatic shark imagery with softer ocean mood.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-header" id="faq">
+      <p class="eyebrow">FAQ Preview</p>
+      <h2>Answer the most common questions on the same page.</h2>
+    </section>
+
+    <section class="faq-section">
+      <details class="faq-item" open>
+        <summary>Who is the Lite version best for?</summary>
+        <p>It is best for smaller businesses or sellers who want a lower-priced one-page offer with premium styling and simpler setup.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is removed compared to Pro?</summary>
+        <p>Lite removes the multi-page architecture, advanced content depth, and full Pro page inventory while keeping the core visual identity.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can buyers still customize the content easily?</summary>
+        <p>Yes. The one-page structure is straightforward to edit and the included docs explain where to update copy, images, and brand details.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can this be used for other industries?</summary>
+        <p>Yes. Buyers can adapt the design for travel, resorts, conservation, aquariums, tours, or any brand that benefits from a cinematic ocean theme.</p>
+      </details>
+    </section>
+
+    <section class="contact-band" id="contact">
+      <div class="contact-copy">
+        <p class="eyebrow">Contact and CTA</p>
+        <h2>Turn interest into inquiry without extra pages.</h2>
+        <p>
+          The Lite version ends with a clear contact block so buyers can direct visitors
+          toward a phone call, email inquiry, booking platform, or contact form integration.
+        </p>
+        <div class="hero-buttons">
+          <a href="mailto:info@example.com" class="btn primary-btn">Email the Team</a>
+          <a href="tel:+15551234567" class="btn secondary-btn">Call Now</a>
+        </div>
+      </div>
+
+      <div class="contact-card glass-card">
+        <h3>Quick Contact</h3>
+        <p><strong>Email:</strong> info@example.com</p>
+        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+        <p><strong>Location:</strong> Marina District, Miami, Florida</p>
+        <p><strong>Hours:</strong> Daily from 8:00 AM to 6:00 PM</p>
+        <div class="mini-feature-list">
+          <span>Simple CTA block</span>
+          <span>Form-service ready</span>
+          <span>Ideal for Lite buyers</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-simple">
+      <a href="#home" class="footer-logo" aria-label="Abyssal Blue Lite Home">
+        <span class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="footerOceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7cf7ff"/>
+                <stop offset="50%" stop-color="#00ffd5"/>
+                <stop offset="100%" stop-color="#087f9e"/>
+              </linearGradient>
+            </defs>
+            <circle cx="32" cy="32" r="23" fill="none" stroke="url(#footerOceanLogo)" stroke-width="5"/>
+            <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#footerOceanLogo)"/>
+            <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+            <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+          </svg>
+        </span>
+        <span class="logo-text">Abyssal Blue Lite</span>
+      </a>
+      <p>
+        A premium one-page ocean website template designed for smaller launches,
+        faster customization, and a lower entry price than the full Pro edition.
+      </p>
+      <div class="footer-bottom">&copy; 2026 Abyssal Blue Lite. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a href="#contact" class="floating-book-btn" aria-label="Jump to contact section">Start Inquiry</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

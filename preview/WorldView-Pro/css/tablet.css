@@ -1,0 +1,102 @@
+@media (min-width: 721px) and (max-width: 1060px) {
+  .site-shell {
+    width: min(calc(100% - 36px), 960px);
+    padding-top: 24px;
+  }
+
+  .site-header {
+    padding: 14px 16px;
+    margin-bottom: 40px;
+  }
+
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 12px);
+    display: grid;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid rgba(160, 208, 255, 0.14);
+    border-radius: 26px;
+    background: rgba(2, 10, 22, 0.94);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .mobile-menu[hidden] {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: grid;
+    gap: 8px;
+  }
+
+  .mobile-nav .page-link {
+    justify-content: flex-start;
+    min-height: 48px;
+    padding: 0 16px;
+    border: 1px solid rgba(160, 208, 255, 0.1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .hero,
+  .contact-layout,
+  .cta-band {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid,
+  .card-grid--2,
+  .card-grid--4,
+  .card-grid--pricing,
+  .timeline,
+  .metric-grid,
+  .pill-list,
+  .space-gallery,
+  .check-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card-grid--pricing .pricing-card.is-featured {
+    grid-column: auto;
+  }
+
+  .comparison-row {
+    grid-template-columns: minmax(0, 1.1fr) repeat(3, minmax(90px, 1fr));
+  }
+
+  .earth-stage {
+    right: -38vw;
+    bottom: -34vw;
+    width: min(124vw, 980px);
+    opacity: 0.82;
+  }
+
+  .glow-orb--left {
+    width: min(72vw, 720px);
+  }
+
+  .footer-panel--compact {
+    padding: 22px 24px;
+  }
+
+  .site-footer::before {
+    inset: -28px -10px -12px;
+  }
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About | Abyssal Blue</title>
+
+  <meta
+    name="description"
+    content="Learn about Abyssal Blue, an immersive ocean experience brand offering guided dives, marine education, reef tours, and conservation-focused adventures."
+  />
+  <meta name="theme-color" content="#02111c" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About | Abyssal Blue" />
+  <meta property="og:description" content="Learn about Abyssal Blue, an immersive ocean experience brand offering guided dives, marine education, reef tours, and conservation-focused adventures." />
+  <meta property="og:url" content="https://example.com/about.html" />
+  <meta property="og:image" content="https://example.com/images/diver-placeholder.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="images/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <!-- PREMIUM ANIMATED BACKGROUND -->
+  <div class="ocean-scene" id="oceanScene">
+    <canvas id="oceanCanvas"></canvas>
+
+    <img src="images/coral-placeholder.jpg" class="coral-bg" alt="">
+    <div class="ocean-tint"></div>
+    <div class="light-rays"></div>
+    <div class="depth-fog"></div>
+    <div class="bubble-layer" id="bubbleLayer"></div>
+    <div class="fish-layer" id="fishLayer"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Abyssal Blue Home">
+      <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="oceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7cf7ff"/>
+            <stop offset="50%" stop-color="#00ffd5"/>
+            <stop offset="100%" stop-color="#087f9e"/>
+          </linearGradient>
+        </defs>
+
+        <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo)" stroke-width="5"/>
+        <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo)"/>
+        <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+        <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+      </svg>
+
+      <span>Abyssal Blue</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="wildlife.html">Wildlife</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book Dive</a>
+      <a href="contact.html">Contact</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <p class="eyebrow">Our Story</p>
+
+      <h1>Built Around the Ocean, Adventure, and Conservation.</h1>
+
+      <p>
+        Abyssal Blue creates immersive ocean experiences through guided dives,
+        reef exploration, marine education, wildlife encounters, and conservation-focused
+        adventures.
+      </p>
+    </section>
+
+    <!-- ABOUT STORY -->
+    <section class="about-story premium-about-story">
+      <div class="about-content glass-card">
+        <p class="eyebrow">Our Mission</p>
+
+        <h2>Connect people with the beauty beneath the surface.</h2>
+
+        <p>
+          The ocean is powerful, peaceful, and unforgettable. Our mission is to help
+          guests experience that world safely while learning about the marine life,
+          reef systems, and habitats that make it worth protecting.
+        </p>
+
+        <p>
+          From first-time ocean explorers to experienced divers, every experience is
+          designed to feel professional, memorable, and respectful of the underwater
+          environment.
+        </p>
+
+        <p>
+          We focus on guided exploration, clear safety practices, conservation awareness,
+          and unforgettable underwater moments that help visitors feel connected to the sea.
+        </p>
+
+        <div class="mini-feature-list">
+          <span>Guided dives</span>
+          <span>Marine education</span>
+          <span>Reef tours</span>
+          <span>Wildlife encounters</span>
+        </div>
+      </div>
+
+      <div class="about-image premium-image-card">
+        <img
+          src="images/diver-placeholder.jpg"
+          alt="Professional scuba diver exploring a coral reef"
+        >
+
+        <div class="image-badge">
+          <strong>Ocean Experience</strong>
+          <span>Guided adventures through reefs, wildlife zones, and blue-water habitats.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE STATS -->
+    <section class="stats-section">
+      <div class="stat-card">
+        <h2>8</h2>
+        <p>Experience Types</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>100%</h2>
+        <p>Safety Focused</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>3D</h2>
+        <p>Ocean Atmosphere</p>
+      </div>
+
+      <div class="stat-card">
+        <h2>50+</h2>
+        <p>Marine Species</p>
+      </div>
+    </section>
+
+    <!-- ABOUT FEATURES -->
+    <section class="section-header">
+      <p class="eyebrow">What We Offer</p>
+
+      <h2>More than a dive. A complete ocean experience.</h2>
+
+      <p>
+        Every trip is designed to combine adventure, education, safety, and respect
+        for marine life.
+      </p>
+    </section>
+
+    <section class="about-features premium-about-features">
+      <div class="about-feature-card">
+        <h3>Guided Ocean Tours</h3>
+
+        <p>
+          Explore reefs, shipwrecks, wildlife zones, and scenic underwater routes
+          with experienced guides who help keep the experience safe and memorable.
+        </p>
+      </div>
+
+      <div class="about-feature-card">
+        <h3>Marine Wildlife Education</h3>
+
+        <p>
+          Learn about sharks, sea turtles, coral reefs, tropical fish, reef ecosystems,
+          and the role each species plays in the health of the ocean.
+        </p>
+      </div>
+
+      <div class="about-feature-card">
+        <h3>Conservation Awareness</h3>
+
+        <p>
+          Our experiences encourage responsible tourism, reef protection, safe wildlife
+          viewing, and a deeper respect for the marine environment.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process-section">
+      <div class="process-card">
+        <span>01</span>
+        <h3>Choose Your Experience</h3>
+        <p>
+          Select from reef dives, wildlife tours, beginner-friendly experiences,
+          private charters, or ocean education programs.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <span>02</span>
+        <h3>Prepare with Confidence</h3>
+        <p>
+          Get clear information about safety, equipment, arrival times, skill level,
+          and what to expect before entering the water.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <span>03</span>
+        <h3>Explore the Ocean</h3>
+        <p>
+          Follow your guide into a world of coral, sea life, blue light, movement,
+          and unforgettable underwater scenery.
+        </p>
+      </div>
+    </section>
+
+    <!-- SPLIT SECTION -->
+    <section class="split-section premium-split">
+      <div>
+        <p class="eyebrow">Why Guests Choose Us</p>
+
+        <h2>Professional guidance with a deep respect for the ocean.</h2>
+
+        <p>
+          We believe ocean adventures should feel exciting, safe, and meaningful.
+          That is why every experience is built around clear communication,
+          responsible wildlife viewing, and a strong connection to the underwater world.
+        </p>
+
+        <div class="mini-feature-list">
+          <span>Safe routes</span>
+          <span>Experienced guides</span>
+          <span>Wildlife respect</span>
+          <span>Clear booking</span>
+        </div>
+      </div>
+
+      <img src="images/shipwreck-placeholder.jpg" alt="Underwater shipwreck scene">
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="about-banner home-final-cta">
+      <p class="eyebrow">Ready to Explore?</p>
+
+      <h2>Discover the Beauty Beneath the Surface.</h2>
+
+      <p>
+        Explore reefs, wildlife, shipwrecks, and unforgettable underwater views
+        with a guided ocean experience built around safety and wonder.
+      </p>
+
+      <a href="booking.html" class="btn primary-btn">
+        Start Exploring
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-simple">
+
+      <a href="index.html" class="footer-logo" aria-label="Abyssal Blue Home">
+        <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="footerOceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7cf7ff"/>
+              <stop offset="50%" stop-color="#00ffd5"/>
+              <stop offset="100%" stop-color="#087f9e"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="32" cy="32" r="23" fill="none" stroke="url(#footerOceanLogo)" stroke-width="5"/>
+          <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#footerOceanLogo)"/>
+          <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+          <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+        </svg>
+
+        <span>Abyssal Blue</span>
+      </a>
+
+      <p>
+        Premium underwater website template designed for aquariums,
+        dive tours, resorts, marine parks, and ocean adventure brands.
+      </p>
+
+      <div class="footer-bottom">
+        &copy; 2026 Abyssal Blue. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="booking.html#dive-packages" class="floating-book-btn" aria-label="Book a dive package">
+    Book Dive
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

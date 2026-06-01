@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | Abyssal Blue</title>
+
+  <meta
+    name="description"
+    content="Contact Abyssal Blue for guided dive reservations, aquarium visits, private charters, group trips, partnerships, and ocean conservation inquiries."
+  />
+  <meta name="theme-color" content="#02111c" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact | Abyssal Blue" />
+  <meta property="og:description" content="Contact Abyssal Blue for guided dive reservations, aquarium visits, private charters, group trips, partnerships, and ocean conservation inquiries." />
+  <meta property="og:url" content="https://example.com/contact.html" />
+  <meta property="og:image" content="https://example.com/images/diver-placeholder.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="images/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <!-- PREMIUM ANIMATED BACKGROUND -->
+  <div class="ocean-scene" id="oceanScene">
+    <canvas id="oceanCanvas"></canvas>
+
+    <img src="images/coral-placeholder.jpg" class="coral-bg" alt="">
+    <div class="ocean-tint"></div>
+    <div class="light-rays"></div>
+    <div class="depth-fog"></div>
+    <div class="bubble-layer" id="bubbleLayer"></div>
+    <div class="fish-layer" id="fishLayer"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Abyssal Blue Home">
+      <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="oceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7cf7ff"/>
+            <stop offset="50%" stop-color="#00ffd5"/>
+            <stop offset="100%" stop-color="#087f9e"/>
+          </linearGradient>
+        </defs>
+
+        <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo)" stroke-width="5"/>
+        <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo)"/>
+        <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+        <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+      </svg>
+
+      <span>Abyssal Blue</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="wildlife.html">Wildlife</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book Dive</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <p class="eyebrow">Get In Touch</p>
+
+      <h1>Contact the Ocean Team.</h1>
+
+      <p>
+        Reach out for guided dive reservations, aquarium visits, private charters,
+        group trips, partnership questions, or ocean conservation inquiries.
+      </p>
+    </section>
+
+    <!-- CONTACT QUICK CARDS -->
+    <section class="contact-quick-grid">
+      <div class="contact-quick-card">
+        <span>Email</span>
+        <strong>info@abyssalblue.com</strong>
+        <p>For general questions, partnerships, visitor support, and group requests.</p>
+      </div>
+
+      <div class="contact-quick-card">
+        <span>Phone</span>
+        <strong>(555) 123-4567</strong>
+        <p>Call for same-day availability, private charters, and tour details.</p>
+      </div>
+
+      <div class="contact-quick-card">
+        <span>Location</span>
+        <strong>Miami, Florida</strong>
+        <p>Visit our ocean discovery center, marina desk, or scheduled dive launch point.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT MAIN -->
+    <section class="contact-wrapper premium-contact-wrapper">
+
+      <div class="contact-info premium-contact-info">
+        <p class="eyebrow">Visit Us</p>
+
+        <h2>Ocean Discovery Center</h2>
+
+        <p>
+          123 Harbor Drive
+          <br>
+          Miami, FL 33101
+        </p>
+
+        <div class="contact-detail-list">
+          <div>
+            <h3>Email</h3>
+            <p>info@abyssalblue.com</p>
+          </div>
+
+          <div>
+            <h3>Phone</h3>
+            <p>(555) 123-4567</p>
+          </div>
+
+          <div>
+            <h3>Hours</h3>
+            <p>
+              Monday - Friday
+              <br>
+              8:00 AM - 6:00 PM
+            </p>
+          </div>
+
+          <div>
+            <h3>Emergency Weather Line</h3>
+            <p>(555) 987-6543</p>
+          </div>
+        </div>
+
+        <div class="booking-note">
+          <strong>Visitor Information:</strong>
+          Contact us for updated hours, marina directions, weather advisories,
+          dive requirements, accessibility information, and parking details.
+        </div>
+      </div>
+
+      <form class="contact-form premium-contact-form" action="thank-you.html" data-form-type="contact">
+
+        <h2>Send a Message</h2>
+
+        <label>
+          Your Name
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            autocomplete="name"
+            required
+          >
+        </label>
+
+        <label>
+          Email Address
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            autocomplete="email"
+            required
+          >
+        </label>
+
+        <label>
+          Phone Number
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            autocomplete="tel"
+          >
+        </label>
+
+        <label>
+          Inquiry Type
+          <select name="inquiry" required>
+            <option value="">Select Inquiry Type</option>
+            <option value="Booking Question">Booking Question</option>
+            <option value="Private Charter">Private Charter</option>
+            <option value="Aquarium Visit">Aquarium Visit</option>
+            <option value="School or Group Trip">School or Group Trip</option>
+            <option value="Partnership">Partnership</option>
+            <option value="General Question">General Question</option>
+          </select>
+        </label>
+
+        <label>
+          Subject
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required
+          >
+        </label>
+
+        <label>
+          Message
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="How can we help?"
+            required
+          ></textarea>
+        </label>
+
+        <button type="submit" class="btn primary-btn">
+          Send Message
+        </button>
+
+        <p class="form-disclaimer">
+          Messages are typically answered within one business day.
+        </p>
+      </form>
+
+    </section>
+
+    <!-- MAP / LOCATION -->
+    <section class="map-section premium-map-section">
+      <div class="map-placeholder premium-map-placeholder">
+        <p class="eyebrow">Find Us</p>
+
+        <h2>Ocean Discovery Center</h2>
+
+        <p>
+          Located near the marina and dive launch area. Visitors can access
+          guided tours, marine exhibits, educational programs, and ocean
+          adventure experiences from this location.
+        </p>
+
+        <div class="map-pins">
+          <span>Marina Launch</span>
+          <span>Reef Route</span>
+          <span>Visitor Center</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT OPTIONS -->
+    <section class="section-header">
+      <p class="eyebrow">Support Options</p>
+
+      <h2>Help visitors find the right next step.</h2>
+
+      <p>
+        Choose the option that best matches your question and our team will
+        connect you with the right department.
+      </p>
+    </section>
+
+    <section class="process-section">
+      <div class="process-card">
+        <span>01</span>
+        <h3>Booking Help</h3>
+        <p>
+          Ask about dive dates, package options, group size, age rules,
+          experience levels, and reservation details.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <span>02</span>
+        <h3>Group Visits</h3>
+        <p>
+          Plan school trips, family visits, resort excursions, aquarium field trips,
+          and private charter experiences.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <span>03</span>
+        <h3>Partnerships</h3>
+        <p>
+          Connect with us about conservation partnerships, marine education,
+          travel collaborations, and local tourism opportunities.
+        </p>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-band home-final-cta">
+      <p class="eyebrow">Need Faster Help?</p>
+
+      <h2>Book directly or contact the team for custom ocean experiences.</h2>
+
+      <p>
+        Whether you're planning a dive, organizing a group visit, or seeking
+        partnership opportunities, our team is ready to help.
+      </p>
+
+      <a href="booking.html" class="btn primary-btn">Book a Dive</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-simple">
+
+      <a href="index.html" class="footer-logo" aria-label="Abyssal Blue Home">
+        <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="footerOceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7cf7ff"/>
+              <stop offset="50%" stop-color="#00ffd5"/>
+              <stop offset="100%" stop-color="#087f9e"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="32" cy="32" r="23" fill="none" stroke="url(#footerOceanLogo)" stroke-width="5"/>
+          <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#footerOceanLogo)"/>
+          <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+          <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+        </svg>
+
+        <span>Abyssal Blue</span>
+      </a>
+
+      <p>
+        Premium underwater website template designed for aquariums,
+        dive tours, resorts, marine parks, and ocean adventure brands.
+      </p>
+
+      <div class="footer-bottom">
+        &copy; 2026 Abyssal Blue. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="booking.html#dive-packages" class="floating-book-btn" aria-label="Book a dive package">
+    Book Dive
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

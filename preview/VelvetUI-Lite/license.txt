@@ -1,0 +1,23 @@
+VelvetUI Lite License
+
+Copyright (c) VelvetUI
+
+This license grants the purchaser a limited, non-transferable right to use VelvetUI Lite under the terms below.
+
+Allowed:
+- Personal use
+- Use on one commercial website owned or operated by the license holder
+- Basic customization of text, colors, branding details, images, and layout structure for the licensed website
+
+Not allowed:
+- Use in client projects
+- Reselling the template in original or modified form
+- Redistributing the source files
+- Sharing files with unlicensed users
+- Uploading the template, source files, or modified source files to marketplaces, repositories, download libraries, or template collections
+
+This license does not transfer ownership of the template or its source files.
+
+For licensing questions, contact:
+webdevlady26@gmail.com
+mailto:webdevlady26@gmail.com

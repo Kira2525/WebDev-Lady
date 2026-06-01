@@ -1,0 +1,9 @@
+VelvetUI Pro Template License Placeholder
+
+Copyright (c) 2026 VelvetUI Pro
+
+This file is included as a starter license placeholder for the template package.
+Replace it with your preferred commercial, proprietary, or open-source license
+before distribution if your project requires specific legal terms.
+
+Until replaced, treat this template package as all rights reserved.

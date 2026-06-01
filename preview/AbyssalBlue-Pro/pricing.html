@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pricing | Abyssal Blue</title>
+
+  <meta
+    name="description"
+    content="View Abyssal Blue dive packages and ocean experience pricing for beginner dives, advanced reef tours, shipwreck expeditions, and private charters."
+  />
+  <meta name="theme-color" content="#02111c" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/pricing.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pricing | Abyssal Blue" />
+  <meta property="og:description" content="View Abyssal Blue dive packages and ocean experience pricing for beginner dives, advanced reef tours, shipwreck expeditions, and private charters." />
+  <meta property="og:url" content="https://example.com/pricing.html" />
+  <meta property="og:image" content="https://example.com/images/coral-placeholder.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="images/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <div class="ocean-scene" id="oceanScene">
+    <canvas id="oceanCanvas"></canvas>
+    <img src="images/coral-placeholder.jpg" class="coral-bg" alt="">
+    <div class="ocean-tint"></div>
+    <div class="light-rays"></div>
+    <div class="depth-fog"></div>
+    <div class="bubble-layer" id="bubbleLayer"></div>
+    <div class="fish-layer" id="fishLayer"></div>
+  </div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo" aria-label="Abyssal Blue Home">
+      <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="oceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7cf7ff"/>
+            <stop offset="50%" stop-color="#00ffd5"/>
+            <stop offset="100%" stop-color="#087f9e"/>
+          </linearGradient>
+        </defs>
+
+        <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo)" stroke-width="5"/>
+        <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo)"/>
+        <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+        <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+      </svg>
+
+      <span>Abyssal Blue</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="wildlife.html">Wildlife</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="booking.html">Book Dive</a>
+      <a href="contact.html">Contact</a>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+
+    <section class="page-hero">
+      <p class="eyebrow">Dive Packages</p>
+
+      <h1>Premium Ocean Pricing.</h1>
+
+      <p>
+        Choose from beginner reef dives, advanced wildlife routes, shipwreck
+        expeditions, private charters, and add-on services designed for unforgettable
+        ocean experiences.
+      </p>
+    </section>
+
+    <section class="booking-strip glass-card">
+      <div>
+        <span class="strip-label">Starting At</span>
+        <strong>$99</strong>
+      </div>
+
+      <div>
+        <span class="strip-label">Most Popular</span>
+        <strong>Advanced Reef Dive</strong>
+      </div>
+
+      <div>
+        <span class="strip-label">Private Options</span>
+        <strong>Available Daily</strong>
+      </div>
+
+      <a href="booking.html" class="btn primary-btn">Reserve Now</a>
+    </section>
+
+    <section class="pricing-page-grid premium-pricing-grid">
+
+      <article class="pricing-page-card">
+        <p class="plan-label">Starter</p>
+
+        <h2>Beginner Reef Dive</h2>
+
+        <div class="price">$99</div>
+
+        <p class="plan-text">
+          Best for first-time guests, shallow reef exploration, and guided ocean introductions.
+        </p>
+
+        <ul>
+          <li>Guided beginner session</li>
+          <li>Basic equipment included</li>
+          <li>Safety briefing</li>
+          <li>Small group experience</li>
+          <li>Shallow reef route</li>
+        </ul>
+
+        <a href="booking.html" class="btn secondary-btn">Choose Starter</a>
+      </article>
+
+      <article class="pricing-page-card popular">
+        <p class="plan-label">Most Popular</p>
+
+        <h2>Advanced Reef Dive</h2>
+
+        <div class="price">$249</div>
+
+        <p class="plan-text">
+          A deeper guided experience with reef exploration, marine wildlife viewing,
+          and premium route options.
+        </p>
+
+        <ul>
+          <li>Extended guided dive</li>
+          <li>Reef and wildlife route</li>
+          <li>Premium equipment included</li>
+          <li>Digital photo add-on option</li>
+          <li>Priority booking window</li>
+        </ul>
+
+        <a href="booking.html" class="btn primary-btn">Choose Advanced</a>
+      </article>
+
+      <article class="pricing-page-card">
+        <p class="plan-label">Private</p>
+
+        <h2>Private Charter</h2>
+
+        <div class="price">$599</div>
+
+        <p class="plan-text">
+          Designed for couples, families, creators, private groups, resort guests,
+          and custom ocean experiences.
+        </p>
+
+        <ul>
+          <li>Private guide</li>
+          <li>Custom dive route</li>
+          <li>Flexible schedule</li>
+          <li>Photo and video option</li>
+          <li>Best for small groups</li>
+        </ul>
+
+        <a href="booking.html" class="btn secondary-btn">Choose Private</a>
+      </article>
+
+    </section>
+
+    <section class="section-header">
+      <p class="eyebrow">Optional Add-Ons</p>
+
+      <h2>Upgrade your ocean experience.</h2>
+
+      <p>
+        Add photography, video, equipment upgrades, or custom group options to make
+        your dive more personal, comfortable, and memorable.
+      </p>
+    </section>
+
+    <section class="add-on-grid">
+      <article class="add-on-card">
+        <span>+$49</span>
+        <h3>Photo Package</h3>
+        <p>Professional underwater images delivered after the experience.</p>
+      </article>
+
+      <article class="add-on-card">
+        <span>+$79</span>
+        <h3>Video Highlight</h3>
+        <p>Short cinematic dive footage for guests, creators, and travel memories.</p>
+      </article>
+
+      <article class="add-on-card">
+        <span>+$35</span>
+        <h3>Equipment Upgrade</h3>
+        <p>Premium wetsuits, masks, fins, or comfort upgrades for longer dives.</p>
+      </article>
+
+      <article class="add-on-card">
+        <span>Custom</span>
+        <h3>Group Package</h3>
+        <p>Special pricing for schools, families, resorts, and private events.</p>
+      </article>
+    </section>
+
+    <section class="pricing-compare-section glass-card">
+      <div class="section-header compact-header">
+        <p class="eyebrow">Compare Packages</p>
+        <h2>Choose the right dive faster.</h2>
+      </div>
+
+      <div class="compare-table">
+        <div class="compare-row compare-head">
+          <span>Feature</span>
+          <span>Beginner</span>
+          <span>Advanced</span>
+          <span>Private</span>
+        </div>
+
+        <div class="compare-row">
+          <span>Guided Dive</span>
+          <span>Included</span>
+          <span>Included</span>
+          <span>Private Guide</span>
+        </div>
+
+        <div class="compare-row">
+          <span>Equipment</span>
+          <span>Basic</span>
+          <span>Premium</span>
+          <span>Premium</span>
+        </div>
+
+        <div class="compare-row">
+          <span>Best For</span>
+          <span>First-Time Guests</span>
+          <span>Adventure Divers</span>
+          <span>Groups</span>
+        </div>
+
+        <div class="compare-row">
+          <span>Photo Option</span>
+          <span>Add-On</span>
+          <span>Add-On</span>
+          <span>Available</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-section premium-split">
+      <div>
+        <p class="eyebrow">Clear Value</p>
+
+        <h2>Simple pricing, strong experiences, and no guesswork.</h2>
+
+        <p>
+          Each package is built to help guests quickly understand what is included,
+          who the experience is best for, and which option fits their comfort level,
+          schedule, and group size.
+        </p>
+
+        <div class="mini-feature-list">
+          <span>Guided routes</span>
+          <span>Equipment options</span>
+          <span>Photo add-ons</span>
+          <span>Private charters</span>
+        </div>
+      </div>
+
+      <img src="images/coral-placeholder.jpg" alt="Coral reef underwater">
+    </section>
+
+    <section class="section-header">
+      <p class="eyebrow">Before You Book</p>
+
+      <h2>Common pricing questions.</h2>
+    </section>
+
+    <section class="faq-section premium-faq-section">
+      <details class="faq-item" open>
+        <summary>Are prices per person?</summary>
+        <p>
+          Beginner and advanced dive prices are listed per guest. Private charter
+          pricing is listed as a starting rate and may vary by group size, route,
+          schedule, and add-on services.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is equipment included in every package?</summary>
+        <p>
+          Basic equipment is included in the beginner package. Advanced and private
+          experiences include premium equipment options, with additional upgrades
+          available on request.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can guests reschedule?</summary>
+        <p>
+          Rescheduling may be available for weather, ocean conditions, or approved
+          schedule changes. Contact the team as early as possible if your plans change.
+        </p>
+      </details>
+    </section>
+
+    <section class="cta-band home-final-cta">
+      <p class="eyebrow">Ready to Dive?</p>
+
+      <h2>Turn ocean curiosity into an unforgettable experience.</h2>
+
+      <p>
+        Choose your package, reserve your preferred date, and get ready to explore
+        reefs, wildlife, shipwrecks, and deep blue water.
+      </p>
+
+      <a href="booking.html" class="btn primary-btn">Reserve Now</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-simple">
+
+      <a href="index.html" class="footer-logo" aria-label="Abyssal Blue Home">
+        <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="footerOceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7cf7ff"/>
+              <stop offset="50%" stop-color="#00ffd5"/>
+              <stop offset="100%" stop-color="#087f9e"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="32" cy="32" r="23" fill="none" stroke="url(#footerOceanLogo)" stroke-width="5"/>
+          <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#footerOceanLogo)"/>
+          <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+          <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+        </svg>
+
+        <span>Abyssal Blue</span>
+      </a>
+
+      <p>
+        Premium underwater website template designed for aquariums,
+        dive tours, resorts, marine parks, and ocean adventure brands.
+      </p>
+
+      <div class="footer-bottom">
+        &copy; 2026 Abyssal Blue. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="booking.html#dive-packages" class="floating-book-btn" aria-label="Book a dive package">
+    Book Dive
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

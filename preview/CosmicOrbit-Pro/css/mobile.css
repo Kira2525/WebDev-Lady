@@ -1,0 +1,137 @@
+@media screen and (max-width: 650px) {
+  .navbar {
+    width: min(92%, 100%);
+    top: 12px;
+    margin-top: 18px;
+    padding: 16px 20px;
+    border-radius: 28px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: min(280px, calc(100vw - 40px));
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 24px;
+    background: rgba(8, 12, 28, 0.96);
+    box-shadow:
+      0 20px 50px rgba(0, 0, 0, 0.4),
+      0 0 24px rgba(130, 234, 255, 0.12);
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+  }
+
+  .hero {
+    width: 92%;
+    padding: 28px 0 72px;
+    gap: 24px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    letter-spacing: -0.05em;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text,
+  .section-lead,
+  .narrow-copy,
+  .pricing-note,
+  p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons,
+  .section-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-stats,
+  .feature-grid,
+  .preview-grid,
+  .pricing-grid,
+  .dashboard-stats,
+  .dashboard-panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card,
+  .feature-card,
+  .pricing-card,
+  .preview-card,
+  .login-card,
+  .contact-form-card,
+  .dashboard-sidebar,
+  .chart-card,
+  .mini-card {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .preview-card {
+    min-height: auto;
+  }
+
+  .preview-card img {
+    height: 160px;
+  }
+
+  .section {
+    margin-bottom: 78px;
+  }
+
+  .section::before {
+    inset: -18px;
+    border-radius: 28px;
+  }
+
+  .dashboard-sidebar {
+    order: 2;
+  }
+
+  .dashboard-main {
+    order: 1;
+  }
+
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fake-chart {
+    height: 180px;
+    gap: 8px;
+  }
+
+  .coming-soon-section {
+    min-height: auto;
+  }
+
+  #spaceScene {
+    opacity: 0.78;
+  }
+}

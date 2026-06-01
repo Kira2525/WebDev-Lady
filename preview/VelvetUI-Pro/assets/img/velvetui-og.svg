@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">VelvetUI Pro Open Graph image</title>
+  <desc id="desc">Premium glass landing page preview artwork for VelvetUI Pro.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06020a" />
+      <stop offset="42%" stop-color="#12061a" />
+      <stop offset="100%" stop-color="#221033" />
+    </linearGradient>
+    <radialGradient id="orbA" cx="18%" cy="26%" r="44%">
+      <stop offset="0%" stop-color="#ff4d94" stop-opacity="0.46" />
+      <stop offset="100%" stop-color="#ff4d94" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="orbB" cx="78%" cy="22%" r="34%">
+      <stop offset="0%" stop-color="#ab7dff" stop-opacity="0.34" />
+      <stop offset="100%" stop-color="#ab7dff" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="diamond" x1="5%" y1="6%" x2="90%" y2="92%">
+      <stop offset="0%" stop-color="#fff5fb" />
+      <stop offset="45%" stop-color="#ffc6de" />
+      <stop offset="100%" stop-color="#ff4d94" />
+    </linearGradient>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.16)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#ff4d94" flood-opacity="0.28" />
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#orbA)" />
+  <rect width="1200" height="630" fill="url(#orbB)" />
+  <g opacity="0.38">
+    <path d="M0 92h1200M0 182h1200M0 272h1200M0 362h1200M0 452h1200M0 542h1200" stroke="#ffffff" stroke-opacity="0.08" />
+    <path d="M136 0v630M316 0v630M496 0v630M676 0v630M856 0v630M1036 0v630" stroke="#ffffff" stroke-opacity="0.06" />
+  </g>
+  <rect x="86" y="84" width="1028" height="462" rx="36" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12" />
+  <g transform="translate(138 140)">
+    <path d="M74 0 148 74 74 148 0 74Z" fill="url(#diamond)" filter="url(#glow)" />
+    <text x="184" y="88" fill="#fff6fb" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" letter-spacing="1.8">VelvetUI Pro</text>
+    <text x="0" y="228" fill="#fff6fb" font-family="Georgia, 'Times New Roman', serif" font-size="86" font-weight="700">Launch a premium landing page in style.</text>
+    <text x="0" y="306" fill="#d8c4d3" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="30">
+      Glassmorphism visuals. Animated text hero. Conversion-ready one-page sections.
+    </text>
+    <g transform="translate(0 360)">
+      <rect width="262" height="70" rx="35" fill="url(#diamond)" />
+      <text x="131" y="44" text-anchor="middle" fill="#25010e" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="28" font-weight="700">Get Pro for $79</text>
+    </g>
+    <g transform="translate(676 32)">
+      <rect width="242" height="292" rx="30" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.14" />
+      <text x="28" y="44" fill="#ffc6de" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="16" font-weight="700" letter-spacing="3">FEATURES</text>
+      <text x="28" y="98" fill="#fff6fb" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700">Premium glassmorphism</text>
+      <text x="28" y="144" fill="#d8c4d3" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="22">Responsive layout</text>
+      <text x="28" y="190" fill="#d8c4d3" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="22">Configurable hero words</text>
+      <text x="28" y="236" fill="#d8c4d3" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-size="22">Clean vanilla files</text>
+    </g>
+  </g>
+</svg>

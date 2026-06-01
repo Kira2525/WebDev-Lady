@@ -1,0 +1,15 @@
+{
+  "name": "web-dev-lady",
+  "version": "1.0.0",
+  "description": "Web Dev Lady website with Stripe payments",
+  "main": "index.html",
+  "scripts": {
+    "start": "netlify dev"
+  },
+  "dependencies": {
+    "stripe": "^18.0.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}

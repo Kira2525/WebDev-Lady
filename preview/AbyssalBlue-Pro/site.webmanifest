@@ -1,0 +1,17 @@
+{
+  "name": "Abyssal Blue",
+  "short_name": "Abyssal Blue",
+  "description": "Premium underwater website template for dive tours, aquariums, resorts, marine parks, and ocean adventure brands.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#02111c",
+  "theme_color": "#02111c",
+  "icons": [
+    {
+      "src": "images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
