@@ -1106,6 +1106,25 @@ footer {
   transition: 0.3s;
 }
 
+.footer-links a {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.footer-links a i {
+width: 22px;
+font-size: 18px;
+color: #ff8bd2;
+transition: 0.3s ease;
+}
+
+.footer-links a:hover i {
+color: #ffffff;
+transform: translateX(3px);
+}
+
+
 .footer-links a:hover {
   color: #ff8bd2;
 }
