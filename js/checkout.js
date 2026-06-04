@@ -22,8 +22,10 @@ if (paymentElement) {
 
 if (!window.selectedProduct) {
   disableCheckout("Choose an active template before you continue to checkout.");
-} else if (!stripe) {
+} else if (isPlaceholderKey) {
   disableCheckout("Checkout setup is still being finalized. Add your live Stripe publishable key before accepting real orders.");
+} else if (!stripe) {
+  disableCheckout("Secure checkout could not load right now. Please refresh the page or contact support if the problem continues.");
 }
 
 if (paymentForm) {
@@ -100,8 +102,8 @@ function setLoading(isLoading) {
   } else {
     submitButton.disabled = false;
 
-    if (window.selectedProduct && window.selectedProduct.price) {
-      submitButton.textContent = `Pay ${window.selectedProduct.price} Securely`;
+    if (window.selectedProduct && window.selectedProduct.priceLabel) {
+      submitButton.textContent = `Pay ${window.selectedProduct.priceLabel} Securely`;
     } else {
       submitButton.textContent = "Pay Securely";
     }

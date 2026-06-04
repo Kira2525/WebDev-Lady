@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R74R9S9ZZL');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-R74R9S9ZZL");
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -17,11 +16,11 @@
 
   <meta
     name="description"
-    content="Shop premium responsive website templates built with HTML, CSS, and JavaScript. Explore Lite and Pro designs for businesses, creators, and modern brands."
+    content="Shop premium responsive HTML website templates from Web Dev Lady. Every Lite template is $59 and every Pro template is $99."
   />
   <meta
     name="keywords"
-    content="website template store, responsive website templates, HTML website templates, premium web design templates, website templates, Web Dev Lady"
+    content="website template store, responsive website templates, HTML website templates, premium web design templates, Web Dev Lady"
   />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Web Dev Lady" />
@@ -31,7 +30,7 @@
   <meta property="og:title" content="Website Template Store | Responsive HTML Website Templates | Web Dev Lady" />
   <meta
     property="og:description"
-    content="Shop premium responsive website templates built with HTML, CSS, and JavaScript. Explore Lite and Pro designs for businesses, creators, and modern brands."
+    content="Shop premium responsive HTML website templates from Web Dev Lady. Every Lite template is $59 and every Pro template is $99."
   />
   <meta property="og:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
   <meta property="og:url" content="https://webdevlady.netlify.app/templates.html" />
@@ -40,7 +39,7 @@
   <meta name="twitter:title" content="Website Template Store | Responsive HTML Website Templates | Web Dev Lady" />
   <meta
     name="twitter:description"
-    content="Shop premium responsive website templates built with HTML, CSS, and JavaScript. Explore Lite and Pro designs for businesses, creators, and modern brands."
+    content="Shop premium responsive HTML website templates from Web Dev Lady. Every Lite template is $59 and every Pro template is $99."
   />
   <meta name="twitter:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
 
@@ -70,9 +69,9 @@
   <link rel="stylesheet" href="css/tablet.css" />
   <link rel="stylesheet" href="css/mobile.css" />
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-/>
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
 </head>
 
 <body>
@@ -85,8 +84,13 @@
       <span>WEB DEV <strong>LADY</strong></span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
-      ☰
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      &#9776;
     </button>
 
     <nav class="nav" id="nav">
@@ -96,35 +100,28 @@
       <a href="about.html">About</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-
       <a href="cart.html" class="cart-icon-link" aria-label="Shopping Cart">
-        🛒
+        &#128722;
       </a>
     </nav>
   </header>
 
   <main>
-
     <section class="hero">
       <div class="hero-content">
         <p class="tagline">PREMIUM WEBSITE COLLECTION</p>
-
-        <h1>Website templates built to look custom.</h1>
+        <h1>Every template comes with a clear upgrade path.</h1>
 
         <p class="hero-text">
-          Browse premium website templates designed for businesses, creators,
-          startups, digital products, service brands, and online stores that
-          need a polished website without starting from scratch.
+          Lite templates are $59 and Pro templates are $99. If you want help
+          beyond the template itself, customization starts at $199 and Website
+          Setup Service starts at $499.
         </p>
 
         <div class="hero-buttons">
-          <a
-            href="cart.html?product=cosmicorbit-pro"
-            class="btn primary"
-          >
-            Buy CosmicOrbit Pro
+          <a href="cart.html?product=cosmicorbit-pro" class="btn primary">
+            Buy Pro &mdash; $99
           </a>
-
           <a
             href="preview/CosmicOrbit-Pro/index.html"
             target="_blank"
@@ -145,46 +142,90 @@
     </section>
 
     <section class="section">
+      <p class="section-tag">LITE VS PRO</p>
+      <h2>Know exactly what changes between versions.</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <span>$59</span>
+          <h3>Lite Template</h3>
+          <ul class="feature-list">
+            <li>Single-page website</li>
+            <li>Responsive layout</li>
+            <li>Editable HTML, CSS, and JavaScript</li>
+            <li>Documentation included</li>
+            <li>Commercial use license</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span>$99</span>
+          <h3>Pro Template</h3>
+          <ul class="feature-list">
+            <li>Multi-page website</li>
+            <li>More sections and pages</li>
+            <li>Stronger layouts for polished launches</li>
+            <li>Responsive layout</li>
+            <li>Editable code, documentation, and commercial use license</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span>$199-$499+</span>
+          <h3>Need launch help?</h3>
+          <p>
+            Choose Template Customization for polished brand updates, or choose
+            Website Setup Service for a more complete launch-ready handoff.
+          </p>
+          <a href="pricing.html#website-path" class="learn-more">Compare Service Options &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
       <p class="section-tag">AVAILABLE NOW</p>
-      <h2>Featured premium templates.</h2>
+      <h2>Choose your template.</h2>
 
       <div class="templates-grid">
-
         <article class="template-card">
           <div class="template-card-content">
             <div class="template-preview-image">
               <img
                 src="images/cosmicorbit-pro.png"
-                alt="CosmicOrbit Pro Website Template Preview"
+                alt="CosmicOrbit website template preview"
               />
             </div>
 
-            <p class="tagline">BEST SELLER</p>
-
+            <p class="tagline">FUTURISTIC SALES WEBSITE</p>
             <h3>CosmicOrbit</h3>
 
             <p>
-              A futuristic premium website template designed for SaaS companies,
-              startups, gaming brands, creators, technology businesses, and
-              digital products that want a high-end online presence without
-              paying for a custom build.
+              A bold futuristic template for creators, SaaS brands, digital
+              products, and service businesses that want a polished premium look.
             </p>
 
             <ul class="feature-list">
-              <li>Lite and Pro versions available</li>
-              <li>Multi-page premium option with business-ready layouts</li>
-              <li>Animated space experience and glassmorphism styling</li>
-              <li>Responsive desktop, tablet, and mobile design</li>
-              <li>Clean editable HTML, CSS, and JavaScript</li>
-              <li>Commercial use license included</li>
-              <li>Instant digital download after purchase</li>
+              <li>Lite: single-page website for simple launches</li>
+              <li>Pro: multi-page website with stronger layouts</li>
+              <li>Responsive on desktop, tablet, and mobile</li>
+              <li>Editable code, documentation, and commercial use license</li>
             </ul>
 
             <div class="template-actions">
-              <a href="cart.html?product=cosmicorbit-pro" class="btn primary">
-                Buy Pro - $99
+              <a href="cart.html?product=cosmicorbit-lite" class="btn secondary">
+                Buy Lite &mdash; $59
               </a>
-
+              <a
+                href="preview/CosmicOrbit-Lite/index.html"
+                class="btn secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Lite Preview
+              </a>
+              <a href="cart.html?product=cosmicorbit-pro" class="btn primary">
+                Buy Pro &mdash; $99
+              </a>
               <a
                 href="preview/CosmicOrbit-Pro/index.html"
                 class="btn secondary"
@@ -193,26 +234,16 @@
               >
                 View Pro Preview
               </a>
-
-              <a href="cart.html?product=cosmicorbit-lite" class="btn secondary">
-                Buy Lite - $59
-              </a>
-
-              <a
-                href="preview/CosmicOrbit-Lite/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn secondary"
-              >
-                View Lite Preview
-              </a>
             </div>
           </div>
 
           <div class="template-price-box">
-            <span>LITE $59 / PRO $99</span>
-            <h3>$59+</h3>
-            <p>Lite and Pro Versions Available</p>
+            <span>AVAILABLE NOW</span>
+            <div class="template-price-lines">
+              <p><strong>Lite:</strong> $59</p>
+              <p><strong>Pro:</strong> $99</p>
+            </div>
+            <p class="template-price-note">Single-page or multi-page versions</p>
           </div>
         </article>
 
@@ -221,50 +252,30 @@
             <div class="template-preview-image">
               <img
                 src="images/abyssalblue-pro.png"
-                alt="Abyssal Blue Website Template Preview"
+                alt="Abyssal Blue website template preview"
               />
             </div>
 
-            <p class="tagline">NEW RELEASE</p>
-
+            <p class="tagline">OCEAN-INSPIRED WEBSITE</p>
             <h3>Abyssal Blue</h3>
 
             <p>
-              A premium ocean-inspired website template featuring immersive
-              underwater visuals, animated marine life, floating bubbles,
-              booking pages, wildlife showcases, galleries, FAQs, and contact
-              forms. Perfect for aquariums, resorts, dive tours, marine parks,
-              conservation organizations, and ocean adventure brands.
+              A modern underwater-inspired template for tours, attractions,
+              travel brands, hospitality businesses, and adventure-focused
+              services.
             </p>
 
             <ul class="feature-list">
-              <li>Lite and Pro versions available</li>
-              <li>Animated underwater experience</li>
-              <li>Interactive gallery, FAQ, and booking flows</li>
-              <li>Responsive desktop, tablet, and mobile layouts</li>
-              <li>Clean editable code and documentation</li>
-              <li>Commercial use license included</li>
-              <li>Instant digital download after purchase</li>
+              <li>Lite: single-page website for simple launches</li>
+              <li>Pro: multi-page website with stronger layouts</li>
+              <li>Responsive on desktop, tablet, and mobile</li>
+              <li>Editable code, documentation, and commercial use license</li>
             </ul>
 
             <div class="template-actions">
-              <a href="cart.html?product=abyssalblue-pro" class="btn primary">
-                Buy Pro - $99
-              </a>
-
-              <a
-                href="preview/AbyssalBlue-Pro/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn secondary"
-              >
-                View Pro Preview
-              </a>
-
               <a href="cart.html?product=abyssalblue-lite" class="btn secondary">
-                Buy Lite - $59
+                Buy Lite &mdash; $59
               </a>
-
               <a
                 href="preview/AbyssalBlue-Lite/index.html"
                 target="_blank"
@@ -273,66 +284,88 @@
               >
                 View Lite Preview
               </a>
+              <a href="cart.html?product=abyssalblue-pro" class="btn primary">
+                Buy Pro &mdash; $99
+              </a>
+              <a
+                href="preview/AbyssalBlue-Pro/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn secondary"
+              >
+                View Pro Preview
+              </a>
             </div>
           </div>
 
           <div class="template-price-box">
-            <span>LITE $59 / PRO $99</span>
-            <h3>$59+</h3>
-            <p>Lite and Pro Versions Available</p>
+            <span>AVAILABLE NOW</span>
+            <div class="template-price-lines">
+              <p><strong>Lite:</strong> $59</p>
+              <p><strong>Pro:</strong> $99</p>
+            </div>
+            <p class="template-price-note">Single-page or multi-page versions</p>
           </div>
         </article>
 
         <article class="template-card">
           <div class="template-card-content">
             <div class="template-preview-image">
-              <img src="images/velvetui-pro.png" alt="VelvetUI Pro Website Template Preview" />
+              <img
+                src="images/velvetui-pro.png"
+                alt="VelvetUI website template preview"
+              />
             </div>
 
-            <p class="tagline">PREMIUM GLASS TEMPLATE</p>
-
+            <p class="tagline">LUXURY MODERN WEBSITE</p>
             <h3>VelvetUI</h3>
 
             <p>
-              A luxury glassmorphism website template with soft purple visuals,
-              polished sections, animated design details, responsive layouts,
-              and conversion-ready pages for modern brands, creators, startups,
-              and digital products.
+              A soft luxury template for beauty brands, coaches, creators,
+              digital offers, and personal brands that want a polished online
+              presentation.
             </p>
 
             <ul class="feature-list">
-              <li>Lite and Pro versions available</li>
-              <li>Premium glassmorphism design language</li>
-              <li>Animated visual effects and polished page flow</li>
-              <li>Responsive desktop, tablet, and mobile CSS</li>
-              <li>Clean editable HTML, CSS, and JavaScript</li>
-              <li>Commercial use license included</li>
-              <li>Instant digital download after purchase</li>
+              <li>Lite: single-page website for simple launches</li>
+              <li>Pro: multi-page website with stronger layouts</li>
+              <li>Responsive on desktop, tablet, and mobile</li>
+              <li>Editable code, documentation, and commercial use license</li>
             </ul>
 
             <div class="template-actions">
-              <a href="cart.html?product=velvetui-pro" class="btn primary">
-                Buy Pro - $99
-              </a>
-
-              <a href="preview/VelvetUI-Pro/index.html" target="_blank" rel="noopener noreferrer" class="btn secondary">
-                View Pro Preview
-              </a>
-
               <a href="cart.html?product=velvetui-lite" class="btn secondary">
-                Buy Lite - $59
+                Buy Lite &mdash; $59
               </a>
-
-              <a href="preview/VelvetUI-Lite/index.html" target="_blank" rel="noopener noreferrer" class="btn secondary">
+              <a
+                href="preview/VelvetUI-Lite/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn secondary"
+              >
                 View Lite Preview
+              </a>
+              <a href="cart.html?product=velvetui-pro" class="btn primary">
+                Buy Pro &mdash; $99
+              </a>
+              <a
+                href="preview/VelvetUI-Pro/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn secondary"
+              >
+                View Pro Preview
               </a>
             </div>
           </div>
 
           <div class="template-price-box">
-            <span>LITE $59 / PRO $99</span>
-            <h3>$59+</h3>
-            <p>Lite and Pro Versions Available</p>
+            <span>AVAILABLE NOW</span>
+            <div class="template-price-lines">
+              <p><strong>Lite:</strong> $59</p>
+              <p><strong>Pro:</strong> $99</p>
+            </div>
+            <p class="template-price-note">Single-page or multi-page versions</p>
           </div>
         </article>
 
@@ -341,236 +374,130 @@
             <div class="template-preview-image">
               <img
                 src="images/worldview-pro.png"
-                alt="WorldView Pro Website Template Preview"
+                alt="WorldView website template preview"
               />
             </div>
 
-            <p class="tagline">GLOBAL BUSINESS TEMPLATE</p>
-
+            <p class="tagline">BUSINESS WEBSITE TEMPLATE</p>
             <h3>WorldView</h3>
 
             <p>
-              WorldView is a modern global business website template designed
-              for agencies, startups, consulting firms, technology companies,
-              international brands, and professional service businesses. It
-              features a polished design, responsive layouts, editable code,
-              and conversion-focused sections.
+              A clean professional template for agencies, consultants,
+              startups, and service-based businesses that need a strong business
+              website foundation.
             </p>
 
             <ul class="feature-list">
-              <li>Lite: Single-page website</li>
-              <li>Lite: Responsive design</li>
-              <li>Lite: HTML, CSS, and JavaScript</li>
-              <li>Lite: Commercial use license, documentation included, and instant digital download</li>
-              <li>Pro: Multi-page website</li>
-              <li>Pro: Premium responsive layouts with additional business pages</li>
-              <li>Pro: Advanced sections and animations</li>
-              <li>Pro: Commercial use license, documentation included, and instant digital download</li>
+              <li>Lite: single-page website for simple launches</li>
+              <li>Pro: multi-page website with stronger layouts</li>
+              <li>Responsive on desktop, tablet, and mobile</li>
+              <li>Editable code, documentation, and commercial use license</li>
             </ul>
 
             <div class="template-actions">
-              <a href="cart.html?product=worldview-pro" class="btn primary">
-                Buy Pro - $99
-              </a>
-
-              <a href="preview/WorldView-Pro/index.html" target="_blank" rel="noopener noreferrer" class="btn secondary">
-                View Pro Preview
-              </a>
-
               <a href="cart.html?product=worldview-lite" class="btn secondary">
-                Buy Lite - $59
+                Buy Lite &mdash; $59
               </a>
-
-              <a href="preview/WorldView-Lite/index.html" target="_blank" rel="noopener noreferrer" class="btn secondary">
+              <a
+                href="preview/WorldView-Lite/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn secondary"
+              >
                 View Lite Preview
+              </a>
+              <a href="cart.html?product=worldview-pro" class="btn primary">
+                Buy Pro &mdash; $99
+              </a>
+              <a
+                href="preview/WorldView-Pro/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn secondary"
+              >
+                View Pro Preview
               </a>
             </div>
           </div>
 
           <div class="template-price-box">
-            <span>LITE $59 / PRO $99</span>
-            <h3>$59+</h3>
-            <p>Lite and Pro Versions Available</p>
+            <span>AVAILABLE NOW</span>
+            <div class="template-price-lines">
+              <p><strong>Lite:</strong> $59</p>
+              <p><strong>Pro:</strong> $99</p>
+            </div>
+            <p class="template-price-note">Single-page or multi-page versions</p>
           </div>
         </article>
-
       </div>
-
     </section>
-  
 
     <section class="section">
-      <p class="section-tag">WHAT YOU GET</p>
-      <h2>Premium templates made for real websites.</h2>
+      <p class="section-tag">NEED MORE THAN A TEMPLATE?</p>
+      <h2>Choose the next service after you buy.</h2>
 
-      <div class="card-grid">
+      <div class="card-grid card-grid--four">
         <article class="card">
           <span>01</span>
-          <h3>Lite Templates</h3>
+          <h3>Template Customization</h3>
           <p>
-            Lite versions include a polished single-page website, responsive
-            CSS, JavaScript, images, README documentation, commercial use
-            license, and instant download after purchase.
+            Starts at $199 and is best if you already know which template you
+            want but need help refining the brand presentation.
           </p>
+          <a href="pricing.html#template-customization" class="learn-more">View Customization &rarr;</a>
         </article>
 
-        <article class="card">
+        <article class="card popular-card">
+          <div class="popular-badge">MOST POPULAR</div>
           <span>02</span>
-          <h3>Pro Templates</h3>
+          <h3>Website Setup Service</h3>
           <p>
-            Pro templates include 8 polished pages with a homepage, pricing,
-            contact flow, and niche-specific supporting pages that match each
-            template's style and use case.
+            Starts at $499 and is best if you want template installation,
+            content swaps, connection guidance, and a final quality review.
           </p>
+          <a href="pricing.html#website-setup-service" class="learn-more">View Setup Service &rarr;</a>
         </article>
 
         <article class="card">
           <span>03</span>
-          <h3>Responsive Design</h3>
+          <h3>Custom Website Build</h3>
           <p>
-            Templates are built to work across desktop, tablet, and mobile
-            screens.
+            Starts at $999 and is best if you need something more original
+            than a template or need a larger business or e-commerce website.
           </p>
+          <a href="pricing.html#custom-website-builds" class="learn-more">Compare Custom Builds &rarr;</a>
         </article>
 
         <article class="card">
           <span>04</span>
-          <h3>Editable Code</h3>
+          <h3>Need help deciding?</h3>
           <p>
-            Clean HTML, CSS, and JavaScript files make it easier to update text,
-            colors, images, links, and sections.
+            Use the contact form if you are not sure which template or service
+            fits your business. I can point you in the right direction.
           </p>
+          <a href="contact.html#project-form" class="learn-more">Ask for Help &rarr;</a>
         </article>
-
-        <article class="card">
-          <span>05</span>
-          <h3>Commercial Use</h3>
-          <p>
-            Use the template for your own business, brand, website, or digital
-            project.
-          </p>
-        </article>
-
-        <article class="card">
-          <span>06</span>
-          <h3>Secure Checkout</h3>
-          <p>
-            Customers choose a template, go through the cart, complete checkout,
-            then receive the correct download page.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <p class="section-tag">COMING SOON</p>
-      <h2>More templates are being added.</h2>
-
-      <div class="templates-grid">
-
-        <article class="template-card">
-          <div class="template-card-content">
-            <div class="template-preview-image coming-soon-preview">
-              <span>Coming Soon</span>
-            </div>
-
-            <p class="tagline">BUSINESS WEBSITE</p>
-
-            <h3>Modern Business Pro</h3>
-
-            <p>
-              A polished business website template for agencies, service
-              providers, consultants, and brands that need a professional online
-              presence.
-            </p>
-
-            <ul class="feature-list">
-              <li>Lite and Pro versions planned</li>
-              <li>Business-focused homepage</li>
-              <li>Service sections</li>
-              <li>About and contact page layout</li>
-              <li>Call-to-action sections</li>
-              <li>Responsive design</li>
-              <li>Clean editable code</li>
-            </ul>
-
-            <div class="template-actions">
-              <a href="contact.html#project-form" class="btn primary">
-                Request This Style
-              </a>
-            </div>
-          </div>
-
-          <div class="template-price-box">
-            <span>COMING</span>
-            <h3>Soon</h3>
-            <p>Business Template</p>
-          </div>
-        </article>
-
-        <article class="template-card">
-          <div class="template-card-content">
-            <div class="template-preview-image coming-soon-preview">
-              <span>Coming Soon</span>
-            </div>
-
-            <p class="tagline">CREATOR WEBSITE</p>
-
-            <h3>Creator Luxe</h3>
-
-            <p>
-              A premium creator website template for influencers, digital
-              brands, personal brands, content creators, and product launches.
-            </p>
-
-            <ul class="feature-list">
-              <li>Lite and Pro versions planned</li>
-              <li>Creator landing page</li>
-              <li>Brand showcase sections</li>
-              <li>Offer and product sections</li>
-              <li>Social media link areas</li>
-              <li>Mobile optimized</li>
-              <li>High-end visual style</li>
-            </ul>
-
-            <div class="template-actions">
-              <a href="contact.html#project-form" class="btn primary">
-                Request This Style
-              </a>
-            </div>
-          </div>
-
-          <div class="template-price-box">
-            <span>COMING</span>
-            <h3>Soon</h3>
-            <p>Creator Template</p>
-          </div>
-        </article>
-
       </div>
     </section>
 
     <section class="cta">
-      <p class="section-tag">NEED SOMETHING CUSTOM?</p>
-
-      <h2>Want a website made just for your brand?</h2>
+      <p class="section-tag">READY TO BUY?</p>
+      <h2>Pick a template now and choose support only if you need it.</h2>
 
       <p>
-        Start with a premium template or request a fully customized website
-        built around your business, products, services, and goals.
+        Every template purchase goes to the correct product page in the cart,
+        and every preview link opens the matching design folder.
       </p>
 
       <div class="hero-buttons">
-        <a href="pricing.html" class="btn primary">
-          View Custom Pricing
+        <a href="pricing.html#website-path" class="btn primary">
+          View Pricing
         </a>
-
         <a href="contact.html#project-form" class="btn secondary">
-          Start Custom Project
+          Start Project Request
         </a>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -581,18 +508,15 @@
           alt="Web Dev Lady Logo"
           class="footer-logo"
         >
-
         <h3>WEB DEV LADY</h3>
-
         <p>
-          Premium website templates, custom website builds,
-          and website customization services.
+          Premium website templates, template customization, and custom website
+          builds for businesses that want a polished online presence.
         </p>
       </div>
 
       <div class="footer-links">
         <h4>Navigation</h4>
-
         <a href="index.html">Home</a>
         <a href="templates.html">Templates</a>
         <a href="pricing.html">Pricing</a>
@@ -603,48 +527,39 @@
 
       <div class="footer-links">
         <h4>Services</h4>
-
-        <a href="templates.html">Website Templates</a>
+        <a href="templates.html">Template Store</a>
         <a href="pricing.html#template-customization">Template Customization</a>
+        <a href="pricing.html#website-setup-service">Website Setup Service</a>
         <a href="pricing.html#custom-website-builds">Custom Website Builds</a>
-        <a href="pricing.html#seo-setup">SEO Setup</a>
-        <a href="pricing.html#shopping-cart-setup">Shopping Cart Setup</a>
-        <a href="contact.html#project-form">Website Support</a>
+        <a href="pricing.html#maintenance-plans">Maintenance Plans</a>
       </div>
 
       <div class="footer-links">
         <h4>Follow</h4>
-
-       <a href="https://www.tiktok.com/@webdevlady" target="_blank">
-  <i class="fa-brands fa-tiktok"></i> TikTok
-</a>
-
-<a href="https://www.instagram.com/webdev_lady/" target="_blank">
-  <i class="fa-brands fa-instagram"></i> Instagram
-</a>
-
-<a href="https://www.facebook.com/webdevlady" target="_blank">
-  <i class="fa-brands fa-facebook"></i> Facebook
-</a>
-
-<a href="https://www.youtube.com/@WebDevLady" target="_blank">
-  <i class="fa-brands fa-youtube"></i> YouTube
-</a>
-
-<a href="https://www.fiverr.com/sellers/kiraleeruck" target="_blank">
-  <i class="fa-solid fa-briefcase"></i> Fiverr
-</a>
-
+        <a href="https://www.tiktok.com/@webdevlady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+        <a href="https://www.instagram.com/webdev_lady/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/webdevlady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.youtube.com/@WebDevLady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.fiverr.com/sellers/kiraleeruck" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-briefcase"></i> Fiverr
+        </a>
         <a href="mailto:webdevlady26@gmail.com">
-  <i class="fa-solid fa-envelope"></i> Email
-</a>
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
       </div>
     </div>
 
     <div class="footer-bottom">
       <p>
-        © 2026 Web Dev Lady. Digital Website Studio.
-        All rights reserved.
+        &copy; 2026 Web Dev Lady. Digital Website Studio. All rights reserved.
       </p>
     </div>
   </footer>

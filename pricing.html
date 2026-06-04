@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R74R9S9ZZL');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-R74R9S9ZZL");
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -17,11 +16,11 @@
 
   <meta
     name="description"
-    content="View pricing for Web Dev Lady website templates, template customization, custom website builds, SEO setup, shopping cart setup, product uploads, hosting setup, and maintenance."
+    content="View clear pricing for Web Dev Lady templates, template customization, custom website builds, add-ons, and maintenance plans."
   />
   <meta
     name="keywords"
-    content="website template pricing, custom website pricing, SEO setup pricing, shopping cart setup, Web Dev Lady"
+    content="website template pricing, template customization pricing, custom website pricing, website maintenance, Web Dev Lady"
   />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Web Dev Lady" />
@@ -31,7 +30,7 @@
   <meta property="og:title" content="Pricing for Website Templates and Custom Website Services | Web Dev Lady" />
   <meta
     property="og:description"
-    content="View pricing for Web Dev Lady website templates, template customization, custom website builds, SEO setup, shopping cart setup, product uploads, hosting setup, and maintenance."
+    content="View clear pricing for Web Dev Lady templates, template customization, custom website builds, add-ons, and maintenance plans."
   />
   <meta property="og:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
   <meta property="og:url" content="https://webdevlady.netlify.app/pricing.html" />
@@ -40,7 +39,7 @@
   <meta name="twitter:title" content="Pricing for Website Templates and Custom Website Services | Web Dev Lady" />
   <meta
     name="twitter:description"
-    content="View pricing for Web Dev Lady website templates, template customization, custom website builds, SEO setup, shopping cart setup, product uploads, hosting setup, and maintenance."
+    content="View clear pricing for Web Dev Lady templates, template customization, custom website builds, add-ons, and maintenance plans."
   />
   <meta name="twitter:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
 
@@ -70,9 +69,9 @@
   <link rel="stylesheet" href="css/tablet.css" />
   <link rel="stylesheet" href="css/mobile.css" />
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-/>
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
 </head>
 
 <body>
@@ -85,7 +84,14 @@
       <span>WEB DEV <strong>LADY</strong></span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle">☰</button>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      &#9776;
+    </button>
 
     <nav class="nav" id="nav">
       <a href="index.html">Home</a>
@@ -94,9 +100,8 @@
       <a href="about.html">About</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-
       <a href="cart.html" class="cart-icon-link" aria-label="Shopping Cart">
-        🛒
+        &#128722;
       </a>
     </nav>
   </header>
@@ -104,19 +109,19 @@
   <main>
     <section class="hero">
       <div class="hero-content">
-        <p class="tagline">PRICING</p>
-
-        <h1>Website pricing built for real launches.</h1>
+        <p class="tagline">CLEAR PRICING</p>
+        <h1>Clear website pricing with a smooth path from DIY to fully custom.</h1>
 
         <p class="hero-text">
-          Choose a ready-made website template, request a customized version, or
-          build a full website with SEO, forms, shopping cart setup, products,
-          hosting help, and launch support.
+          Compare templates, Template Customization, Website Setup Service,
+          custom website builds, and maintenance plans with clear pricing and
+          a professional next step for every stage.
         </p>
 
         <div class="hero-buttons">
-          <a href="templates.html" class="btn primary">View Templates</a>
-          <a href="contact.html#project-form" class="btn secondary">Start Custom Project</a>
+          <a href="templates.html" class="btn primary">Shop Templates</a>
+          <a href="#website-path" class="btn secondary">Choose Your Path</a>
+          <a href="contact.html#project-form" class="btn secondary">Start Project Request</a>
         </div>
       </div>
 
@@ -129,342 +134,350 @@
     </section>
 
     <section class="section" id="website-packages">
-      <p class="section-tag">WEBSITE PACKAGES</p>
-      <h2>Premium design without agency-level pricing.</h2>
+      <p class="section-tag">MAIN SERVICES</p>
+      <h2>Choose the level of help you need.</h2>
 
       <div class="card-grid">
         <article class="card" id="template-only-pricing">
           <span>01</span>
-
           <h3>Template Only</h3>
-          <h2>$59-$119</h2>
-
+          <h2>Lite $59 / Pro $99</h2>
           <p class="delivery-time">Instant digital download</p>
-
           <p>
-            Best for buyers who want polished website files and are comfortable
-            editing or hosting the template themselves.
+            Best for buyers who want the website files right away and are
+            comfortable editing the template themselves.
           </p>
-
           <ul class="feature-list">
-            <li>Website template files</li>
-            <li>HTML, CSS, and JavaScript</li>
-            <li>Responsive page layouts</li>
-            <li>Clean editable code</li>
+            <li>Responsive website template files</li>
+            <li>Editable HTML, CSS, and JavaScript</li>
             <li>Documentation included</li>
+            <li>Commercial use license</li>
             <li>No customization included</li>
           </ul>
-
           <a href="templates.html" class="btn primary">
-            Browse Templates
+            Shop Templates
           </a>
         </article>
 
-        <article class="card popular-card" id="template-customization">
-          <div class="popular-badge">MOST POPULAR</div>
-
+        <article class="card" id="template-customization">
           <span>02</span>
-
           <h3>Template Customization</h3>
-          <h2>$249+</h2>
-
-          <p class="delivery-time">Estimated 3–7 business days</p>
-
+          <h2>Starts at $199</h2>
+          <p class="delivery-time">Estimated 3-7 business days</p>
           <p>
-            Best if you want a purchased template personalized with your brand,
-            colors, text, images, links, and contact details.
+            Best if you already like one of the templates but want polished
+            brand updates without moving into a larger service package.
           </p>
-
           <ul class="feature-list">
-            <li>Business name added</li>
-            <li>Brand colors updated</li>
             <li>Logo added</li>
-            <li>Text/content changes</li>
-            <li>Images swapped</li>
-            <li>Contact details updated</li>
-            <li>Button links updated</li>
+            <li>Brand colors updated</li>
+            <li>Text and image replacement</li>
+            <li>Buttons and links updated</li>
+            <li>Contact information refreshed</li>
+            <li>Basic section cleanup</li>
           </ul>
-
           <a href="contact.html#project-form" class="btn primary">
             Request Customization
           </a>
         </article>
 
-        <article class="card" id="custom-website-builds">
+        <article class="card popular-card" id="website-setup-service">
+          <div class="popular-badge">MOST POPULAR</div>
           <span>03</span>
-
-          <h3>Starter Website Build</h3>
-          <h2>$1,200+</h2>
-
-          <p class="delivery-time">Project timeline varies</p>
-
+          <h3>Website Setup Service</h3>
+          <h2>Starts at $499</h2>
+          <p class="delivery-time">Estimated 5-10 business days</p>
           <p>
-            Best for small businesses that need a professional website built
-            from scratch with a clean layout and mobile-friendly design.
+            Best for clients who want a more complete launch-ready setup with
+            practical support beyond simple visual updates.
           </p>
-
           <ul class="feature-list">
-            <li>Up to 5 pages</li>
-            <li>Custom homepage layout</li>
-            <li>Responsive desktop, tablet, and mobile design</li>
+            <li>Template installation help</li>
+            <li>Logo added</li>
+            <li>Brand colors updated</li>
+            <li>Text and image replacement</li>
+            <li>Social media links added</li>
             <li>Contact form setup</li>
-            <li>Basic SEO setup</li>
-            <li>Launch-ready front-end files</li>
+            <li>Domain connection assistance</li>
+            <li>Mobile responsiveness review</li>
+            <li>Final website review</li>
           </ul>
-
           <a href="contact.html#project-form" class="btn primary">
-            Request Starter Website
+            Request Setup Service
           </a>
         </article>
 
-        <article class="card">
+        <article class="card" id="custom-website-builds">
           <span>04</span>
-
-          <h3>Business Website Build</h3>
-          <h2>$1,800+</h2>
-
+          <h3>Starter Custom Website</h3>
+          <h2>Starts at $999</h2>
           <p class="delivery-time">Project timeline varies</p>
-
           <p>
-            Best for businesses that need more pages, stronger branding,
-            service sections, forms, SEO structure, and a polished online
-            presence.
+            Best for a smaller custom website that needs a professional layout,
+            responsive design, and a more tailored structure than a template.
           </p>
-
           <ul class="feature-list">
-            <li>Up to 10 pages</li>
-            <li>Custom design direction</li>
-            <li>Service or product sections</li>
+            <li>Up to 5 pages</li>
+            <li>Custom homepage and page layouts</li>
+            <li>Responsive desktop, tablet, and mobile design</li>
             <li>Contact form setup</li>
             <li>Basic SEO setup</li>
-            <li>Image optimization</li>
-            <li>Launch support</li>
           </ul>
-
           <a href="contact.html#project-form" class="btn primary">
-            Request Business Website
+            Request Custom Website
           </a>
         </article>
 
         <article class="card">
           <span>05</span>
-
-          <h3>E-Commerce Website</h3>
-          <h2>$2,500+</h2>
-
+          <h3>Business Website</h3>
+          <h2>Starts at $1,499</h2>
           <p class="delivery-time">Project timeline varies</p>
-
           <p>
-            Best for brands that need a website with shopping cart setup,
-            product pages, checkout links, product uploads, and online sales
-            features.
+            Best for businesses that need more pages, stronger structure, and
+            a more complete online presence.
           </p>
-
           <ul class="feature-list">
-            <li>Custom website design</li>
-            <li>Shopping cart setup</li>
-            <li>Product page layout</li>
-            <li>Up to 10 products added</li>
-            <li>Checkout/payment link setup</li>
+            <li>Up to 10 pages</li>
+            <li>Service or product sections</li>
+            <li>Contact form setup</li>
             <li>Basic SEO setup</li>
-            <li>Mobile responsive design</li>
+            <li>Launch support</li>
           </ul>
-
           <a href="contact.html#project-form" class="btn primary">
-            Request E-Commerce Build
+            Request Custom Website
           </a>
         </article>
 
         <article class="card">
           <span>06</span>
-
-          <h3>Premium Custom Website</h3>
-          <h2>$3,500+</h2>
-
+          <h3>E-Commerce Website</h3>
+          <h2>Starts at $1,999</h2>
           <p class="delivery-time">Project timeline varies</p>
-
           <p>
-            Best for brands that want a more advanced website with custom
-            sections, animations, extra pages, stronger design, and full launch
-            support.
+            Best for brands that need shopping cart setup, product pages,
+            checkout links, and a store-ready website.
+          </p>
+          <ul class="feature-list">
+            <li>Custom store website design</li>
+            <li>Shopping cart and checkout setup</li>
+            <li>Product page layout</li>
+            <li>Up to 10 products added</li>
+            <li>Basic SEO setup</li>
+          </ul>
+          <a href="contact.html#project-form" class="btn primary">
+            Request Custom Website
+          </a>
+        </article>
+
+        <article class="card">
+          <span>07</span>
+          <h3>Premium Custom Website</h3>
+          <h2>Starts at $2,999</h2>
+          <p class="delivery-time">Project timeline varies</p>
+          <p>
+            Best for larger projects that need more pages, stronger design
+            direction, advanced visuals, and a full premium build.
+          </p>
+          <ul class="feature-list">
+            <li>Up to 15 pages</li>
+            <li>Advanced custom layouts</li>
+            <li>Forms and integrations</li>
+            <li>Advanced sections or motion</li>
+            <li>Launch support included</li>
+          </ul>
+          <a href="contact.html#project-form" class="btn primary">
+            Request Custom Website
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="website-path">
+      <p class="section-tag">WEBSITE ROADMAP</p>
+      <h2>Choose Your Website Path</h2>
+      <p class="section-intro">
+        Start with the level of support that feels right today, then move up
+        only when your business needs more.
+      </p>
+
+      <div class="path-grid">
+        <article class="path-card">
+          <p class="path-pill">DIY OPTIONS</p>
+          <h3>Design-first and budget-conscious.</h3>
+          <ul class="path-list">
+            <li><strong>Lite Website Template</strong><span>$59</span></li>
+            <li><strong>Pro Website Template</strong><span>$99</span></li>
+          </ul>
+        </article>
+
+        <article class="path-card">
+          <p class="path-pill">DONE-WITH-YOU OPTIONS</p>
+          <h3>Hands-on support without a full custom build.</h3>
+          <ul class="path-list">
+            <li><strong>Template Customization</strong><span>$199</span></li>
+            <li><strong>Website Setup Service</strong><span>$499</span></li>
+          </ul>
+        </article>
+
+        <article class="path-card">
+          <p class="path-pill">DONE-FOR-YOU OPTIONS</p>
+          <h3>Built for businesses ready for a larger step.</h3>
+          <ul class="path-list">
+            <li><strong>Starter Website</strong><span>$999</span></li>
+            <li><strong>Business Website</strong><span>$1,499</span></li>
+            <li><strong>E-Commerce Website</strong><span>$1,999</span></li>
+            <li><strong>Premium Website</strong><span>$2,999</span></li>
+          </ul>
+        </article>
+
+        <article class="path-card">
+          <p class="path-pill">MAINTENANCE PLANS</p>
+          <h3>Keep your website polished after launch.</h3>
+          <ul class="path-list">
+            <li><strong>Basic</strong><span>$39/mo</span></li>
+            <li><strong>Standard</strong><span>$79/mo</span></li>
+            <li><strong>Premium</strong><span>$149/mo</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="customization-includes">
+      <p class="section-tag">DONE-WITH-YOU SUPPORT</p>
+      <h2>Choose the support level that matches your launch.</h2>
+
+      <div class="detail-grid">
+        <article class="card detail-card">
+          <p class="service-price">Starts at $199</p>
+          <h3>Template Customization</h3>
+          <p>
+            A streamlined option for businesses that already know which
+            template they want and need polished brand updates.
           </p>
 
           <ul class="feature-list">
-            <li>Advanced custom design</li>
-            <li>Up to 15 pages</li>
-            <li>Advanced animations or visual effects</li>
-            <li>SEO structure</li>
-            <li>Forms and integrations</li>
-            <li>Shopping cart options available</li>
-            <li>Launch support included</li>
+            <li>Logo added</li>
+            <li>Brand colors updated</li>
+            <li>Text and image replacement</li>
+            <li>Buttons and link updates</li>
+            <li>Contact information refreshed</li>
+            <li>Basic section cleanup</li>
           </ul>
+        </article>
 
-          <a href="contact.html#project-form" class="btn primary">
-            Request Premium Website
-          </a>
+        <article class="card detail-card popular-card">
+          <div class="popular-badge">MOST POPULAR</div>
+          <p class="service-price">Starts at $499</p>
+          <h3>Website Setup Service</h3>
+          <p>
+            A more complete launch package for clients who want setup guidance,
+            brand updates, and a final review before going live.
+          </p>
+
+          <ul class="feature-list">
+            <li>Template installation help</li>
+            <li>Logo added</li>
+            <li>Brand colors updated</li>
+            <li>Text and image replacement</li>
+            <li>Social media links added</li>
+            <li>Contact form setup</li>
+            <li>Domain connection assistance</li>
+            <li>Mobile responsiveness review</li>
+            <li>Final website review</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-tag">WHAT I NEED FROM YOU</p>
+      <h2>Send these details to keep the process simple.</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <span>01</span>
+          <h3>Brand Assets</h3>
+          <ul class="feature-list">
+            <li>Logo file, if available</li>
+            <li>Preferred colors</li>
+            <li>Business name and contact details</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span>02</span>
+          <h3>Content and Images</h3>
+          <ul class="feature-list">
+            <li>Text or copy for each section</li>
+            <li>Images you want used</li>
+            <li>Links, buttons, and social media profiles</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span>03</span>
+          <h3>Project Notes</h3>
+          <ul class="feature-list">
+            <li>Template name</li>
+            <li>Pages needed</li>
+            <li>Deadline and requested changes</li>
+          </ul>
         </article>
       </div>
     </section>
 
     <section class="section">
       <p class="section-tag">ADD-ONS</p>
-      <h2>Extra website services.</h2>
+      <h2>Optional extras without an overwhelming list.</h2>
 
       <div class="card-grid">
         <article class="card">
           <span>+</span>
           <h3>Extra Page</h3>
-          <p>$100-$200 — Add one additional page to an existing website or template.</p>
-        </article>
-
-        <article class="card" id="seo-setup">
-          <span>+</span>
-          <h3>Basic SEO Setup</h3>
-          <p>$150 — Add page titles, meta descriptions, heading structure, image alt text, and basic SEO cleanup.</p>
+          <p>$100-$200 for an additional page added to a template or website.</p>
         </article>
 
         <article class="card">
           <span>+</span>
-          <h3>Advanced SEO Setup</h3>
-          <p>$300+ — Keyword-focused page structure, stronger metadata, SEO-friendly sections, and search-ready page cleanup.</p>
-        </article>
-
-        <article class="card" id="shopping-cart-setup">
-          <span>+</span>
-          <h3>Shopping Cart Setup</h3>
-          <p>$250+ — Add or connect a shopping cart, checkout buttons, payment links, or cart page setup.</p>
+          <h3>SEO Setup</h3>
+          <p>$150 for basic SEO setup or $300+ for a more advanced SEO cleanup.</p>
         </article>
 
         <article class="card">
           <span>+</span>
-          <h3>Product Uploads</h3>
-          <p>$10-$25 per product — Add product names, prices, descriptions, images, and buy buttons.</p>
+          <h3>Shopping Cart and Payments</h3>
+          <p>$250+ for shopping cart setup and $75-$150 for payment link setup.</p>
         </article>
 
         <article class="card">
           <span>+</span>
-          <h3>Payment Link Setup</h3>
-          <p>$75-$150 — Connect Stripe, PayPal, Gumroad, or other checkout/payment links.</p>
+          <h3>Forms and Booking</h3>
+          <p>$100-$150 for contact form setup or $75-$150 for booking button setup.</p>
         </article>
 
         <article class="card">
           <span>+</span>
-          <h3>Contact Form Setup</h3>
-          <p>$100-$150 — Set up a working contact form through Netlify, Formspree, or another form service.</p>
+          <h3>Domain, Hosting, and Analytics</h3>
+          <p>$75-$200 depending on whether you need domain help, hosting setup, or analytics added.</p>
         </article>
 
         <article class="card">
           <span>+</span>
-          <h3>Booking Button Setup</h3>
-          <p>$75-$150 — Connect Calendly, Square, booking links, appointment links, or service request buttons.</p>
-        </article>
-
-        <article class="card">
-          <span>+</span>
-          <h3>Domain Setup</h3>
-          <p>$75-$150 — Help connect a domain name to the website.</p>
-        </article>
-
-        <article class="card">
-          <span>+</span>
-          <h3>Hosting Setup</h3>
-          <p>$100-$200 — Help set up website hosting, deployment, SSL, and basic launch settings.</p>
-        </article>
-
-        <article class="card">
-          <span>+</span>
-          <h3>Google Analytics Setup</h3>
-          <p>$75-$150 — Add basic visitor tracking to help you understand website traffic.</p>
-        </article>
-
-        <article class="card">
-          <span>+</span>
-          <h3>Google Business Profile Setup</h3>
-          <p>$150-$300 — Help set up or improve a Google Business Profile for local visibility.</p>
-        </article>
-
-        <article class="card">
-          <span>+</span>
-          <h3>Social Media Links</h3>
-          <p>$50-$100 — Add TikTok, Instagram, Facebook, YouTube, or other social media links to the website.</p>
-        </article>
-
-        <article class="card">
-          <span>+</span>
-          <h3>Image Optimization</h3>
-          <p>$100-$250 — Resize and compress website images to help pages load faster.</p>
-        </article>
-
-        <article class="card">
-          <span>+</span>
-          <h3>Speed Cleanup</h3>
-          <p>$150-$300 — Clean up files, reduce heavy images, and improve basic page performance.</p>
-        </article>
-
-        <article class="card">
-          <span>+</span>
-          <h3>Blog Setup</h3>
-          <p>$250+ — Add a blog page layout or article section to the website.</p>
-        </article>
-
-        <article class="card">
-          <span>+</span>
-          <h3>Revision Pack</h3>
-          <p>$75-$150 — Add an extra round of edits after the included revisions are used.</p>
-        </article>
-
-        <article class="card">
-          <span>+</span>
-          <h3>Website Maintenance</h3>
-          <p>$39-$149/month — Monthly updates, small text changes, link checks, and basic website support.</p>
+          <h3>Product and Content Help</h3>
+          <p>$10-$25 per product for uploads, plus quote-based help for image cleanup or extra revisions.</p>
         </article>
       </div>
     </section>
 
-    <section class="section" id="pricing-details">
-      <p class="section-tag">WHY PRICING VARIES</p>
-      <h2>Every website project has different needs.</h2>
-
-      <div class="featured-product">
-        <div class="product-content">
-          <p class="tagline">CLEAR PRICING. FLEXIBLE PROJECTS.</p>
-
-          <h3>Final pricing depends on the amount of work needed.</h3>
-
-          <p>
-            Template-only purchases are simple flat-rate digital products.
-            Customization and custom website builds can vary depending on page
-            count, content changes, branding needs, images, SEO, shopping cart
-            setup, product uploads, forms, hosting, domain setup, and launch
-            support.
-          </p>
-
-          <ul class="feature-list">
-            <li>Simple template purchases stay flat-rate</li>
-            <li>Customization starts at $249</li>
-            <li>Starter custom websites start at $1,200</li>
-            <li>E-commerce websites start at $2,500</li>
-            <li>Add-ons can increase the total depending on project needs</li>
-            <li>You will know the price before work begins</li>
-          </ul>
-        </div>
-
-        <div class="product-price">
-          <span>Starting At</span>
-          <h3>$249</h3>
-          <p>Customization</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="section" id="maintenance-plans">
       <p class="section-tag">MONTHLY SUPPORT</p>
-      <h2>Website care plans.</h2>
+      <h2>Maintenance plans for ongoing updates.</h2>
 
       <div class="card-grid">
         <article class="card">
           <span>01</span>
-          <h3>Basic Care</h3>
+          <h3>Basic Maintenance</h3>
           <h2>$39/month</h2>
           <p>Best for simple websites that only need light monthly support.</p>
           <ul class="feature-list">
@@ -478,13 +491,13 @@
         <article class="card popular-card">
           <div class="popular-badge">BEST VALUE</div>
           <span>02</span>
-          <h3>Business Care</h3>
+          <h3>Standard Maintenance</h3>
           <h2>$79/month</h2>
           <p>Best for businesses that need regular updates and basic support.</p>
           <ul class="feature-list">
             <li>Monthly content updates</li>
             <li>Image swaps</li>
-            <li>Button/link updates</li>
+            <li>Button and link updates</li>
             <li>Basic SEO checkup</li>
             <li>Email support</li>
           </ul>
@@ -492,7 +505,7 @@
 
         <article class="card">
           <span>03</span>
-          <h3>Premium Care</h3>
+          <h3>Premium Maintenance</h3>
           <h2>$149/month</h2>
           <p>Best for websites that need ongoing updates, products, and stronger support.</p>
           <ul class="feature-list">
@@ -507,22 +520,23 @@
     </section>
 
     <section class="cta">
-      <p class="section-tag">READY TO LAUNCH?</p>
-
-      <h2>Start with a template. Upgrade when needed.</h2>
+      <p class="section-tag">READY TO GET STARTED?</p>
+      <h2>Start with the service that matches your business.</h2>
 
       <p>
-        Browse premium website templates or request a fully customized website
-        built for your brand, business, products, and goals.
+        Start with a $59 or $99 template, choose Website Setup Service for the
+        easiest supported launch, or request a fully custom website quote.
       </p>
 
       <div class="hero-buttons">
         <a href="templates.html" class="btn primary">
-          Browse Templates
+          Shop Templates
         </a>
-
         <a href="contact.html#project-form" class="btn secondary">
-          Request Custom Work
+          Request Setup Service
+        </a>
+        <a href="contact.html#project-form" class="btn secondary">
+          Request Custom Website
         </a>
       </div>
     </section>
@@ -536,18 +550,15 @@
           alt="Web Dev Lady Logo"
           class="footer-logo"
         >
-
         <h3>WEB DEV LADY</h3>
-
         <p>
-          Premium website templates, custom website builds,
-          and website customization services.
+          Premium website templates, template customization, and custom website
+          builds for businesses that want a polished online presence.
         </p>
       </div>
 
       <div class="footer-links">
         <h4>Navigation</h4>
-
         <a href="index.html">Home</a>
         <a href="templates.html">Templates</a>
         <a href="pricing.html">Pricing</a>
@@ -558,52 +569,39 @@
 
       <div class="footer-links">
         <h4>Services</h4>
-
-        <a href="templates.html">Website Templates</a>
+        <a href="templates.html">Template Store</a>
         <a href="pricing.html#template-customization">Template Customization</a>
+        <a href="pricing.html#website-setup-service">Website Setup Service</a>
         <a href="pricing.html#custom-website-builds">Custom Website Builds</a>
-        <a href="pricing.html#seo-setup">SEO Setup</a>
-        <a href="pricing.html#shopping-cart-setup">Shopping Cart Setup</a>
-        <a href="contact.html#project-form">Website Support</a>
+        <a href="pricing.html#maintenance-plans">Maintenance Plans</a>
       </div>
 
-        <div class="footer-links">
+      <div class="footer-links">
         <h4>Follow</h4>
-
-       <a href="https://www.tiktok.com/@webdevlady" target="_blank">
-  <i class="fa-brands fa-tiktok"></i> TikTok
-</a>
-
-<a href="https://www.instagram.com/webdev_lady/" target="_blank">
-  <i class="fa-brands fa-instagram"></i> Instagram
-</a>
-
-<a href="https://www.facebook.com/webdevlady" target="_blank">
-  <i class="fa-brands fa-facebook"></i> Facebook
-</a>
-
-<a href="" target="_blank">
-  <i class="fa-brands fa-youtube"></i> YouTube
-</a>
-
-<a href="https://www.youtube.com/@WebDevLady" target="_blank">
-  <i class="fa-brands fa-youtube"></i> YouTube
-</a>
-
-<a href="https://www.fiverr.com/sellers/kiraleeruck" target="_blank">
-  <i class="fa-solid fa-briefcase"></i> Fiverr
-</a>
-
+        <a href="https://www.tiktok.com/@webdevlady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+        <a href="https://www.instagram.com/webdev_lady/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/webdevlady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.youtube.com/@WebDevLady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.fiverr.com/sellers/kiraleeruck" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-briefcase"></i> Fiverr
+        </a>
         <a href="mailto:webdevlady26@gmail.com">
-  <i class="fa-solid fa-envelope"></i> Email
-</a>
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
       </div>
     </div>
 
     <div class="footer-bottom">
       <p>
-        © 2026 Web Dev Lady. Digital Website Studio.
-        All rights reserved.
+        &copy; 2026 Web Dev Lady. Digital Website Studio. All rights reserved.
       </p>
     </div>
   </footer>

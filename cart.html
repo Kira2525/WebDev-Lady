@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R74R9S9ZZL');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
+  <script src="js/product-catalog.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-R74R9S9ZZL");
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -28,14 +28,11 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/tablet.css" />
   <link rel="stylesheet" href="css/mobile.css" />
-
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-/>
-
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
   <script src="https://js.stripe.com/v3/"></script>
-
 </head>
 
 <body>
@@ -48,8 +45,13 @@
       <span>WEB DEV <strong>LADY</strong></span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
-      ☰
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      &#9776;
     </button>
 
     <nav class="nav" id="nav">
@@ -57,10 +59,10 @@
       <a href="templates.html">Templates</a>
       <a href="pricing.html">Pricing</a>
       <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-
       <a href="cart.html" class="cart-icon-link active" aria-label="Shopping Cart">
-        🛒
+        &#128722;
       </a>
     </nav>
   </header>
@@ -82,7 +84,6 @@
 
           <div class="cart-item-content">
             <p class="tagline" id="cartProductTagline">TEMPLATE</p>
-
             <h3 id="cartProductName">Loading Template...</h3>
 
             <p id="cartProductDescription">
@@ -99,7 +100,7 @@
                 rel="noopener noreferrer"
                 class="btn secondary"
               >
-                View Live Preview
+                View Preview
               </a>
             </div>
           </div>
@@ -140,24 +141,24 @@
             </button>
 
             <p class="checkout-trust">
-              Secure Checkout • Instant Download • Digital Product
+              Secure checkout. Instant download. Digital product delivery.
             </p>
 
             <p id="payment-message"></p>
           </form>
 
           <p class="checkout-note">
-            Secure payments powered by Stripe. After successful payment, you’ll
-            receive instant access to your download.
+            Secure payments are powered by Stripe. After successful payment,
+            you will be sent to the correct download page for your template.
           </p>
 
           <p class="checkout-note small-note">
-            Digital product notice: because this is an instant download, all
-            sales are final after purchase.
+            Digital template sales are final after download. If you have a
+            download or file issue, contact support and I will help.
           </p>
 
           <a href="templates.html" class="back-link">
-            ← Keep Shopping
+            &larr; Back to Templates
           </a>
         </aside>
       </div>
@@ -172,175 +173,68 @@
           alt="Web Dev Lady Logo"
           class="footer-logo"
         >
-
         <h3>WEB DEV LADY</h3>
-
         <p>
-          Premium website templates, custom website builds,
-          and website customization services.
+          Premium website templates, template customization, and custom website
+          builds for businesses that want a polished online presence.
         </p>
       </div>
 
       <div class="footer-links">
         <h4>Navigation</h4>
-
         <a href="index.html">Home</a>
         <a href="templates.html">Templates</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
       </div>
 
       <div class="footer-links">
         <h4>Services</h4>
-
-        <a href="templates.html">Website Templates</a>
+        <a href="templates.html">Template Store</a>
         <a href="pricing.html#template-customization">Template Customization</a>
+        <a href="pricing.html#website-setup-service">Website Setup Service</a>
         <a href="pricing.html#custom-website-builds">Custom Website Builds</a>
-        <a href="contact.html#project-form">Website Support</a>
+        <a href="pricing.html#maintenance-plans">Maintenance Plans</a>
       </div>
 
       <div class="footer-links">
         <h4>Follow</h4>
-
-       <a href="https://www.tiktok.com/@webdevlady" target="_blank">
-  <i class="fa-brands fa-tiktok"></i> TikTok
-</a>
-
-<a href="https://www.instagram.com/webdev_lady/" target="_blank">
-  <i class="fa-brands fa-instagram"></i> Instagram
-</a>
-
-<a href="https://www.facebook.com/webdevlady" target="_blank">
-  <i class="fa-brands fa-facebook"></i> Facebook
-</a>
-
-<a href="https://www.youtube.com/@WebDevLady" target="_blank">
-  <i class="fa-brands fa-youtube"></i> YouTube
-</a>
-
-<a href="https://www.fiverr.com/sellers/kiraleeruck" target="_blank">
-  <i class="fa-solid fa-briefcase"></i> Fiverr
-</a>
-
+        <a href="https://www.tiktok.com/@webdevlady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+        <a href="https://www.instagram.com/webdev_lady/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/webdevlady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.youtube.com/@WebDevLady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.fiverr.com/sellers/kiraleeruck" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-briefcase"></i> Fiverr
+        </a>
         <a href="mailto:webdevlady26@gmail.com">
-  <i class="fa-solid fa-envelope"></i> Email
-</a>
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
       </div>
     </div>
 
     <div class="footer-bottom">
       <p>
-        © 2026 Web Dev Lady. Digital Website Studio.
-        All rights reserved.
+        &copy; 2026 Web Dev Lady. Digital Website Studio. All rights reserved.
       </p>
     </div>
   </footer>
 
   <script>
-    const cartProducts = {
-  "cosmicorbit-lite": {
-    name: "CosmicOrbit Lite",
-    price: "$59",
-    image: "images/cosmicorbit-lite.png",
-    preview: "preview/CosmicOrbit-Lite/index.html",
-    tagline: "LITE TEMPLATE",
-    successUrl: "thank-you-lite.html?product=cosmicorbit-lite",
-    typeLabel: "Single-Page Lite Template",
-    description: "A single-page futuristic website template with responsive design, clean editable code, commercial use license, and instant digital download.",
-    features: ["Single-page website", "Responsive design", "Editable HTML, CSS, and JavaScript", "Commercial use license", "Instant download"]
-  },
-
-  "cosmicorbit-pro": {
-    name: "CosmicOrbit Pro",
-    price: "$99",
-    image: "images/cosmicorbit-pro.png",
-    preview: "preview/CosmicOrbit-Pro/index.html",
-    tagline: "PRO TEMPLATE",
-    successUrl: "thank-you-pro.html?product=cosmicorbit-pro",
-    typeLabel: "Multi-Page Pro Template",
-    description: "A futuristic multi-page website template with premium layouts, animated visuals, responsive design, and clean editable code.",
-    features: ["Multi-page website", "Animated space design", "Responsive design", "Editable code", "Commercial use license", "Instant download"]
-  },
-
-  "abyssalblue-lite": {
-    name: "Abyssal Blue Lite",
-    price: "$59",
-    image: "images/abyssalblue-lite.png",
-    preview: "preview/AbyssalBlue-Lite/index.html",
-    tagline: "LITE TEMPLATE",
-    successUrl: "thank-you-lite.html?product=abyssalblue-lite",
-    typeLabel: "Single-Page Lite Template",
-    description: "A single-page ocean-inspired website template with underwater visuals, responsive design, editable code, and instant download.",
-    features: ["Single-page website", "Ocean-inspired design", "Responsive layout", "Editable code", "Commercial use license", "Instant download"]
-  },
-
-  "abyssalblue-pro": {
-    name: "Abyssal Blue Pro",
-    price: "$99",
-    image: "images/abyssalblue-pro.png",
-    preview: "preview/AbyssalBlue-Pro/index.html",
-    tagline: "PRO TEMPLATE",
-    successUrl: "thank-you-pro.html?product=abyssalblue-pro",
-    typeLabel: "Multi-Page Pro Template",
-    description: "A premium ocean-inspired website template with underwater visuals, animated sections, galleries, FAQ, contact pages, and responsive design.",
-    features: ["Multi-page website", "Animated underwater design", "Gallery and FAQ pages", "Responsive design", "Editable code", "Commercial use license", "Instant download"]
-  },
-
-  "velvetui-lite": {
-    name: "VelvetUI Lite",
-    price: "$59",
-    image: "images/velvetui-lite.png",
-    preview: "preview/VelvetUI-Lite/index.html",
-    tagline: "LITE TEMPLATE",
-    successUrl: "thank-you-lite.html?product=velvetui-lite",
-    typeLabel: "Single-Page Lite Template",
-    description: "A single-page luxury glassmorphism website template with soft purple visuals, responsive design, editable code, and instant download.",
-    features: ["Single-page website", "Luxury glass design", "Responsive layout", "Editable code", "Commercial use license", "Instant download"]
-  },
-
-  "velvetui-pro": {
-    name: "VelvetUI Pro",
-    price: "$99",
-    image: "images/velvetui-pro.png",
-    preview: "preview/VelvetUI-Pro/index.html",
-    tagline: "PRO TEMPLATE",
-    successUrl: "thank-you-pro.html?product=velvetui-pro",
-    typeLabel: "Multi-Page Pro Template",
-    description: "A premium glassmorphism website template with polished pages, animated details, responsive layouts, and editable code.",
-    features: ["Multi-page website", "Premium glassmorphism style", "Animated design details", "Responsive design", "Editable code", "Commercial use license", "Instant download"]
-  },
-
-  "worldview-lite": {
-    name: "WorldView Lite",
-    price: "$59",
-    image: "images/worldview-lite.png",
-    preview: "preview/WorldView-Lite/index.html",
-    tagline: "LITE TEMPLATE",
-    successUrl: "thank-you-lite.html?product=worldview-lite",
-    typeLabel: "Single-Page Website Template",
-    description: "WorldView Lite is a single-page global business website template with responsive design, editable code, documentation, commercial use license, and instant digital download.",
-    features: ["Single-page website", "Responsive design", "HTML, CSS, and JavaScript", "Commercial use license", "Documentation included", "Instant digital download"]
-  },
-
-  "worldview-pro": {
-    name: "WorldView Pro",
-    price: "$99",
-    image: "images/worldview-pro.png",
-    preview: "preview/WorldView-Pro/index.html",
-    tagline: "PRO TEMPLATE",
-    successUrl: "thank-you-pro.html?product=worldview-pro",
-    typeLabel: "Multi-Page Premium Website Template",
-    description: "WorldView Pro is a multi-page premium global business website template with polished responsive layouts, advanced sections, animations, documentation, and instant digital download.",
-    features: ["Multi-page website", "Premium responsive layouts", "Additional business pages", "Advanced sections and animations", "Commercial use license", "Documentation included", "Instant digital download"]
-  }
-};
-
+    const cartProducts = window.productCatalog || {};
     const params = new URLSearchParams(window.location.search);
     const productKey = params.get("product");
     const product = productKey ? cartProducts[productKey] : null;
 
-    window.cartProducts = cartProducts;
     window.selectedProduct = product
       ? {
           key: productKey,
@@ -384,22 +278,19 @@
     function showActiveProduct(activeProduct) {
       cartImageWrap.classList.remove("cart-image-wrap--placeholder");
       cartImg.src = activeProduct.image;
-      cartImg.alt = `${activeProduct.name} website template preview`;
-
+      cartImg.alt = activeProduct.name + " website template preview";
       tagline.textContent = activeProduct.tagline;
       title.textContent = activeProduct.name;
       description.textContent = activeProduct.description;
       previewBtn.href = activeProduct.preview;
       previewBtn.setAttribute("target", "_blank");
       previewBtn.setAttribute("rel", "noopener noreferrer");
-      previewBtn.textContent = "View Live Preview";
-
+      previewBtn.textContent = "View " + activeProduct.version + " Preview";
       summaryName.textContent = activeProduct.name;
-      summaryPrice.textContent = activeProduct.price;
+      summaryPrice.textContent = activeProduct.priceLabel;
       summaryType.textContent = activeProduct.typeLabel;
-      totalPrice.textContent = activeProduct.price;
-      submitBtn.textContent = `Pay ${activeProduct.price} Securely`;
-
+      totalPrice.textContent = activeProduct.priceLabel;
+      submitBtn.textContent = "Pay " + activeProduct.priceLabel + " Securely";
       featuresList.innerHTML = "";
 
       activeProduct.features.forEach((feature) => {
@@ -415,7 +306,6 @@
       showActiveProduct(product);
     }
   </script>
-
   <script src="js/script.js"></script>
   <script src="js/checkout.js"></script>
 </body>

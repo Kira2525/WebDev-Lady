@@ -1,8 +1,16 @@
 # Abyssal Blue Pro
 
-Abyssal Blue Pro is a premium static HTML website template designed for dive tours, aquariums, marine parks, ocean resorts, conservation brands, and underwater adventure businesses.
+Version: 1.0
 
-## Included Pages
+Abyssal Blue Pro is a polished static HTML website template for scuba diving tours, marine wildlife centers, reef excursions, ocean experience brands, and conservation-focused adventure businesses.
+
+## Requirements
+
+No build tools, frameworks, package managers, or installations are required.
+
+Abyssal Blue Pro runs as a standard static HTML, CSS, and JavaScript website.
+
+## Included HTML Pages
 
 - `index.html`
 - `about.html`
@@ -14,26 +22,27 @@ Abyssal Blue Pro is a premium static HTML website template designed for dive tou
 - `faq.html`
 - `thank-you.html`
 - `404.html`
-- `style-guide.html`
 
 ## Core Features
 
-- Multi-page marketing and conversion flow
-- Cinematic underwater visual language
-- Responsive layouts across desktop, tablet, and mobile
-- Animated bubbles, fish, particles, and hero slider
-- Booking and contact form templates with thank-you flow
-- Gallery filtering, pricing comparison, FAQ, and conversion CTAs
-- Marketplace-friendly utility pages and seller documentation
-- Style guide page for faster buyer customization
+- Multi-page static website with no build tools required
+- Responsive desktop, tablet, and mobile layouts
+- Animated ocean background with bubbles, fish, and canvas particles
+- Guided-dive pricing and booking flow
+- Filterable gallery with accessible lightbox
+- Contact and booking forms with demo thank-you redirect flow
+- SEO-ready metadata, manifest, robots file, and sitemap
+- Beginner-friendly setup and customization documentation
 
 ## Quick Start
 
-1. Download or copy the project files to your local machine.
-2. Open `index.html` in a browser for a quick preview, or serve the folder with a local static server for a more realistic test.
-3. Replace text, images, metadata, contact details, and booking information with your own brand content.
-4. Connect the forms to your preferred backend or form service before publishing.
-5. Update canonical URLs, social metadata, manifest values, and sitemap URLs for your live domain.
+1. Download or copy the full project folder.
+2. Open `index.html` directly in your browser for a quick preview.
+3. Replace the logo, images, business details, and package content.
+4. Replace placeholder URLs like `https://example.com/` with your live domain.
+5. Connect the forms to a live form handler if needed.
+6. Review the site on desktop, tablet, and mobile.
+7. Deploy to your hosting provider.
 
 ## File Structure
 
@@ -47,34 +56,60 @@ AbyssalBlue-Pro/
 |-- gallery.html
 |-- index.html
 |-- pricing.html
+|-- thank-you.html
+|-- wildlife.html
+|-- README.md
+|-- license.txt
 |-- robots.txt
 |-- sitemap.xml
 |-- site.webmanifest
-|-- style-guide.html
-|-- thank-you.html
-|-- wildlife.html
 |-- css/
+|   |-- styles.css
+|   |-- tablet.css
+|   `-- mobile.css
 |-- docs/
+|   |-- customization-guide.md
+|   |-- form-setup-guide.md
+|   |-- hosting-guide.md
+|   |-- image-replacement-guide.md
+|   `-- setup-guide.md
 |-- images/
+|   |-- coral-placeholder.jpg
+|   |-- diver-placeholder.jpg
+|   |-- favicon.svg
+|   |-- hero-shark.jpg
+|   |-- logo.svg
+|   |-- shipwreck-placeholder.jpg
+|   |-- tropical-fish.jpg
+|   `-- turtle-placeholder.jpg
 `-- js/
+    `-- main.js
 ```
 
 ## Customization Notes
 
-- Global styles live in `css/styles.css`.
-- Responsive overrides live in `css/tablet.css` and `css/mobile.css`.
-- Shared interactions live in `js/main.js`.
-- Image assets live in `images/`.
-- Setup, customization, image, form, and hosting guides live in `docs/`.
-- The style guide page gives buyers a fast way to review reusable components before editing production pages.
+- Shared desktop and global styles live in `css/styles.css`.
+- Tablet layout overrides live in `css/tablet.css`.
+- Mobile layout overrides live in `css/mobile.css`.
+- Shared interactivity lives in `js/main.js`.
+- Images and brand assets live in `images/`.
+- Each HTML page includes its own page copy and metadata.
 
 ## Forms
 
-The included forms are front-end templates. They currently redirect to `thank-you.html` for demo purposes. Before launch, point each form `action` to a live handler such as Formspree, Netlify Forms, EmailJS, a serverless function, or your own backend.
+The included booking and contact forms are demonstration forms by default. They currently redirect to `thank-you.html`. Connect the forms to Formspree, Netlify Forms, EmailJS, or your own backend before launch if you want live submissions.
 
 ## Deployment
 
-This template can be deployed to any static hosting platform, including Netlify, Vercel, GitHub Pages, Cloudflare Pages, cPanel hosting, or an S3-style object storage setup.
+Abyssal Blue Pro can be deployed to virtually any static hosting provider, including:
+
+- Netlify
+- Vercel
+- GitHub Pages
+- Cloudflare Pages
+- cPanel / Shared Hosting
+
+See the Hosting Guide for detailed deployment instructions.
 
 ## Included Documentation
 
@@ -83,3 +118,17 @@ This template can be deployed to any static hosting platform, including Netlify,
 - [Image Replacement Guide](docs/image-replacement-guide.md)
 - [Form Setup Guide](docs/form-setup-guide.md)
 - [Hosting Guide](docs/hosting-guide.md)
+
+## Support
+
+Need help customizing the template?
+
+Customization services, updates, and additional support may be available separately.
+
+See `license.txt` for licensing details.
+
+## License
+
+This template is provided under the Abyssal Blue Pro Single Purchase License.
+
+See `license.txt` for complete licensing terms.

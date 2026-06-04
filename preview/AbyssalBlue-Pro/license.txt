@@ -1,29 +1,28 @@
 ABYSSAL BLUE PRO LICENSE
 
-Copyright © 2026 Web Dev Lady
+Copyright (c) 2026 Web Dev Lady
 
 SINGLE PURCHASE LICENSE
 
-By purchasing, downloading, or using this template, you agree to the following terms:
+By purchasing, downloading, or using this template, you agree to the following terms.
 
 YOU MAY:
 
-* Use the template for personal websites.
-* Use the template for commercial websites.
-* Use the template for client projects.
-* Modify text, colors, images, branding, layouts, and functionality.
-* Customize the template for unlimited projects owned by you or your clients.
+- Use the template for one final personal, commercial, or client website/project.
+- Modify text, colors, images, branding, layouts, and functionality as needed for that project.
+- Create development, staging, and backup copies for that same project.
+- Transfer the completed customized website to one client as part of one completed client project.
 
 YOU MAY NOT:
 
-* Resell the template as a website template, theme, starter kit, or design asset.
-* Redistribute, share, or give away the source files.
-* Upload the template to marketplaces, repositories, or file-sharing websites.
-* Claim ownership of the original template design or source package.
+- Resell the template as a template, theme, starter kit, or design asset.
+- Redistribute, share, give away, upload, or publish the source files.
+- Use the same purchase for multiple unrelated websites or projects.
+- Claim ownership of the original template design, source code, documentation, or source package.
 
 OWNERSHIP
 
-This purchase grants usage rights only.
+This license grants usage rights only.
 
 All original design, source code, documentation, branding, and template assets remain the intellectual property of Web Dev Lady.
 
@@ -39,4 +38,4 @@ CONTACT
 
 For licensing questions, custom work, or extended licensing, contact:
 
-[webdevlady26@gmail.com](mailto:webdevlady26@gmail.com)
+webdevlady26@gmail.com

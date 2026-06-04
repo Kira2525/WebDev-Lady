@@ -84,6 +84,8 @@
   .faq-grid,
   .about-stats,
   .card-grid,
+  .path-grid,
+  .detail-grid,
   .templates-grid,
   .featured-product,
   .template-card {
@@ -101,6 +103,15 @@
   .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .path-card {
+    padding: 24px;
+  }
+
+  .path-list li {
+    flex-direction: column;
+    gap: 6px;
   }
 }
 

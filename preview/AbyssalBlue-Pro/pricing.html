@@ -14,14 +14,19 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://example.com/pricing.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Abyssal Blue" />
   <meta property="og:title" content="Pricing | Abyssal Blue" />
   <meta property="og:description" content="View Abyssal Blue dive packages and ocean experience pricing for beginner dives, advanced reef tours, shipwreck expeditions, and private charters." />
   <meta property="og:url" content="https://example.com/pricing.html" />
-  <meta property="og:image" content="https://example.com/images/coral-placeholder.jpg" />
+  <meta property="og:image" content="https://example.com/images/hero-shark.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pricing | Abyssal Blue" />
+  <meta name="twitter:description" content="View Abyssal Blue dive packages and ocean experience pricing for beginner dives, advanced reef tours, shipwreck expeditions, and private charters." />
+  <meta name="twitter:image" content="https://example.com/images/hero-shark.jpg" />
 
-  <link rel="icon" href="images/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/tablet.css">
   <link rel="stylesheet" href="css/mobile.css">
@@ -132,7 +137,7 @@
           <li>Shallow reef route</li>
         </ul>
 
-        <a href="booking.html" class="btn secondary-btn">Choose Starter</a>
+        <a href="booking.html?package=Beginner%20Reef%20Dive#reserve" class="btn secondary-btn">Choose Starter</a>
       </article>
 
       <article class="pricing-page-card popular">
@@ -155,7 +160,53 @@
           <li>Priority booking window</li>
         </ul>
 
-        <a href="booking.html" class="btn primary-btn">Choose Advanced</a>
+        <a href="booking.html?package=Advanced%20Reef%20Dive#reserve" class="btn primary-btn">Choose Advanced</a>
+      </article>
+
+      <article class="pricing-page-card">
+        <p class="plan-label">Adventure</p>
+
+        <h2>Shipwreck Expedition</h2>
+
+        <div class="price">$329</div>
+
+        <p class="plan-text">
+          Designed for confident guests who want dramatic wreck scenery, deeper
+          routes, and a guide-led look at the marine life surrounding each site.
+        </p>
+
+        <ul>
+          <li>Shipwreck-focused guided route</li>
+          <li>Premium equipment included</li>
+          <li>Advanced safety briefing</li>
+          <li>Marine history storytelling</li>
+          <li>Wildlife and photo moments</li>
+        </ul>
+
+        <a href="booking.html?package=Shipwreck%20Expedition#reserve" class="btn secondary-btn">Choose Shipwreck</a>
+      </article>
+
+      <article class="pricing-page-card">
+        <p class="plan-label">Wildlife</p>
+
+        <h2>Sea Turtle Tour</h2>
+
+        <div class="price">$189</div>
+
+        <p class="plan-text">
+          A slower-paced wildlife route built around turtle habitats, reef
+          observation, and conservation-minded viewing for guests of mixed experience levels.
+        </p>
+
+        <ul>
+          <li>Turtle habitat route</li>
+          <li>Guide-led wildlife education</li>
+          <li>Beginner-friendly pacing</li>
+          <li>Photo add-on option</li>
+          <li>Small group departure</li>
+        </ul>
+
+        <a href="booking.html?package=Sea%20Turtle%20Tour#reserve" class="btn secondary-btn">Choose Turtle Tour</a>
       </article>
 
       <article class="pricing-page-card">
@@ -178,7 +229,7 @@
           <li>Best for small groups</li>
         </ul>
 
-        <a href="booking.html" class="btn secondary-btn">Choose Private</a>
+        <a href="booking.html?package=Private%20Charter#reserve" class="btn secondary-btn">Choose Private</a>
       </article>
 
     </section>
@@ -230,12 +281,16 @@
         <div class="compare-row compare-head">
           <span>Feature</span>
           <span>Beginner</span>
+          <span>Turtle Tour</span>
           <span>Advanced</span>
+          <span>Shipwreck</span>
           <span>Private</span>
         </div>
 
         <div class="compare-row">
           <span>Guided Dive</span>
+          <span>Included</span>
+          <span>Included</span>
           <span>Included</span>
           <span>Included</span>
           <span>Private Guide</span>
@@ -244,6 +299,8 @@
         <div class="compare-row">
           <span>Equipment</span>
           <span>Basic</span>
+          <span>Basic</span>
+          <span>Premium</span>
           <span>Premium</span>
           <span>Premium</span>
         </div>
@@ -251,12 +308,16 @@
         <div class="compare-row">
           <span>Best For</span>
           <span>First-Time Guests</span>
+          <span>Wildlife Lovers</span>
           <span>Adventure Divers</span>
+          <span>Confident Divers</span>
           <span>Groups</span>
         </div>
 
         <div class="compare-row">
           <span>Photo Option</span>
+          <span>Add-On</span>
+          <span>Add-On</span>
           <span>Add-On</span>
           <span>Add-On</span>
           <span>Available</span>
@@ -359,9 +420,28 @@
       </a>
 
       <p>
-        Premium underwater website template designed for aquariums,
-        dive tours, resorts, marine parks, and ocean adventure brands.
+        Guided ocean dives, marine wildlife encounters, and
+        conservation-focused adventures from Miami's waterfront.
       </p>
+
+      <!-- Replace # with real social media URLs -->
+      <div class="footer-social" role="group" aria-label="Abyssal Blue social media links">
+        <a href="#" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="X">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+      </div>
 
       <div class="footer-bottom">
         &copy; 2026 Abyssal Blue. All rights reserved.

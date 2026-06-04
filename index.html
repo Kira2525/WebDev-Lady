@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R74R9S9ZZL');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-R74R9S9ZZL");
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -17,11 +16,11 @@
 
   <meta
     name="description"
-    content="Browse premium responsive website templates built with HTML, CSS, and JavaScript. Instant downloads, commercial use licenses, and Lite and Pro versions available."
+    content="Browse premium responsive website templates, request template customization, or start a fully custom website build with Web Dev Lady."
   />
   <meta
     name="keywords"
-    content="website templates, premium website templates, responsive website templates, HTML CSS website templates, web design templates, small business website templates, Web Dev Lady"
+    content="website templates, premium website templates, custom website design, template customization, responsive website templates, Web Dev Lady"
   />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Web Dev Lady" />
@@ -31,7 +30,7 @@
   <meta property="og:title" content="Web Dev Lady | Premium Website Templates for Small Businesses" />
   <meta
     property="og:description"
-    content="Browse premium responsive website templates built with HTML, CSS, and JavaScript. Instant downloads, commercial use licenses, and Lite and Pro versions available."
+    content="Browse premium responsive website templates, request template customization, or start a fully custom website build with Web Dev Lady."
   />
   <meta property="og:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
   <meta property="og:url" content="https://webdevlady.netlify.app/" />
@@ -40,7 +39,7 @@
   <meta name="twitter:title" content="Web Dev Lady | Premium Website Templates for Small Businesses" />
   <meta
     name="twitter:description"
-    content="Browse premium responsive website templates built with HTML, CSS, and JavaScript. Instant downloads, commercial use licenses, and Lite and Pro versions available."
+    content="Browse premium responsive website templates, request template customization, or start a fully custom website build with Web Dev Lady."
   />
   <meta name="twitter:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
 
@@ -70,10 +69,10 @@
   <link rel="stylesheet" href="css/tablet.css" />
   <link rel="stylesheet" href="css/mobile.css" />
   <link rel="preload" as="image" href="images/webdevlady.png">
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
 </head>
 
 <body>
@@ -86,7 +85,14 @@
       <span>WEB DEV <strong>LADY</strong></span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle">☰</button>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      &#9776;
+    </button>
 
     <nav class="nav" id="nav">
       <a href="index.html" class="active">Home</a>
@@ -96,7 +102,7 @@
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
       <a href="cart.html" class="cart-icon-link" aria-label="Shopping Cart">
-        🛒
+        &#128722;
       </a>
     </nav>
   </header>
@@ -105,21 +111,22 @@
     <section class="hero">
       <div class="hero-content">
         <p class="tagline">DIGITAL WEBSITE STUDIO</p>
-
-        <h1>Premium websites that make your brand look expensive.</h1>
+        <h1>Choose the website path that fits your launch.</h1>
 
         <p class="hero-text">
-          Shop ready-made website templates or request a fully custom website
-          built specifically for your business, brand, or digital product.
+          Start with a Lite or Pro template, upgrade to template
+          customization from $199, choose Website Setup Service from $499, or
+          step into a fully custom website from $999.
         </p>
 
         <div class="hero-buttons">
           <a href="templates.html" class="btn primary">Shop Templates</a>
-          <a href="contact.html#project-form" class="btn secondary">Request Custom Website</a>
+          <a href="pricing.html#website-path" class="btn secondary">View Pricing Path</a>
+          <a href="contact.html#project-form" class="btn secondary">Start Project Request</a>
         </div>
 
         <p class="hero-trust">
-          Website Templates • Custom Builds • Digital Product Design
+          Premium presentation, approachable pricing, and a clear next step at every level.
         </p>
       </div>
 
@@ -132,211 +139,242 @@
     </section>
 
     <section class="section">
+      <p class="section-tag">START HERE</p>
+      <h2>Choose the level of support that matches your launch.</h2>
+
+      <div class="card-grid card-grid--four">
+        <article class="card">
+          <span>01</span>
+          <p class="service-price">Lite $59 / Pro $99</p>
+          <h3>DIY Templates</h3>
+          <p>
+            Choose a polished Lite or Pro template and launch on your own
+            timeline with editable files, documentation, and instant download
+            access.
+          </p>
+          <a href="templates.html" class="learn-more">Shop Templates &rarr;</a>
+        </article>
+
+        <article class="card">
+          <span>02</span>
+          <p class="service-price">Starts at $199</p>
+          <h3>Template Customization</h3>
+          <p>
+            Best for businesses that already like a template and want polished
+            brand updates without moving into a larger service package.
+          </p>
+          <a href="pricing.html#template-customization" class="learn-more">See Customization &rarr;</a>
+        </article>
+
+        <article class="card popular-card">
+          <div class="popular-badge">MOST POPULAR</div>
+          <span>03</span>
+          <p class="service-price">Starts at $499</p>
+          <h3>Website Setup Service</h3>
+          <p>
+            The best entry-level service for clients who want template setup,
+            brand updates, launch guidance, and a stronger handoff.
+          </p>
+          <a href="pricing.html#website-setup-service" class="learn-more">Explore Setup Service &rarr;</a>
+        </article>
+
+        <article class="card">
+          <span>04</span>
+          <p class="service-price">Starts at $999</p>
+          <h3>Custom Website Builds</h3>
+          <p>
+            For businesses that need a more strategic site structure, a larger
+            build, e-commerce functionality, or a fully custom visual direction.
+          </p>
+          <a href="pricing.html#custom-website-builds" class="learn-more">Compare Custom Options &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
       <p class="section-tag">FEATURED TEMPLATE</p>
-      <h2>Best Seller</h2>
+      <h2>Featured for brands that want a high-end online look.</h2>
 
       <div class="featured-product">
         <div class="product-content">
-          <p class="tagline">BEST SELLER WEBSITE TEMPLATE</p>
-
+          <p class="tagline">BEST SELLER</p>
           <h3>CosmicOrbit Pro</h3>
 
           <p>
-            A futuristic premium website template built for digital brands,
-            creators, service providers, and online businesses that want a bold,
-            expensive-looking web presence.
+            CosmicOrbit Pro is a premium multi-page website template for
+            creators, service businesses, startups, and digital products that
+            want a polished modern launch.
           </p>
 
           <ul class="feature-list">
-            <li>8 premium pages included</li>
-            <li>Animated 3D space-inspired design</li>
-            <li>Responsive desktop, tablet, and mobile layouts</li>
-            <li>Modern pricing, contact, and product sections</li>
-            <li>Easy HTML, CSS, and JavaScript customization</li>
-            <li>Instant digital download after purchase</li>
+            <li>Multi-page website with stronger layouts</li>
+            <li>Responsive desktop, tablet, and mobile design</li>
+            <li>Editable HTML, CSS, and JavaScript</li>
+            <li>Documentation included</li>
+            <li>Commercial use license</li>
+            <li>Instant digital download</li>
           </ul>
 
           <div class="product-buttons">
             <a href="cart.html?product=cosmicorbit-pro" class="btn primary">
-              Buy CosmicOrbit Pro — $99
+              Buy Pro &mdash; $99
             </a>
-
             <a
               href="preview/CosmicOrbit-Pro/index.html"
               target="_blank"
               rel="noopener noreferrer"
               class="btn secondary"
             >
-              View Live Preview
+              View Pro Preview
+            </a>
+            <a href="cart.html?product=cosmicorbit-lite" class="btn secondary">
+              Buy Lite &mdash; $59
+            </a>
+            <a
+              href="preview/CosmicOrbit-Lite/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn secondary"
+            >
+              View Lite Preview
             </a>
           </div>
         </div>
 
         <div class="product-preview-card">
-          <div class="preview-badge">BEST SELLER</div>
-
+          <div class="preview-badge">FEATURED</div>
           <img
             src="images/cosmicorbit-pro.png"
             alt="CosmicOrbit Pro website template preview"
           />
 
           <div class="preview-info">
-            <span>Template Price</span>
+            <span>Pro Template</span>
             <strong>$99</strong>
-            <p>Instant Download</p>
+            <p>Lite version also available for $59</p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section dark">
-      <p class="section-tag">SERVICES</p>
-      <h2>Choose how you want to launch.</h2>
+      <p class="section-tag">SETUP MADE SIMPLE</p>
+      <h2>Need help getting a template launch-ready?</h2>
 
       <div class="card-grid">
         <article class="card">
           <span>01</span>
-          <h3>Template Only</h3>
+          <h3>Choose a template</h3>
           <p>
-            Buy premium website templates and launch quickly by editing the files
-            yourself.
+            Pick the design you like best from the template store, or use the
+            contact form if you want help choosing between Lite and Pro.
           </p>
-
-          <a href="about.html#template-only" class="learn-more">Learn More →</a>
         </article>
 
         <article class="card">
           <span>02</span>
-          <h3>Template Customization</h3>
+          <h3>Send your brand details</h3>
           <p>
-            Personalize a purchased template with your branding, colors, text,
-            images, and business details.
+            Share your logo, business name, text, images, links, preferred
+            colors, and any launch details you want included.
           </p>
-
-          <a href="about.html#template-customization" class="learn-more">Learn More →</a>
         </article>
 
         <article class="card">
           <span>03</span>
-          <h3>Custom Website Build</h3>
+          <h3>Launch with confidence</h3>
           <p>
-            A completely original premium website built specifically around your
-            business or digital brand.
+            Website Setup Service adds installation help, mobile review, and a
+            final quality pass so your template feels ready for the next step.
           </p>
-
-          <a href="about.html#custom-website" class="learn-more">Learn More →</a>
         </article>
       </div>
     </section>
 
     <section class="cta">
-  <p class="section-tag">READY TO LAUNCH?</p>
-
-  <h2>Get a website that looks ready to sell.</h2>
-
-  <p>
-    Choose a premium template, customize one for your brand,
-    or request a fully custom website build.
-  </p>
-
-  <div class="hero-buttons">
-    <a href="templates.html" class="btn primary">
-      Shop Templates
-    </a>
-
-    <a href="contact.html#project-form" class="btn secondary">
-      Request Custom Website
-    </a>
-  </div>
-</section>
-</main>
-
-  <footer>
-
-  <div class="footer-content">
-
-    <div class="footer-brand">
-      <img
-        src="images/webdevlady-logo.png"
-        alt="Web Dev Lady Logo"
-        class="footer-logo"
-      >
-
-      <h3>WEB DEV LADY</h3>
+      <p class="section-tag">NOT SURE WHAT YOU NEED?</p>
+      <h2>Choose the clearest next step for your website.</h2>
 
       <p>
-        Premium website templates, custom website builds,
-        and website customization services.
+        Start with the pricing path if you want to compare options, or use the
+        contact form if you want help deciding between customization, setup,
+        and a custom build.
       </p>
-    </div>
 
-    <div class="footer-links">
+      <div class="hero-buttons">
+        <a href="contact.html#project-form" class="btn primary">
+          Start the Contact Form
+        </a>
+        <a href="pricing.html#website-path" class="btn secondary">
+          View Pricing
+        </a>
+      </div>
+    </section>
+  </main>
 
-      <h4>Navigation</h4>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img
+          src="images/webdevlady-logo.png"
+          alt="Web Dev Lady Logo"
+          class="footer-logo"
+        >
+        <h3>WEB DEV LADY</h3>
+        <p>
+          Premium website templates, template customization, and custom website
+          builds for businesses that want a polished online presence.
+        </p>
+      </div>
 
-      <a href="index.html">Home</a>
-      <a href="templates.html">Templates</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="index.html">Home</a>
+        <a href="templates.html">Templates</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
 
-    </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="templates.html">Template Store</a>
+        <a href="pricing.html#template-customization">Template Customization</a>
+        <a href="pricing.html#website-setup-service">Website Setup Service</a>
+        <a href="pricing.html#custom-website-builds">Custom Website Builds</a>
+        <a href="pricing.html#maintenance-plans">Maintenance Plans</a>
+      </div>
 
-    <div class="footer-links">
-
-      <h4>Services</h4>
-
-      <a href="templates.html">Website Templates</a>
-      <a href="pricing.html#template-customization">Template Customization</a>
-      <a href="pricing.html#custom-website-builds">Custom Website Builds</a>
-      <a href="contact.html#project-form">Website Support</a>
-
-    </div>
-
-     <div class="footer-links">
+      <div class="footer-links">
         <h4>Follow</h4>
-
-       <a href="https://www.tiktok.com/@webdevlady" target="_blank">
-  <i class="fa-brands fa-tiktok"></i> TikTok
-</a>
-
-<a href="https://www.instagram.com/webdev_lady/" target="_blank">
-  <i class="fa-brands fa-instagram"></i> Instagram
-</a>
-
-<a href="https://www.facebook.com/webdevlady" target="_blank">
-  <i class="fa-brands fa-facebook"></i> Facebook
-</a>
-
-<a href="https://www.youtube.com/@WebDevLady" target="_blank">
-  <i class="fa-brands fa-youtube"></i> YouTube
-</a>
-
-<a href="#" target="_blank">
-  <i class="fa-brands fa-threads"></i> Threads
-</a>
-
-<a href="#" target="_blank">
-  <i class="fa-brands fa-x-twitter"></i> X
-</a>
-
+        <a href="https://www.tiktok.com/@webdevlady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+        <a href="https://www.instagram.com/webdev_lady/" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/webdevlady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.youtube.com/@WebDevLady" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.fiverr.com/sellers/kiraleeruck" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-briefcase"></i> Fiverr
+        </a>
         <a href="mailto:webdevlady26@gmail.com">
-  <i class="fa-solid fa-envelope"></i> Email
-</a>
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
       </div>
     </div>
 
-  <div class="footer-bottom">
-
-    <p>
-      © 2026 Web Dev Lady. Digital Website Studio.
-      All rights reserved.
-    </p>
-
-  </div>
-
-</footer>
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 Web Dev Lady. Digital Website Studio. All rights reserved.
+      </p>
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>

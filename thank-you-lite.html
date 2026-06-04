@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R74R9S9ZZL');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-R74R9S9ZZL");
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,9 +27,9 @@
   <link rel="stylesheet" href="css/tablet.css" />
   <link rel="stylesheet" href="css/mobile.css" />
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-/>
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
 </head>
 
 <body class="success-page">
@@ -39,69 +38,53 @@
 
   <main class="success-main">
     <section class="success-card">
-
       <p class="eyebrow">Purchase Complete</p>
-
       <h1>Download Ready</h1>
 
       <p>
-        Your Lite template is ready to download. Click the button below to get your ZIP file.
+        Your Lite template is ready to download. Use the button below to get
+        your ZIP file.
       </p>
 
       <div class="download-box">
         <h2 id="productName">Loading your template...</h2>
-
         <p id="productDescription">
           Please wait while we prepare your download.
         </p>
-
         <a id="downloadBtn" class="btn primary download-btn" href="#" download>
           Download Template
         </a>
       </div>
 
       <p class="small-note">
-        Save your ZIP file somewhere safe. Your download includes the template files,
-        images folder, responsive CSS, JavaScript, and README documentation.
+        Your Lite download includes a single-page website, responsive styles,
+        editable code, documentation, and a commercial use license.
+      </p>
+
+      <p class="small-note">
+        If you need help with branding, content changes, or setup, request
+        customization and I can take care of it for you.
       </p>
 
       <a class="home-link" href="templates.html">
-        ← Back to Templates
+        &larr; Back to Templates
       </a>
-
     </section>
   </main>
 
   <footer class="simple-footer">
     <p>
-      © 2026 Web Dev Lady. Digital Website Studio.
-      All rights reserved.
+      &copy; 2026 Web Dev Lady. Digital Website Studio. All rights reserved.
     </p>
   </footer>
 
+  <script src="js/product-catalog.js"></script>
   <script>
-    const templates = {
-      "cosmicorbit-lite": {
-        name: "CosmicOrbit Lite",
-        description: "Single page cosmic-inspired website template with responsive design, clean code, and commercial use license.",
-        file: "downloads/CosmicOrbit-Lite.zip"
-      },
-      "abyssalblue-lite": {
-        name: "Abyssal Blue Lite",
-        description: "Single-page ocean-inspired website template with responsive design, editable code, documentation, and commercial use license.",
-        file: "downloads/AbyssalBlue-Lite.zip"
-      },
-      "velvetui-lite": {
-        name: "VelvetUI Lite",
-        description: "Single-page glassmorphism website template with responsive design, editable code, documentation, and commercial use license.",
-        file: "downloads/VelvetUI-Lite.zip"
-      },
-      "worldview-lite": {
-        name: "WorldView Lite",
-        description: "Single-page global business website template with responsive design, editable code, documentation, and commercial use license.",
-        file: "downloads/WorldView-Lite.zip"
-      }
-    };
+    const liteTemplates = Object.fromEntries(
+      Object.entries(window.productCatalog || {}).filter(([, template]) => {
+        return template.version === "Lite";
+      })
+    );
 
     const params = new URLSearchParams(window.location.search);
     const product = params.get("product");
@@ -110,14 +93,14 @@
     const productDescription = document.getElementById("productDescription");
     const downloadBtn = document.getElementById("downloadBtn");
 
-    if (product && templates[product]) {
-      productName.textContent = templates[product].name;
-      productDescription.textContent = templates[product].description;
-      downloadBtn.href = templates[product].file;
-      downloadBtn.textContent = "Download " + templates[product].name;
+    if (product && liteTemplates[product]) {
+      productName.textContent = liteTemplates[product].name;
+      productDescription.textContent = liteTemplates[product].description;
+      downloadBtn.href = liteTemplates[product].downloadFile;
+      downloadBtn.textContent = "Download " + liteTemplates[product].name;
     } else {
       productName.textContent = "Template Not Found";
-      productDescription.textContent = "This download link is missing or incorrect. Please contact Web Dev Lady for help.";
+      productDescription.textContent = "This download link is missing or incorrect. Contact Web Dev Lady if you need help accessing your files.";
       downloadBtn.style.display = "none";
     }
   </script>

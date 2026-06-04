@@ -2,53 +2,90 @@
 
 ## Overview
 
-Abyssal Blue Pro is a static HTML, CSS, and JavaScript template. No build tools, package installation, or framework setup is required.
+Abyssal Blue Pro is a static HTML, CSS, and JavaScript template. No framework, package manager, build tool, or install step is required.
 
-## Files You Will Work With Most
+## Requirements
 
-- `index.html` and the other `.html` files for page content
-- `css/styles.css` for global design and component styles
-- `css/tablet.css` for tablet layout changes
-- `css/mobile.css` for mobile layout changes
-- `js/main.js` for navigation, gallery filtering, animations, and form flow
-- `images/` for photography, logos, and icons
+No build tools, package managers, frameworks, or installations are required.
 
-## Local Preview Options
+Abyssal Blue Pro runs as a standard static HTML, CSS, and JavaScript website.
 
-### Option 1: Open the Files Directly
+## Quick Start
 
-Open `index.html` in your browser for a quick preview. This is fine for content editing and visual checks.
+1. Replace your logo in `images/logo.svg`.
+2. Replace demo images in `images/`.
+3. Update business name and contact details.
+4. Update pricing and package information.
+5. Replace `https://example.com` URLs.
+6. Connect forms if needed.
+7. Preview locally.
+8. Deploy to your hosting provider.
 
-### Option 2: Use a Local Static Server
+## Main Files
 
-Using a local server gives you a more realistic preview for links, navigation, and browser behavior.
+- `index.html` through `404.html` control page content and page metadata.
+- `css/styles.css` contains the shared and desktop-first styles.
+- `css/tablet.css` contains tablet layout overrides.
+- `css/mobile.css` contains mobile layout overrides.
+- `js/main.js` contains navigation, animation, gallery, booking, and form behavior.
+- `images/` stores the photo assets, logo, and favicon.
+- `robots.txt` controls search engine crawling instructions.
+- `sitemap.xml` contains the list of public pages for search engines.
+- `site.webmanifest` controls app-style icon and manifest settings.
+
+## How To Preview Locally
+
+### Option 1: Open the HTML files directly
+
+Open `index.html` in your browser. This is enough for content editing, layout review, and link testing.
+
+### Option 2: Use a simple local static server
+
+This is useful if you prefer testing with a localhost URL.
 
 Examples:
 
 - VS Code Live Server
 - Python simple server
-- `npx serve`
-- Netlify CLI preview
+- Any static hosting preview tool you already use
 
-## Initial Setup Checklist
+## First-Time Setup Checklist
 
-1. Replace the business name, email, phone numbers, address, and hours.
-2. Update the homepage hero copy and CTA language.
-3. Replace placeholder images in `images/`.
-4. Review pricing, package names, and FAQ content.
-5. Update metadata for every page, especially canonical URLs and social preview content.
-6. Connect the forms to a real form processor or backend.
-7. Test every page on desktop, tablet, and mobile.
+1. Review all included pages and decide which ones you want to keep.
+2. Replace the business name, contact details, address, and hours.
+3. Update homepage headlines, CTA text, and package details.
+4. Replace the placeholder images in `images/`.
+5. Update page titles, descriptions, canonical URLs, Open Graph tags, and Twitter tags.
+6. Connect the forms to a real form handler.
+7. Review the site on desktop, tablet, and mobile.
 
-## Recommended Pre-Launch Checks
+## Common Customizations
 
-- Verify all page links
-- Verify form redirects
-- Test gallery filters
-- Confirm favicon and manifest behavior
-- Review spacing and text wrapping on mobile
-- Check real contact details and legal copy
+Most customers update:
 
-## Deployment Preparation
+- Logo
+- Images
+- Colors
+- Contact information
+- Pricing
+- Social media links
+- SEO metadata
+- Form handling
 
-Before publishing, review the hosting instructions in [hosting-guide.md](hosting-guide.md) and the form instructions in [form-setup-guide.md](form-setup-guide.md).
+## Launch Checklist
+
+- All navigation links work
+- All CTA buttons point to real destinations
+- Package names and prices match on booking and pricing pages
+- Contact details are real
+- Demo form redirects are replaced or intentionally kept for preview use
+- `robots.txt` and `sitemap.xml` are updated for the live domain
+- Canonical URLs no longer use `https://example.com/`
+- Favicon and manifest paths work correctly
+
+## Related Guides
+
+- [Customization Guide](customization-guide.md)
+- [Image Replacement Guide](image-replacement-guide.md)
+- [Form Setup Guide](form-setup-guide.md)
+- [Hosting Guide](hosting-guide.md)

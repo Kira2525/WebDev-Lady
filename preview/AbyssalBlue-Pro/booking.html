@@ -14,14 +14,19 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://example.com/booking.html" />
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Abyssal Blue" />
   <meta property="og:title" content="Book Dive | Abyssal Blue" />
   <meta property="og:description" content="Reserve an underwater adventure with Abyssal Blue. Book guided reef dives, shipwreck tours, sea turtle experiences, and private ocean charters." />
   <meta property="og:url" content="https://example.com/booking.html" />
-  <meta property="og:image" content="https://example.com/images/diver-placeholder.jpg" />
+  <meta property="og:image" content="https://example.com/images/hero-shark.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Book Dive | Abyssal Blue" />
+  <meta name="twitter:description" content="Reserve an underwater adventure with Abyssal Blue. Book guided reef dives, shipwreck tours, sea turtle experiences, and private ocean charters." />
+  <meta name="twitter:image" content="https://example.com/images/hero-shark.jpg" />
 
-  <link rel="icon" href="images/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/tablet.css">
   <link rel="stylesheet" href="css/mobile.css">
@@ -212,8 +217,8 @@
         </button>
 
         <p class="form-disclaimer" id="bookingFormDisclaimer">
-          After you submit your request, our team will contact you to confirm
-          availability, payment details, equipment needs, and arrival instructions.
+          This demo booking form routes to the confirmation page. Connect a live
+          form handler before launch to receive real reservation requests.
         </p>
       </form>
 
@@ -277,6 +282,50 @@
       </div>
 
       <div class="pricing-card">
+        <p class="plan-label">Adventure</p>
+        <h3>Shipwreck Expedition</h3>
+        <div class="price">$329</div>
+
+        <p>Explore a dramatic wreck route with deeper water scenery and rich marine history.</p>
+
+        <ul class="package-list">
+          <li>Wreck-focused guided route</li>
+          <li>Advanced briefing and support</li>
+          <li>Premium equipment included</li>
+        </ul>
+
+        <a
+          href="#reserve"
+          class="btn secondary-btn package-select"
+          data-package="Shipwreck Expedition"
+        >
+          Reserve Shipwreck Dive
+        </a>
+      </div>
+
+      <div class="pricing-card">
+        <p class="plan-label">Wildlife</p>
+        <h3>Sea Turtle Tour</h3>
+        <div class="price">$189</div>
+
+        <p>Relaxed reef pacing with turtle habitat viewing, marine education, and photo moments.</p>
+
+        <ul class="package-list">
+          <li>Turtle habitat route</li>
+          <li>Guide-led wildlife education</li>
+          <li>Beginner-friendly pace</li>
+        </ul>
+
+        <a
+          href="#reserve"
+          class="btn secondary-btn package-select"
+          data-package="Sea Turtle Tour"
+        >
+          Reserve Turtle Tour
+        </a>
+      </div>
+
+      <div class="pricing-card">
         <p class="plan-label">Private</p>
         <h3>Private Charter</h3>
         <div class="price">$599</div>
@@ -332,7 +381,7 @@
       <div class="process-card">
         <span>01</span>
         <h3>Choose a Package</h3>
-        <p>Select a beginner, advanced, wildlife, shipwreck, or private charter experience.</p>
+        <p>Select a beginner reef dive, turtle tour, shipwreck route, advanced reef adventure, or private charter.</p>
       </div>
 
       <div class="process-card">
@@ -388,9 +437,28 @@
       </a>
 
       <p>
-        Premium underwater website template designed for aquariums,
-        dive tours, resorts, marine parks, and ocean adventure brands.
+        Guided ocean dives, marine wildlife encounters, and
+        conservation-focused adventures from Miami's waterfront.
       </p>
+
+      <!-- Replace # with real social media URLs -->
+      <div class="footer-social" role="group" aria-label="Abyssal Blue social media links">
+        <a href="#" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="X">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+      </div>
 
       <div class="footer-bottom">
         &copy; 2026 Abyssal Blue. All rights reserved.
