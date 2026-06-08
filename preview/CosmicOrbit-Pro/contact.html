@@ -1,199 +1,258 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | CosmicOrbit Pro Template Sales and Custom Branding</title>
+  <title>Contact | Cosmic Orbit Astronomy Website Template</title>
   <meta
     name="description"
-    content="Contact CosmicOrbit Pro for template sales, custom branding requests, and launch questions."
+    content="Preview the contact page for Cosmic Orbit, a premium astronomy website template for observatories, stargazing experiences, and telescope event businesses."
   />
+  <meta
+    name="keywords"
+    content="astronomy website template, stargazing website template, observatory website template, planetarium website template, telescope events website, space website template, Cosmic Orbit"
+  />
+  <meta name="theme-color" content="#04111f" />
+  <meta name="robots" content="index, follow" />
+  <!--
+    SEO CUSTOMIZATION:
+    Replace https://yourdomain.com/ with your live website URL.
+    Replace /images/planet.png with your preferred social sharing image.
+  -->
+  <link rel="canonical" href="https://yourdomain.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cosmic Orbit" />
+  <meta property="og:title" content="Contact | Cosmic Orbit Astronomy Website Template" />
+  <meta
+    property="og:description"
+    content="Invite inquiries with Cosmic Orbit, an astronomy and stargazing website template built for observatories, telescope sessions, and planetarium-style experiences."
+  />
+  <meta property="og:url" content="https://yourdomain.com/contact.html" />
+  <meta property="og:image" content="https://yourdomain.com/images/planet.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Cosmic Orbit Astronomy Website Template" />
+  <meta
+    name="twitter:description"
+    content="A contact page template for observatories, telescope events, stargazing brands, and planetarium-style experiences."
+  />
+  <meta name="twitter:image" content="https://yourdomain.com/images/planet.png" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width: 1024px)" />
-  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 650px)" />
-  <link rel="manifest" href="site.webmanifest" />
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <meta name="theme-color" content="#02030a" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
 </head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <div id="spaceScene" aria-hidden="true"></div>
+<body data-nav-page="contact.html">
+  <a class="skip-link" href="#mainContent">Skip to content</a>
   <div class="page-glow" aria-hidden="true"></div>
+  <div class="star-overlay" aria-hidden="true"></div>
+  <div class="shooting-stars" aria-hidden="true"></div>
+  <div class="background-planet" aria-hidden="true"></div>
 
-  <header class="navbar">
-    <a href="index.html" class="logo">CosmicOrbit<span>Pro</span></a>
-
-    <nav class="nav-links" id="navLinks" aria-label="Primary">
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <a href="index.html" class="site-brand" aria-label="Cosmic Orbit home">
+      <img src="images/logo.svg" alt="" />
+      <span>Cosmic Orbit</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="events.html">Events</a>
       <a href="pricing.html">Pricing</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="login.html">Login</a>
-      <a href="contact.html" class="active" aria-current="page">Contact</a>
+      <a href="booking.html">Booking</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
     </nav>
-
-    <button
-      class="menu-btn"
-      id="menuBtn"
-      type="button"
-      aria-expanded="false"
-      aria-controls="navLinks"
-      aria-label="Open navigation menu"
-    >
-      <span aria-hidden="true">Menu</span>
-    </button>
   </header>
 
-  <main id="main-content">
-    <section class="section contact">
-      <p class="eyebrow">Contact</p>
-      <h1>Choose the right next step for your launch.</h1>
-      <p class="section-lead narrow-copy">
-        Template purchases route to the checkout handoff page. Custom requests route to the inquiry
-        form below so you can capture scope, branding needs, and launch details in one place.
-      </p>
-    </section>
-
-    <section class="section" id="buy">
-      <div class="pricing-grid">
-        <article class="pricing-card tilt-card">
-          <p class="card-label">Template Purchase</p>
-          <h3>$99 Template License</h3>
-          <p class="pricing-note">
-            Buy the template package and connect the included checkout page to your preferred
-            payment provider before launch.
-          </p>
-          <a href="coming-soon.html" class="btn primary">Go To Cart</a>
-        </article>
-
-        <article class="pricing-card tilt-card">
-          <p class="card-label">Custom Branding</p>
-          <h3>$299 Template + Branding</h3>
-          <p class="pricing-note">
-            Use the inquiry form to request brand updates, content edits, and a cleaner handoff
-            tailored to your offer or client project.
-          </p>
-          <a href="#custom" class="btn primary">Request Custom Branding</a>
-        </article>
+  <main id="mainContent">
+    <!-- Hero Section -->
+    <section class="section-shell page-hero">
+      <div class="page-copy">
+        <p class="eyebrow">Contact</p>
+        <h1>Reach the team for planning help, general questions, or private event support.</h1>
+        <p>
+          Use the contact form for general inquiries, school coordination, media questions, or group planning.
+          This demo form redirects to the thank-you page until a live service is connected.
+        </p>
+      </div>
+      <div class="page-visual" data-reveal>
+        <div class="glass-panel">
+          <img src="images/planet.png" alt="Cosmic Orbit contact overview visual." />
+        </div>
       </div>
     </section>
 
-    <section class="section contact" id="custom">
-      <div class="contact-form-card tilt-card">
-        <p class="eyebrow">Custom Inquiry</p>
-        <h2>Tell us what you need.</h2>
-        <p class="section-lead">
-          This demo form is included to show the contact flow. Connect it to your email service,
-          CRM, or form platform before launch.
+    <!-- Contact Section -->
+    <section class="section-shell form-layout">
+      <div class="form-card" data-reveal>
+        <p class="eyebrow">General Contact Form</p>
+        <h2>Send a message to Cosmic Orbit.</h2>
+        <p class="small-note">
+          Demo form note: connect Formspree, Netlify Forms, EmailJS, or your own backend when you are ready for live submissions.
         </p>
 
-        <form class="contact-form" id="contactForm">
-          <div class="field-group">
-            <label class="field-label" for="contact-name">Name</label>
-            <input
-              id="contact-name"
-              name="name"
-              type="text"
-              class="login-input"
-              placeholder="Your name"
-              autocomplete="name"
-              required
-            />
+        <!-- Demo form: redirect handled in js/main.js until customers connect a real submission workflow. -->
+        <form class="stack-form" data-demo-form data-redirect="thank-you.html">
+          <div class="field-row">
+            <div class="field-group">
+              <label for="contact-name">Full Name</label>
+              <input id="contact-name" name="name" class="input-field" type="text" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="field-group">
+              <label for="contact-email">Email Address</label>
+              <input id="contact-email" name="email" class="input-field" type="email" placeholder="hello@yourdomain.com" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="contact-topic">Topic</label>
+              <select id="contact-topic" name="topic" class="input-field" required>
+                <option value="">Select a topic</option>
+                <option value="general">General Question</option>
+                <option value="booking">Booking Support</option>
+                <option value="school">School Program Planning</option>
+                <option value="private-event">Private Event Inquiry</option>
+                <option value="media">Media or Partnership</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="contact-phone">Phone Number</label>
+              <input id="contact-phone" name="phone" class="input-field" type="tel" placeholder="Optional" autocomplete="tel" />
+            </div>
           </div>
 
           <div class="field-group">
-            <label class="field-label" for="contact-email">Email Address</label>
-            <input
-              id="contact-email"
-              name="email"
-              type="email"
-              class="login-input"
-              placeholder="you@example.com"
-              autocomplete="email"
-              required
-            />
-          </div>
-
-          <div class="field-group">
-            <label class="field-label" for="contact-package">Request Type</label>
-            <select id="contact-package" name="package" class="login-input" required>
-              <option value="">Select an option</option>
-              <option value="branding">Template + Branding</option>
-              <option value="support">Template setup support</option>
-              <option value="custom">Custom project inquiry</option>
-            </select>
-          </div>
-
-          <div class="field-group">
-            <label class="field-label" for="contact-message">Project Details</label>
+            <label for="contact-message">Message</label>
             <textarea
               id="contact-message"
               name="message"
-              class="login-input contact-message"
-              placeholder="Tell us about your timeline, brand direction, and what you want changed."
+              class="input-field"
+              placeholder="Tell us how we can help."
               required
             ></textarea>
           </div>
 
-          <button type="submit" class="btn primary login-submit">Send Inquiry</button>
+          <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
 
-        <div class="status-message" id="formStatus" aria-live="polite"></div>
+        <div class="status-message" aria-live="polite"></div>
+      </div>
+
+      <div class="visual-stack">
+        <article class="detail-card" data-reveal>
+          <div class="card-topline">
+            <span>Email</span>
+            <div class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+          </div>
+          <h3>hello@cosmicorbit.com</h3>
+          <p>Best for booking support, school questions, and private event planning.</p>
+        </article>
+
+        <article class="detail-card" data-reveal>
+          <div class="card-topline">
+            <span>Phone</span>
+            <div class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+          </div>
+          <h3>(555) 014-7824</h3>
+          <p>Available for weekday planning support and time-sensitive event questions.</p>
+        </article>
+
+        <article class="detail-card" data-reveal>
+          <div class="card-topline">
+            <span>Location</span>
+            <div class="info-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+          </div>
+          <h3>4901 Horizon Crest Drive, Scottsdale, AZ 85251</h3>
+          <p>Example address for a desert observatory destination. Replace with your live business location.</p>
+        </article>
       </div>
     </section>
 
-    <section class="section">
-      <div class="feature-grid">
-        <article class="feature-card tilt-card">
-          <span>01</span>
-          <h3>Email Support</h3>
-          <p>webdevlady26@gmail.com</p>
+    <!-- Contact Info Section -->
+    <section class="section-shell">
+      <div class="contact-grid">
+        <article class="detail-card" data-reveal>
+          <h3>Office Hours</h3>
+          <p>Monday to Friday: 10:00 AM to 6:00 PM</p>
+          <p>Weekend event support varies by schedule.</p>
         </article>
-
-        <article class="feature-card tilt-card">
-          <span>02</span>
-          <h3>Response Window</h3>
-          <p>Most product and branding inquiries are answered within 24 to 48 hours.</p>
-        </article>
-
-        <article class="feature-card tilt-card">
-          <span>03</span>
-          <h3>Best Fit</h3>
-          <p>
-            Ideal for software businesses, startup launches, digital product sites, and branded
-            service pages that need a stronger front-end presentation.
-          </p>
+        <article class="detail-card" data-reveal>
+          <h3>Best Response Window</h3>
+          <p>Most messages receive a reply within 24 to 48 business hours.</p>
         </article>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>
-      &copy; <span data-current-year>2026</span> CosmicOrbit Pro. Premium HTML template for
-      SaaS, software, and digital product brands.
-    </p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" aria-label="Cosmic Orbit home">
+            <img src="images/logo.svg" alt="" />
+            <span>Cosmic Orbit</span>
+          </a>
+          <p>General contact and planning support for observatory nights, school visits, and premium private astronomy experiences.</p>
+          <div class="footer-social" role="group" aria-label="Cosmic Orbit social media links">
+            <a href="https://yourdomain.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://yourdomain.com/" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://yourdomain.com/" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+            <a href="https://yourdomain.com/" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            <a href="https://yourdomain.com/" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Navigation</h3>
+          <ul class="footer-link-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Experiences</h3>
+          <ul class="footer-link-list">
+            <li><a href="services.html#telescope-nights">Telescope Nights</a></li>
+            <li><a href="services.html#school-programs">School Programs</a></li>
+            <li><a href="services.html#private-events">Private Events</a></li>
+            <li><a href="booking.html">Booking Requests</a></li>
+            <li><a href="faq.html">Guest Policies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-current-year>2026</span> Cosmic Orbit. All rights reserved.</p>
+        <p class="small-note">Replace the example address, phone, and email with the final business details before launch.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
-
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"
-      }
-    }
-  </script>
-
-  <script type="module" src="js/space-scene.js"></script>
 </body>
 </html>
+
+
+
+
+

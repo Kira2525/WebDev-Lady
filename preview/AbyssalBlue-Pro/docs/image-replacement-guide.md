@@ -1,122 +1,256 @@
-# Image Replacement Guide
+# Abyssal Blue Pro Image Replacement Guide
+
+This guide explains how to replace the included photography, branding assets, and icons used throughout Abyssal Blue Pro.
 
 ## Fastest Replacement Method
 
-The easiest way to replace images is to keep the same filenames.
+The easiest way to update the template is to keep the existing filenames.
 
 Example:
 
 Replace:
 
-`images/hero-shark.jpg`
+```txt
+images/hero-shark.jpg
+```
 
-with your own file named:
+with your own image using the exact same filename.
 
-`hero-shark.jpg`
+This allows all existing HTML, CSS, and JavaScript references to continue working without modification.
 
-This allows the template to continue working without editing any HTML.
+## Image Directory
 
-## Where Images Are Stored
+All image assets are stored in:
 
-All current image assets live in the `images/` folder.
+```txt
+images/
+```
 
-## Recommended Image Formats
+## Recommended File Formats
 
 Use:
 
-- JPG for photographs
-- PNG for transparent graphics
-- SVG for logos and icons
+* JPG for photography
+* PNG for graphics requiring transparency
+* SVG for logos and icons
+* WebP for improved performance where supported
 
-Avoid uploading extremely large images unless required for quality.
+Avoid excessively large image files, as they may slow page loading.
 
-## Current Included Files
+## Included Image Assets
 
-- `hero-shark.jpg`
-  Use: homepage hero slider, gallery, wildlife content
-  Recommended replacement size: 1800 x 1200 px
+### Hero Shark
 
-- `coral-placeholder.jpg`
-  Use: fixed background image, gallery, pricing split section, wildlife content
-  Recommended replacement size: 1800 x 1200 px
+```txt
+images/hero-shark.jpg
+```
 
-- `diver-placeholder.jpg`
-  Use: about page image, booking page split section, gallery, contact metadata image
-  Recommended replacement size: 1800 x 1200 px
+Used in:
 
-- `turtle-placeholder.jpg`
-  Use: homepage slider, gallery, wildlife content, FAQ split section
-  Recommended replacement size: 1800 x 1200 px
+* Homepage hero slider
+* Gallery sections
+* Wildlife content
 
-- `shipwreck-placeholder.jpg`
-  Use: homepage slider, booking and gallery sections, wildlife content
-  Recommended replacement size: 1800 x 1200 px
+Recommended size:
 
-- `tropical-fish.jpg`
-  Use: homepage hero slider and wildlife content
-  Recommended replacement size: 1800 x 1200 px
+```txt
+1800 × 1200 px
+```
 
-- `logo.svg`
-  Use: brand asset file included for logo replacement
-  Recommended replacement size: vector SVG, square artboard
+### Coral Image
 
-- `favicon.svg`
-  Use: browser tab icon and manifest icon
-  Recommended replacement size: vector SVG, simple readable shape
+```txt
+images/coral-placeholder.jpg
+```
 
-## Replacement Tips
+Used in:
 
-### How to replace `hero-shark.jpg`
+* Background sections
+* Gallery content
+* Pricing page
+* Wildlife page
 
-Save your new hero image as `images/hero-shark.jpg` to avoid editing the HTML.
+Recommended size:
 
-### How to replace `coral-placeholder.jpg`
+```txt
+1800 × 1200 px
+```
 
-Replace the file directly if you want to preserve all existing references in the background and content sections.
+### Diver Image
 
-### How to replace `diver-placeholder.jpg`
+```txt
+images/diver-placeholder.jpg
+```
 
-Use a high-resolution diver photo with space for cropping, since the image appears in multiple aspect ratios.
+Used in:
 
-### How to replace `turtle-placeholder.jpg`
+* About page
+* Booking page
+* Gallery content
+* Contact page previews
 
-Choose an image with the subject clearly visible near the center so it crops well in cards and sliders.
+Recommended size:
 
-### How to replace `shipwreck-placeholder.jpg`
+```txt
+1800 × 1200 px
+```
 
-Use a wide image with strong contrast so the shipwreck remains clear under overlays and dark gradients.
+### Turtle Image
 
-### How to replace `tropical-fish.jpg`
+```txt
+images/turtle-placeholder.jpg
+```
 
-Use a colorful, well-lit reef image that still looks strong when cropped in the hero slider and wildlife cards.
+Used in:
 
-### How to replace `logo.svg`
+* Homepage slider
+* Wildlife content
+* Gallery content
+* FAQ sections
 
-Replace the file with your own SVG logo. If you also want the inline SVG logo in the HTML changed, update the logo markup in each page header and footer.
+Recommended size:
 
-### How to replace `favicon.svg`
+```txt
+1800 × 1200 px
+```
 
-Replace `images/favicon.svg` with a new SVG icon and keep the same filename unless you also update every HTML reference and the manifest entry.
+### Shipwreck Image
 
-## Performance Tips
+```txt
+images/shipwreck-placeholder.jpg
+```
 
-For best loading speed:
+Used in:
 
-- Compress images before uploading.
-- Keep most images under 500 KB when possible.
-- Use SVG for logos and icons.
-- Test page speed after replacing images.
+* Homepage slider
+* Booking page
+* Wildlife content
+* Gallery content
+
+Recommended size:
+
+```txt
+1800 × 1200 px
+```
+
+### Tropical Fish Image
+
+```txt
+images/tropical-fish.jpg
+```
+
+Used in:
+
+* Homepage slider
+* Wildlife content
+
+Recommended size:
+
+```txt
+1800 × 1200 px
+```
+
+## Branding Assets
+
+### Logo
+
+```txt
+images/logo.svg
+```
+
+Used in:
+
+* Header
+* Footer
+* Branding references
+
+Recommended format:
+
+```txt
+SVG
+```
+
+For best results, use a square or horizontal vector logo.
+
+### Favicon
+
+```txt
+images/favicon.svg
+```
+
+Used in:
+
+* Browser tabs
+* Bookmarks
+* Web app manifest
+
+Recommended format:
+
+```txt
+SVG
+```
+
+Keep the design simple and readable at small sizes.
+
+## Image Replacement Tips
+
+### Photography
+
+When replacing photos:
+
+* Use similar aspect ratios
+* Use high-quality images
+* Compress files before uploading
+* Test image cropping on mobile devices
+
+### Logos
+
+When replacing logos:
+
+* Prefer SVG format
+* Avoid unnecessary detail
+* Test visibility on dark backgrounds
+
+### Favicons
+
+When replacing favicons:
+
+* Use simple shapes
+* Avoid small text
+* Verify visibility in browser tabs
+
+## Performance Recommendations
+
+For best performance:
+
+* Compress images before deployment
+* Keep most images under 500 KB where possible
+* Use SVG for logos and icons
+* Remove unused image assets
+* Test loading speed after replacement
 
 ## Important
 
-If you rename an image file, you must also update every HTML, CSS, and JavaScript reference that uses that file.
+If you rename any image file, you must also update every reference to that file throughout:
 
-Keeping the original filenames is recommended.
+* HTML
+* CSS
+* JavaScript
 
-## Best Practices
+Keeping the original filenames is the recommended workflow.
 
-- Keep file sizes compressed for fast loading
-- Export JPG photos at web-friendly quality
-- Use SVG for logos and favicons when possible
-- Test image crops on desktop and mobile
-- Keep filenames the same unless you also update every related HTML reference
+## Before Launch
+
+Before publishing:
+
+* Replace all demo photography
+* Replace the logo
+* Replace the favicon
+* Verify image paths
+* Verify image alt text
+* Test desktop layouts
+* Test tablet layouts
+* Test mobile layouts
+* Check page loading performance
+
+Following these recommendations will ensure Abyssal Blue Pro remains visually consistent and optimized after customization.

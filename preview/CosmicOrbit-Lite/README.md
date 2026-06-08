@@ -1,45 +1,127 @@
-# CosmicOrbit Lite
+﻿# Cosmic Orbit Lite
 
-CosmicOrbit Lite is a premium one-page HTML website template for SaaS, startup, software, and digital product brands. It keeps the cinematic Three.js space scene and polished visual style of the larger product line in a leaner single-page package.
+Version 1.0
 
-## Included Files
+Cosmic Orbit Lite is a streamlined one-page astronomy website template designed for observatories, planetariums, stargazing experience companies, astronomy clubs, educational programs, science centers, and space-themed events.
 
-- `index.html`
-- `site.webmanifest`
-- `README.md`
-- `css/style.css`
-- `css/tablet.css`
-- `css/mobile.css`
-- `js/main.js`
-- `js/space-scene.js`
-- `assets/favicon.ico`
-- `assets/favicon-16x16.png`
-- `assets/favicon-32x32.png`
-- `assets/apple-touch-icon.png`
-- `assets/images/home-preview.png`
-- `assets/images/pricing-preview.png`
-- `docs/readme.txt`
-- `docs/setup-guide.txt`
-- `docs/customization-guide.txt`
-- `docs/license.txt`
+Built as the lightweight companion to Cosmic Orbit Pro, the Lite version delivers the same premium visual style in a simpler one-page format that is easy to customize and launch.
 
-## Stack
+---
 
-- HTML5
-- CSS3
-- JavaScript
-- Three.js via CDN import map
+## Features
+
+* One-page astronomy website template
+* Responsive desktop, tablet, and mobile layouts
+* Animated cosmic background
+* Modern glass-inspired interface design
+* One-page anchor navigation
+* SEO-ready structure
+* Custom 404 page
+* Font Awesome icon support
+* Beginner-friendly documentation
+* Static hosting compatible
+* No build process required
+
+---
+
+## Technology Stack
+
+Cosmic Orbit Lite is built using:
+
+* HTML5
+* CSS3
+* JavaScript
+* Font Awesome
+
+No frameworks are required.
+
+No package managers are required.
+
+No installations are required.
+
+---
+
+## System Requirements
+
+You only need:
+
+* A modern web browser
+* A text editor
+* Optional web hosting
+
+Supported browsers:
+
+* Google Chrome
+* Microsoft Edge
+* Mozilla Firefox
+* Safari
+
+---
 
 ## Quick Start
 
 1. Open the project folder in your code editor.
-2. Run the site through a local server such as VS Code Live Server.
-3. Open `index.html`.
+2. Preview `index.html` in a browser.
+3. Replace business content and branding.
+4. Update placeholder URLs.
+5. Test desktop, tablet, and mobile layouts.
+6. Deploy to your preferred hosting provider.
 
-## Important Notes
+---
 
-- CosmicOrbit Lite is a single-page template.
-- The contact form uses demo behavior in `js/main.js` and should be connected to a real form service before launch.
-- Google Fonts and the Three.js module load from external CDNs by default.
+## Launch Checklist
 
-Additional setup, customization, and licensing notes are in `docs/`.
+Before publishing:
+
+✓ Business name updated
+
+✓ Contact information updated
+
+✓ Social links updated
+
+✓ Images replaced
+
+✓ Domain references updated
+
+✓ Sitemap updated
+
+✓ Robots.txt updated
+
+✓ Manifest updated
+
+✓ Desktop tested
+
+✓ Tablet tested
+
+✓ Mobile tested
+
+✓ Navigation verified
+
+✓ 404 page tested
+
+---
+
+## Browser Support
+
+Cosmic Orbit Lite supports all modern browsers.
+
+For best results, use the latest version of:
+
+* Chrome
+* Edge
+* Firefox
+* Safari
+
+---
+
+## License
+
+Cosmic Orbit Lite is distributed under the included commercial license.
+
+See:
+
+```text
+license.txt
+```
+
+for complete licensing terms.

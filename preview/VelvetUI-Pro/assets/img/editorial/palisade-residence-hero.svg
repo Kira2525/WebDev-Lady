@@ -1,0 +1,28 @@
+<svg width="1600" height="1900" viewBox="0 0 1600 1900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1900" fill="#DCC8B3"/>
+  <rect width="1600" height="1900" fill="url(#paint0_linear_5_31)"/>
+  <rect x="122" y="118" width="1356" height="1664" rx="44" fill="#1F1715"/>
+  <rect x="162" y="156" width="1278" height="980" rx="30" fill="#F4EBDD"/>
+  <rect x="218" y="214" width="1162" height="864" rx="24" fill="url(#paint1_linear_5_31)"/>
+  <rect x="278" y="264" width="1042" height="450" rx="24" fill="#E9D7C3"/>
+  <rect x="330" y="346" width="372" height="290" rx="20" fill="#6F3D43"/>
+  <rect x="746" y="320" width="500" height="344" rx="18" fill="#F7F1E7"/>
+  <rect x="816" y="414" width="360" height="170" rx="18" fill="#D0AF8D"/>
+  <ellipse cx="1008" cy="692" rx="316" ry="72" fill="#B48970" fill-opacity="0.34"/>
+  <rect x="392" y="728" width="632" height="188" rx="94" fill="#B78574"/>
+  <rect x="1082" y="724" width="178" height="242" rx="30" fill="#8F6757"/>
+  <rect x="186" y="1200" width="1212" height="532" rx="28" fill="#241B18"/>
+  <text x="266" y="1338" fill="#F8F1E7" font-family="Georgia, serif" font-size="92">Palisade Residence</text>
+  <text x="266" y="1424" fill="#D7BE9A" font-family="Arial, sans-serif" font-size="30" letter-spacing="4">SCOTTSDALE GREAT ROOM CONCEPT</text>
+  <text x="266" y="1510" fill="#E7D8C9" font-family="Arial, sans-serif" font-size="34">Warm limewash walls, carved oak, sculptural lighting, and quiet evening glow.</text>
+  <defs>
+    <linearGradient id="paint0_linear_5_31" x1="800" y1="0" x2="800" y2="1900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EADBC9"/>
+      <stop offset="1" stop-color="#C8B097"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_5_31" x1="799" y1="214" x2="799" y2="1078" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F0E7"/>
+      <stop offset="1" stop-color="#E2C8AD"/>
+    </linearGradient>
+  </defs>
+</svg>

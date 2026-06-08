@@ -1,0 +1,18 @@
+{
+"name": "WorldView Global",
+"short_name": "WorldView",
+"description": "Premium global intelligence, travel insight, and location analytics.",
+"start_url": "/",
+"scope": "/",
+"display": "standalone",
+"background_color": "#030815",
+"theme_color": "#071126",
+"icons": [
+{
+"src": "assets/favicon.svg",
+"sizes": "any",
+"type": "image/svg+xml"
+}
+]
+}
+

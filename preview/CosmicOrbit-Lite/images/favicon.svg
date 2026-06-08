@@ -1,0 +1,24 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="favPlanet" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24.5 18.5) rotate(47) scale(28)">
+      <stop offset="0.04" stop-color="#F7FDFF"/>
+      <stop offset="0.28" stop-color="#98F0FF"/>
+      <stop offset="0.64" stop-color="#3387E4"/>
+      <stop offset="1" stop-color="#07182D"/>
+    </radialGradient>
+    <linearGradient id="favRing" x1="8" y1="36" x2="58" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A6F0FF" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#A6F0FF" stop-opacity="0.92"/>
+      <stop offset="0.58" stop-color="#9B91FF" stop-opacity="0.72"/>
+      <stop offset="0.86" stop-color="#D8FBFF" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#A6F0FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="31" cy="33" r="15.5" fill="#72E4FF" fill-opacity="0.18"/>
+  <circle cx="31" cy="33" r="13.5" fill="url(#favPlanet)"/>
+  <circle cx="31" cy="33" r="14.6" stroke="#D5FBFF" stroke-opacity="0.3" stroke-width="1.2"/>
+  <path d="M19 24.6C22.4 22.4 27.7 22.1 33 24C30.8 27 27.7 29 23.1 30.8C20.4 29.6 18.8 27.4 19 24.6Z" fill="#F4FDFF" fill-opacity="0.34"/>
+  <path d="M7 39.2C14.1 27 32 23.5 48.4 28.2C53.1 29.5 56.9 31.4 59 33.2" stroke="url(#favRing)" stroke-width="4.3" stroke-linecap="round"/>
+  <circle cx="50.2" cy="20.8" r="2.4" fill="#F7FCFF"/>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "name": "Velvet Studio",
+  "short_name": "Velvet Studio",
+  "description": "Boutique interior design studio for refined homes and guest spaces.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#120217",
+  "theme_color": "#120217",
+  "icons": [
+    {
+      "src": "assets/img/velvetui-favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

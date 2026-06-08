@@ -1,41 +1,166 @@
-const body = document.body;
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-const supportsHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+function qs(selector, scope = document) {
+  return scope.querySelector(selector);
+}
 
-function closeMenu() {
-  if (!menuBtn || !navLinks) {
+function qsa(selector, scope = document) {
+  return Array.from(scope.querySelectorAll(selector));
+}
+
+document.addEventListener("DOMContentLoaded", initializeCosmicOrbit);
+
+if (document.readyState !== "loading") {
+  initializeCosmicOrbit();
+}
+
+function initializeCosmicOrbit() {
+  if (window.__cosmicOrbitMainInitialized) {
     return;
   }
 
-  navLinks.classList.remove("is-open");
-  menuBtn.setAttribute("aria-expanded", "false");
-  body.classList.remove("nav-open");
+  window.__cosmicOrbitMainInitialized = true;
+
+  const reducedMotion =
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  initializeBackgroundPlanet();
+
+  if (!reducedMotion) {
+    createShootingStars();
+    addBackgroundMouseMovement();
+  }
+
+  initializeMobileNavigation();
+  initializeActiveNavigation();
+  initializeSectionNavigation();
+  initializeSmoothScrolling(reducedMotion);
+  initializeDemoForms();
+  initializeRevealAnimations(reducedMotion);
+  initializeCurrentYear();
 }
 
-if (menuBtn && navLinks) {
-  menuBtn.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("is-open");
+/* =========================================================
+   BACKGROUND MOTION
+========================================================= */
 
-    menuBtn.setAttribute("aria-expanded", String(isOpen));
-    body.classList.toggle("nav-open", isOpen);
+function initializeBackgroundPlanet() {
+  qsa(".background-planet").forEach((planet) => {
+    if (planet.querySelector(".planet-core")) {
+      return;
+    }
+
+    const backRing = document.createElement("span");
+    const core = document.createElement("span");
+    const frontRing = document.createElement("span");
+
+    backRing.className = "planet-ring planet-ring-back";
+    core.className = "planet-core";
+    frontRing.className = "planet-ring planet-ring-front";
+
+    planet.append(backRing, core, frontRing);
+  });
+}
+
+function createShootingStars() {
+  const container = document.querySelector(".shooting-stars");
+
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  const starCount = 7;
+
+  for (let i = 0; i < starCount; i++) {
+    const star = document.createElement("span");
+
+    star.className = "shooting-star";
+    star.style.top = `${Math.random() * 70}%`;
+    star.style.left = `${40 + Math.random() * 70}%`;
+    star.style.setProperty("--star-delay", `${Math.random() * 8}s`);
+    star.style.setProperty("--star-speed", `${3 + Math.random() * 3}s`);
+
+    container.appendChild(star);
+  }
+}
+
+function addBackgroundMouseMovement() {
+  const glow = document.querySelector(".page-glow");
+  const starOverlay = document.querySelector(".star-overlay");
+
+  if (!glow && !starOverlay) return;
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let glowX = 0;
+  let glowY = 0;
+  let starX = 0;
+  let starY = 0;
+  const startTime = performance.now();
+
+  window.addEventListener("mousemove", (event) => {
+    mouseX = (event.clientX / window.innerWidth - 0.5) * 18;
+    mouseY = (event.clientY / window.innerHeight - 0.5) * 18;
   });
 
-  navLinks.querySelectorAll("a").forEach((link) => {
+  function animateBackground(now) {
+    const elapsed = (now - startTime) / 1000;
+    const ambientX = Math.sin(elapsed * 0.18) * 4.5;
+    const ambientY = Math.cos(elapsed * 0.14) * 3.5;
+    const targetGlowX = mouseX + ambientX;
+    const targetGlowY = mouseY + ambientY;
+    const targetStarX = mouseX * 0.32 + Math.sin(elapsed * 0.11) * 6;
+    const targetStarY = mouseY * 0.22 + Math.cos(elapsed * 0.09) * 4;
+
+    glowX += (targetGlowX - glowX) * 0.04;
+    glowY += (targetGlowY - glowY) * 0.04;
+    starX += (targetStarX - starX) * 0.025;
+    starY += (targetStarY - starY) * 0.025;
+
+    if (glow) {
+      glow.style.transform =
+        `translate3d(${glowX}px, ${glowY}px, 0) scale(1.03)`;
+    }
+
+    if (starOverlay) {
+      starOverlay.style.setProperty("--star-shift-x", `${starX}px`);
+      starOverlay.style.setProperty("--star-shift-y", `${starY}px`);
+    }
+
+    requestAnimationFrame(animateBackground);
+  }
+
+  requestAnimationFrame(animateBackground);
+}
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+function initializeMobileNavigation() {
+  const body = document.body;
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  if (!menuToggle || !navMenu) {
+    return;
+  }
+
+  function closeMenu() {
+    menuToggle.setAttribute("aria-expanded", "false");
+    navMenu.classList.remove("is-open");
+    body.classList.remove("nav-open");
+  }
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    const nextState = !isOpen;
+
+    menuToggle.setAttribute("aria-expanded", String(nextState));
+    navMenu.classList.toggle("is-open", nextState);
+    body.classList.toggle("nav-open", nextState);
+  });
+
+  qsa("a", navMenu).forEach((link) => {
     link.addEventListener("click", closeMenu);
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!navLinks.classList.contains("is-open")) {
-      return;
-    }
-
-    if (menuBtn.contains(event.target) || navLinks.contains(event.target)) {
-      return;
-    }
-
-    closeMenu();
   });
 
   document.addEventListener("keydown", (event) => {
@@ -43,30 +168,40 @@ if (menuBtn && navLinks) {
       closeMenu();
     }
   });
+
+  document.addEventListener("click", (event) => {
+    if (!navMenu.classList.contains("is-open")) {
+      return;
+    }
+
+    if (menuToggle.contains(event.target) || navMenu.contains(event.target)) {
+      return;
+    }
+
+    closeMenu();
+  });
 }
 
-const currentYearTargets = document.querySelectorAll("[data-current-year]");
+/* =========================================================
+   ACTIVE NAVIGATION STATE
+========================================================= */
 
-currentYearTargets.forEach((target) => {
-  target.textContent = String(new Date().getFullYear());
-});
+function initializeActiveNavigation() {
+  const body = document.body;
+  const navMenu = document.getElementById("navMenu");
+  const currentPage = body.dataset.navPage;
 
-const pageSections = document.querySelectorAll("main section[id]");
-const sectionLinks = navLinks
-  ? Array.from(navLinks.querySelectorAll('a[href^="#"]'))
-  : [];
-
-function updateActiveSection(targetId) {
-  if (!sectionLinks.length) {
+  if (!currentPage || !navMenu) {
     return;
   }
 
-  sectionLinks.forEach((link) => {
-    const isActive = link.getAttribute("href") === "#" + targetId;
+  qsa("a", navMenu).forEach((link) => {
+    const href = link.getAttribute("href");
+    const isCurrentPage = href === currentPage;
 
-    link.classList.toggle("active", isActive);
+    link.classList.toggle("is-active", isCurrentPage);
 
-    if (isActive) {
+    if (isCurrentPage) {
       link.setAttribute("aria-current", "page");
     } else {
       link.removeAttribute("aria-current");
@@ -74,86 +209,119 @@ function updateActiveSection(targetId) {
   });
 }
 
-if (sectionLinks.length && pageSections.length) {
-  sectionLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      const targetId = link.getAttribute("href").replace("#", "");
+/* =========================================================
+   SMOOTH SCROLLING FOR SAME-PAGE LINKS
+========================================================= */
 
-      updateActiveSection(targetId);
-    });
-  });
 
-  if ("IntersectionObserver" in window) {
-    const sectionObserver = new IntersectionObserver(
-      (entries) => {
-        const visibleSection = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+function initializeSectionNavigation() {
+  const navMenu = document.getElementById("navMenu");
+  const sectionLinks = navMenu ? qsa('a[href^="#"]', navMenu) : [];
+  const pageSections = qsa("main section[id]");
 
-        if (visibleSection) {
-          updateActiveSection(visibleSection.target.id);
-        }
-      },
-      {
-        threshold: [0.35, 0.6],
-        rootMargin: "-20% 0px -45% 0px"
+  function updateActiveSection(targetId) {
+    sectionLinks.forEach((link) => {
+      const href = link.getAttribute("href");
+      const isCurrentSection = href === `#${targetId}`;
+
+      link.classList.toggle("is-active", isCurrentSection);
+
+      if (isCurrentSection) {
+        link.setAttribute("aria-current", "page");
+      } else if (!document.body.dataset.navPage) {
+        link.removeAttribute("aria-current");
       }
-    );
-
-    pageSections.forEach((section) => {
-      sectionObserver.observe(section);
     });
   }
-}
 
-const tiltCards = document.querySelectorAll(".tilt-card");
+  if (sectionLinks.length && pageSections.length) {
+    updateActiveSection(pageSections[0].id);
+  }
 
-if (supportsHover && !reduceMotionQuery.matches) {
-  tiltCards.forEach((card) => {
-    card.addEventListener("mousemove", (event) => {
-      const rect = card.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -6;
-      const rotateY = ((x - centerX) / centerX) * 6;
+  sectionLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const href = link.getAttribute("href");
 
-      card.style.transform =
-        "perspective(1000px) rotateX(" +
-        rotateX +
-        "deg) rotateY(" +
-        rotateY +
-        "deg) translateY(-4px)";
+      if (!href || !href.startsWith("#")) {
+        return;
+      }
+
+      updateActiveSection(href.slice(1));
     });
+  });
+}
+function initializeSmoothScrolling(reducedMotion) {
+  qsa('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+      const targetId = anchor.getAttribute("href");
 
-    card.addEventListener("mouseleave", () => {
-      card.style.transform =
-        "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)";
+      if (!targetId || targetId === "#") {
+        return;
+      }
+
+      const target = qs(targetId);
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+      target.scrollIntoView({
+        behavior: reducedMotion ? "auto" : "smooth",
+        block: "start"
+      });
     });
   });
 }
 
-const revealElements = document.querySelectorAll(
-  ".feature-card, .preview-card, .pricing-card, .split, .dashboard-sidebar, .chart-card, .mini-card"
-);
+/* =========================================================
+   FORM DEMO REDIRECTS
+========================================================= */
 
-if (reduceMotionQuery.matches || !("IntersectionObserver" in window)) {
-  revealElements.forEach((element) => {
-    element.style.opacity = "1";
-    element.style.transform = "none";
+function initializeDemoForms() {
+  const demoForms = qsa("[data-demo-form]");
+
+  demoForms.forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const redirectUrl = form.dataset.redirect || "thank-you.html";
+      const status = form.parentElement?.querySelector(".status-message");
+
+      if (status) {
+        status.textContent =
+          "Demo form submitted. Connect Formspree, Netlify Forms, EmailJS, or your own backend before launch.";
+        status.classList.add("is-visible");
+      }
+
+      window.setTimeout(() => {
+        window.location.href = redirectUrl;
+      }, 250);
+    });
   });
-} else {
-  const observer = new IntersectionObserver(
+}
+
+/* =========================================================
+   REVEAL ANIMATIONS
+========================================================= */
+
+function initializeRevealAnimations(reducedMotion) {
+  const revealItems = qsa("[data-reveal]");
+
+  if (reducedMotion || !("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
           return;
         }
 
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-        observer.unobserve(entry.target);
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
       });
     },
     {
@@ -161,25 +329,17 @@ if (reduceMotionQuery.matches || !("IntersectionObserver" in window)) {
     }
   );
 
-  revealElements.forEach((element) => {
-    element.style.opacity = "0";
-    element.style.transform = "translateY(34px)";
-    element.style.transition = "opacity 0.7s ease, transform 0.7s ease";
-    observer.observe(element);
+  revealItems.forEach((item) => revealObserver.observe(item));
+}
+
+/* =========================================================
+   CURRENT YEAR HELPER
+========================================================= */
+
+function initializeCurrentYear() {
+  qsa("[data-current-year]").forEach((target) => {
+    target.textContent = String(new Date().getFullYear());
   });
 }
 
-const contactForm = document.getElementById("contactForm");
-const formStatus = document.getElementById("formStatus");
 
-if (contactForm && formStatus) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    formStatus.className = "status-message is-visible is-success";
-    formStatus.textContent =
-      "Demo inquiry captured. Connect this form to your email or form service before launch.";
-
-    contactForm.reset();
-  });
-}

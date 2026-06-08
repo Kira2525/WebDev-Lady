@@ -3,29 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abyssal Blue Lite | One-Page Ocean Website Template</title>
+  <title>Abyssal Blue Lite | One-Page Ocean Adventure Website Template</title>
   <meta
     name="description"
-    content="Abyssal Blue Lite is a premium one-page underwater website template for dive tours, aquariums, marine parks, and ocean adventure brands."
+    content="Abyssal Blue Lite is a lightweight one-page ocean, scuba, and adventure website template with cinematic visuals, responsive sections, and easy customization."
   />
   <meta name="theme-color" content="#02111c" />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/" />
+
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Abyssal Blue Lite | One-Page Ocean Website Template" />
-  <meta property="og:description" content="A cinematic one-page ocean website template with anchor navigation, glass cards, animated depth effects, and responsive sections." />
+  <meta property="og:site_name" content="Abyssal Blue Lite" />
+  <meta property="og:title" content="Abyssal Blue Lite | One-Page Ocean Adventure Website Template" />
+  <meta
+    property="og:description"
+    content="A cinematic one-page ocean website template for scuba brands, marine attractions, charter tours, and adventure businesses."
+  />
+  <meta property="og:url" content="https://example.com/" />
   <meta property="og:image" content="https://example.com/images/hero-shark.jpg" />
-  <link rel="canonical" href="https://example.com/index.html" />
+  <meta property="og:image:alt" content="Abyssal Blue Lite ocean adventure website template preview" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Abyssal Blue Lite | One-Page Ocean Adventure Website Template" />
+  <meta
+    name="twitter:description"
+    content="A premium one-page ocean and scuba website template with responsive sections, glass cards, and easy-to-edit content blocks."
+  />
+  <meta name="twitter:image" content="https://example.com/images/hero-shark.jpg" />
+  <meta name="twitter:image:alt" content="Abyssal Blue Lite ocean adventure website template preview" />
+
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
   <link rel="stylesheet" href="css/mobile.css" />
 </head>
 <body>
   <a class="skip-link" href="#mainContent">Skip to content</a>
 
-  <div class="ocean-scene" id="oceanScene">
+  <!-- DECORATIVE BACKGROUND: Replace the images in /images to change the overall mood of the template. -->
+  <div class="ocean-scene" aria-hidden="true">
     <canvas id="oceanCanvas"></canvas>
-    <img src="images/coral-placeholder.jpg" class="coral-bg" alt="">
+    <img src="images/coral-placeholder.jpg" class="coral-bg" alt="" />
     <div class="ocean-tint"></div>
     <div class="light-rays"></div>
     <div class="depth-fog"></div>
@@ -33,27 +57,35 @@
     <div class="fish-layer" id="fishLayer"></div>
   </div>
 
+  <!-- HEADER / BRANDING: Update the business name, logo text, and navigation labels here. -->
   <header class="site-header">
     <a href="#home" class="logo" aria-label="Abyssal Blue Lite Home">
       <span class="logo-icon" aria-hidden="true">
         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="oceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#7cf7ff"/>
-              <stop offset="50%" stop-color="#00ffd5"/>
-              <stop offset="100%" stop-color="#087f9e"/>
+              <stop offset="0%" stop-color="#7cf7ff" />
+              <stop offset="50%" stop-color="#00ffd5" />
+              <stop offset="100%" stop-color="#087f9e" />
             </linearGradient>
           </defs>
-          <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo)" stroke-width="5"/>
-          <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo)"/>
-          <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
-          <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+          <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo)" stroke-width="5" />
+          <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo)" />
+          <circle cx="39" cy="30" r="2.8" fill="#02111c" />
+          <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5" />
         </svg>
       </span>
       <span class="logo-text">Abyssal Blue Lite</span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-controls="navMenu"
+      aria-expanded="false"
+      type="button"
+    >
       <span></span>
       <span></span>
       <span></span>
@@ -71,108 +103,130 @@
   </header>
 
   <main id="mainContent">
+    <!-- HERO SECTION: Replace the headline, supporting text, and primary calls to action. -->
     <section class="hero-section" id="home">
       <div class="hero-content glass-card">
-        <p class="eyebrow">Lite One-Page Edition</p>
-        <h1>Launch an Ocean Brand With One Premium Page.</h1>
+        <p class="eyebrow">Ocean Adventure Template</p>
+        <h1>Bring Your Ocean Brand to Life With One Premium Page.</h1>
         <p class="hero-text">
-          Abyssal Blue Lite is a cinematic one-page website template for scuba tours,
-          aquariums, marine parks, and ocean experience brands that need a polished
-          web presence without the full Pro page set.
+          Use this polished one-page layout for scuba tours, aquariums, marine parks,
+          charter crews, conservation projects, or any business built around the water.
         </p>
         <div class="hero-buttons">
-          <a href="#services" class="btn primary-btn">Explore Packages</a>
-          <a href="#contact" class="btn secondary-btn">Start Inquiry</a>
+          <a href="#services" class="btn primary-btn">View Services</a>
+          <a href="#contact" class="btn secondary-btn">Contact Us</a>
         </div>
         <div class="hero-trust-row">
-          <span>One-page conversion flow</span>
-          <span>Responsive glass interface</span>
-          <span>Animated ocean atmosphere</span>
+          <span>Simple one-page structure</span>
+          <span>Responsive glass-card layout</span>
+          <span>Easy content replacement</span>
         </div>
       </div>
 
       <div class="hero-slider">
-        <img src="images/hero-shark.jpg" class="slide active" alt="Shark swimming through deep blue water">
-        <img src="images/diver-placeholder.jpg" class="slide" alt="Scuba diver exploring an underwater reef">
-        <img src="images/turtle-placeholder.jpg" class="slide" alt="Sea turtle swimming in clear ocean water">
-        <img src="images/shipwreck-placeholder.jpg" class="slide" alt="Cinematic underwater shipwreck scene">
-        <div class="slider-caption">Designed to feel immersive from the first screen.</div>
+        <img
+          src="images/hero-shark.jpg"
+          class="slide active"
+          alt="Shark swimming through deep blue water"
+        />
+        <img
+          src="images/diver-placeholder.jpg"
+          class="slide"
+          alt="Scuba diver exploring an underwater reef"
+        />
+        <img
+          src="images/turtle-placeholder.jpg"
+          class="slide"
+          alt="Sea turtle swimming in clear ocean water"
+        />
+        <img
+          src="images/shipwreck-placeholder.jpg"
+          class="slide"
+          alt="Cinematic underwater shipwreck scene"
+        />
+        <div class="slider-caption">Swap these demo images with your own tours, wildlife, or destination photography.</div>
       </div>
     </section>
 
-    <section class="stats-section">
+    <!-- QUICK STATS: Edit these short highlights to match your business or offer. -->
+    <section class="stats-section" aria-label="Template highlights">
       <div class="stat-card">
         <h2>1</h2>
-        <p>Focused landing page</p>
+        <p>Easy-to-edit landing page</p>
       </div>
       <div class="stat-card">
-        <h2>7</h2>
-        <p>Anchor-linked sections</p>
+        <h2>3</h2>
+        <p>Featured service cards</p>
       </div>
       <div class="stat-card">
         <h2>100%</h2>
-        <p>Responsive layout</p>
+        <p>Responsive presentation</p>
       </div>
       <div class="stat-card">
-        <h2>59</h2>
-        <p>Recommended price</p>
+        <h2>Fast</h2>
+        <p>Simple content updates</p>
       </div>
     </section>
 
+    <!-- FEATURE SECTION: Use this area to explain what makes the business or offer stand out. -->
     <section class="section-header" id="features">
       <p class="eyebrow">Highlights</p>
-      <h2>Everything needed for a polished Lite release.</h2>
+      <h2>Clean sections, rich visuals, and a clear path to contact.</h2>
       <p>
-        The Lite edition keeps the atmosphere and visual quality of Abyssal Blue
-        while simplifying the product into a fast one-page structure buyers can
-        customize in less time.
+        Abyssal Blue Lite keeps the visual atmosphere strong while making the page
+        straightforward for customers to customize and launch.
       </p>
     </section>
 
     <section class="feature-grid">
       <article class="feature-card">
-        <h3>Immersive Background</h3>
-        <p>Animated bubbles, swimming fish, ocean particles, lighting layers, and glass cards create instant perceived value.</p>
+        <h3>Immersive Visual Style</h3>
+        <p>Animated light, bubbles, and layered imagery create a premium ocean feel without adding extra pages.</p>
       </article>
       <article class="feature-card">
-        <h3>Simple Buyer Workflow</h3>
-        <p>Anchor navigation keeps the product lean and removes the setup overhead of a full multi-page website.</p>
+        <h3>Simple One-Page Flow</h3>
+        <p>Visitors can move from the hero section to services, gallery, FAQ, and contact details without leaving the page.</p>
       </article>
       <article class="feature-card">
-        <h3>Commercially Ready</h3>
-        <p>Includes a designed 404 page, manifest, README, and setup docs for a cleaner marketplace package.</p>
+        <h3>Buyer-Friendly Structure</h3>
+        <p>Editable comments, clear sections, and lightweight files make the template easier to update for a real business.</p>
       </article>
     </section>
 
+    <!-- ABOUT SECTION: Replace this demo story with your business summary, mission, or local experience. -->
     <section class="split-section" id="about">
       <div>
-        <p class="eyebrow">About the Template</p>
-        <h2>Built for smaller brands that still want a premium first impression.</h2>
+        <p class="eyebrow">About Your Brand</p>
+        <h2>Share a clear story about the experience visitors can expect.</h2>
         <p>
-          Abyssal Blue Lite is ideal for local dive operators, boutique ocean tours,
-          marine exhibits, and conservation projects that want a single strong landing
-          page without committing to a larger multi-page site.
+          This section works well for an owner story, dive philosophy, marine education
+          message, or a quick overview of the destinations and guests you serve.
         </p>
         <p>
-          The layout supports storytelling, service previews, visual credibility, and
-          contact conversion in one streamlined file.
+          Keep the copy concise, visual, and welcoming so visitors understand the tone
+          of your business before they reach the service cards below.
         </p>
         <div class="mini-feature-list">
-          <span>Fast customization</span>
-          <span>Lower setup friction</span>
-          <span>Premium ocean look</span>
-          <span>Mobile-first sales flow</span>
+          <span>Local expertise</span>
+          <span>Easy to personalize</span>
+          <span>Strong first impression</span>
+          <span>Built for contact-driven sites</span>
         </div>
       </div>
-      <img src="images/diver-placeholder.jpg" alt="Diver exploring a bright coral reef">
+      <img
+        src="images/diver-placeholder.jpg"
+        alt="Diver exploring a bright coral reef"
+        loading="lazy"
+      />
     </section>
 
+    <!-- SERVICES SECTION: Replace these sample offers with your dives, tours, tickets, or experiences. -->
     <section class="section-header" id="services">
       <p class="eyebrow">Services</p>
-      <h2>Preview your offers without a full pricing page.</h2>
+      <h2>Highlight your most popular dives, tours, or experiences.</h2>
       <p>
-        Lite keeps the service section concise while still making it easy for buyers
-        to present tiered packages or featured experiences.
+        Keep this section focused on the offers you want visitors to notice first.
+        Three well-written cards are usually enough for a one-page template.
       </p>
     </section>
 
@@ -181,23 +235,23 @@
         <span>Starter</span>
         <h3>Reef Explorer</h3>
         <div class="price">$99</div>
-        <p>Ideal for beginner dives, short tours, and first-time underwater visitors.</p>
+        <p>Ideal for beginner-friendly dives, guided reef tours, or quick ocean excursions.</p>
         <ul class="service-list">
           <li>Guided route</li>
           <li>Small group feel</li>
-          <li>Perfect for landing pages</li>
+          <li>Great entry-level offer</li>
         </ul>
       </article>
 
       <article class="service-card featured">
-        <span>Most Popular</span>
+        <span>Featured</span>
         <h3>Deep Blue Experience</h3>
         <div class="price">$249</div>
-        <p>For brands that want a premium featured package to anchor their offer section.</p>
+        <p>Use the center card to spotlight the service you want most visitors to ask about first.</p>
         <ul class="service-list">
-          <li>Hero package emphasis</li>
-          <li>Photo upgrade positioning</li>
-          <li>Stronger CTA focus</li>
+          <li>Best-value positioning</li>
+          <li>Premium visual emphasis</li>
+          <li>Clear call-to-contact fit</li>
         </ul>
       </article>
 
@@ -205,112 +259,134 @@
         <span>Private</span>
         <h3>Charter Escape</h3>
         <div class="price">$599</div>
-        <p>Designed for boutique private tours, family charters, and custom ocean experiences.</p>
+        <p>Perfect for private charters, family trips, special events, or custom adventure packages.</p>
         <ul class="service-list">
           <li>Private guide concept</li>
-          <li>Flexible schedule messaging</li>
+          <li>Flexible itinerary</li>
           <li>Premium positioning</li>
         </ul>
       </article>
     </section>
 
+    <!-- GALLERY SECTION: Replace the demo images and captions with your strongest visual proof. -->
     <section class="section-header" id="gallery">
-      <p class="eyebrow">Gallery Preview</p>
-      <h2>Show just enough imagery to sell the experience.</h2>
+      <p class="eyebrow">Gallery</p>
+      <h2>Use a focused gallery to build trust and atmosphere.</h2>
       <p>
-        The Lite version uses a compact image grid to create atmosphere while keeping
-        the product simpler than the Pro gallery system.
+        A compact image section helps visitors imagine the experience while keeping the
+        Lite template fast, clean, and easy to manage.
       </p>
     </section>
 
     <section class="gallery-grid">
       <article class="gallery-card tall">
-        <img src="images/hero-shark.jpg" alt="Shark gliding through deep ocean water">
+        <img src="images/hero-shark.jpg" alt="Shark gliding through deep ocean water" loading="lazy" />
         <div>
-          <span>Wildlife</span>
-          <h3>Open Water Impact</h3>
-          <p>Strong hero-style visuals for dramatic first impressions.</p>
+          <span>Open Water</span>
+          <h3>Strong First Impressions</h3>
+          <p>Lead with a dramatic image that immediately sets the tone for the page.</p>
         </div>
       </article>
       <article class="gallery-card">
-        <img src="images/coral-placeholder.jpg" alt="Colorful coral reef scene">
+        <img src="images/coral-placeholder.jpg" alt="Colorful coral reef scene" loading="lazy" />
         <div>
           <span>Reef</span>
-          <h3>Living Texture</h3>
-          <p>Great for education, eco-tourism, and aquarium positioning.</p>
+          <h3>Color and Texture</h3>
+          <p>Show off the environment, habitat, or destination that makes the experience memorable.</p>
         </div>
       </article>
       <article class="gallery-card">
-        <img src="images/diver-placeholder.jpg" alt="Diver moving through a reef wall">
+        <img src="images/diver-placeholder.jpg" alt="Diver moving through a reef wall" loading="lazy" />
         <div>
-          <span>Guided Tour</span>
+          <span>Guest View</span>
           <h3>Human Perspective</h3>
-          <p>Helps visitors picture themselves inside the experience.</p>
+          <p>Photos with people help visitors picture themselves inside the experience.</p>
         </div>
       </article>
       <article class="gallery-card wide">
-        <img src="images/turtle-placeholder.jpg" alt="Sea turtle above a sunlit reef">
+        <img src="images/turtle-placeholder.jpg" alt="Sea turtle above a sunlit reef" loading="lazy" />
         <div>
-          <span>Conservation</span>
-          <h3>Quiet Premium Storytelling</h3>
-          <p>Balances the more dramatic shark imagery with softer ocean mood.</p>
+          <span>Wildlife</span>
+          <h3>Calm Storytelling</h3>
+          <p>Balance dramatic imagery with quieter moments that feel welcoming and premium.</p>
         </div>
       </article>
     </section>
 
+    <!-- FAQ SECTION: Replace these common questions with the ones customers ask most often. -->
     <section class="section-header" id="faq">
-      <p class="eyebrow">FAQ Preview</p>
-      <h2>Answer the most common questions on the same page.</h2>
+      <p class="eyebrow">FAQ</p>
+      <h2>Answer common questions on the same page.</h2>
+      <p>
+        This area is useful for quick details about experience level, schedules,
+        locations, accessibility, or what guests should bring.
+      </p>
     </section>
 
     <section class="faq-section">
       <details class="faq-item" open>
-        <summary>Who is the Lite version best for?</summary>
-        <p>It is best for smaller businesses or sellers who want a lower-priced one-page offer with premium styling and simpler setup.</p>
+        <summary>How easy is it to replace the demo text and images?</summary>
+        <p>Very easy. Each major section includes comments so customers can quickly update business details, offers, photos, and contact information.</p>
       </details>
       <details class="faq-item">
-        <summary>What is removed compared to Pro?</summary>
-        <p>Lite removes the multi-page architecture, advanced content depth, and full Pro page inventory while keeping the core visual identity.</p>
+        <summary>Can this layout work for tours, aquariums, or marine education brands?</summary>
+        <p>Yes. The design works well for scuba operators, marine attractions, conservation groups, charters, and other ocean-focused businesses.</p>
       </details>
       <details class="faq-item">
-        <summary>Can buyers still customize the content easily?</summary>
-        <p>Yes. The one-page structure is straightforward to edit and the included docs explain where to update copy, images, and brand details.</p>
+        <summary>Do I need extra pages for the Lite version?</summary>
+        <p>No. The Lite version is intentionally kept as a single polished page with anchored navigation and a simple contact-focused ending.</p>
       </details>
       <details class="faq-item">
-        <summary>Can this be used for other industries?</summary>
-        <p>Yes. Buyers can adapt the design for travel, resorts, conservation, aquariums, tours, or any brand that benefits from a cinematic ocean theme.</p>
+        <summary>Where should the main call to action send visitors?</summary>
+        <p>For Lite, the cleanest option is usually the contact section, an email link, or a phone call button, depending on the business workflow.</p>
       </details>
     </section>
 
+    <!-- CONTACT SECTION: Update the email, phone, location, hours, and contact buttons here. -->
     <section class="contact-band" id="contact">
       <div class="contact-copy">
-        <p class="eyebrow">Contact and CTA</p>
-        <h2>Turn interest into inquiry without extra pages.</h2>
+        <p class="eyebrow">Contact</p>
+        <h2>Make it easy for visitors to reach your team.</h2>
         <p>
-          The Lite version ends with a clear contact block so buyers can direct visitors
-          toward a phone call, email inquiry, booking platform, or contact form integration.
+          The Lite version ends with a clear contact section so visitors can quickly
+          email, call, or learn where your business is based.
         </p>
         <div class="hero-buttons">
-          <a href="mailto:info@example.com" class="btn primary-btn">Email the Team</a>
-          <a href="tel:+15551234567" class="btn secondary-btn">Call Now</a>
+          <a href="mailto:info@example.com" class="btn primary-btn">Email Us</a>
+          <a href="tel:+15551234567" class="btn secondary-btn">Call Us</a>
         </div>
       </div>
 
       <div class="contact-card glass-card">
         <h3>Quick Contact</h3>
-        <p><strong>Email:</strong> info@example.com</p>
-        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-        <p><strong>Location:</strong> Marina District, Miami, Florida</p>
-        <p><strong>Hours:</strong> Daily from 8:00 AM to 6:00 PM</p>
+        <ul class="contact-details">
+          <li>
+            <strong>Email</strong>
+            <a href="mailto:info@example.com">info@example.com</a>
+          </li>
+          <li>
+            <strong>Phone</strong>
+            <a href="tel:+15551234567">+1 (555) 123-4567</a>
+          </li>
+          <li>
+            <strong>Location</strong>
+            <span>Marina District, Miami, Florida</span>
+          </li>
+          <li>
+            <strong>Hours</strong>
+            <span>Daily from 8:00 AM to 6:00 PM</span>
+          </li>
+        </ul>
         <div class="mini-feature-list">
-          <span>Simple CTA block</span>
-          <span>Form-service ready</span>
-          <span>Ideal for Lite buyers</span>
+          <span>Email-friendly CTA</span>
+          <span>Phone-ready contact block</span>
+          <span>Easy to customize</span>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER: Update the quick links, social media URLs, and copyright text here. -->
   <footer class="site-footer">
     <div class="footer-simple">
       <a href="#home" class="footer-logo" aria-label="Abyssal Blue Lite Home">
@@ -318,28 +394,98 @@
           <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="footerOceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#7cf7ff"/>
-                <stop offset="50%" stop-color="#00ffd5"/>
-                <stop offset="100%" stop-color="#087f9e"/>
+                <stop offset="0%" stop-color="#7cf7ff" />
+                <stop offset="50%" stop-color="#00ffd5" />
+                <stop offset="100%" stop-color="#087f9e" />
               </linearGradient>
             </defs>
-            <circle cx="32" cy="32" r="23" fill="none" stroke="url(#footerOceanLogo)" stroke-width="5"/>
-            <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#footerOceanLogo)"/>
-            <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
-            <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+            <circle cx="32" cy="32" r="23" fill="none" stroke="url(#footerOceanLogo)" stroke-width="5" />
+            <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#footerOceanLogo)" />
+            <circle cx="39" cy="30" r="2.8" fill="#02111c" />
+            <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5" />
           </svg>
         </span>
         <span class="logo-text">Abyssal Blue Lite</span>
       </a>
-      <p>
-        A premium one-page ocean website template designed for smaller launches,
-        faster customization, and a lower entry price than the full Pro edition.
+
+      <p class="footer-summary">
+        A premium one-page ocean website template built for dive tours, marine attractions,
+        charter crews, and adventure brands.
       </p>
-      <div class="footer-bottom">&copy; 2026 Abyssal Blue Lite. All rights reserved.</div>
+
+      <div class="footer-actions">
+        <a href="#contact" class="btn primary-btn">Contact Us</a>
+        <a href="mailto:info@example.com" class="btn secondary-btn">Email Us</a>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer quick links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <ul class="social-links" aria-label="Social media links">
+        <li>
+          <a
+            href="https://example.com/"
+            aria-label="Visit the Facebook page"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://example.com/"
+            aria-label="Visit the Instagram profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://example.com/"
+            aria-label="Visit the TikTok profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://example.com/"
+            aria-label="Visit the YouTube channel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://example.com/"
+            aria-label="Visit the X profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer-bottom">&copy; 2026 Abyssal Blue Lite. All rights reserved.</p>
     </div>
   </footer>
 
-  <a href="#contact" class="floating-book-btn" aria-label="Jump to contact section">Start Inquiry</a>
+  <a href="#contact" class="floating-contact-btn" id="floatingContactButton" aria-label="Jump to the contact section">
+    Contact Us
+  </a>
 
   <script src="js/main.js"></script>
 </body>

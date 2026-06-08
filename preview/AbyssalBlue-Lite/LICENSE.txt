@@ -1,0 +1,81 @@
+# Abyssal Blue Lite License
+
+Copyright © 2026 Web Dev Lady
+
+All Rights Reserved.
+
+## Single Purchase License
+
+By purchasing, downloading, installing, modifying, or using Abyssal Blue Lite, you agree to the terms of this license.
+
+This license grants the purchaser a limited, non-exclusive, non-transferable license to use the template as outlined below.
+
+## Permitted Use
+
+You may:
+
+* Use the template for one personal, commercial, or client website project.
+* Customize the design, content, branding, colors, typography, imagery, layouts, and functionality as needed for that project.
+* Create development, staging, testing, and backup copies for the same licensed project.
+* Deliver a completed customized website to one client as part of one completed client project.
+* Use the template on a live production website associated with the licensed project.
+
+## Restrictions
+
+You may not:
+
+* Resell the template as a template, theme, starter kit, design system, UI kit, or website package.
+* Redistribute, share, sublicense, upload, publish, or give away the source files.
+* Use a single purchase for multiple unrelated websites, businesses, brands, or client projects.
+* Upload the source files to marketplaces, repositories, download sites, template libraries, or file-sharing services.
+* Claim ownership of the original template design, source code, documentation, assets, or source package.
+* Remove copyright notices from included documentation.
+
+## Demo Content Notice
+
+Abyssal Blue Lite may include fictional demonstration content intended solely to showcase the design and functionality of the template.
+
+This may include:
+
+* Business names
+* Contact information
+* Social media links
+* Marketing copy
+* Placeholder domains
+* Images and graphics
+
+Before publishing a live website, replace all demonstration content with information belonging to the final website owner.
+
+## Ownership
+
+This license grants usage rights only.
+
+All original design work, source code, documentation, branding, layouts, assets, and template materials remain the intellectual property of Web Dev Lady.
+
+No ownership rights are transferred through the purchase of this template.
+
+## Support
+
+Support, updates, custom development, and customization services are not included unless explicitly stated at the time of purchase.
+
+Additional services may be offered separately.
+
+## No Warranty
+
+Abyssal Blue Lite is provided "as is" without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.
+
+## Limitation of Liability
+
+In no event shall Web Dev Lady be liable for any claim, damages, losses, liabilities, costs, or expenses arising from the use of the template or the inability to use the template.
+
+## Licensing Questions
+
+For licensing questions, custom development, extended licensing, or commercial inquiries, contact:
+
+```txt
+webdevlady26@gmail.com
+```
+
+---
+
+Abyssal Blue Lite © 2026 Web Dev Lady. All Rights Reserved.

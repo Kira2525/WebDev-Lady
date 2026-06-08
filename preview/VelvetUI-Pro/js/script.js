@@ -1,299 +1,365 @@
-const words = ["CREATE", "BUILD", "DESIGN", "LAUNCH", "GROW"];
+/* =========================================================
+   VELVET STUDIO — PREMIUM INTERACTION SCRIPT
+========================================================= */
 
-const VELVETUI_CONFIG = {
-  words,
-  colors: {
-    text: "rgba(255, 229, 239, 0.94)",
-    glow: "rgba(255, 116, 188, 0.92)",
-    innerGlow: "rgba(255, 87, 170, 0.17)",
-    outerGlow: "rgba(129, 77, 222, 0.09)"
-  },
-  shape: "diamond",
-  density: 170,
-  speed: 1,
-  font: '"Baskerville Old Face", "Palatino Linotype", Georgia, serif',
-  fontSizeMin: 13,
-  fontSizeMax: 21,
-  glow: 24,
-  interactive: true,
-  modes: {
-    hero: {
-      centerX: 0.73,
-      centerY: 0.48,
-      scale: 1.18,
-      densityMultiplier: 1,
-      speedMultiplier: 1,
-      alphaMultiplier: 1,
-      glowMultiplier: 1,
-      motionMultiplier: 1,
-      interactive: true
-    },
-    ambient: {
-      centerX: 0.84,
-      centerY: 0.3,
-      scale: 1.18,
-      densityMultiplier: 1,
-      speedMultiplier: 1,
-      alphaMultiplier: 1,
-      glowMultiplier: 1,
-      motionMultiplier: 1,
-      interactive: true
-    }
-  }
-};
+document.addEventListener("DOMContentLoaded", () => {
+  initMobileNavigation();
+  initFaqBehavior();
+  initStickyNavState();
+  initScrollReveal();
+  initCanvasBackground();
+});
 
-(function () {
-  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+/* =========================================================
+   MOBILE NAVIGATION — Hamburger ↔ X
+========================================================= */
 
-  function setupNavigation() {
-    const toggle = document.querySelector("[data-menu-toggle]");
-    const navLinks = document.getElementById("navLinks");
+function initMobileNavigation() {
+  const menuButton = document.querySelector(".menu-btn");
+  const navLinks   = document.querySelector(".nav-links");
+  if (!menuButton || !navLinks) return;
+  const mobileNavQuery = window.matchMedia("(max-width: 768px)");
 
-    if (!toggle || !navLinks) {
-      return;
-    }
-
-    function closeMenu() {
-      navLinks.classList.remove("active");
-      toggle.setAttribute("aria-expanded", "false");
-    }
-
-    toggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("active");
-      toggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("click", (event) => {
-      if (!navLinks.classList.contains("active")) {
-        return;
-      }
-
-      if (!navLinks.contains(event.target) && !toggle.contains(event.target)) {
-        closeMenu();
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeMenu();
-      }
-    });
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 768) {
-        closeMenu();
-      }
-    });
+  function openNav() {
+    navLinks.classList.add("active");
+    menuButton.classList.add("is-open");
+    menuButton.setAttribute("aria-expanded", "true");
+    menuButton.setAttribute("aria-label", "Close navigation");
+    navLinks.setAttribute("aria-hidden", "false");
+    document.body.classList.add("nav-open");
   }
 
-  function setupHeroCanvas() {
-    const canvas = document.getElementById("heroCanvas");
+  function closeNav() {
+    navLinks.classList.remove("active");
+    menuButton.classList.remove("is-open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation");
+    navLinks.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("nav-open");
+  }
 
-    if (!canvas) {
-      return;
+  navLinks.setAttribute("aria-hidden", mobileNavQuery.matches ? "true" : "false");
+
+  menuButton.addEventListener("click", () => {
+    navLinks.classList.contains("active") ? closeNav() : openNav();
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeNav);
+  });
+
+  /* Close on outside click */
+  document.addEventListener("click", (e) => {
+    if (!menuButton.contains(e.target) && !navLinks.contains(e.target)) {
+      closeNav();
     }
+  });
 
-    const ctx = canvas.getContext("2d");
-
-    if (!ctx) {
-      return;
+  /* Close on Escape */
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeNav();
+      menuButton.focus();
     }
+  });
 
-    let width = 0;
-    let height = 0;
-    let points = [];
-    let time = 0;
-    let runtimeConfig = getRuntimeConfig();
-    const pointer = {
-      x: 0,
-      y: 0,
-      active: false
-    };
-
-    function getModeConfig() {
-      const modeKey = document.body.dataset.canvasMode === "hero" ? "hero" : "ambient";
-      return VELVETUI_CONFIG.modes[modeKey];
+  const handleViewportChange = (event) => {
+    if (!event.matches) {
+      closeNav();
+      navLinks.setAttribute("aria-hidden", "false");
+    } else {
+      navLinks.setAttribute("aria-hidden", navLinks.classList.contains("active") ? "false" : "true");
     }
+  };
 
-    function getRuntimeConfig() {
-      const modeConfig = getModeConfig();
-      const mobileReduction = window.innerWidth < 768 ? 0.76 : 1;
-      const motionReduction = reducedMotionQuery.matches ? 0.58 : 1;
-      const density = Math.max(
-        18,
-        Math.round(
-          VELVETUI_CONFIG.density *
-          modeConfig.densityMultiplier *
-          mobileReduction *
-          motionReduction
-        )
-      );
-      const speed = VELVETUI_CONFIG.speed * modeConfig.speedMultiplier * (reducedMotionQuery.matches ? 0.72 : 1);
-      const textItems = Array.isArray(VELVETUI_CONFIG.words)
-        ? VELVETUI_CONFIG.words.filter(Boolean)
-        : [VELVETUI_CONFIG.words];
+  if (typeof mobileNavQuery.addEventListener === "function") {
+    mobileNavQuery.addEventListener("change", handleViewportChange);
+  } else if (typeof mobileNavQuery.addListener === "function") {
+    mobileNavQuery.addListener(handleViewportChange);
+  }
+}
 
-      return {
-        ...VELVETUI_CONFIG,
-        density,
-        speed,
-        interactive: modeConfig.interactive && !reducedMotionQuery.matches,
-        textItems: textItems.length ? textItems : ["CREATE"],
-        modeConfig
-      };
-    }
+/* =========================================================
+   FAQ ACCORDION
+========================================================= */
 
-    function resizeCanvas() {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-      runtimeConfig = getRuntimeConfig();
-      createShapePoints();
-    }
+function initFaqBehavior() {
+  const faqItems = document.querySelectorAll(".faq-accordion details");
+  faqItems.forEach((item) => {
+    item.addEventListener("toggle", () => {
+      if (!item.open) return;
+      faqItems.forEach((other) => { if (other !== item) other.removeAttribute("open"); });
+    });
+  });
+}
 
-    function diamondFormula(t) {
-      const cos = Math.cos(t);
-      const sin = Math.sin(t);
-      const normalizer = Math.max(Math.abs(cos) + Math.abs(sin), 0.001);
+/* =========================================================
+   STICKY NAV
+========================================================= */
 
-      return {
-        x: (16 * cos) / normalizer,
-        y: (16 * sin) / normalizer
-      };
-    }
+function initStickyNavState() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+  const update = () => header.classList.toggle("is-scrolled", window.scrollY > 24);
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+}
 
-    function createShapePoints() {
-      points = [];
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
 
-      const { centerX, centerY, scale, alphaMultiplier } = runtimeConfig.modeConfig;
-      const shapeScale = (Math.min(width, height) / 38) * scale;
-      const anchorX = width * centerX;
-      const anchorY = height * centerY;
-      const baseSize = runtimeConfig.fontSizeMin;
-      const sizeRange = Math.max(0, runtimeConfig.fontSizeMax - runtimeConfig.fontSizeMin);
+function initScrollReveal() {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const items = document.querySelectorAll(
+    ".section-block, .hero-copy, .hero-stage, .feature-card, .value-card, .showcase-card, .pricing-card, .testimonial-card, .process-step, .story-card, .cta-card, .comparison-card"
+  );
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    items.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+  items.forEach((el) => el.classList.add("reveal-item"));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -60px 0px" });
+  items.forEach((el) => observer.observe(el));
+}
 
-      for (let i = 0; i < runtimeConfig.density; i += 1) {
-        const t = (Math.PI * 2 * i) / runtimeConfig.density;
-        const shapePoint = diamondFormula(t);
+/* =========================================================
+   PREMIUM CANVAS BACKGROUND
+========================================================= */
 
-        points.push({
-          baseX: anchorX + shapePoint.x * shapeScale,
-          baseY: anchorY - shapePoint.y * shapeScale,
-          size: baseSize + Math.random() * sizeRange,
-          speed: (0.45 + Math.random() * 0.7) * runtimeConfig.speed,
-          offset: Math.random() * Math.PI * 2,
-          alpha: (0.36 + Math.random() * 0.48) * alphaMultiplier,
-          depth: 0.5 + Math.random() * 0.8,
-          drift: 0.7 + Math.random() * 0.9
-        });
-      }
-    }
+function initCanvasBackground() {
+  const canvas = document.querySelector("#heroCanvas");
+  if (!canvas) return;
 
-    function drawBackgroundGlow() {
-      const { centerX, centerY, scale, glowMultiplier } = runtimeConfig.modeConfig;
-      const radius = Math.min(width, height) * (0.26 * scale + 0.14);
-      const gradient = ctx.createRadialGradient(
-        width * centerX,
-        height * centerY,
-        runtimeConfig.glow * glowMultiplier,
-        width * centerX,
-        height * centerY,
-        radius
-      );
+  const ctx = canvas.getContext("2d", { alpha: false });
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-      gradient.addColorStop(0, runtimeConfig.colors.innerGlow);
-      gradient.addColorStop(0.42, runtimeConfig.colors.outerGlow);
-      gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+  let width = 0, height = 0;
+  let pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+  let time = 0;
+  let animationFrame = 0;
 
-      ctx.fillStyle = gradient;
+  const pointer = {
+    x: window.innerWidth * 0.5,
+    y: window.innerHeight * 0.35,
+    targetX: window.innerWidth * 0.5,
+    targetY: window.innerHeight * 0.35,
+  };
+
+  const diamonds = Array.from({ length: 38 }, () => ({
+    x: Math.random(),
+    y: Math.random(),
+    size: 4 + Math.random() * 14,
+    speed: 0.06 + Math.random() * 0.22,
+    drift: (-0.12 + Math.random() * 0.24),
+    opacity: 0.06 + Math.random() * 0.18,
+    rotation: Math.random() * Math.PI,
+  }));
+
+  const sketchLines = Array.from({ length: 28 }, () => ({
+    x: Math.random(),
+    y: Math.random(),
+    length: 80 + Math.random() * 260,
+    opacity: 0.04 + Math.random() * 0.07,
+    angle: [-0.7, 0, 0.7, 1.57, 2.35][Math.floor(Math.random() * 5)],
+  }));
+
+  const orbs = [
+    { x: 0.15, y: 0.28, r: 0.52, color: "255,55,130",  alpha: 0.38 },
+    { x: 0.82, y: 0.18, r: 0.48, color: "180,155,255", alpha: 0.28 },
+    { x: 0.50, y: 0.72, r: 0.44, color: "244,180,100", alpha: 0.14 },
+    { x: 0.25, y: 0.78, r: 0.36, color: "120,80,220",  alpha: 0.18 },
+  ];
+
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width  = Math.floor(width  * pixelRatio);
+    canvas.height = Math.floor(height * pixelRatio);
+    canvas.style.width  = `${width}px`;
+    canvas.style.height = `${height}px`;
+    ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+  }
+
+  function drawBase() {
+    const g = ctx.createLinearGradient(0, 0, width * 0.6, height);
+    g.addColorStop(0,    "#0e0218");
+    g.addColorStop(0.32, "#22083a");
+    g.addColorStop(0.65, "#190530");
+    g.addColorStop(1,    "#050008");
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, width, height);
+  }
+
+  function drawOrbs() {
+    orbs.forEach((orb, i) => {
+      const t  = time * 0.0003 + i * 1.4;
+      const cx = (orb.x + Math.sin(t) * 0.08) * width;
+      const cy = (orb.y + Math.cos(t * 0.7) * 0.06) * height;
+      const r  = orb.r * Math.max(width, height);
+
+      const grd = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+      grd.addColorStop(0,   `rgba(${orb.color},${orb.alpha})`);
+      grd.addColorStop(0.4, `rgba(${orb.color},${orb.alpha * 0.35})`);
+      grd.addColorStop(1,   `rgba(${orb.color},0)`);
+      ctx.fillStyle = grd;
       ctx.fillRect(0, 0, width, height);
-    }
-
-    function applyPointerRepulsion(x, y) {
-      if (!runtimeConfig.interactive || !pointer.active) {
-        return { x, y };
-      }
-
-      const dx = x - pointer.x;
-      const dy = y - pointer.y;
-      const distance = Math.hypot(dx, dy);
-      const radius = Math.max(runtimeConfig.fontSizeMax * 7, Math.min(width, height) * 0.14);
-
-      if (distance === 0 || distance > radius) {
-        return { x, y };
-      }
-
-      const force = (1 - distance / radius) * runtimeConfig.fontSizeMax * 1.35;
-      const angle = Math.atan2(dy, dx);
-
-      return {
-        x: x + Math.cos(angle) * force,
-        y: y + Math.sin(angle) * force
-      };
-    }
-
-    function getTextForPoint(index) {
-      return runtimeConfig.textItems[index % runtimeConfig.textItems.length];
-    }
-
-    function drawShapeText() {
-      ctx.clearRect(0, 0, width, height);
-      drawBackgroundGlow();
-
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.globalCompositeOperation = "screen";
-
-      const motionFactor = runtimeConfig.modeConfig.motionMultiplier;
-      points.forEach((point, index) => {
-        const wave = Math.sin(time * point.speed + point.offset);
-        const orbit = Math.cos(time * point.speed * 0.72 + point.offset);
-        const pulse = Math.sin(time * 0.6 + point.offset + point.depth);
-        const drift = runtimeConfig.fontSizeMin * 0.44 * motionFactor * point.drift;
-        const baseX = point.baseX + wave * drift;
-        const baseY = point.baseY + orbit * drift * 0.72;
-        const displaced = applyPointerRepulsion(baseX, baseY);
-        const size = point.size * (0.78 + (pulse + 1) * 0.18);
-
-        ctx.font = `700 ${size}px ${runtimeConfig.font}`;
-        ctx.shadowBlur = runtimeConfig.glow * runtimeConfig.modeConfig.glowMultiplier * point.depth;
-        ctx.shadowColor = runtimeConfig.colors.glow;
-        ctx.fillStyle = runtimeConfig.colors.text.replace(/0\.\d+\)$/, `${Math.min(point.alpha, 0.96)})`);
-        ctx.fillText(getTextForPoint(index), displaced.x, displaced.y);
-      });
-
-      ctx.globalCompositeOperation = "source-over";
-      time += 0.014 * runtimeConfig.speed;
-      window.requestAnimationFrame(drawShapeText);
-    }
-
-    function handlePointerMove(event) {
-      pointer.x = event.clientX;
-      pointer.y = event.clientY;
-      pointer.active = true;
-    }
-
-    function handlePointerLeave() {
-      pointer.active = false;
-    }
-
-    window.addEventListener("resize", resizeCanvas);
-    if (typeof reducedMotionQuery.addEventListener === "function") {
-      reducedMotionQuery.addEventListener("change", resizeCanvas);
-    }
-
-    if (runtimeConfig.interactive) {
-      window.addEventListener("pointermove", handlePointerMove);
-      window.addEventListener("pointerleave", handlePointerLeave);
-    }
-
-    resizeCanvas();
-    drawShapeText();
+    });
   }
 
-  setupNavigation();
-  setupHeroCanvas();
-})();
+  function drawFabricLines() {
+    ctx.save();
+    ctx.globalAlpha = 0.16;
+    for (let i = -height; i < width; i += 26) {
+      const wave = Math.sin(time * 0.0014 + i * 0.009) * 14;
+      ctx.beginPath();
+      ctx.moveTo(i + wave, 0);
+      ctx.lineTo(i + height + wave, height);
+      ctx.strokeStyle = "rgba(255,255,255,0.055)";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawSketchLines() {
+    ctx.save();
+    sketchLines.forEach((line) => {
+      const x = line.x * width;
+      const y = line.y * height;
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(line.angle);
+      ctx.beginPath();
+      ctx.moveTo(-line.length * 0.5, 0);
+      ctx.lineTo(line.length * 0.5, 0);
+      ctx.strokeStyle = `rgba(255,208,227,${line.opacity})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.rect(-line.length * 0.22, -20, line.length * 0.44, 40);
+      ctx.strokeStyle = `rgba(244,201,139,${line.opacity * 0.65})`;
+      ctx.stroke();
+      ctx.restore();
+    });
+    ctx.restore();
+  }
+
+  function drawDiamonds() {
+    ctx.save();
+    diamonds.forEach((d) => {
+      d.y -= d.speed * 0.0009;
+      d.x += d.drift * 0.0004;
+      d.rotation += 0.0022;
+      if (d.y < -0.08) d.y = 1.08;
+      if (d.x < -0.08) d.x = 1.08;
+      if (d.x > 1.08)  d.x = -0.08;
+
+      const x = d.x * width;
+      const y = d.y * height;
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(d.rotation);
+      ctx.beginPath();
+      ctx.moveTo(0, -d.size);
+      ctx.lineTo(d.size * 0.62, 0);
+      ctx.lineTo(0, d.size);
+      ctx.lineTo(-d.size * 0.62, 0);
+      ctx.closePath();
+      ctx.strokeStyle = `rgba(255,208,227,${d.opacity})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(0, 0, d.size * 0.18, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${d.opacity * 0.6})`;
+      ctx.fill();
+      ctx.restore();
+    });
+    ctx.restore();
+  }
+
+  function drawSpotlight() {
+    pointer.x += (pointer.targetX - pointer.x) * 0.055;
+    pointer.y += (pointer.targetY - pointer.y) * 0.055;
+    const r   = Math.max(width, height) * 0.48;
+    const grd = ctx.createRadialGradient(pointer.x, pointer.y, 0, pointer.x, pointer.y, r);
+    grd.addColorStop(0,   "rgba(255,200,225,0.18)");
+    grd.addColorStop(0.3, "rgba(255,77,148,0.08)");
+    grd.addColorStop(0.7, "rgba(180,130,255,0.04)");
+    grd.addColorStop(1,   "rgba(255,200,225,0)");
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, width, height);
+  }
+
+  function drawVignette() {
+    const grd = ctx.createRadialGradient(
+      width*0.5, height*0.5, height*0.3,
+      width*0.5, height*0.5, height
+    );
+    grd.addColorStop(0, "rgba(0,0,0,0)");
+    grd.addColorStop(1, "rgba(3,0,10,0.72)");
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, width, height);
+  }
+
+  function render() {
+    animationFrame = 0;
+    time += 16;
+    ctx.clearRect(0, 0, width, height);
+    drawBase();
+    drawOrbs();
+    drawFabricLines();
+    drawSketchLines();
+    drawDiamonds();
+    drawSpotlight();
+    drawVignette();
+    if (!reduceMotion && !document.hidden) {
+      animationFrame = requestAnimationFrame(render);
+    }
+  }
+
+  function startAnimation() {
+    if (reduceMotion || animationFrame) return;
+    animationFrame = requestAnimationFrame(render);
+  }
+
+  function stopAnimation() {
+    if (!animationFrame) return;
+    cancelAnimationFrame(animationFrame);
+    animationFrame = 0;
+  }
+
+  resize();
+  if (reduceMotion) {
+    drawBase(); drawOrbs(); drawSketchLines(); drawVignette();
+  } else {
+    startAnimation();
+  }
+
+  window.addEventListener("resize", resize);
+  window.addEventListener("mousemove", (e) => {
+    pointer.targetX = e.clientX;
+    pointer.targetY = e.clientY;
+  }, { passive: true });
+  window.addEventListener("touchmove", (e) => {
+    const t = e.touches[0];
+    if (!t) return;
+    pointer.targetX = t.clientX;
+    pointer.targetY = t.clientY;
+  }, { passive: true });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAnimation();
+      return;
+    }
+    startAnimation();
+  });
+}

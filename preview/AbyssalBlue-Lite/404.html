@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | Abyssal Blue Lite</title>
+  <meta
+    name="description"
+    content="The page you requested could not be found. Return to the Abyssal Blue Lite one-page ocean adventure template."
+  />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#02111c" />
+  <link rel="canonical" href="https://example.com/404.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Abyssal Blue Lite" />
+  <meta property="og:title" content="Page Not Found | Abyssal Blue Lite" />
+  <meta
+    property="og:description"
+    content="The page you requested could not be found. Return to the Abyssal Blue Lite homepage to continue exploring the template."
+  />
+  <meta property="og:url" content="https://example.com/404.html" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Page Not Found | Abyssal Blue Lite" />
+  <meta
+    name="twitter:description"
+    content="The page you requested could not be found. Return to the Abyssal Blue Lite homepage to continue exploring the template."
+  />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+<body class="not-found-page">
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
+  <!-- DECORATIVE BACKGROUND: Replace the background image in /images to change the 404 page mood. -->
+  <div class="ocean-scene" aria-hidden="true">
+    <canvas id="oceanCanvas"></canvas>
+    <img src="images/coral-placeholder.jpg" class="coral-bg" alt="" />
+    <div class="ocean-tint"></div>
+    <div class="light-rays"></div>
+    <div class="depth-fog"></div>
+    <div class="bubble-layer" id="bubbleLayer"></div>
+    <div class="fish-layer" id="fishLayer"></div>
+  </div>
+
+  <!-- HEADER / NAVIGATION: Update the logo text and return links here. -->
+  <header class="site-header">
+    <a href="index.html#home" class="logo" aria-label="Abyssal Blue Lite Home">
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="oceanLogo404" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7cf7ff" />
+              <stop offset="50%" stop-color="#00ffd5" />
+              <stop offset="100%" stop-color="#087f9e" />
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo404)" stroke-width="5" />
+          <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo404)" />
+          <circle cx="39" cy="30" r="2.8" fill="#02111c" />
+          <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5" />
+        </svg>
+      </span>
+      <span class="logo-text">Abyssal Blue Lite</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-controls="navMenu"
+      aria-expanded="false"
+      type="button"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- 404 MESSAGE: Edit this copy and these return actions if you want a different fallback experience. -->
+  <main class="not-found-main" id="mainContent">
+    <section class="not-found-card">
+      <p class="not-found-tag">404 &bull; LOST AT SEA</p>
+      <h1>Lost at Sea?</h1>
+      <p>
+        This page seems to have disappeared beneath the waves. Return to the homepage
+        and continue your journey.
+      </p>
+      <div class="not-found-actions">
+        <a href="index.html" class="btn primary-btn">Back to Home</a>
+        <a href="index.html#contact" class="btn secondary-btn">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: Update the quick contact actions and social profile URLs here. -->
+  <footer class="site-footer">
+    <div class="footer-simple">
+      <a href="index.html" class="footer-logo" aria-label="Abyssal Blue Lite Home">
+        <span class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="footerOceanLogo404" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7cf7ff" />
+                <stop offset="50%" stop-color="#00ffd5" />
+                <stop offset="100%" stop-color="#087f9e" />
+              </linearGradient>
+            </defs>
+            <circle cx="32" cy="32" r="23" fill="none" stroke="url(#footerOceanLogo404)" stroke-width="5" />
+            <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#footerOceanLogo404)" />
+            <circle cx="39" cy="30" r="2.8" fill="#02111c" />
+            <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5" />
+          </svg>
+        </span>
+        <span class="logo-text">Abyssal Blue Lite</span>
+      </a>
+
+      <p class="footer-summary">
+        A premium one-page ocean website template built for dive tours, marine attractions,
+        charter crews, and adventure brands.
+      </p>
+
+      <div class="footer-actions">
+        <a href="index.html" class="btn primary-btn">Back to Home</a>
+        <a href="mailto:info@example.com" class="btn secondary-btn">Email Us</a>
+      </div>
+
+      <ul class="social-links" aria-label="Social media links">
+        <li>
+          <a
+            href="https://example.com/"
+            aria-label="Visit the Facebook page"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://example.com/"
+            aria-label="Visit the Instagram profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://example.com/"
+            aria-label="Visit the TikTok profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://example.com/"
+            aria-label="Visit the YouTube channel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://example.com/"
+            aria-label="Visit the X profile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer-bottom">&copy; 2026 Abyssal Blue Lite. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

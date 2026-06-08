@@ -1,0 +1,20 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1100" fill="#ECDDCD"/>
+  <rect x="88" y="82" width="1424" height="934" rx="36" fill="#1E1716"/>
+  <rect x="132" y="126" width="1336" height="846" rx="30" fill="url(#paint0_linear_19_7)"/>
+  <rect x="212" y="198" width="1176" height="360" rx="26" fill="#F4EBE0"/>
+  <rect x="274" y="250" width="320" height="252" rx="16" fill="#AE9277"/>
+  <rect x="640" y="234" width="288" height="278" rx="16" fill="#F9F4EE"/>
+  <rect x="970" y="230" width="348" height="282" rx="18" fill="#D8B188"/>
+  <ellipse cx="812" cy="700" rx="426" ry="88" fill="#B48874" fill-opacity="0.32"/>
+  <rect x="364" y="604" width="776" height="196" rx="98" fill="#7A584D"/>
+  <rect x="1180" y="588" width="132" height="228" rx="18" fill="#B99170"/>
+  <text x="218" y="888" fill="#F8F1E8" font-family="Georgia, serif" font-size="68">Atlas House Dining Room</text>
+  <text x="218" y="948" fill="#D4BA96" font-family="Arial, sans-serif" font-size="24" letter-spacing="4">ENTERTAINING FLOOR FOR A DESERT RESIDENCE</text>
+  <defs>
+    <linearGradient id="paint0_linear_19_7" x1="800" y1="126" x2="800" y2="972" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCC3AD"/>
+      <stop offset="1" stop-color="#9B7567"/>
+    </linearGradient>
+  </defs>
+</svg>

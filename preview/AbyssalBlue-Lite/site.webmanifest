@@ -1,8 +1,9 @@
 {
-  "name": "Abyssal Blue Lite",
-  "short_name": "Abyssal Lite",
-  "description": "Premium one-page underwater website template for dive tours, aquariums, marine parks, and ocean adventure brands.",
-  "start_url": "index.html",
+  "name": "Your Business Name",
+  "short_name": "Business",
+  "description": "Replace this description with your business, service, or brand description.",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#02111c",
   "theme_color": "#02111c",

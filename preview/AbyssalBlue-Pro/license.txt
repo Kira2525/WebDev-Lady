@@ -1,41 +1,83 @@
-ABYSSAL BLUE PRO LICENSE
+# Abyssal Blue Pro License
 
-Copyright (c) 2026 Web Dev Lady
+Copyright © 2026 Web Dev Lady
 
-SINGLE PURCHASE LICENSE
+All Rights Reserved.
 
-By purchasing, downloading, or using this template, you agree to the following terms.
+## Single Purchase License
 
-YOU MAY:
+By purchasing, downloading, installing, modifying, or using Abyssal Blue Pro, you agree to the terms of this license.
 
-- Use the template for one final personal, commercial, or client website/project.
-- Modify text, colors, images, branding, layouts, and functionality as needed for that project.
-- Create development, staging, and backup copies for that same project.
-- Transfer the completed customized website to one client as part of one completed client project.
+This license grants the purchaser a limited, non-exclusive, non-transferable license to use the template as outlined below.
 
-YOU MAY NOT:
+## Permitted Use
 
-- Resell the template as a template, theme, starter kit, or design asset.
-- Redistribute, share, give away, upload, or publish the source files.
-- Use the same purchase for multiple unrelated websites or projects.
-- Claim ownership of the original template design, source code, documentation, or source package.
+You may:
 
-OWNERSHIP
+* Use the template for one personal, commercial, or client website project.
+* Customize the design, content, branding, colors, typography, imagery, layouts, and functionality as needed for that project.
+* Create development, staging, testing, and backup copies for the same licensed project.
+* Deliver a completed customized website to one client as part of one completed client project.
+* Use the template on a live production website associated with the licensed project.
+
+## Restrictions
+
+You may not:
+
+* Resell the template as a template, theme, starter kit, design system, UI kit, or website package.
+* Redistribute, share, sublicense, upload, publish, or give away the source files.
+* Use a single purchase for multiple unrelated websites, businesses, brands, or client projects.
+* Upload the source files to marketplaces, repositories, download sites, template libraries, or file-sharing services.
+* Claim ownership of the original template design, source code, documentation, assets, or source package.
+* Remove copyright notices from included documentation.
+
+## Demo Content Notice
+
+Abyssal Blue Pro includes fictional demonstration content intended solely to showcase the design and functionality of the template.
+
+This may include:
+
+* Business names
+* Logos
+* Contact information
+* Social media links
+* Pricing examples
+* Marketing copy
+* Images and graphics
+* Placeholder domains
+
+Before publishing a live website, replace all demonstration content with information belonging to the final website owner.
+
+## Ownership
 
 This license grants usage rights only.
 
-All original design, source code, documentation, branding, and template assets remain the intellectual property of Web Dev Lady.
+All original design work, source code, documentation, branding, layouts, assets, and template materials remain the intellectual property of Web Dev Lady.
 
-SUPPORT
+No ownership rights are transferred through the purchase of this template.
 
-Support, updates, and customization services are sold separately unless otherwise stated.
+## Support
 
-LIMITATION OF LIABILITY
+Support, updates, custom development, and customization services are not included unless explicitly stated at the time of purchase.
 
-This template is provided "AS IS" without warranty of any kind. Web Dev Lady shall not be liable for any damages arising from the use of this template.
+Any additional services may be offered separately.
 
-CONTACT
+## No Warranty
 
-For licensing questions, custom work, or extended licensing, contact:
+Abyssal Blue Pro is provided "as is" without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.
 
+## Limitation of Liability
+
+In no event shall Web Dev Lady be liable for any claim, damages, losses, liabilities, costs, or expenses arising from the use of the template or the inability to use the template.
+
+## Licensing Questions
+
+For licensing questions, custom development, extended licensing, or commercial inquiries, contact:
+
+```txt
 webdevlady26@gmail.com
+```
+
+---
+
+Abyssal Blue Pro © 2026 Web Dev Lady. All Rights Reserved.

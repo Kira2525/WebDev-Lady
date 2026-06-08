@@ -1,0 +1,235 @@
+/* =========================================================
+   VELVET STUDIO — MOBILE STYLESHEET (≤768px + ≤520px)
+========================================================= */
+
+/* =========================================================
+   HAMBURGER BUTTON
+========================================================= */
+
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid rgba(255, 200, 225, 0.26);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.07);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  position: relative;
+}
+
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 200, 225, 0.46);
+}
+
+/* The three bars */
+.menu-btn .bar {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.22s ease,
+              width 0.22s ease;
+  position: absolute;
+}
+
+.menu-btn .bar:nth-child(1) { transform: translateY(-6px); }
+.menu-btn .bar:nth-child(2) { transform: translateY(0); width: 14px; margin-left: -3px; }
+.menu-btn .bar:nth-child(3) { transform: translateY(6px); }
+
+/* Open state — animate to X */
+.menu-btn.is-open .bar:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+  width: 20px;
+}
+
+.menu-btn.is-open .bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.menu-btn.is-open .bar:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+  width: 20px;
+}
+
+/* =========================================================
+   MOBILE LAYOUT (≤768px)
+========================================================= */
+
+@media (max-width: 768px) {
+  .site-header { padding-top: 14px; }
+
+  .nav {
+    position: relative;
+    z-index: 1001;
+    overflow: visible;
+    padding: 14px 18px;
+    gap: 16px;
+  }
+
+  .menu-btn { display: inline-flex; }
+
+  .nav-links {
+    position: absolute;
+    z-index: 1002;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 16px 18px 20px;
+    border-radius: 24px;
+    background: rgba(9, 1, 18, 0.97);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(36px) saturate(170%);
+    box-shadow:
+      0 28px 80px rgba(1,0,8,0.78),
+      inset 0 1px 0 rgba(255,255,255,0.10);
+    /* Slide-in animation */
+    transform-origin: top center;
+    transform: scaleY(0.92) translateY(-8px);
+    opacity: 0;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    pointer-events: none;
+    max-height: min(70vh, calc(100vh - 120px));
+    overflow-y: auto;
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: scaleY(1) translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 11px 14px;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: var(--muted);
+    transition: background 0.18s, color 0.18s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a[aria-current="page"] {
+    background: rgba(255,255,255,0.07);
+    color: var(--text);
+  }
+
+  /* Remove the underline pseudo on mobile — we have bg highlight instead */
+  .nav-links a::after { display: none; }
+
+  .page-shell { padding-top: 38px; }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  h1 {
+    max-width: none;
+    font-size: clamp(3rem, 13vw, 4.8rem);
+  }
+
+  h2 { font-size: clamp(2rem, 9vw, 3.4rem); }
+
+  .hero-stats,
+  .mini-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process-timeline,
+  .moodboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .showcase-band { grid-template-columns: 1fr; }
+  .showcase-band > div {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,200,225,0.14);
+  }
+  .showcase-band > div:last-child { border-bottom: none; }
+
+  .link-cluster,
+  .audience-grid,
+  .pricing-detail-grid,
+  .form-grid.two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .section-block::before { top: -1.8rem; }
+
+  .feature-grid,
+  .demo-grid,
+  .showcase-grid,
+  .portfolio-gallery-grid,
+  .pricing-grid,
+  .testimonial-grid,
+  .story-grid,
+  .comparison-grid,
+  .value-grid,
+  .stats-grid,
+  .featured-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CTA card padding tighten on mobile */
+  .cta-card {
+    padding: 2.2rem 1.6rem;
+  }
+}
+
+/* =========================================================
+   SMALL PHONE (≤520px)
+========================================================= */
+
+@media (max-width: 520px) {
+  .nav { gap: 10px; }
+  .logo { font-size: 1.28rem; gap: 10px; }
+
+  .button-row { flex-direction: column; }
+  .btn-primary, .btn-secondary { width: 100%; }
+
+  .hero-stats,
+  .mini-stats { grid-template-columns: 1fr; }
+
+  .process-timeline { grid-template-columns: 1fr; }
+
+  .large-editorial-placeholder { min-height: 240px; }
+
+  .lead,
+  .section-copy,
+  .feature-card p,
+  .showcase-card p,
+  .pricing-card p,
+  .story-card p,
+  .faq-accordion p,
+  .testimonial-card p,
+  .cta-card p,
+  .sidebar-card p,
+  .comparison-card p,
+  .value-card p {
+    font-size: 0.95rem;
+  }
+
+  .moodboard-swatch {
+    min-height: 110px;
+    border-radius: 28px;
+  }
+
+  .moodboard-swatch span {
+    writing-mode: initial;
+    transform: none;
+  }
+}

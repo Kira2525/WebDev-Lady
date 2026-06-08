@@ -234,11 +234,36 @@ if (menuToggle && navMenu) {
    5. Active Navigation Link
 ========================================================= */
 
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
+function normalizeNavPageName(pathOrHref) {
+  if (!pathOrHref) return "";
+
+  const { pathname } = new URL(pathOrHref, window.location.href);
+  const trimmedPath = pathname.replace(/\/+$/, "");
+  const segments = trimmedPath.split("/").filter(Boolean);
+  const lastSegment = segments[segments.length - 1] || "";
+
+  if (!lastSegment) return "index.html";
+  if (!/\.[a-z0-9]+$/i.test(lastSegment)) return "";
+
+  return lastSegment.toLowerCase();
+}
+
+function getCurrentNavPage() {
+  const pageOverride = document.body?.dataset.navPage?.trim()?.toLowerCase() || "";
+
+  if (pageOverride === "none") return "";
+  if (pageOverride) return pageOverride;
+
+  const detectedPage = normalizeNavPageName(window.location.pathname);
+  return detectedPage || "index.html";
+}
+
+const currentPage = getCurrentNavPage();
 
 document.querySelectorAll(".nav-menu a").forEach((link) => {
-  const href = link.getAttribute("href");
-  const isActive = href === currentPage;
+  const href = link.getAttribute("href") || "";
+  const linkPage = normalizeNavPageName(href);
+  const isActive = Boolean(currentPage) && linkPage === currentPage;
 
   link.classList.toggle("active", isActive);
 

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | WorldView Global</title>
+  <meta
+    name="description"
+    content="Browse common client questions about WorldView Global services, timelines, data sources, reports, and consultations."
+  />
+  <meta name="theme-color" content="#071126" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <!-- Shared brand fonts and icon library -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Shared site styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body data-page="faq">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <!-- Shared animated background and Earth scene -->
+  <div class="space-scene" id="worldBackground" aria-hidden="true">
+    <div class="space-noise"></div>
+    <div class="stars"></div>
+    <div class="glow-orb glow-orb--left"></div>
+    <div class="earth-stage" id="earthStage">
+      <div class="earth" id="earth">
+        <div class="earth-image"></div>
+      </div>
+    </div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <main class="site-shell" id="main-content">
+    <!-- Shared site header and navigation -->
+    <header class="site-header reveal">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-worldview.svg" alt="WorldView Global globe logo" />
+        <span class="brand-copy">
+          <span class="brand-title">WORLDVIEW GLOBAL</span>
+          <span class="brand-tagline">Global Intelligence &amp; Location Insight</span>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <div class="nav-links">
+          <a class="page-link" data-page-link="home" href="index.html">Home</a>
+          <a class="page-link" data-page-link="about" href="about.html">About</a>
+          <a class="page-link" data-page-link="solutions" href="solutions.html">Solutions</a>
+          <a class="page-link" data-page-link="showcase" href="showcase.html">Showcase</a>
+          <a class="page-link" data-page-link="use-cases" href="use-cases.html">Use Cases</a>
+          <a class="page-link" data-page-link="faq" href="faq.html">FAQ</a>
+          <a class="page-link" data-page-link="pricing" href="pricing.html">Pricing</a>
+          <a class="page-link" data-page-link="contact" href="contact.html">Contact</a>
+        </div>
+      </nav>
+      <div class="nav-actions">
+        <a class="button button--primary button--sm" href="contact.html?intent=purchase&amp;plan=FAQ%20Consultation&amp;source=faq-nav">Book a Strategy Call</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu" data-nav-toggle>
+          <span class="nav-toggle-bar"></span>
+          <span class="sr-only">Open navigation</span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu" hidden data-mobile-menu>
+        <nav class="mobile-nav" aria-label="Mobile">
+          <a class="page-link" data-page-link="home" href="index.html">Home</a>
+          <a class="page-link" data-page-link="about" href="about.html">About</a>
+          <a class="page-link" data-page-link="solutions" href="solutions.html">Solutions</a>
+          <a class="page-link" data-page-link="showcase" href="showcase.html">Showcase</a>
+          <a class="page-link" data-page-link="use-cases" href="use-cases.html">Use Cases</a>
+          <a class="page-link" data-page-link="faq" href="faq.html">FAQ</a>
+          <a class="page-link" data-page-link="pricing" href="pricing.html">Pricing</a>
+          <a class="page-link" data-page-link="contact" href="contact.html">Contact</a>
+        </nav>
+        <a class="button button--primary button--sm" href="contact.html?intent=purchase&amp;plan=FAQ%20Consultation&amp;source=faq-mobile-nav">Book a Strategy Call</a>
+      </div>
+    </header>
+
+    <section class="hero reveal">
+      <article class="hero-card" data-tilt>
+        <div class="eyebrow"><span class="pulse"></span>Frequently Asked Questions</div>
+        <h1>
+          Answers for clients planning
+          <span class="gradient-text">their next move.</span>
+        </h1>
+        <p class="lead">
+          These are the questions teams most often ask about timelines, deliverables, consultations, and how our
+          location and market insight engagements work.
+        </p>
+      </article>
+      <aside class="stat-stack">
+        <div class="stat-card" data-tilt>
+          <strong>Reports</strong>
+          <span>Briefings are designed to be readable, premium, and immediately useful in internal discussions.</span>
+        </div>
+        <div class="stat-card" data-tilt>
+          <strong>Timelines</strong>
+          <span>Most focused engagements move quickly once the business question and scope are defined.</span>
+        </div>
+        <div class="stat-card" data-tilt>
+          <strong>Consultations</strong>
+          <span>Strategy calls help translate the findings into practical next steps for your team.</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section reveal">
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>What does a typical WorldView Global engagement include?</summary>
+          <div class="faq-content">Most engagements include a discovery step, a premium written briefing or report, and a follow-up consultation to review findings and next-step recommendations.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How long does a project usually take?</summary>
+          <div class="faq-content">Focused briefings can often be delivered within one to two weeks depending on complexity, while larger custom scopes may require a longer delivery window.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you work with specific industries only?</summary>
+          <div class="faq-content">No. We regularly support travel, SaaS, education, agencies, conferences, and mission-led organizations, but the frameworks are flexible enough for many premium growth and strategy questions.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What kind of questions are best suited for a strategy call?</summary>
+          <div class="faq-content">Strategy calls are ideal when you are comparing launch regions, reviewing an existing report, prioritizing audience opportunities, or pressure-testing a location decision with leadership in mind.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you tailor the report around one region or market?</summary>
+          <div class="faq-content">Yes. Many clients ask for a narrowly scoped engagement focused on one geography, corridor, city cluster, or audience segment rather than a broad global view.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you provide raw data files?</summary>
+          <div class="faq-content">Our primary deliverables are decision-ready summaries, frameworks, and advisory recommendations. If a project requires supporting materials or source notes, we can discuss that during scoping.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you support leadership presentations or internal meetings?</summary>
+          <div class="faq-content">Yes. We can structure engagements so the briefing is presentation-friendly and can participate in a follow-up session to answer questions with your internal team.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How do we get started?</summary>
+          <div class="faq-content">Start with a consultation request through the contact page. We will review your question, suggest the best-fit package or custom scope, and outline timing.</div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="panel cta-band">
+        <div>
+          <span class="section-label">Still Deciding?</span>
+          <h2>Bring your question to the team directly.</h2>
+          <p>If you are not sure which package fits, we can help shape the scope before any engagement begins.</p>
+        </div>
+        <div class="button-row">
+          <a class="button button--primary" href="contact.html?intent=contact&amp;plan=General%20Inquiry&amp;source=faq-cta">Contact the Team</a>
+          <a class="button button--secondary" href="pricing.html">View Service Packages</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shared site footer -->
+    <footer class="site-footer reveal">
+      <div class="footer-panel">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <a class="footer-brand" href="index.html">
+              <img src="assets/logo-worldview.svg" alt="WorldView Global globe logo" />
+              <span>WorldView Global</span>
+            </a>
+            <p class="footer-copy">Premium intelligence, travel insight, and location analytics for teams navigating global decisions with confidence.</p>
+            <p class="footer-meta">&copy; <span data-current-year>2026</span> WorldView Global. Global intelligence and location insight.</p>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Follow Market Insights</h3>
+            <div class="social-links">
+              <a href="#" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" aria-label="Twitter">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+              <a href="#" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 {
-  "name": "Abyssal Blue",
-  "short_name": "Abyssal Blue",
-  "description": "Guided ocean dives, marine wildlife encounters, and conservation-focused adventures from Miami's waterfront.",
+  "name": "Your Business Name",
+  "short_name": "Business",
+  "description": "Replace this description with your business, service, or brand description.",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#02111c",

@@ -1,0 +1,7 @@
+```txt
+# Update this placeholder domain before publishing.
+User-agent: *
+Allow: /
+
+Sitemap: https://yourdomain.com/sitemap.xml
+```

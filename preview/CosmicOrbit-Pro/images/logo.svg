@@ -1,0 +1,57 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="planetSurface" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(49 38) rotate(46.2) scale(57.8)">
+      <stop offset="0.02" stop-color="#F7FDFF"/>
+      <stop offset="0.26" stop-color="#8EEDFF"/>
+      <stop offset="0.62" stop-color="#2C7DDB"/>
+      <stop offset="1" stop-color="#07172C"/>
+    </radialGradient>
+    <radialGradient id="planetShadow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(82 86) rotate(-128.8) scale(60.5)">
+      <stop offset="0.07" stop-color="#07101E" stop-opacity="0"/>
+      <stop offset="0.72" stop-color="#081223" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#030813" stop-opacity="0.72"/>
+    </radialGradient>
+    <radialGradient id="atmosphereGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(64 64) rotate(90) scale(50)">
+      <stop offset="0.72" stop-color="#4CC7FF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#B5F2FF" stop-opacity="0.65"/>
+    </radialGradient>
+    <linearGradient id="ringFront" x1="19" y1="62" x2="109" y2="84" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B5F4FF" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#B5F4FF" stop-opacity="0.82"/>
+      <stop offset="0.55" stop-color="#7F8DFF" stop-opacity="0.72"/>
+      <stop offset="0.84" stop-color="#A3EAFF" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#B5F4FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ringBack" x1="28" y1="50" x2="101" y2="69" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#85E8FF" stop-opacity="0"/>
+      <stop offset="0.26" stop-color="#85E8FF" stop-opacity="0.32"/>
+      <stop offset="0.65" stop-color="#A088FF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#85E8FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="planetBlur" x="8" y="8" width="112" height="112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="9.5"/>
+    </filter>
+    <filter id="ringGlow" x="6" y="33" width="116" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+  </defs>
+
+  <g opacity="0.7" filter="url(#planetBlur)">
+    <circle cx="64" cy="64" r="35" fill="#5FE1FF"/>
+  </g>
+
+  <g opacity="0.58" filter="url(#ringGlow)">
+    <path d="M20 67C27 52 49 42 72 42C92 42 108 50 112 62" stroke="url(#ringBack)" stroke-width="5.4" stroke-linecap="round"/>
+  </g>
+
+  <circle cx="64" cy="64" r="34" fill="url(#planetSurface)"/>
+  <circle cx="64" cy="64" r="34" fill="url(#planetShadow)"/>
+  <circle cx="64" cy="64" r="36.2" stroke="url(#atmosphereGlow)" stroke-width="3"/>
+
+  <path d="M38 48.5C45.5 44 56 42.3 66.3 44.6C60.6 50.7 54.5 55.4 44.8 59.7C39.7 57.6 37.4 53.6 38 48.5Z" fill="#EAFDFF" fill-opacity="0.34"/>
+  <path d="M55 71.5C63.5 65.7 75.2 63.8 84.5 67.4C79 75.4 71.1 81 60.1 84.1C54.6 81.4 52.9 76.7 55 71.5Z" fill="#88D6FF" fill-opacity="0.23"/>
+  <path d="M29 72.8C40.4 52.7 70.8 45.8 97.5 55.7C104 58.1 108.8 61 112 64.7" stroke="url(#ringBack)" stroke-width="4.3" stroke-linecap="round"/>
+  <path d="M17 77.2C27.8 58.5 59.1 51.2 90.2 58.5C101.2 61 110 64.8 116 69.1" stroke="url(#ringFront)" stroke-width="6.8" stroke-linecap="round"/>
+  <circle cx="98" cy="44" r="3.8" fill="#F8FCFF"/>
+  <circle cx="98" cy="44" r="7.8" fill="#F8FCFF" fill-opacity="0.14"/>
+</svg>

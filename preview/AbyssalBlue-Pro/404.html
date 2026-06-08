@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="css/mobile.css">
 </head>
 
-<body>
+<body data-nav-page="none">
   <a class="skip-link" href="#mainContent">Skip to content</a>
 
   <div class="ocean-scene" id="oceanScene">
@@ -47,20 +47,24 @@
 
   <header class="site-header">
     <a href="index.html" class="logo" aria-label="Abyssal Blue Home">
-      <svg width="60" height="60" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="oceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#7cf7ff"/>
-            <stop offset="50%" stop-color="#00ffd5"/>
-            <stop offset="100%" stop-color="#087f9e"/>
-          </linearGradient>
-        </defs>
-        <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo)" stroke-width="5"/>
-        <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo)"/>
-        <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
-        <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
-      </svg>
-      <span>Abyssal Blue</span>
+      <span class="logo-icon" aria-hidden="true">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="oceanLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7cf7ff"/>
+              <stop offset="50%" stop-color="#00ffd5"/>
+              <stop offset="100%" stop-color="#087f9e"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="32" cy="32" r="23" fill="none" stroke="url(#oceanLogo)" stroke-width="5"/>
+          <path d="M21 33 C26 23 41 23 46 33 C40 42 27 42 21 33Z" fill="url(#oceanLogo)"/>
+          <circle cx="39" cy="30" r="2.8" fill="#02111c"/>
+          <path d="M12 33 L22 26 L22 40Z" fill="#00ffd5"/>
+        </svg>
+      </span>
+
+      <span class="logo-text">Abyssal Blue</span>
     </a>
 
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
@@ -81,49 +85,20 @@
     </nav>
   </header>
 
-  <main id="mainContent">
-    <section class="page-hero">
-      <p class="eyebrow">404 Error</p>
-      <h1>The Page Drifted Off Course.</h1>
-      <p>
-        The page you requested does not exist, may have moved, or may no longer be
-        part of the current site. Use the links below to get back to the reef.
+  <main class="thank-you-main" id="mainContent">
+    <section class="thank-you-card glass-card lost-at-sea-card">
+      <p class="lost-at-sea-badge">404 &#8226; LOST AT SEA</p>
+
+      <h1>Lost at Sea?</h1>
+
+      <p class="thank-you-text lost-at-sea-text">
+        This page seems to have disappeared beneath the waves. Return to the
+        homepage and continue your journey.
       </p>
-    </section>
 
-    <section class="contact-quick-grid">
-      <div class="contact-quick-card">
-        <span>Start Here</span>
-        <strong>Homepage</strong>
-        <p>Return to the homepage to see current departures, featured experiences, and ocean highlights.</p>
-        <a href="index.html">Go to Home</a>
-      </div>
-
-      <div class="contact-quick-card">
-        <span>Popular Path</span>
-        <strong>Booking Flow</strong>
-        <p>Jump into the booking page to compare packages, pick a date, and request your next dive.</p>
-        <a href="booking.html#dive-packages">View Dive Packages</a>
-      </div>
-
-      <div class="contact-quick-card">
-        <span>Need Context?</span>
-        <strong>FAQ</strong>
-        <p>Open the FAQ page for answers about safety, weather policies, equipment, and guest preparation.</p>
-        <a href="faq.html">Open FAQ</a>
-      </div>
-    </section>
-
-    <section class="cta-band home-final-cta">
-      <p class="eyebrow">Continue Browsing</p>
-      <h2>Everything important is still within reach.</h2>
-      <p>
-        Use the main navigation or head straight to the booking, gallery, wildlife,
-        contact, and pricing pages from this recovery screen.
-      </p>
-      <div class="hero-buttons center-buttons">
-        <a href="gallery.html" class="btn secondary-btn">View Gallery</a>
-        <a href="booking.html#dive-packages" class="btn primary-btn">Book a Dive</a>
+      <div class="thank-you-buttons">
+        <a href="index.html" class="btn primary-btn">Back to Home</a>
+        <a href="contact.html" class="btn secondary-btn">Contact Us</a>
       </div>
     </section>
   </main>

@@ -1,299 +1,458 @@
-const words = ["CREATE", "BUILD", "DESIGN", "LAUNCH", "GROW"];
+/* =========================================================
+   VELVETUI LITE — INTERACTION SCRIPT
+   This file controls the mobile navigation, sticky header,
+   FAQ behavior, smooth scrolling, reveal animations, and
+   animated canvas background.
+========================================================= */
 
-const VELVETUI_CONFIG = {
-  words,
-  colors: {
-    text: "rgba(255, 229, 239, 0.94)",
-    glow: "rgba(255, 116, 188, 0.92)",
-    innerGlow: "rgba(255, 87, 170, 0.17)",
-    outerGlow: "rgba(129, 77, 222, 0.09)"
-  },
-  shape: "diamond",
-  density: 170,
-  speed: 1,
-  font: '"Baskerville Old Face", "Palatino Linotype", Georgia, serif',
-  fontSizeMin: 13,
-  fontSizeMax: 21,
-  glow: 24,
-  interactive: true,
-  modes: {
-    hero: {
-      centerX: 0.73,
-      centerY: 0.48,
-      scale: 1.18,
-      densityMultiplier: 1,
-      speedMultiplier: 1,
-      alphaMultiplier: 1,
-      glowMultiplier: 1,
-      motionMultiplier: 1,
-      interactive: true
-    },
-    ambient: {
-      centerX: 0.84,
-      centerY: 0.3,
-      scale: 1.18,
-      densityMultiplier: 1,
-      speedMultiplier: 1,
-      alphaMultiplier: 1,
-      glowMultiplier: 1,
-      motionMultiplier: 1,
-      interactive: true
-    }
-  }
-};
+document.addEventListener("DOMContentLoaded", () => {
+  initMobileNavigation();
+  initStickyNavState();
+  initActiveNavState();
+  initFaqBehavior();
+  initSmoothAnchorLinks();
+  initScrollReveal();
+  initCanvasBackground();
+});
 
-(function () {
-  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+/* =========================================================
+   MOBILE NAVIGATION
+   Customers can edit nav labels in HTML without changing
+   this logic as long as the same classes and IDs remain.
+========================================================= */
 
-  function setupNavigation() {
-    const toggle = document.querySelector("[data-menu-toggle]");
-    const navLinks = document.getElementById("navLinks");
+function initMobileNavigation() {
+  const menuButton = document.querySelector(".menu-btn");
+  const navLinks = document.querySelector(".nav-links");
 
-    if (!toggle || !navLinks) {
-      return;
-    }
+  if (!menuButton || !navLinks) return;
 
-    function closeMenu() {
-      navLinks.classList.remove("active");
-      toggle.setAttribute("aria-expanded", "false");
-    }
+  const mobileNavQuery = window.matchMedia("(max-width: 768px)");
 
-    toggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("active");
-      toggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("click", (event) => {
-      if (!navLinks.classList.contains("active")) {
-        return;
-      }
-
-      if (!navLinks.contains(event.target) && !toggle.contains(event.target)) {
-        closeMenu();
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeMenu();
-      }
-    });
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 768) {
-        closeMenu();
-      }
-    });
+  function openNav() {
+    navLinks.classList.add("active");
+    menuButton.classList.add("is-open");
+    menuButton.setAttribute("aria-expanded", "true");
+    menuButton.setAttribute("aria-label", "Close navigation");
+    navLinks.setAttribute("aria-hidden", "false");
+    document.body.classList.add("nav-open");
   }
 
-  function setupHeroCanvas() {
-    const canvas = document.getElementById("heroCanvas");
+  function closeNav() {
+    navLinks.classList.remove("active");
+    menuButton.classList.remove("is-open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation");
+    navLinks.setAttribute("aria-hidden", mobileNavQuery.matches ? "true" : "false");
+    document.body.classList.remove("nav-open");
+  }
 
-    if (!canvas) {
-      return;
+  navLinks.setAttribute("aria-hidden", mobileNavQuery.matches ? "true" : "false");
+
+  menuButton.addEventListener("click", () => {
+    navLinks.classList.contains("active") ? closeNav() : openNav();
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeNav);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!menuButton.contains(event.target) && !navLinks.contains(event.target)) {
+      closeNav();
     }
+  });
 
-    const ctx = canvas.getContext("2d");
-
-    if (!ctx) {
-      return;
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeNav();
+      menuButton.focus();
     }
+  });
 
-    let width = 0;
-    let height = 0;
-    let points = [];
-    let time = 0;
-    let runtimeConfig = getRuntimeConfig();
-    const pointer = {
-      x: 0,
-      y: 0,
-      active: false
-    };
-
-    function getModeConfig() {
-      const modeKey = document.body.dataset.canvasMode === "hero" ? "hero" : "ambient";
-      return VELVETUI_CONFIG.modes[modeKey];
+  const handleViewportChange = (event) => {
+    if (!event.matches) {
+      closeNav();
+      navLinks.setAttribute("aria-hidden", "false");
+    } else {
+      navLinks.setAttribute("aria-hidden", navLinks.classList.contains("active") ? "false" : "true");
     }
+  };
 
-    function getRuntimeConfig() {
-      const modeConfig = getModeConfig();
-      const mobileReduction = window.innerWidth < 768 ? 0.76 : 1;
-      const motionReduction = reducedMotionQuery.matches ? 0.58 : 1;
-      const density = Math.max(
-        18,
-        Math.round(
-          VELVETUI_CONFIG.density *
-          modeConfig.densityMultiplier *
-          mobileReduction *
-          motionReduction
-        )
-      );
-      const speed = VELVETUI_CONFIG.speed * modeConfig.speedMultiplier * (reducedMotionQuery.matches ? 0.72 : 1);
-      const textItems = Array.isArray(VELVETUI_CONFIG.words)
-        ? VELVETUI_CONFIG.words.filter(Boolean)
-        : [VELVETUI_CONFIG.words];
+  if (typeof mobileNavQuery.addEventListener === "function") {
+    mobileNavQuery.addEventListener("change", handleViewportChange);
+  } else if (typeof mobileNavQuery.addListener === "function") {
+    mobileNavQuery.addListener(handleViewportChange);
+  }
+}
+
+/* =========================================================
+   STICKY HEADER
+   Adds a lightweight scroll state so the header feels more
+   polished without changing its height.
+========================================================= */
+
+function initStickyNavState() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+
+  const update = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 24);
+  };
+
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+}
+
+/* =========================================================
+   ACTIVE NAV STATE
+   Keeps the current one-page section highlighted in the
+   primary navigation while scrolling or jumping by anchor.
+========================================================= */
+
+function initActiveNavState() {
+  const rootStyle = getComputedStyle(document.documentElement);
+
+  const getNavOffset = () => {
+    const cssOffset = parseFloat(rootStyle.getPropertyValue("--nav-offset"));
+    if (Number.isFinite(cssOffset)) return cssOffset;
+
+    const header = document.querySelector(".site-header");
+    return header ? header.getBoundingClientRect().height + 18 : 140;
+  };
+
+  const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+  if (!navLinks.length) return;
+
+  const sections = navLinks
+    .map((link) => {
+      const targetId = link.getAttribute("href");
+      if (!targetId) return null;
 
       return {
-        ...VELVETUI_CONFIG,
-        density,
-        speed,
-        interactive: modeConfig.interactive && !reducedMotionQuery.matches,
-        textItems: textItems.length ? textItems : ["CREATE"],
-        modeConfig
+        link,
+        targetId,
+        section: document.querySelector(targetId)
       };
-    }
+    })
+    .filter((item) => item && item.section);
 
-    function resizeCanvas() {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-      runtimeConfig = getRuntimeConfig();
-      createShapePoints();
-    }
+  if (!sections.length) return;
 
-    function diamondFormula(t) {
-      const cos = Math.cos(t);
-      const sin = Math.sin(t);
-      const normalizer = Math.max(Math.abs(cos) + Math.abs(sin), 0.001);
+  function setActiveLink(activeId) {
+    sections.forEach(({ link, targetId }) => {
+      const isActive = targetId === activeId;
+      link.classList.toggle("active", isActive);
 
-      return {
-        x: (16 * cos) / normalizer,
-        y: (16 * sin) / normalizer
-      };
-    }
-
-    function createShapePoints() {
-      points = [];
-
-      const { centerX, centerY, scale, alphaMultiplier } = runtimeConfig.modeConfig;
-      const shapeScale = (Math.min(width, height) / 38) * scale;
-      const anchorX = width * centerX;
-      const anchorY = height * centerY;
-      const baseSize = runtimeConfig.fontSizeMin;
-      const sizeRange = Math.max(0, runtimeConfig.fontSizeMax - runtimeConfig.fontSizeMin);
-
-      for (let i = 0; i < runtimeConfig.density; i += 1) {
-        const t = (Math.PI * 2 * i) / runtimeConfig.density;
-        const shapePoint = diamondFormula(t);
-
-        points.push({
-          baseX: anchorX + shapePoint.x * shapeScale,
-          baseY: anchorY - shapePoint.y * shapeScale,
-          size: baseSize + Math.random() * sizeRange,
-          speed: (0.45 + Math.random() * 0.7) * runtimeConfig.speed,
-          offset: Math.random() * Math.PI * 2,
-          alpha: (0.36 + Math.random() * 0.48) * alphaMultiplier,
-          depth: 0.5 + Math.random() * 0.8,
-          drift: 0.7 + Math.random() * 0.9
-        });
+      if (isActive) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
       }
+    });
+  }
+
+  function getClosestSectionId() {
+    const navOffset = getNavOffset();
+    let activeId = sections[0].targetId;
+
+    sections.forEach(({ section, targetId }) => {
+      const top = section.getBoundingClientRect().top;
+      if (top - navOffset <= 0) {
+        activeId = targetId;
+      }
+    });
+
+    return activeId;
+  }
+
+  const startingHash = window.location.hash && document.querySelector(window.location.hash)
+    ? window.location.hash
+    : getClosestSectionId();
+
+  setActiveLink(startingHash);
+
+  window.addEventListener("scroll", () => {
+    setActiveLink(getClosestSectionId());
+  }, { passive: true });
+
+  window.addEventListener("hashchange", () => {
+    if (window.location.hash && document.querySelector(window.location.hash)) {
+      setActiveLink(window.location.hash);
     }
+  });
+}
 
-    function drawBackgroundGlow() {
-      const { centerX, centerY, scale, glowMultiplier } = runtimeConfig.modeConfig;
-      const radius = Math.min(width, height) * (0.26 * scale + 0.14);
-      const gradient = ctx.createRadialGradient(
-        width * centerX,
-        height * centerY,
-        runtimeConfig.glow * glowMultiplier,
-        width * centerX,
-        height * centerY,
-        radius
-      );
+/* =========================================================
+   FAQ ACCORDION
+   Keeps one FAQ item open at a time on the one-page homepage.
+========================================================= */
 
-      gradient.addColorStop(0, runtimeConfig.colors.innerGlow);
-      gradient.addColorStop(0.42, runtimeConfig.colors.outerGlow);
-      gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+function initFaqBehavior() {
+  const faqItems = document.querySelectorAll(".faq-accordion details");
+  if (!faqItems.length) return;
+
+  faqItems.forEach((item) => {
+    item.addEventListener("toggle", () => {
+      if (!item.open) return;
+
+      faqItems.forEach((other) => {
+        if (other !== item) other.removeAttribute("open");
+      });
+    });
+  });
+}
+
+/* =========================================================
+   SAME-PAGE SMOOTH SCROLL
+   Only intercepts pure hash links like #contact. Links to
+   index.html#contact still work normally from other pages.
+========================================================= */
+
+function initSmoothAnchorLinks() {
+  const samePageLinks = document.querySelectorAll('a[href^="#"]');
+  if (!samePageLinks.length) return;
+
+  const getNavOffset = () => {
+    const cssOffset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--nav-offset"));
+    if (Number.isFinite(cssOffset)) return cssOffset;
+
+    const header = document.querySelector(".site-header");
+    return header ? header.getBoundingClientRect().height + 18 : 140;
+  };
+
+  samePageLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.getAttribute("href");
+      if (!targetId || targetId === "#") return;
+
+      const target = document.querySelector(targetId);
+      if (!target) return;
+
+      event.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - getNavOffset();
+      window.scrollTo({ top, behavior: "smooth" });
+      history.replaceState(null, "", targetId);
+    });
+  });
+}
+
+/* =========================================================
+   SCROLL REVEAL
+   Adds gentle entrance motion to section content. Reduced
+   motion users see everything immediately.
+========================================================= */
+
+function initScrollReveal() {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const items = document.querySelectorAll(
+    ".section-heading, .hero-copy, .hero-visual, .feature-card, .process-step, .showcase-card, .pricing-card, .form-card, .sidebar-card, .thanks-card, .error-card"
+  );
+
+  if (!items.length) return;
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    items.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+
+  items.forEach((element) => element.classList.add("reveal-item"));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
+
+  items.forEach((element) => observer.observe(element));
+}
+
+/* =========================================================
+   PREMIUM CANVAS BACKGROUND
+   This is the shared animated background system that helps
+   Lite visually match Pro while staying framework-free.
+========================================================= */
+
+function initCanvasBackground() {
+  const canvas = document.querySelector("#heroCanvas");
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d", { alpha: false });
+  if (!ctx) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  let width = 0;
+  let height = 0;
+  let pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+  let time = 0;
+  let animationFrame = 0;
+
+  const pointer = {
+    x: window.innerWidth * 0.5,
+    y: window.innerHeight * 0.35,
+    targetX: window.innerWidth * 0.5,
+    targetY: window.innerHeight * 0.35
+  };
+
+  const diamonds = Array.from({ length: 38 }, () => ({
+    x: Math.random(),
+    y: Math.random(),
+    size: 4 + Math.random() * 14,
+    speed: 0.06 + Math.random() * 0.22,
+    drift: -0.12 + Math.random() * 0.24,
+    opacity: 0.06 + Math.random() * 0.18,
+    rotation: Math.random() * Math.PI
+  }));
+
+  const sketchLines = Array.from({ length: 28 }, () => ({
+    x: Math.random(),
+    y: Math.random(),
+    length: 80 + Math.random() * 260,
+    opacity: 0.04 + Math.random() * 0.07,
+    angle: [-0.7, 0, 0.7, 1.57, 2.35][Math.floor(Math.random() * 5)]
+  }));
+
+  const orbs = [
+    { x: 0.15, y: 0.28, r: 0.52, color: "255,55,130", alpha: 0.38 },
+    { x: 0.82, y: 0.18, r: 0.48, color: "180,155,255", alpha: 0.28 },
+    { x: 0.50, y: 0.72, r: 0.44, color: "244,180,100", alpha: 0.14 },
+    { x: 0.25, y: 0.78, r: 0.36, color: "120,80,220", alpha: 0.18 }
+  ];
+
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.floor(width * pixelRatio);
+    canvas.height = Math.floor(height * pixelRatio);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+  }
+
+  function drawBase() {
+    const gradient = ctx.createLinearGradient(0, 0, width * 0.6, height);
+    gradient.addColorStop(0, "#0e0218");
+    gradient.addColorStop(0.32, "#22083a");
+    gradient.addColorStop(0.65, "#190530");
+    gradient.addColorStop(1, "#050008");
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, width, height);
+  }
+
+  function drawOrbs() {
+    orbs.forEach((orb, index) => {
+      const orbitalTime = time * 0.0003 + index * 1.4;
+      const centerX = (orb.x + Math.sin(orbitalTime) * 0.08) * width;
+      const centerY = (orb.y + Math.cos(orbitalTime * 0.7) * 0.06) * height;
+      const radius = orb.r * Math.max(width, height);
+      const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius);
+
+      gradient.addColorStop(0, `rgba(${orb.color},${orb.alpha})`);
+      gradient.addColorStop(0.4, `rgba(${orb.color},${orb.alpha * 0.35})`);
+      gradient.addColorStop(1, `rgba(${orb.color},0)`);
 
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height);
-    }
-
-    function applyPointerRepulsion(x, y) {
-      if (!runtimeConfig.interactive || !pointer.active) {
-        return { x, y };
-      }
-
-      const dx = x - pointer.x;
-      const dy = y - pointer.y;
-      const distance = Math.hypot(dx, dy);
-      const radius = Math.max(runtimeConfig.fontSizeMax * 7, Math.min(width, height) * 0.14);
-
-      if (distance === 0 || distance > radius) {
-        return { x, y };
-      }
-
-      const force = (1 - distance / radius) * runtimeConfig.fontSizeMax * 1.35;
-      const angle = Math.atan2(dy, dx);
-
-      return {
-        x: x + Math.cos(angle) * force,
-        y: y + Math.sin(angle) * force
-      };
-    }
-
-    function getTextForPoint(index) {
-      return runtimeConfig.textItems[index % runtimeConfig.textItems.length];
-    }
-
-    function drawShapeText() {
-      ctx.clearRect(0, 0, width, height);
-      drawBackgroundGlow();
-
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.globalCompositeOperation = "screen";
-
-      const motionFactor = runtimeConfig.modeConfig.motionMultiplier;
-      points.forEach((point, index) => {
-        const wave = Math.sin(time * point.speed + point.offset);
-        const orbit = Math.cos(time * point.speed * 0.72 + point.offset);
-        const pulse = Math.sin(time * 0.6 + point.offset + point.depth);
-        const drift = runtimeConfig.fontSizeMin * 0.44 * motionFactor * point.drift;
-        const baseX = point.baseX + wave * drift;
-        const baseY = point.baseY + orbit * drift * 0.72;
-        const displaced = applyPointerRepulsion(baseX, baseY);
-        const size = point.size * (0.78 + (pulse + 1) * 0.18);
-
-        ctx.font = `700 ${size}px ${runtimeConfig.font}`;
-        ctx.shadowBlur = runtimeConfig.glow * runtimeConfig.modeConfig.glowMultiplier * point.depth;
-        ctx.shadowColor = runtimeConfig.colors.glow;
-        ctx.fillStyle = runtimeConfig.colors.text.replace(/0\.\d+\)$/, `${Math.min(point.alpha, 0.96)})`);
-        ctx.fillText(getTextForPoint(index), displaced.x, displaced.y);
-      });
-
-      ctx.globalCompositeOperation = "source-over";
-      time += 0.014 * runtimeConfig.speed;
-      window.requestAnimationFrame(drawShapeText);
-    }
-
-    function handlePointerMove(event) {
-      pointer.x = event.clientX;
-      pointer.y = event.clientY;
-      pointer.active = true;
-    }
-
-    function handlePointerLeave() {
-      pointer.active = false;
-    }
-
-    window.addEventListener("resize", resizeCanvas);
-    if (typeof reducedMotionQuery.addEventListener === "function") {
-      reducedMotionQuery.addEventListener("change", resizeCanvas);
-    }
-
-    if (runtimeConfig.interactive) {
-      window.addEventListener("pointermove", handlePointerMove);
-      window.addEventListener("pointerleave", handlePointerLeave);
-    }
-
-    resizeCanvas();
-    drawShapeText();
+    });
   }
 
-  setupNavigation();
-  setupHeroCanvas();
-})();
+  function drawFabricLines() {
+    ctx.save();
+    ctx.globalAlpha = 0.16;
+    for (let line = -height; line < width; line += 26) {
+      ctx.beginPath();
+      ctx.moveTo(line, 0);
+      ctx.lineTo(line + height, height);
+      ctx.strokeStyle = "rgba(255,255,255,0.04)";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawSketchLines() {
+    ctx.save();
+    sketchLines.forEach((line, index) => {
+      const wobble = Math.sin(time * 0.00022 + index) * 18;
+      const x = line.x * width + wobble;
+      const y = line.y * height;
+      const endX = x + Math.cos(line.angle) * line.length;
+      const endY = y + Math.sin(line.angle) * line.length;
+
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(endX, endY);
+      ctx.strokeStyle = `rgba(255,255,255,${line.opacity})`;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    });
+    ctx.restore();
+  }
+
+  function drawDiamonds() {
+    ctx.save();
+    diamonds.forEach((diamond, index) => {
+      const driftX = Math.sin(time * 0.00035 * diamond.speed + index) * 18;
+      const driftY = Math.cos(time * 0.00028 * diamond.speed + index) * 16;
+      const x = diamond.x * width + driftX + (pointer.x - width * 0.5) * diamond.drift * 0.03;
+      const y = diamond.y * height + driftY + (pointer.y - height * 0.35) * diamond.drift * 0.03;
+      const size = diamond.size;
+
+      ctx.translate(x, y);
+      ctx.rotate(diamond.rotation + time * 0.0002 * diamond.speed);
+      ctx.fillStyle = `rgba(255,255,255,${diamond.opacity})`;
+      ctx.strokeStyle = "rgba(255,200,225,0.12)";
+      ctx.lineWidth = 1;
+
+      ctx.beginPath();
+      ctx.moveTo(0, -size);
+      ctx.lineTo(size * 0.72, 0);
+      ctx.lineTo(0, size);
+      ctx.lineTo(-size * 0.72, 0);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+    });
+    ctx.restore();
+  }
+
+  function render() {
+    drawBase();
+    drawOrbs();
+    drawFabricLines();
+    drawSketchLines();
+    drawDiamonds();
+
+    if (!reduceMotion) {
+      pointer.x += (pointer.targetX - pointer.x) * 0.08;
+      pointer.y += (pointer.targetY - pointer.y) * 0.08;
+    }
+
+    time += 16;
+    animationFrame = window.requestAnimationFrame(render);
+  }
+
+  function handlePointerMove(event) {
+    pointer.targetX = event.clientX;
+    pointer.targetY = event.clientY;
+  }
+
+  resize();
+  render();
+
+  window.addEventListener("resize", resize, { passive: true });
+
+  if (!reduceMotion) {
+    window.addEventListener("pointermove", handlePointerMove, { passive: true });
+  }
+
+  window.addEventListener("beforeunload", () => {
+    if (animationFrame) window.cancelAnimationFrame(animationFrame);
+  });
+}

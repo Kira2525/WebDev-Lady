@@ -1,0 +1,166 @@
+# WorldView Global Pro Commercial Template License
+
+Copyright © 2026 WorldView Global Pro
+
+All Rights Reserved.
+
+---
+
+## 1. License Grant
+
+Upon valid purchase, the buyer is granted a non-exclusive, non-transferable, revocable license to use, modify, and publish the WorldView Global Pro template for one completed website project.
+
+One license purchase equals one final website deployment.
+
+---
+
+## 2. Permitted Use
+
+The buyer may:
+
+* Customize the template for personal, business, educational, or commercial use
+* Modify colors, branding, content, layouts, images, and styling
+* Publish one completed website using the template
+* Deliver one completed website to a single client
+* Use the template on a production website after customization
+
+All ownership of the finished website content created by the buyer remains with the buyer or their client.
+
+---
+
+## 3. Restrictions
+
+The buyer may not:
+
+* Resell the template source files
+* Redistribute the template source files
+* Share the template with third parties
+* Sublicense the template
+* Bundle the template with another product for resale
+* Offer the template as a starter kit, website kit, theme, UI kit, framework, or competing template product
+* Upload the editable source files to public repositories or file-sharing services
+* Claim authorship of the original template design, structure, or source package
+
+The template must be substantially incorporated into a completed website project before distribution to an end client.
+
+---
+
+## 4. Single-Use License
+
+Each purchase authorizes one final website project.
+
+Examples:
+
+### Allowed
+
+* One business website
+* One nonprofit website
+* One personal website
+* One client website
+
+### Not Allowed
+
+* Multiple client websites from a single purchase
+* Multiple business websites from a single purchase
+* Repeated commercial deployment without additional licenses
+
+Each additional project requires an additional license purchase.
+
+---
+
+## 5. Extended and Multi-Use Rights
+
+An additional or extended license is required for:
+
+* Multiple client deployments
+* Agency-wide usage
+* Internal template libraries
+* White-label website programs
+* SaaS products
+* Commercial website reselling systems
+* Any use beyond a single completed website project
+
+---
+
+## 6. Client Work
+
+A buyer may customize and deliver one completed website to one paying client.
+
+The client may operate and maintain the completed website.
+
+The client may not extract, redistribute, resell, or reuse the template source package for additional projects unless a separate license has been purchased.
+
+---
+
+## 7. Third-Party Services
+
+WorldView Global Pro may be connected to third-party services including, but not limited to:
+
+* Netlify
+* Vercel
+* Cloudflare
+* GitHub
+* Formspree
+* Getform
+* Analytics platforms
+* Email providers
+
+All third-party services are governed by their own terms, pricing, and policies.
+
+The template license does not grant rights to any third-party service.
+
+---
+
+## 8. Updates and Support
+
+Any updates, documentation, or support are provided solely at the discretion of the seller unless otherwise stated in the product listing.
+
+Customization, integration, deployment assistance, and consulting services are not included unless separately agreed upon in writing.
+
+---
+
+## 9. No Warranty
+
+The template is provided "AS IS" without warranty of any kind, express or implied.
+
+This includes, but is not limited to:
+
+* Merchantability
+* Fitness for a particular purpose
+* Non-infringement
+* Compatibility with third-party services
+* Uninterrupted operation
+
+The buyer assumes all risk associated with use of the template.
+
+---
+
+## 10. Limitation of Liability
+
+In no event shall the author, creator, or seller be liable for any claim, damages, losses, liabilities, costs, or expenses arising from:
+
+* Use of the template
+* Inability to use the template
+* Data loss
+* Business interruption
+* Third-party service failures
+* Hosting issues
+* Deployment errors
+
+Liability shall be limited to the amount paid for the template.
+
+---
+
+## 11. Intellectual Property
+
+All intellectual property rights in the original WorldView Global Pro template, including design structure, source code, documentation, branding assets included with the template, and supporting materials, remain the property of the author unless otherwise stated.
+
+This license grants usage rights only and does not transfer ownership of the original template.
+
+---
+
+## 12. Acceptance
+
+By downloading, installing, modifying, publishing, or otherwise using WorldView Global Pro, the buyer acknowledges and agrees to be bound by the terms of this license.
+
+If the buyer does not agree to these terms, they must not use the template.

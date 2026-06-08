@@ -1,26 +1,18 @@
-{
-  "name": "CosmicOrbit Lite",
-  "short_name": "OrbitLite",
-  "description": "Premium one-page Three.js HTML template for SaaS and software brands.",
-  "start_url": "./index.html",
+﻿{
+  "name": "Cosmic Orbit",
+  "short_name": "Cosmic Orbit",
+  "description": "Observatory and stargazing website with premium cosmic styling.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#02030a",
-  "theme_color": "#02030a",
+  "background_color": "#04111f",
+  "theme_color": "#04111f",
   "icons": [
     {
-      "src": "assets/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
+      "src": "images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ]
 }
+

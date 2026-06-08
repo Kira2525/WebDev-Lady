@@ -1,92 +1,219 @@
-# Form Setup Guide
+# Abyssal Blue Pro Form Setup Guide
 
 ## Important
 
-The included forms are demonstration forms intended for template previews.
+The included booking and contact forms are demonstration forms intended for template previews.
 
-No submissions will be sent unless a form service or backend is connected.
+By default, no form submissions are stored, emailed, or processed until you connect a form service or custom backend.
+
+## Included Forms
+
+Abyssal Blue Pro includes two forms:
+
+```txt
+booking.html
+contact.html
+```
+
+By default, both forms redirect visitors to:
+
+```txt
+thank-you.html
+```
+
+This allows the template to function immediately on any static hosting platform.
 
 ## Current Form Behavior
 
-The included forms are demo-only by default.
+The forms are configured for demonstration purposes.
 
-- `booking.html` contains the booking form
-- `contact.html` contains the contact form
+Current flow:
 
-Both currently redirect to `thank-you.html` for preview purposes.
+1. Visitor completes the form.
+2. Client-side validation runs.
+3. Form type is stored in session storage.
+4. Visitor is redirected to:
 
-## Connecting A Live Form Service
+```txt
+thank-you.html?form=booking
+```
 
-Update the `action` attribute on each form when you connect a live service or backend.
+or
 
-Current demo form files:
+```txt
+thank-you.html?form=contact
+```
 
-- `booking.html`
-- `contact.html`
+5. The thank-you page displays the appropriate confirmation message.
+
+## JavaScript Integration
+
+Form behavior is managed by:
+
+```txt
+js/main.js
+```
+
+The script looks for forms using:
+
+```html
+data-form-type
+```
+
+If you customize the forms, ensure these attributes remain consistent unless you also update the JavaScript.
 
 ## Recommended Form Services
 
-Popular options include:
+Abyssal Blue Pro works well with:
 
-- Formspree
-- Netlify Forms
-- EmailJS
-- Custom backend solutions
+* Formspree
+* Netlify Forms
+* EmailJS
+* Getform
+* Basin
+* Custom Backend Solutions
 
-Choose the option that best fits your hosting environment and technical requirements.
+Choose the option that best matches your hosting environment and workflow.
 
-## How The Thank-You Flow Works
+## Option 1: Formspree
 
-`js/main.js` looks for forms with `data-form-type`.
+### Step 1
 
-When the form action points to `thank-you.html`, the script:
+Create a Formspree form and obtain your endpoint URL.
 
-1. Validates the form.
-2. Stores the form type in session storage.
-3. Redirects to `thank-you.html?form=booking` or `thank-you.html?form=contact`.
-4. Updates the thank-you page copy based on the form type.
+### Step 2
 
-## Formspree
+Replace the form action with your endpoint:
 
-1. Create a form endpoint in Formspree.
-2. Replace the form `action` with your Formspree URL.
-3. Set `method="POST"` on the form if needed.
-4. Remove or update any demo disclaimer text.
-5. Submit a test entry.
+```html
+<form action="https://formspree.io/f/your-id" method="POST">
+```
 
-## Netlify Forms
+### Step 3
 
-1. Add `name` and `data-netlify="true"` to the form.
-2. Add a hidden input like `form-name` if Netlify requires it.
-3. Deploy the site to Netlify.
-4. Replace the demo `action` if you prefer a custom success page setup.
-5. Test a live submission from the deployed site.
+Submit a test inquiry and verify delivery.
 
-## EmailJS
+### Step 4
 
-1. Create an EmailJS service, template, and public key.
-2. Replace the demo redirect logic with EmailJS submission logic in `js/main.js`.
-3. Keep validation in place.
-4. Show a success message or redirect only after EmailJS confirms success.
-5. Test successful and failed requests.
+Adjust the thank-you page flow if desired.
 
-## Custom Backend
+## Option 2: Netlify Forms
 
-1. Point the form `action` to your backend route.
-2. Add the correct `method`.
-3. Make sure field names match your server-side handler.
-4. Update success and error behavior in `js/main.js` if needed.
-5. Test validation, success, and failure responses.
-6. Verify CSRF protection, spam prevention, and server-side validation where appropriate.
+### Step 1
 
-## Final Checklist
+Update the form tag:
+
+```html
+<form
+  name="booking"
+  method="POST"
+  data-netlify="true"
+>
+```
+
+### Step 2
+
+Add the hidden form-name field:
+
+```html
+<input
+  type="hidden"
+  name="form-name"
+  value="booking"
+/>
+```
+
+### Step 3
+
+Deploy the site to Netlify.
+
+### Step 4
+
+Verify submissions appear in the Netlify dashboard.
+
+## Option 3: EmailJS
+
+### Step 1
+
+Create:
+
+* EmailJS Service
+* Email Template
+* Public Key
+
+### Step 2
+
+Update:
+
+```txt
+js/main.js
+```
+
+to submit through EmailJS.
+
+### Step 3
+
+Only display a success message or redirect after EmailJS confirms a successful submission.
+
+### Step 4
+
+Test successful and failed submissions.
+
+## Option 4: Custom Backend
+
+### Step 1
+
+Replace the form action:
+
+```html
+<form action="/api/contact" method="POST">
+```
+
+### Step 2
+
+Ensure field names match your backend handler.
+
+### Step 3
+
+Process submissions server-side.
+
+### Step 4
+
+Return success and error responses appropriately.
+
+### Step 5
+
+Implement:
+
+* Validation
+* Spam protection
+* CSRF protection
+* Rate limiting
+
+where applicable.
+
+## Updating The Thank-You Page
+
+The included:
+
+```txt
+thank-you.html
+```
+
+page supports both booking and contact inquiries.
+
+You may:
+
+* Keep the existing behavior
+* Customize the messaging
+* Create separate success pages
+* Redirect users elsewhere
+
+## Testing Checklist
 
 Before launching:
 
-- Verify form actions.
-- Verify field names.
-- Verify email delivery.
-- Verify success page behavior.
-- Verify mobile form usability.
-- Verify spam protection.
-- Test multiple submissions.
+* Verify form actions
+* Verify field names
+* Verify required fields
+* Verify email

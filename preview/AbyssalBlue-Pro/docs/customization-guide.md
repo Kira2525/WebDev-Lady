@@ -1,155 +1,207 @@
-# Customization Guide
+# Abyssal Blue Pro Customization Guide
+
+Thank you for purchasing Abyssal Blue Pro.
+
+This guide covers the most common customizations you'll make before launching the template for a real business.
 
 ## Quick Start
 
-1. Replace your logo in `images/logo.svg`.
-2. Replace demo images in `images/`.
-3. Update business name, contact details, hours, and address.
-4. Update pricing and package details.
-5. Replace placeholder URLs such as `https://example.com`.
-6. Connect forms to your preferred form service.
-7. Test the site on desktop, tablet, and mobile.
-8. Upload the template to your hosting provider.
+1. Replace the demo business name throughout the template.
+2. Replace logo, favicon, and branding assets.
+3. Replace demo photography and gallery images.
+4. Update contact information, hours, and location details.
+5. Update pricing and package information.
+6. Replace placeholder URLs with your live domain.
+7. Configure the booking and contact forms.
+8. Test desktop, tablet, and mobile layouts.
+9. Deploy to your preferred hosting provider.
 
-## Template Pages
+## Included Pages
 
-The template uses root-level HTML files:
+Abyssal Blue Pro includes the following pages:
 
-- `index.html`
-- `about.html`
-- `wildlife.html`
-- `gallery.html`
-- `booking.html`
-- `contact.html`
-- `pricing.html`
-- `faq.html`
-- `thank-you.html`
-- `404.html`
+```txt
+index.html
+about.html
+wildlife.html
+gallery.html
+booking.html
+contact.html
+pricing.html
+faq.html
+thank-you.html
+404.html
+```
 
-If you rename or remove a page, update the navigation on every HTML file.
+If you rename, remove, or add pages, update navigation links across all HTML files.
 
-## CSS Files
+## Branding
 
-- `css/styles.css` for shared styling and desktop-first layout
-- `css/tablet.css` for tablet layout overrides
-- `css/mobile.css` for mobile layout overrides
+Replace:
 
-## JavaScript File
+* Business name
+* Logo
+* Favicon
+* Contact information
+* Social media links
 
-- `js/main.js` for the mobile menu, active nav state, animated background, hero slider, gallery filtering, gallery lightbox, booking package selection, and form behavior
+Check:
 
-## Colors
-
-Change the theme colors in the `:root` section near the top of `css/styles.css`.
-
-Key variables include:
-
-- `--bg-deep`
-- `--bg-mid`
-- `--bg-blue`
-- `--accent`
-- `--accent-2`
-- `--white`
-- `--text-soft`
-- `--text-muted`
-
-Start with the variables before changing individual component rules.
+```txt
+index.html
+about.html
+wildlife.html
+gallery.html
+booking.html
+contact.html
+pricing.html
+faq.html
+thank-you.html
+404.html
+```
 
 ## Navigation
 
-The main navigation is hard-coded in each HTML file. When you update menu labels or links, repeat the same change on every page so the site stays consistent.
+Navigation is duplicated across multiple pages for static-hosting compatibility.
+
+If you modify:
+
+* Page names
+* Navigation labels
+* URLs
+
+apply the same changes across every HTML file.
 
 ## Footer
 
-Footer content appears on every page.
+The footer appears throughout the template.
 
 Update:
 
-- Business name
-- Footer description
-- Copyright text
-- Social media links
-- Footer navigation links
-- Contact details, if shown
+* Business name
+* Copyright text
+* Footer description
+* Social media links
+* Footer navigation
+* Contact information
 
-Make the same footer changes across all HTML files so the site stays consistent.
+Keep footer content consistent across all pages.
 
 ## Social Media Links
 
-Footer social media links use Font Awesome icons.
+Default social icons use Font Awesome.
 
-Replace the placeholder `#` values with your real social media URLs.
+Replace placeholder links with your own:
 
-Supported icons include:
+* Facebook
+* Instagram
+* TikTok
+* YouTube
+* X (Twitter)
 
-- Facebook
-- Instagram
-- TikTok
-- YouTube
-- X (Twitter)
+Update these links on every page where the footer appears.
 
-The social icon HTML is located in the footer section of each HTML page.
+## Images & Photography
 
-Social icon styling is controlled in:
+Replace all demo imagery with your own photography.
 
-`css/styles.css`
+Recommended image types:
 
-Look for:
+* Hero photography
+* Underwater photography
+* Marine wildlife photography
+* Destination photography
+* Gallery images
 
-`/* Footer Social Media */`
+When replacing images:
 
-## Pricing And Packages
+* Keep similar aspect ratios
+* Compress large files before uploading
+* Update image alt text
+* Verify layouts on mobile devices
 
-Package content appears in two places:
+## Pricing & Packages
 
-- `pricing.html`
-- `booking.html`
+Package information appears in:
 
-Keep the package names identical in both files. If you add, remove, or rename a package, update:
+```txt
+pricing.html
+booking.html
+```
 
-- Pricing cards
-- Booking package cards
-- The booking form `<select name="package">`
-- Any package-specific CTA link text
+Keep package names consistent between both pages.
 
-## SEO Placeholder URLs
+When updating packages, review:
 
-Each page includes placeholder values like `https://example.com/...`.
+* Pricing cards
+* Booking cards
+* Package descriptions
+* Booking form options
+* CTA buttons
+
+## Contact & Booking Forms
+
+Forms are included in:
+
+```txt
+booking.html
+contact.html
+```
+
+By default, forms redirect to:
+
+```txt
+thank-you.html
+```
+
+If you require real submissions, connect the forms to:
+
+* Netlify Forms
+* Formspree
+* Getform
+* Custom backend
+
+See the Form Setup Guide for details.
+
+## SEO Setup
 
 Before launch, update:
 
-- `<title>`
-- `meta name="description"`
-- `link rel="canonical"`
-- Open Graph tags
-- Twitter tags
-- `robots.txt`
-- `sitemap.xml`
+* Page titles
+* Meta descriptions
+* Canonical URLs
+* Open Graph tags
+* Twitter card tags
 
-## Images And Branding
+Also update:
 
-- Replace images in `images/`
-- Update the business name in headers and footers
-- Replace `images/logo.svg` if needed
-- Keep `images/favicon.svg` unless you intentionally replace it
+```txt
+robots.txt
+sitemap.xml
+site.webmanifest
+```
 
-## Forms
+Replace all placeholder domains with your actual website address.
 
-The booking and contact forms currently redirect to `thank-you.html` for demo purposes. Review [Form Setup Guide](form-setup-guide.md) before launch if you want real submissions.
+## Pre-Launch Checklist
 
-## JavaScript Features
+Before publishing:
 
-The following features depend on `js/main.js`:
+* Replace all demo branding
+* Replace all placeholder imagery
+* Update pricing information
+* Update contact details
+* Update social links
+* Configure forms
+* Test navigation links
+* Test gallery functionality
+* Test booking forms
+* Test mobile layouts
+* Update SEO metadata
+* Update robots.txt
+* Update sitemap.xml
+* Update site.webmanifest
+* Verify thank-you page behavior
+* Verify custom 404 page behavior
 
-- Mobile menu
-- Active navigation state
-- Animated bubbles
-- Animated fish
-- Ocean particle background
-- Hero slider
-- Gallery filters
-- Gallery lightbox
-- Booking package selection
-- Thank-you page behavior
-
-If you remove a feature from the HTML, also remove or update the related JavaScript selectors so the file stays clean.
+Once these steps are complete, Abyssal Blue Pro is ready for production deployment.

@@ -1,0 +1,39 @@
+/* =========================================================
+   VELVET STUDIO — TABLET STYLESHEET (≤1024px)
+========================================================= */
+
+@media (max-width: 1024px) {
+  :root {
+    --content-width: min(100% - 28px, 920px);
+  }
+
+  .hero-grid,
+  .page-hero,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid { min-height: auto; }
+
+  .feature-grid,
+  .demo-grid,
+  .showcase-grid,
+  .pricing-grid,
+  .testimonial-grid,
+  .story-grid,
+  .comparison-grid,
+  .value-grid,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-timeline { grid-template-columns: repeat(2, 1fr); }
+
+  .featured-project-grid,
+  .moodboard-card { grid-template-columns: 1fr; }
+
+  .large-editorial-placeholder { min-height: 420px; }
+  .moodboard-grid { grid-template-columns: repeat(4, 1fr); }
+
+  .footer-grid { text-align: center; }
+}

@@ -1,175 +1,274 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pricing | CosmicOrbit Pro Template License and Branding</title>
+  <title>Pricing | Cosmic Orbit Astronomy Website Template</title>
   <meta
     name="description"
-    content="Compare the $99 CosmicOrbit Pro template license and the $299 template plus branding package."
+    content="Preview the pricing page for Cosmic Orbit, an astronomy and stargazing website template with polished pricing layouts for observatory experiences."
   />
+  <meta
+    name="keywords"
+    content="astronomy website template, stargazing website template, observatory website template, planetarium website template, telescope events website, space website template, Cosmic Orbit"
+  />
+  <meta name="theme-color" content="#04111f" />
+  <meta name="robots" content="index, follow" />
+  <!--
+    SEO CUSTOMIZATION:
+    Replace https://yourdomain.com/ with your live website URL.
+    Replace /images/planet.png with your preferred social sharing image.
+  -->
+  <link rel="canonical" href="https://yourdomain.com/pricing.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cosmic Orbit" />
+  <meta property="og:title" content="Pricing | Cosmic Orbit Astronomy Website Template" />
+  <meta
+    property="og:description"
+    content="Display package pricing with Cosmic Orbit, a premium astronomy website template for telescope events, observatory programs, and planetarium-style experiences."
+  />
+  <meta property="og:url" content="https://yourdomain.com/pricing.html" />
+  <meta property="og:image" content="https://yourdomain.com/images/planet.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pricing | Cosmic Orbit Astronomy Website Template" />
+  <meta
+    name="twitter:description"
+    content="A pricing page template for astronomy brands, telescope events, observatory programs, and planetarium-style experiences."
+  />
+  <meta name="twitter:image" content="https://yourdomain.com/images/planet.png" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width: 1024px)" />
-  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 650px)" />
-  <link rel="manifest" href="site.webmanifest" />
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <meta name="theme-color" content="#02030a" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
 </head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <div id="spaceScene" aria-hidden="true"></div>
+<body data-nav-page="pricing.html">
+  <a class="skip-link" href="#mainContent">Skip to content</a>
   <div class="page-glow" aria-hidden="true"></div>
+  <div class="star-overlay" aria-hidden="true"></div>
+  <div class="shooting-stars" aria-hidden="true"></div>
+  <div class="background-planet" aria-hidden="true"></div>
 
-  <header class="navbar">
-    <a href="index.html" class="logo">CosmicOrbit<span>Pro</span></a>
-
-    <nav class="nav-links" id="navLinks" aria-label="Primary">
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <a href="index.html" class="site-brand" aria-label="Cosmic Orbit home">
+      <img src="images/logo.svg" alt="" />
+      <span>Cosmic Orbit</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="navMenu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="pricing.html" class="active" aria-current="page">Pricing</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="login.html">Login</a>
+      <a href="services.html">Services</a>
+      <a href="events.html">Events</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="booking.html">Booking</a>
+      <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
     </nav>
-
-    <button
-      class="menu-btn"
-      id="menuBtn"
-      type="button"
-      aria-expanded="false"
-      aria-controls="navLinks"
-      aria-label="Open navigation menu"
-    >
-      <span aria-hidden="true">Menu</span>
-    </button>
   </header>
 
-  <main id="main-content">
-    <section class="section contact">
-      <p class="eyebrow">Pricing</p>
-      <h1>Choose the package that fits your launch.</h1>
-      <p class="section-lead narrow-copy">
-        Buy the template as a polished front-end product, or choose the branding package
-        if you want the same visual foundation adapted more closely to your business.
-      </p>
-    </section>
-
-    <section class="section">
-      <div class="pricing-grid">
-        <article class="pricing-card tilt-card">
-          <p class="card-label">$99 Template License</p>
-          <h3>Template License</h3>
-          <p class="price">$99</p>
-
-          <ul class="pricing-features">
-            <li>8 premium HTML pages with shared navigation</li>
-            <li>Real Three.js animated background and premium motion</li>
-            <li>Responsive desktop, tablet, and mobile styles</li>
-            <li>Login and dashboard demo pages included</li>
-            <li>Updated documentation and commercial-ready structure</li>
-          </ul>
-
-          <a href="coming-soon.html" class="btn primary">Buy Template</a>
-        </article>
-
-        <article class="pricing-card featured tilt-card">
-          <p class="card-label">$299 Template + Branding</p>
-          <h3>Template + Branding</h3>
-          <p class="price">$299</p>
-
-          <ul class="pricing-features">
-            <li>Everything in the template license</li>
-            <li>Logo placement and brand color updates</li>
-            <li>Content cleanup and CTA refinement</li>
-            <li>Navigation, sections, and messaging adjusted to your offer</li>
-            <li>Cleaner launch handoff for a product or service business</li>
-          </ul>
-
-          <a href="contact.html#custom" class="btn primary">Custom Branding</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <p class="eyebrow">Package Notes</p>
-      <h2>Clear scope, no surprises.</h2>
-
-      <div class="feature-grid">
-        <article class="feature-card tilt-card">
-          <span>01</span>
-          <h3>Front-End Only</h3>
-          <p>
-            The template is built with HTML, CSS, JavaScript, and Three.js. Backend systems,
-            databases, checkout processing, and authentication are not included.
-          </p>
-        </article>
-
-        <article class="feature-card tilt-card">
-          <span>02</span>
-          <h3>Checkout Handoff Included</h3>
-          <p>
-            The purchase flow routes to a polished cart or checkout placeholder page so the
-            template has a clean sales path even before a payment tool is connected.
-          </p>
-        </article>
-
-        <article class="feature-card tilt-card">
-          <span>03</span>
-          <h3>Documentation Ready</h3>
-          <p>
-            Setup, customization, and license notes are already included so the template feels
-            like a complete product instead of a folder of disconnected files.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section split">
-      <div>
-        <p class="eyebrow">Need A Guided Version?</p>
-        <h2>The branding package is best for sellers who want a cleaner launch handoff.</h2>
-      </div>
-
-      <div>
-        <p class="section-lead">
-          If you already know the template is a fit but want it aligned more closely to your business,
-          the branding package helps remove the last layer of generic setup work before launch.
+  <main id="mainContent">
+    <!-- Hero Section -->
+    <section class="section-shell page-hero">
+      <div class="page-copy">
+        <p class="eyebrow">Pricing</p>
+        <h1>Transparent packages for public guests, school visits, and private sky events.</h1>
+        <p>
+          Use these demo rates to show how Cosmic Orbit can price public experiences, educational programs,
+          and premium private events. Customers can easily update these figures for a live launch.
         </p>
-
-        <div class="section-actions">
-          <a href="contact.html#custom" class="btn primary">Request Branding</a>
-          <a href="contact.html" class="btn secondary">Contact Sales</a>
+      </div>
+      <div class="page-visual" data-reveal>
+        <div class="glass-panel">
+          <img src="images/planet.png" alt="Cosmic Orbit pricing overview visual." />
         </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-shell">
+      <div class="pricing-grid">
+        <article class="pricing-card interactive-card" data-reveal>
+          <span class="pricing-badge">Public Night</span>
+          <h3>Stargazing Admission</h3>
+          <div class="pricing-figure">$39</div>
+          <p class="pricing-subline">Per guest</p>
+          <ul class="bullet-list">
+            <li>Live host introduction</li>
+            <li>Shared telescope stations</li>
+            <li>Seasonal constellation highlights</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card featured interactive-card" data-reveal>
+          <span class="pricing-badge">Family Favorite</span>
+          <h3>Family Orbit Bundle</h3>
+          <div class="pricing-figure">$129</div>
+          <p class="pricing-subline">Up to 4 guests</p>
+          <ul class="bullet-list">
+            <li>Priority family arrival window</li>
+            <li>Kid-friendly telescope pacing</li>
+            <li>Take-home sky guide sheet</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card interactive-card" data-reveal>
+          <span class="pricing-badge">School Groups</span>
+          <h3>Education Night</h3>
+          <div class="pricing-figure">$18</div>
+          <p class="pricing-subline">Per student, 20 guest minimum</p>
+          <ul class="bullet-list">
+            <li>Presenter-led astronomy lesson</li>
+            <li>Flexible teacher coordination</li>
+            <li>Indoor fallback option</li>
+          </ul>
+        </article>
+
+        <article class="pricing-card interactive-card" data-reveal>
+          <span class="pricing-badge">Private Event</span>
+          <h3>Private Sky Experience</h3>
+          <div class="pricing-figure">$780</div>
+          <p class="pricing-subline">Starting rate for groups</p>
+          <ul class="bullet-list">
+            <li>Dedicated host team</li>
+            <li>Custom pacing and run of show</li>
+            <li>Optional presentation add-on</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section-shell">
+      <div class="section-header">
+        <p class="eyebrow">Compare Options</p>
+        <h2>Choose the format that best fits your guest list and goals.</h2>
+      </div>
+
+      <div class="glass-panel" data-reveal>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Package</th>
+              <th>Best For</th>
+              <th>Typical Format</th>
+              <th>Includes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Stargazing Admission</td>
+              <td>Tourists, couples, solo visitors</td>
+              <td>Shared public night</td>
+              <td>Telescope access and guided sky tour</td>
+            </tr>
+            <tr>
+              <td>Family Orbit Bundle</td>
+              <td>Parents, kids, multigenerational groups</td>
+              <td>Shared public night</td>
+              <td>Family pacing and child-friendly guidance</td>
+            </tr>
+            <tr>
+              <td>Education Night</td>
+              <td>Schools, STEM clubs, youth groups</td>
+              <td>Reserved school program</td>
+              <td>Structured presentation and educator support</td>
+            </tr>
+            <tr>
+              <td>Private Sky Experience</td>
+              <td>Corporate, social, VIP events</td>
+              <td>Private booking</td>
+              <td>Custom schedule, dedicated hosting, optional add-ons</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Notes Section -->
+    <section class="section-shell">
+      <div class="details-grid">
+        <article class="detail-card" data-reveal>
+          <h3>Group Discounts</h3>
+          <p>Schools, tour operators, and recurring organizations can request custom rates for larger guest counts.</p>
+        </article>
+        <article class="detail-card" data-reveal>
+          <h3>Weather Flexibility</h3>
+          <p>Outdoor pricing assumes favorable viewing conditions. Rescheduling policies can be adjusted for the final business setup.</p>
+        </article>
+        <article class="detail-card" data-reveal>
+          <h3>Add-On Options</h3>
+          <p>Popular upgrades include private telescope coaching, astrophotography guidance, and indoor presentation extensions.</p>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>
-      &copy; <span data-current-year>2026</span> CosmicOrbit Pro. Premium HTML template for
-      SaaS, software, and digital product brands.
-    </p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" aria-label="Cosmic Orbit home">
+            <img src="images/logo.svg" alt="" />
+            <span>Cosmic Orbit</span>
+          </a>
+          <p>Flexible pricing structures for public skywatching, family visits, school programs, and premium private astronomy nights.</p>
+          <div class="footer-social" role="group" aria-label="Cosmic Orbit social media links">
+            <a href="https://yourdomain.com/" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://yourdomain.com/" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://yourdomain.com/" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+            <a href="https://yourdomain.com/" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            <a href="https://yourdomain.com/" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Navigation</h3>
+          <ul class="footer-link-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Experiences</h3>
+          <ul class="footer-link-list">
+            <li><a href="services.html#telescope-nights">Telescope Nights</a></li>
+            <li><a href="services.html#school-programs">School Programs</a></li>
+            <li><a href="services.html#private-events">Private Events</a></li>
+            <li><a href="booking.html">Booking Inquiries</a></li>
+            <li><a href="faq.html">Visit Questions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-current-year>2026</span> Cosmic Orbit. All rights reserved.</p>
+        <p class="small-note">Package names and pricing are ready to customize for live operations.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
-
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"
-      }
-    }
-  </script>
-
-  <script type="module" src="js/space-scene.js"></script>
 </body>
 </html>
+
+
+
+
+

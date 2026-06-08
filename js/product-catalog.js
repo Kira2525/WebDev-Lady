@@ -143,17 +143,17 @@ window.productCatalog = {
       "Instant digital download"
     ]
   },
-  "worldview-lite": {
-    key: "worldview-lite",
-    name: "WorldView Lite",
-    family: "WorldView",
+  "worldviewglobal-lite": {
+    key: "worldviewglobal-lite",
+    name: "WorldView Global Lite",
+    family: "WorldView Global",
     version: "Lite",
     price: 59,
     priceLabel: "$59",
-    image: "images/worldview-lite.png",
-    preview: "preview/WorldView-Lite/index.html",
-    downloadFile: "downloads/WorldView-Lite.zip",
-    successUrl: "thank-you-lite.html?product=worldview-lite",
+    image: "images/worldviewglobal-lite.png",
+    preview: "preview/WorldViewGlobal-Lite/index.html",
+    downloadFile: "downloads/WorldViewGlobal-Lite.zip",
+    successUrl: "thank-you-lite.html?product=worldviewglobal-lite",
     tagline: "LITE TEMPLATE",
     typeLabel: "Single-page template",
     description: "A professional single-page business template for agencies, consultants, startups, and service-based brands that need a clean online presence.",
@@ -166,20 +166,21 @@ window.productCatalog = {
       "Instant digital download"
     ]
   },
-  "worldview-pro": {
-    key: "worldview-pro",
-    name: "WorldView Pro",
-    family: "WorldView",
+  "worldviewglobal-pro": {
+    key: "worldviewglobal-pro",
+    name: "WorldView Global Pro",
+    family: "WorldView Global",
     version: "Pro",
     price: 99,
     priceLabel: "$99",
-    image: "images/worldview-pro.png",
-    preview: "preview/WorldView-Pro/index.html",
-    downloadFile: "downloads/WorldView-Pro.zip",
-    successUrl: "thank-you-pro.html?product=worldview-pro",
+    image: "images/worldviewglobal-pro.png",
+    preview: "preview/WorldViewGlobal-Pro/index.html",
+    downloadFile: "downloads/WorldViewGlobal-Pro.zip",
+    successUrl: "thank-you-pro.html?product=worldviewglobal-pro",
     tagline: "PRO TEMPLATE",
     typeLabel: "Multi-page template",
-    description: "A polished multi-page business template with stronger layouts, additional business-ready sections, and a more complete website structure.",
+    description: "A polished multi-page business template with stronger layouts, additional business-ready sections, and a more complete website structure."
+    ,
     features: [
       "Multi-page website",
       "More sections and pages",

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Setup -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>WorldView Lite | Global Intelligence &amp; Location Insight</title>
+  <meta
+    name="description"
+    content="WorldView Global helps companies understand markets, travel behavior, location trends, and regional opportunities through premium intelligence and advisory services."
+  />
+  <meta name="theme-color" content="#071126" />
+
+  <!-- Icons & Manifest -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body data-page="home">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Shared animated background and Earth image -->
+  <div class="space-scene" id="worldBackground" aria-hidden="true">
+    <div class="space-noise"></div>
+    <div class="stars"></div>
+    <div class="glow-orb glow-orb--left"></div>
+
+    <div class="earth-stage" id="earthStage">
+      <div class="earth" id="earth">
+        <div class="earth-image"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <main class="site-shell" id="main-content">
+    <!-- Header -->
+    <header class="site-header reveal">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-worldview.svg" alt="WorldView Global globe logo" />
+        <span class="brand-copy">
+          <span class="brand-title">WORLDVIEW GLOBAL</span>
+          <span class="brand-tagline">Global Intelligence &amp; Location Insight</span>
+        </span>
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="desktop-nav" aria-label="Primary">
+        <div class="nav-links">
+          <a class="page-link" href="#home">Home</a>
+          <a class="page-link" href="#solutions">Solutions</a>
+          <a class="page-link" href="#why-us">Why Us</a>
+          <a class="page-link" href="#process">Process</a>
+          <a class="page-link" href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="button button--primary button--sm" href="#contact">Book a Strategy Call</a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          data-nav-toggle
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="sr-only">Open navigation</span>
+        </button>
+      </div>
+
+      <!-- Mobile and tablet navigation drawer -->
+      <div class="mobile-menu" id="mobileMenu" hidden data-mobile-menu>
+        <nav class="mobile-nav" aria-label="Mobile">
+          <a class="page-link" href="#home">Home</a>
+          <a class="page-link" href="#solutions">Solutions</a>
+          <a class="page-link" href="#why-us">Why Us</a>
+          <a class="page-link" href="#process">Process</a>
+          <a class="page-link" href="#contact">Contact</a>
+        </nav>
+
+        <a class="button button--primary button--sm" href="#contact">Book a Strategy Call</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero reveal" id="home">
+      <article class="hero-card" data-tilt>
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          Premium Global Intelligence
+        </div>
+
+        <h1>
+          See global movement before
+          <span class="gradient-text">markets react.</span>
+        </h1>
+
+        <p class="lead">
+          WorldView Global helps leadership teams interpret market shifts, travel behavior,
+          location demand, and regional opportunities through focused intelligence and advisory support.
+        </p>
+
+        <div class="button-row">
+          <a class="button button--primary" href="#solutions">Explore Services</a>
+          <a class="button button--secondary" href="#contact">Book a Strategy Call</a>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric-card">
+            <strong>40+</strong>
+            <span>Markets reviewed through trend, demand, and movement analysis frameworks.</span>
+          </div>
+
+          <div class="metric-card">
+            <strong>7-Day</strong>
+            <span>Typical turnaround window for focused briefings and executive summaries.</span>
+          </div>
+
+          <div class="metric-card">
+            <strong>1:1</strong>
+            <span>Advisory-led strategy calls tailored to your region, audience, and decision.</span>
+          </div>
+        </div>
+      </article>
+
+      <aside class="stat-stack">
+        <div class="stat-card reveal" data-tilt>
+          <strong>Travel Insight</strong>
+          <span>Understand how travelers move, where interest is forming, and what regions are gaining attention.</span>
+        </div>
+
+        <div class="stat-card reveal" data-tilt>
+          <strong>Location Analytics</strong>
+          <span>Turn regional signals into launch priorities, expansion paths, and site confidence.</span>
+        </div>
+
+        <div class="stat-card reveal" data-tilt>
+          <strong>Executive Briefings</strong>
+          <span>Present findings in premium summaries that leadership teams can use quickly.</span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="section reveal" id="solutions">
+      <div class="section-header">
+        <span class="section-label">Solutions Overview</span>
+        <h2>Built for companies making high-stakes global decisions.</h2>
+        <p>
+          A focused one-page experience for presenting global research, location insight,
+          advisory services, and premium market intelligence.
+        </p>
+      </div>
+
+      <div class="card-grid card-grid--4">
+        <article class="card" data-tilt>
+          <div class="card-header">
+            <h3>Market Intelligence</h3>
+            <span class="tag">Reports</span>
+          </div>
+          <p>Assess market momentum, competitor posture, demand signals, and regional risk.</p>
+        </article>
+
+        <article class="card" data-tilt>
+          <div class="card-header">
+            <h3>Travel Behavior</h3>
+            <span class="tag">Movement</span>
+          </div>
+          <p>Reveal where traveler interest is building and how audiences move seasonally.</p>
+        </article>
+
+        <article class="card" data-tilt>
+          <div class="card-header">
+            <h3>Location Mapping</h3>
+            <span class="tag">Geo</span>
+          </div>
+          <p>Prioritize cities, corridors, and launch regions with clearer place-based logic.</p>
+        </article>
+
+        <article class="card" data-tilt>
+          <div class="card-header">
+            <h3>Strategy Sessions</h3>
+            <span class="tag">Advisory</span>
+          </div>
+          <p>Use guided calls to pressure-test assumptions and decide what to do next.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section reveal" id="why-us">
+      <div class="section-header">
+        <span class="section-label">Why Teams Choose Us</span>
+        <h2>Clarity, speed, and a premium point of view.</h2>
+        <p>
+          WorldView Global is designed for teams that need more than raw data.
+          We interpret signals, shape the story, and translate findings into practical next steps.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card" data-tilt>
+          <div class="icon-badge"></div>
+          <div class="card-header">
+            <h3>Decision-Ready Reporting</h3>
+          </div>
+          <p>Structured for internal alignment, stakeholder briefings, and fast executive review.</p>
+        </article>
+
+        <article class="card" data-tilt>
+          <div class="icon-badge"></div>
+          <div class="card-header">
+            <h3>Global Perspective</h3>
+          </div>
+          <p>Useful for travel, technology, education, events, and premium regional launches.</p>
+        </article>
+
+        <article class="card" data-tilt>
+          <div class="icon-badge"></div>
+          <div class="card-header">
+            <h3>Advisory Access</h3>
+          </div>
+          <p>Direct conversation helps each recommendation adapt to the client's real decision.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="section reveal">
+      <div class="panel doc-utility">
+        <div class="section-header">
+          <span class="section-label">Industries Served</span>
+          <h2>Insight models that adapt across sectors.</h2>
+          <p>
+            Our work supports travel teams, SaaS companies, agencies, education platforms,
+            conference organizers, and mission-led organizations.
+          </p>
+        </div>
+
+        <div class="check-grid">
+          <div class="check-item">Travel &amp; Tourism</div>
+          <div class="check-item">SaaS &amp; Technology</div>
+          <div class="check-item">Education Platforms</div>
+          <div class="check-item">Global Agencies</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section reveal" id="process">
+      <div class="section-header">
+        <span class="section-label">How We Work</span>
+        <h2>A simple workflow that keeps strategy moving.</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-step" data-step="01">
+          <h3>Frame the decision</h3>
+          <p>Define the market question, launch objective, geography, and business constraint.</p>
+        </article>
+
+        <article class="timeline-step" data-step="02">
+          <h3>Analyze the signals</h3>
+          <p>Synthesize location trends, demand patterns, travel movement, and contextual intelligence.</p>
+        </article>
+
+        <article class="timeline-step" data-step="03">
+          <h3>Activate the insight</h3>
+          <p>Deliver the findings, review the strategy, and outline the next-step actions.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section reveal" id="contact">
+      <div class="contact-layout">
+        <div class="contact-panel">
+          <span class="section-label">Start A Conversation</span>
+          <h2>Bring sharper global perspective into your next move.</h2>
+          <p>
+            Send a message to discuss market expansion, travel behavior,
+            regional demand, or location opportunity.
+          </p>
+
+          <!-- Contact form: buyers can update fields, action, and service options here -->
+          <form
+            class="form-grid"
+            name="contact"
+            method="POST"
+            action="thank-you.html"
+            data-contact-form
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="intent" value="contact" data-intent-field />
+            <input type="hidden" name="topic" value="general" data-topic-field />
+
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-field">
+              <label for="service">What do you need help with?</label>
+              <select id="service" name="service">
+                <option value="Market Intelligence">Market Intelligence</option>
+                <option value="Travel Behavior Analysis">Travel Behavior Analysis</option>
+                <option value="Location Opportunity Mapping">Location Opportunity Mapping</option>
+                <option value="Strategy Session">Strategy Session</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us what you are evaluating."></textarea>
+            </div>
+
+            <p class="fine-print" data-contact-summary>
+              General inquiry for WorldView Global services from website.
+            </p>
+
+            <button class="button button--primary" type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <aside class="panel">
+          <span class="section-label">Lite Package</span>
+          <h2>Focused, polished, and ready to launch.</h2>
+          <p>
+            This Lite version keeps the premium look of WorldView Pro while using a simpler one-page structure.
+          </p>
+
+          <div class="mini-meta">
+            <span>One-page layout</span>
+            <span>Responsive design</span>
+            <span>Working form flow</span>
+            <span>404 + thank-you support</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer reveal">
+      <div class="footer-panel">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <a class="footer-brand" href="index.html">
+              <img src="assets/logo-worldview.svg" alt="WorldView Global globe logo" />
+              <span>WorldView Global</span>
+            </a>
+
+            <p class="footer-copy">
+              Premium intelligence, travel insight, and location analytics for teams navigating global decisions with confidence.
+            </p>
+
+            <p class="footer-meta">
+              &copy; <span data-current-year>2026</span> WorldView Global. Global intelligence and location insight.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Follow Market Insights</h3>
+
+            <div class="social-links">
+              <a href="#" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+
+              <a href="#" aria-label="X">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+
+              <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+
+              <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Main JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

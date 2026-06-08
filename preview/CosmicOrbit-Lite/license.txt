@@ -1,25 +1,171 @@
-COSMICORBIT LITE LICENSE
+﻿# Cosmic Orbit Lite Commercial Template License
 
-SINGLE PURCHASE LICENSE
+Version 1.0
 
-You may:
+Copyright © 2026 Cosmic Orbit Lite
 
-- Use the template in personal projects
-- Use the template in commercial client work
-- Customize branding, layout, colors, and content
-- Modify the files to fit your product or service
+All Rights Reserved.
 
-You may not:
+---
 
-- Resell the template files as a competing template product
-- Redistribute the source files for free or as part of another download
-- Share the original files with unlicensed third parties
-- Claim the original template design as your own work before modification
+## 1. License Grant
 
-This purchase grants usage rights only.
+Upon valid purchase, the buyer is granted a non-exclusive, non-transferable license to use, modify, and publish Cosmic Orbit Lite for one completed website project.
 
-Ownership of the original template design and source package remains with the creator.
+One purchase equals one final website deployment.
 
-If you need extended licensing or a custom agreement, contact:
+---
 
-webdevlady26@gmail.com
+## 2. Permitted Use
+
+The buyer may:
+
+* Edit the HTML, CSS, JavaScript, image, and documentation files
+* Customize the template for personal, educational, nonprofit, or commercial use
+* Rebrand the template for one live website
+* Deliver one completed website to a single client
+* Publish one completed website on a production domain
+
+All ownership of custom content added by the buyer remains with the buyer or their client.
+
+---
+
+## 3. Restrictions
+
+The buyer may not:
+
+* Resell the template source files
+* Redistribute the template source files
+* Share the template with third parties
+* Upload the source files to public repositories
+* Repackage the template as another template, starter kit, UI kit, theme, or competing product
+* Include the template source files in marketplace listings
+* Claim authorship of the original template design or source package
+
+The template must be substantially incorporated into a completed website project before distribution to an end client.
+
+---
+
+## 4. Single-Use License
+
+Each purchase authorizes one final website project.
+
+Examples of permitted use:
+
+✓ One business website
+
+✓ One personal website
+
+✓ One nonprofit website
+
+✓ One client website
+
+Examples requiring additional licenses:
+
+✗ Multiple client websites
+
+✗ Multiple business websites
+
+✗ Agency-wide reuse
+
+✗ Repeated commercial deployment
+
+Each additional website project requires an additional license purchase.
+
+---
+
+## 5. Client Work
+
+A purchaser may customize and deliver one completed website to one paying client.
+
+The client may operate and maintain the completed website.
+
+The client may not extract, reuse, redistribute, or resell the original template source package without obtaining a separate license.
+
+---
+
+## 6. Support and Updates
+
+Support, updates, customization assistance, deployment assistance, and consulting services are not included unless specifically stated in the product listing.
+
+Future updates, if any, are provided at the discretion of the seller.
+
+---
+
+## 7. Third-Party Services
+
+Cosmic Orbit Lite may be connected to third-party services including:
+
+* Netlify
+* Vercel
+* Cloudflare
+* GitHub
+* Analytics providers
+* Marketing platforms
+
+All third-party services are governed by their own terms and policies.
+
+No rights to third-party services are granted under this license.
+
+---
+
+## 8. No Warranty
+
+The template is provided "AS IS" without warranty of any kind, express or implied.
+
+This includes, but is not limited to:
+
+* Merchantability
+* Fitness for a particular purpose
+* Non-infringement
+* Compatibility with third-party services
+* Continuous availability
+
+The buyer assumes all risk associated with use of the template.
+
+---
+
+## 9. Limitation of Liability
+
+In no event shall the author, creator, or seller be liable for any claim, damages, losses, costs, or expenses arising from:
+
+* Use of the template
+* Inability to use the template
+* Hosting issues
+* Third-party service failures
+* Deployment errors
+* Business interruption
+
+Liability shall not exceed the amount paid for the template.
+
+---
+
+## 10. Intellectual Property
+
+All intellectual property rights in the original Cosmic Orbit Lite template, including design structure, source code, documentation, included branding assets, and supporting materials, remain the property of the author unless otherwise stated.
+
+This license grants usage rights only and does not transfer ownership of the original template.
+
+---
+
+## 11. Acceptance
+
+By downloading, installing, modifying, publishing, or otherwise using Cosmic Orbit Lite, the buyer acknowledges and agrees to be bound by the terms of this license.
+
+If the buyer does not agree to these terms, they must not use the template.
+
+---
+
+## 12. Final Responsibility
+
+The buyer is responsible for reviewing and updating:
+
+* Website content
+* Accessibility compliance
+* Contact information
+* Business policies
+* Privacy policies
+* Terms of service
+* Legal compliance requirements
+
+before publishing the final website.

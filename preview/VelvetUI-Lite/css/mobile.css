@@ -1,44 +1,82 @@
+/* =========================================================
+   VELVETUI LITE — MOBILE STYLESHEET
+   Use this file for mobile navigation and small-screen
+   spacing, typography, grids, and form adjustments.
+========================================================= */
+
 @media (max-width: 768px) {
+  :root {
+    --content-width: min(100% - 22px, 100%);
+    --section-space: 4rem;
+    --section-gap: 1rem;
+    --nav-offset: 102px;
+  }
+
   .site-header {
-    padding-top: 14px;
+    padding-top: 10px;
+  }
+
+  .nav {
+    position: relative;
+    padding: 12px 14px;
+    gap: 12px;
+    border-radius: 22px;
+    z-index: 1000;
+    overflow: visible;
   }
 
   .menu-btn {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
   }
 
   .nav-links {
     position: absolute;
-    top: calc(100% + 14px);
-    right: 0;
+    top: calc(100% + 10px);
     left: 0;
-    padding: 18px;
-    display: grid;
-    gap: 12px;
-    border-radius: 24px;
-    background:
-      linear-gradient(180deg, rgba(16, 6, 23, 0.96), rgba(16, 6, 23, 0.88));
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.38);
-    backdrop-filter: blur(24px);
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 12px 14px 16px;
+    border-radius: 20px;
+    background: rgba(9, 1, 18, 0.97);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(36px) saturate(170%);
+    box-shadow:
+      0 28px 80px rgba(1, 0, 8, 0.78),
+      inset 0 1px 0 rgba(255, 255, 255, 0.10);
+    transform-origin: top center;
+    transform: scaleY(0.92) translateY(-8px);
     opacity: 0;
+    transition: opacity 0.22s ease, transform 0.22s ease;
     pointer-events: none;
-    transform: translateY(-8px);
-    transition: opacity 0.24s ease, transform 0.24s ease;
+    z-index: 1001;
   }
 
   .nav-links.active {
+    display: flex;
+    transform: scaleY(1) translateY(0);
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0);
   }
 
   .nav-links a {
-    padding: 0.8rem 0.95rem;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.04);
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 0.98rem;
+    color: var(--muted);
+    transition: background 0.18s ease, color 0.18s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus-visible {
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--text);
   }
 
   .nav-links a::after {
@@ -46,30 +84,37 @@
   }
 
   .page-shell {
-    padding-top: 2.4rem;
-    padding-bottom: 4.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
   }
 
-  .hero-grid {
-    gap: 18px;
-  }
-
-  .hero-meta,
+  .split-intro,
+  .contact-layout,
   .hero-stats,
+  .service-grid,
   .feature-grid,
-  .showcase-grid {
+  .showcase-grid,
+  .process-timeline,
+  .pricing-grid,
+  .deliverable-strip,
+  .link-cluster,
+  .form-grid.two-column {
     grid-template-columns: 1fr;
   }
 
   h1 {
     max-width: 12ch;
-    font-size: clamp(2.9rem, 12vw, 4.2rem);
-    line-height: 0.98;
+    font-size: clamp(2.4rem, 11vw, 4rem);
   }
 
   h2 {
-    font-size: clamp(1.95rem, 8vw, 2.8rem);
-    line-height: 1;
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+  }
+
+  h3 {
+    line-height: 1.08;
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    margin-bottom: 10px;
   }
 
   .lead,
@@ -77,69 +122,232 @@
   .feature-card p,
   .showcase-card p,
   .pricing-card p,
+  .process-step p,
   .faq-accordion p,
-  .hero-panel li,
-  .meta-card strong,
-  .footer-copy p,
-  .footer-note p,
-  .value-card p {
-    font-size: 0.97rem;
-    line-height: 1.7;
+  .site-footer p,
+  .sidebar-card p,
+  .contact-meta p,
+  .thanks-card p,
+  .error-card p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .lead {
+    margin-top: 0.85rem;
+    font-size: 1rem;
+  }
+
+  .section-copy {
+    margin-top: 0.65rem;
   }
 
   .button-row {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
+    margin-top: 1rem;
   }
 
   .btn-primary,
-  .btn-secondary {
+  .btn-secondary,
+  button.btn-primary {
     width: 100%;
+    min-height: 50px;
+    padding: 0.9rem 1.15rem;
   }
 
-  .footer-grid,
-  .meta-card,
-  .hero-panel,
+  .hero-image-frame {
+    min-height: 220px;
+  }
+
+  .showcase-image-frame {
+    min-height: 200px;
+  }
+
+  .hero-image-frame img {
+    object-fit:cover;
+    object-position: center;
+  }
+
+  .glass-card,
   .feature-card,
   .showcase-card,
   .pricing-card,
-  .upgrade-card {
-    padding: 1.35rem;
+  .process-step,
+  .form-card,
+  .sidebar-card,
+  .hero-visual,
+  .thanks-card,
+  .error-card {
+    padding: 16px;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-heading {
+    margin-bottom: 14px;
+  }
+
+  .pricing-grid,
+  .feature-grid,
+  .showcase-grid,
+  .deliverable-strip,
+  .process-timeline,
+  .link-cluster,
+  .service-grid {
+    gap: 2.5rem; 
+  }
+
+  .feature-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+  }
+
+  .image-placeholder {
+    min-height: 180px;
+    margin-bottom: 12px;
+  }
+
+  .tag-row,
+  .contact-meta {
+    margin-top: 0.75rem;
+  }
+
+  .info-list,
+  .pricing-card ul,
+  .hero-visual ul {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 1rem;
+    line-height: 1.55;
+  }
+
+  .info-list li,
+  .pricing-card li,
+  .hero-visual li {
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+
+  .pricing-card h3 {
+    max-width: 100%;
+    font-size: clamp(1.45rem, 6vw, 1.85rem);
+    line-height: 1.1;
+  }
+
+  .price {
+    margin-top: 0.65rem;
+    font-size: clamp(1.8rem, 9vw, 2.4rem);
+  }
+
+  .price-subtitle {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+  }
+
+  .pill,
+  .price-label,
+  .showcase-type {
+    margin-bottom: 0.55rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
+  .hero-stats div {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .hero-stats strong {
+    font-size: 1.35rem;
+  }
+
+  .hero-stats span {
+    font-size: 0.82rem;
+  }
+
+  .faq-accordion {
+    gap: 10px;
   }
 
   .faq-accordion details {
-    padding: 18px;
+    padding: 1rem;
+    border-radius: 18px;
   }
 
-  #heroCanvas {
-    opacity: 0.82;
+  .faq-accordion summary {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .faq-accordion p {
+    margin-top: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 }
 
 @media (max-width: 540px) {
   :root {
-    --content-width: min(100% - 22px, 100%);
-    --section-space: 4rem;
-  }
-
-  .nav {
-    gap: 14px;
+    --content-width: min(100% - 18px, 100%);
+    --section-space: 3.5rem;
+    --nav-offset: 96px;
   }
 
   .logo {
-    font-size: 1.45rem;
-  }
-
-  .hero-stats div {
-    padding: 16px 14px;
-  }
-
-  .tag-row {
     gap: 8px;
+    font-size: 1.15rem;
+  }
+
+  .logo-image {
+    width: 34px;
+    height: 34px;
+  }
+
+  .nav {
+    padding: 11px 13px;
+  }
+
+  .nav-links {
+    padding: 12px 13px 14px;
   }
 
   .tag {
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
+    font-size: 0.68rem;
+    letter-spacing: 0.11em;
+  }
+
+  .glass-card,
+  .feature-card,
+  .showcase-card,
+  .pricing-card,
+  .process-step,
+  .form-card,
+  .sidebar-card,
+  .hero-visual,
+  .thanks-card,
+  .error-card,
+  .site-footer {
+    padding: 0.95rem;
+    border-radius: 18px;
+  }
+
+  .hero-image-frame {
+    min-height: 200px;
+  }
+
+  .showcase-image-frame {
+    min-height: 180px;
   }
 }
+

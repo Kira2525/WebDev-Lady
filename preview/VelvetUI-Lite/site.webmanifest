@@ -1,12 +1,18 @@
 {
-  "name": "VelvetUI Lite",
-  "short_name": "VelvetUI",
-  "description": "Premium one-page starter website template with animated diamond text and glassmorphism styling.",
+  "name": "VELVET STUDIO",
+  "short_name": "VELVET",
+  "description": "Boutique interior design studio shaping warm, layered homes, guest spaces, and hospitality interiors.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#09020f",
-  "theme_color": "#0d0514",
+  "background_color": "#07010e",
+  "theme_color": "#120217",
   "icons": [
+    {
+      "src": "assets/velvetui-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
     {
       "src": "assets/velvetui-favicon.svg",
       "sizes": "any",

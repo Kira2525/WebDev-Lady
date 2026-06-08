@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Showcase | WorldView Global</title>
+  <meta
+    name="description"
+    content="Explore sample case studies and client scenarios from WorldView Global across travel, technology, events, and regional strategy."
+  />
+  <meta name="theme-color" content="#071126" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <!-- Shared brand fonts and icon library -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Shared site styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body data-page="showcase">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <!-- Shared animated background and Earth scene -->
+  <div class="space-scene" id="worldBackground" aria-hidden="true">
+    <div class="space-noise"></div>
+    <div class="stars"></div>
+    <div class="glow-orb glow-orb--left"></div>
+    <div class="earth-stage" id="earthStage">
+      <div class="earth" id="earth">
+        <div class="earth-image"></div>
+      </div>
+    </div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <main class="site-shell" id="main-content">
+    <!-- Shared site header and navigation -->
+    <header class="site-header reveal">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-worldview.svg" alt="WorldView Global globe logo" />
+        <span class="brand-copy">
+          <span class="brand-title">WORLDVIEW GLOBAL</span>
+          <span class="brand-tagline">Global Intelligence &amp; Location Insight</span>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <div class="nav-links">
+          <a class="page-link" data-page-link="home" href="index.html">Home</a>
+          <a class="page-link" data-page-link="about" href="about.html">About</a>
+          <a class="page-link" data-page-link="solutions" href="solutions.html">Solutions</a>
+          <a class="page-link" data-page-link="showcase" href="showcase.html">Showcase</a>
+          <a class="page-link" data-page-link="use-cases" href="use-cases.html">Use Cases</a>
+          <a class="page-link" data-page-link="faq" href="faq.html">FAQ</a>
+          <a class="page-link" data-page-link="pricing" href="pricing.html">Pricing</a>
+          <a class="page-link" data-page-link="contact" href="contact.html">Contact</a>
+        </div>
+      </nav>
+      <div class="nav-actions">
+        <a class="button button--primary button--sm" href="contact.html?intent=purchase&amp;plan=Showcase%20Consultation&amp;source=showcase-nav">Request a Consultation</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu" data-nav-toggle>
+          <span class="nav-toggle-bar"></span>
+          <span class="sr-only">Open navigation</span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu" hidden data-mobile-menu>
+        <nav class="mobile-nav" aria-label="Mobile">
+          <a class="page-link" data-page-link="home" href="index.html">Home</a>
+          <a class="page-link" data-page-link="about" href="about.html">About</a>
+          <a class="page-link" data-page-link="solutions" href="solutions.html">Solutions</a>
+          <a class="page-link" data-page-link="showcase" href="showcase.html">Showcase</a>
+          <a class="page-link" data-page-link="use-cases" href="use-cases.html">Use Cases</a>
+          <a class="page-link" data-page-link="faq" href="faq.html">FAQ</a>
+          <a class="page-link" data-page-link="pricing" href="pricing.html">Pricing</a>
+          <a class="page-link" data-page-link="contact" href="contact.html">Contact</a>
+        </nav>
+        <a class="button button--primary button--sm" href="contact.html?intent=purchase&amp;plan=Showcase%20Consultation&amp;source=showcase-mobile-nav">Request a Consultation</a>
+      </div>
+    </header>
+
+    <section class="hero reveal">
+      <article class="hero-card" data-tilt>
+        <div class="eyebrow"><span class="pulse"></span>Showcase</div>
+        <h1>
+          Example scenarios that show
+          <span class="gradient-text">insight in action.</span>
+        </h1>
+        <p class="lead">
+          These sample engagements illustrate how WorldView Global helps brands, operators, and growth teams convert
+          movement signals into sharper strategic decisions.
+        </p>
+      </article>
+      <aside class="stat-stack">
+        <div class="stat-card" data-tilt>
+          <strong>Travel Launches</strong>
+          <span>Position destinations and experiences around audience demand and route behavior.</span>
+        </div>
+        <div class="stat-card" data-tilt>
+          <strong>Technology Growth</strong>
+          <span>Compare regions, prioritize expansion, and shape market-entry logic for new products.</span>
+        </div>
+        <div class="stat-card" data-tilt>
+          <strong>Live Events</strong>
+          <span>Use movement and location context to choose cities, partners, and timing with greater confidence.</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-header">
+        <span class="section-label">Case Studies</span>
+        <h2>Three ways clients use the work.</h2>
+      </div>
+      <div class="card-grid">
+        <article class="showcase-card" data-tilt>
+          <div class="showcase-visual"></div>
+          <div class="card-header"><h3>Regional Tourism Recovery Brief</h3><span class="tag">Travel</span></div>
+          <p>A premium hospitality group needed to identify which inbound traveler segments were returning first and which corridors carried the strongest near-term opportunity.</p>
+          <ul class="showcase-list">
+            <li>Compared seasonal demand shifts across priority regions.</li>
+            <li>Identified audience behavior changes affecting campaign timing.</li>
+            <li>Delivered a briefing that aligned marketing and partnership teams.</li>
+          </ul>
+        </article>
+        <article class="showcase-card" data-tilt>
+          <div class="showcase-visual"></div>
+          <div class="card-header"><h3>SaaS Market Expansion Review</h3><span class="tag">Technology</span></div>
+          <p>A growth-stage software company used WorldView Global to narrow its next expansion market shortlist and sequence launch efforts more strategically.</p>
+          <ul class="showcase-list">
+            <li>Evaluated market momentum, adoption climate, and regional fit.</li>
+            <li>Built a practical entry path instead of a broad global wish list.</li>
+            <li>Supported leadership with a concise strategy-call follow-up.</li>
+          </ul>
+        </article>
+        <article class="showcase-card" data-tilt>
+          <div class="showcase-visual"></div>
+          <div class="card-header"><h3>Conference City Selection Model</h3><span class="tag">Events</span></div>
+          <p>An international event team needed location insight that balanced travel accessibility, audience appeal, and commercial upside across candidate host cities.</p>
+          <ul class="showcase-list">
+            <li>Scored city options against movement patterns and strategic fit.</li>
+            <li>Clarified why one region outperformed the alternatives.</li>
+            <li>Helped stakeholders move quickly toward a final decision.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="panel">
+        <span class="section-label">Scenario Library</span>
+        <h2>Additional engagements we regularly support.</h2>
+        <div class="card-grid card-grid--2">
+          <article class="card" data-tilt>
+            <div class="card-header"><h3>Education Platform Expansion</h3><span class="tag">Audience</span></div>
+            <p>Reveal which regions show the best mix of learner demand, pricing tolerance, and partnership potential.</p>
+          </article>
+          <article class="card" data-tilt>
+            <div class="card-header"><h3>Agency Client Launch Support</h3><span class="tag">Strategy</span></div>
+            <p>Provide premium research that helps agencies guide international rollouts with more place-aware recommendations.</p>
+          </article>
+          <article class="card" data-tilt>
+            <div class="card-header"><h3>Environmental Campaign Planning</h3><span class="tag">Impact</span></div>
+            <p>Understand where mission-driven messages can travel further and which regions are primed for stronger engagement.</p>
+          </article>
+          <article class="card" data-tilt>
+            <div class="card-header"><h3>Executive Opportunity Briefing</h3><span class="tag">Leadership</span></div>
+            <p>Prepare leadership teams for board, investor, or internal planning conversations with sharper regional framing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="panel cta-band">
+        <div>
+          <span class="section-label">See Your Scenario</span>
+          <h2>Let&rsquo;s map the situation you are actually facing.</h2>
+          <p>Use these examples as a starting point, then bring us your market question, audience challenge, or location decision.</p>
+        </div>
+        <div class="button-row">
+          <a class="button button--primary" href="contact.html?intent=purchase&amp;plan=Scenario%20Consultation&amp;source=showcase-cta">Book a Strategy Call</a>
+          <a class="button button--secondary" href="pricing.html">View Service Packages</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shared site footer -->
+    <footer class="site-footer reveal">
+      <div class="footer-panel">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <a class="footer-brand" href="index.html">
+              <img src="assets/logo-worldview.svg" alt="WorldView Global globe logo" />
+              <span>WorldView Global</span>
+            </a>
+            <p class="footer-copy">Premium intelligence, travel insight, and location analytics for teams navigating global decisions with confidence.</p>
+            <p class="footer-meta">&copy; <span data-current-year>2026</span> WorldView Global. Global intelligence and location insight.</p>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-title">Follow Market Insights</h3>
+            <div class="social-links">
+              <a href="#" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" aria-label="Twitter">
+                <i class="fab fa-x-twitter"></i>
+              </a>
+              <a href="#" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,52 +1,162 @@
 # VelvetUI Lite
 
-VelvetUI Lite is the one-page starter version of VelvetUI Pro. It keeps the same VelvetUI branding, animated diamond text background, premium glassmorphism styling, and responsive layout approach in a smaller package that is easier to launch quickly.
+VelvetUI Lite is a premium one-page HTML website template inspired by the VelvetUI Pro design system.
 
-## Included files
+It delivers the same luxury aesthetic, editorial styling, refined typography, premium cards, responsive navigation, and polished user experience in a streamlined single-page format that is easy to customize and launch.
 
-- `index.html`
-- `css/style.css`
-- `css/tablet.css`
-- `css/mobile.css`
-- `js/script.js`
-- `assets/velvetui-favicon.svg`
-- `assets/velvetui-mark.svg`
-- `assets/velvetui-og.svg`
-- `docs/setup-guide.txt`
-- `docs/customization-guide.txt`
-- `license.txt`
-- `site.webmanifest`
+**VELVET STUDIO** is a fictional demonstration brand included to showcase the design and functionality of the template.
 
-## How to open the template
+Before publishing a live website, replace all demo branding, contact information, social links, metadata, and business content with your own.
 
-1. Open the `VelvetUI-Lite` folder.
-2. Double-click `index.html`, or open `index.html` in your browser or code editor preview.
-3. Edit the text, colors, and buttons directly in the source files.
+## Features
 
-## How to edit text
+* Premium one-page website template
+* Fully responsive desktop, tablet, and mobile layouts
+* Luxury interior design and creative studio aesthetic
+* Anchor-based navigation
+* Responsive mobile menu
+* FAQ accordion functionality
+* Enhanced inquiry form experience
+* SEO-ready page structure
+* Open Graph and social sharing metadata
+* Custom 404 page
+* Dedicated thank-you page
+* Static hosting compatible
+* No build tools required
+* No framework dependencies
 
-- Open `index.html`.
-- Replace the demo headlines, paragraphs, labels, and button text with your own content.
-- Update section IDs only if you also update the matching anchor links in the navigation.
+## Included Files
 
-## How to edit colors
+```txt
+index.html
+thank-you.html
+404.html
 
-- Open `css/style.css`.
-- Update the color variables inside the `:root` block near the top of the file.
-- Main brand styling comes from variables such as `--primary`, `--primary-soft`, `--bg`, and `--text`.
+css/styles.css
+css/tablet.css
+css/mobile.css
 
-## How to edit animation words
+js/script.js
 
-- Open `js/script.js`.
-- Edit the array at the top of the file:
+assets/velvetui-mark.svg
+assets/velvetui-favicon.svg
+assets/velvetui-og.svg
 
-```js
-const words = ["CREATE", "BUILD", "DESIGN", "LAUNCH", "GROW"];
+robots.txt
+sitemap.xml
+site.webmanifest
+
+LICENSE.txt
+README.md
+
+docs/setup-guide.md
+docs/hosting-guide.md
+docs/image-replacement-guide.md
+docs/form-setup-guide.md
+docs/customization-guide.md
 ```
 
-## Lite vs Pro
+## What VelvetUI Lite Is
 
-- `VelvetUI Lite` is a one-page starter template.
-- `VelvetUI Pro` is the expanded multi-page version with dedicated pages for about, features, pricing, showcase, FAQ, contact, thank-you, and 404 content.
-- Choose Lite for smaller launches and quick setups.
-- Choose Pro when you need a full website system with more content depth and page flexibility.
+* A one-page website template
+* Built with HTML, CSS, and JavaScript
+* Static hosting friendly
+* Easy to customize
+* Designed for agencies, studios, consultants, creatives, and service businesses
+* A lightweight alternative to VelvetUI Pro
+
+## Quick Start
+
+1. Open `index.html` in your browser.
+2. Replace the demo branding and content.
+3. Update contact information and social links.
+4. Customize colors, fonts, and spacing.
+5. Configure the inquiry form if needed.
+6. Update metadata and domain references.
+7. Deploy to your preferred hosting provider.
+
+## Recommended Customization Order
+
+1. Business name and branding
+2. Logo and favicon
+3. Contact information
+4. Social media links
+5. Colors and typography
+6. Services and pricing content
+7. FAQ content
+8. Form configuration
+9. SEO settings
+10. Final testing
+
+## Main Edit Locations
+
+### Content
+
+```txt
+index.html
+thank-you.html
+404.html
+```
+
+### Styling
+
+```txt
+css/styles.css
+css/tablet.css
+css/mobile.css
+```
+
+### Interactions
+
+```txt
+js/script.js
+```
+
+### Branding Assets
+
+```txt
+assets/velvetui-mark.svg
+assets/velvetui-favicon.svg
+assets/velvetui-og.svg
+```
+
+### SEO & Metadata
+
+```txt
+robots.txt
+sitemap.xml
+site.webmanifest
+```
+
+and the `<head>` section of each HTML page.
+
+## Documentation
+
+Included documentation:
+
+* Setup Guide
+* Hosting Guide
+* Image Replacement Guide
+* Form Setup Guide
+* Customization Guide
+
+## Notes
+
+* The public-facing website is written as a fictional luxury studio brand.
+* The inquiry form redirects to `thank-you.html` by default.
+* Font Awesome is loaded via CDN and used for social links and interface icons.
+* All demo branding and content should be replaced before publishing a live website.
+
+## License
+
+Please refer to:
+
+```txt
+LICENSE.txt
+```
+
+for complete usage terms and restrictions.
+
+---
+
+VelvetUI Lite © 2026. All Rights Reserved.

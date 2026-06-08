@@ -1,25 +1,171 @@
-COSMICORBIT PRO LICENSE
+# Cosmic Orbit Pro Commercial Template License
 
-SINGLE PURCHASE LICENSE
+Version 1.0
 
-You may:
+Copyright © 2026 Cosmic Orbit Pro
 
-- Use the template in personal projects
-- Use the template in commercial client work
-- Customize branding, layout, colors, and content
-- Modify the files to fit your product or service
+All Rights Reserved.
 
-You may not:
+---
 
-- Resell the template files as a competing template product
-- Redistribute the source files for free or as part of another download
-- Share the original files with unlicensed third parties
-- Claim the original template design as your own work before modification
+## 1. License Grant
 
-This purchase grants usage rights only.
+Upon valid purchase, the buyer is granted a non-exclusive, non-transferable license to use, modify, and publish Cosmic Orbit Pro for one completed website project.
 
-Ownership of the original template design and source package remains with the creator.
+One purchase equals one final website deployment.
 
-If you need extended licensing or a custom agreement, contact:
+---
 
-webdevlady26@gmail.com
+## 2. Permitted Use
+
+The buyer may:
+
+* Modify the HTML, CSS, JavaScript, images, and documentation files
+* Rebrand the template for personal or commercial use
+* Create one completed website using the template
+* Deliver one completed website to a single client
+* Use the completed website on a live production domain
+
+All ownership of custom content added by the buyer remains with the buyer or their client.
+
+---
+
+## 3. Restrictions
+
+The buyer may not:
+
+* Resell the template source files
+* Redistribute the template source files
+* Share the template with third parties
+* Upload the source files to public repositories
+* Repackage the template as another template, theme, starter kit, UI kit, or competing product
+* Include the source files in a marketplace listing
+* Claim authorship of the original template design or source package
+
+The template must be substantially incorporated into a completed website project before being delivered to an end client.
+
+---
+
+## 4. Single-Use License
+
+Each license purchase authorizes one final website project.
+
+Examples of permitted use:
+
+✓ One business website
+
+✓ One personal website
+
+✓ One nonprofit website
+
+✓ One client website
+
+Examples requiring additional licenses:
+
+✗ Multiple client websites
+
+✗ Multiple business websites
+
+✗ Agency-wide reuse
+
+✗ Repeated commercial deployments
+
+Each additional project requires an additional license purchase.
+
+---
+
+## 5. Extended Usage
+
+An additional or extended license is required for:
+
+* Multiple client deployments
+* Internal template libraries
+* White-label website programs
+* SaaS products
+* Website reselling systems
+* Any use beyond a single completed website project
+
+---
+
+## 6. Client Work
+
+A purchaser may customize and deliver one completed website to one paying client.
+
+The client may operate and maintain the completed website.
+
+The client may not extract, reuse, redistribute, or resell the original template source package without obtaining a separate license.
+
+---
+
+## 7. Third-Party Services
+
+Cosmic Orbit Pro may be connected to third-party services such as:
+
+* Netlify
+* Vercel
+* Cloudflare
+* GitHub
+* Formspree
+* Getform
+* EmailJS
+* Analytics providers
+
+All third-party services are governed by their own terms and policies.
+
+No rights to third-party services are granted under this license.
+
+---
+
+## 8. Support and Updates
+
+Support, updates, customization assistance, deployment assistance, and consulting services are not included unless specifically stated in the product listing.
+
+Future updates, if any, are provided at the discretion of the seller.
+
+---
+
+## 9. No Warranty
+
+The template is provided "AS IS" without warranty of any kind, express or implied.
+
+This includes, but is not limited to:
+
+* Merchantability
+* Fitness for a particular purpose
+* Non-infringement
+* Compatibility with third-party services
+* Continuous availability
+
+The buyer assumes all risk associated with use of the template.
+
+---
+
+## 10. Limitation of Liability
+
+In no event shall the author, creator, or seller be liable for any claim, damages, losses, costs, or expenses arising from:
+
+* Use of the template
+* Inability to use the template
+* Data loss
+* Hosting issues
+* Third-party service failures
+* Deployment errors
+* Business interruption
+
+Liability shall not exceed the amount paid for the template.
+
+---
+
+## 11. Intellectual Property
+
+All intellectual property rights in the original Cosmic Orbit Pro template, including design structure, source code, documentation, branding assets included with the template, and supporting materials, remain the property of the author unless otherwise stated.
+
+This license grants usage rights only and does not transfer ownership of the original template.
+
+---
+
+## 12. Acceptance
+
+By downloading, installing, modifying, publishing, or otherwise using Cosmic Orbit Pro, the buyer acknowledges and agrees to be bound by the terms of this license.
+
+If the buyer does not agree to these terms, they must not use the template.

@@ -1,0 +1,21 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1100" fill="#E5D5C5"/>
+  <rect x="92" y="82" width="1416" height="936" rx="36" fill="#201816"/>
+  <rect x="136" y="126" width="1328" height="846" rx="30" fill="url(#paint0_linear_12_3)"/>
+  <rect x="200" y="180" width="1212" height="324" rx="22" fill="#EFE3D4"/>
+  <rect x="248" y="228" width="232" height="228" rx="18" fill="#7B5A4A"/>
+  <rect x="530" y="222" width="292" height="240" rx="18" fill="#A97E6A"/>
+  <rect x="870" y="216" width="478" height="248" rx="20" fill="#F6F0E9"/>
+  <ellipse cx="814" cy="640" rx="412" ry="82" fill="#A87B67" fill-opacity="0.38"/>
+  <rect x="438" y="562" width="742" height="206" rx="103" fill="#D8B38B"/>
+  <rect x="1188" y="546" width="130" height="214" rx="20" fill="#8A6555"/>
+  <rect x="200" y="820" width="1212" height="72" rx="18" fill="#F6EEE4" fill-opacity="0.74"/>
+  <text x="222" y="876" fill="#2B211D" font-family="Georgia, serif" font-size="62">The Marlowe Suite</text>
+  <text x="1018" y="876" fill="#6F3D43" font-family="Arial, sans-serif" font-size="22" letter-spacing="4">BOUTIQUE GUEST RETREAT</text>
+  <defs>
+    <linearGradient id="paint0_linear_12_3" x1="800" y1="126" x2="800" y2="972" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCC4B0"/>
+      <stop offset="1" stop-color="#B58C78"/>
+    </linearGradient>
+  </defs>
+</svg>

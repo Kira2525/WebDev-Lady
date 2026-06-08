@@ -1,0 +1,124 @@
+# WorldView Global Lite Commercial Template License
+
+Copyright (c) 2026 WorldView Global Lite
+
+All rights reserved.
+
+---
+
+# 1. Grant of License
+
+Upon valid purchase, the buyer is granted a non-exclusive, non-transferable license to use, modify, and publish the WorldView Global Lite template in one completed website project per license purchase.
+
+---
+
+# 2. Permitted Use
+
+The buyer may:
+
+* Customize the template for personal, business, or client work
+* Modify layout, colors, branding, text, links, images, and assets
+* Publish one finished website using the template
+* Deliver one finished client website that incorporates the template
+* Replace included images, icons, logos, and content with their own materials
+
+---
+
+# 3. Restrictions
+
+The buyer may not:
+
+* Resell, redistribute, sublicense, share, trade, or give away the source files
+* Offer the template, in whole or in part, as another template, starter kit, website kit, theme, or design system
+* Upload the editable source package to public repositories, marketplaces, file-sharing services, or shared libraries
+* Claim authorship of the original template design, structure, or source package
+* Sell, transfer, or distribute the source files to multiple clients under a single license purchase
+
+---
+
+# 4. Multi-Use and Extended Rights
+
+Each license purchase permits use in one final website project.
+
+If the buyer wishes to:
+
+* Use the template on multiple websites
+* Deliver the template to multiple clients
+* Include the template in an internal design library
+* Reuse the template across multiple commercial projects
+
+an additional license or extended commercial license must be obtained.
+
+---
+
+# 5. Support and Customization
+
+Any support included with the template is limited to the scope described in:
+
+* The product listing
+* README documentation
+* Included setup guides
+* Any separate written agreement
+
+Custom development, integrations, content creation, deployment services, and advanced customization may require a separate paid agreement.
+
+---
+
+# 6. Third-Party Services
+
+WorldView Global Lite may be connected to third-party services such as:
+
+* Hosting providers
+* Form providers
+* Analytics platforms
+* Email services
+* Domain registrars
+
+These services are governed by their own terms, policies, pricing, and agreements and are not covered by this license.
+
+---
+
+# 7. No Warranty
+
+The template is provided "as is" without warranty of any kind, express or implied, including but not limited to warranties of:
+
+* Merchantability
+* Fitness for a particular purpose
+* Noninfringement
+* Compatibility with all third-party services or hosting providers
+
+The buyer assumes all responsibility for testing and deployment.
+
+---
+
+# 8. Limitation of Liability
+
+In no event shall the author, creator, or seller be liable for any claim, damages, losses, liabilities, or expenses arising from, out of, or in connection with:
+
+* The template
+* Use of the template
+* Modification of the template
+* Deployment of the template
+* Third-party services connected to the template
+
+This limitation applies whether the claim is based on contract, tort, negligence, or otherwise.
+
+---
+
+# 9. Ownership
+
+The original template design, source code, documentation, and included assets remain the intellectual property of the author unless otherwise stated.
+
+Purchase of this template grants a license to use the template and does not transfer ownership of the underlying intellectual property.
+
+---
+
+# 10. Acceptance
+
+By downloading, accessing, modifying, publishing, or otherwise using the WorldView Global Lite template, the buyer acknowledges that they have read, understood, and agreed to the terms of this license.
+
+---
+
+# Contact
+
+For licensing questions, extended licensing inquiries, or commercial usage requests, contact the seller through the marketplace or platform where the template was purchased.

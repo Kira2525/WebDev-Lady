@@ -1,53 +1,63 @@
 @media screen and (max-width: 1024px) {
-  .navbar {
+  .site-header {
     width: min(94%, 980px);
+    padding: 16px 20px;
+    gap: 18px;
   }
 
-  .hero {
-    min-height: auto;
-    padding-top: 48px;
+  .nav-menu {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .home-hero,
+  .page-hero,
+  .split-layout,
+  .form-layout,
+  .team-grid,
+  .contact-grid,
+  .pricing-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
   }
 
-  .hero-card {
-    max-width: 720px;
+  .home-hero,
+  .page-hero {
+    min-height: auto;
+    padding-top: 50px;
   }
 
-  h1 {
-    font-size: clamp(2.9rem, 8.5vw, 4.8rem);
-  }
-
-  h2 {
-    font-size: clamp(2.1rem, 6vw, 3.1rem);
-  }
-
-  .feature-grid,
-  .preview-grid,
-  .dashboard-stats {
+  .services-grid,
+  .events-grid,
+  .story-grid,
+  .directory-grid,
+  .details-grid,
+  .proof-grid,
+  .stats-grid,
+  .steps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .pricing-grid,
-  .split,
-  .dashboard-layout,
-  .dashboard-panel-grid {
-    grid-template-columns: 1fr;
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .pricing-card.featured {
-    transform: none;
+  .footer-brand {
+    max-width: none;
+    grid-column: 1 / -1;
   }
 
-  .dashboard-sidebar {
-    position: static;
+  .hero-metrics {
+    max-width: 760px;
   }
 
-  .section {
-    margin-bottom: 96px;
+  .hero-visual,
+  .page-visual {
+    max-width: 720px;
+    margin: 0 auto;
   }
 
-  .section::before {
-    inset: -22px;
+  .section-shell {
+    margin-bottom: 88px;
   }
 }

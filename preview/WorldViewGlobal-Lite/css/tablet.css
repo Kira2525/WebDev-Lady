@@ -1,0 +1,124 @@
+/* Tablet layout overrides for screens from 721px to 1060px */
+@media (min-width: 721px) and (max-width: 1060px) {
+  /* Main shell and header */
+  .site-shell {
+    width: min(calc(100% - 36px), 960px);
+    padding-top: 24px;
+  }
+
+  .site-header {
+    position: relative;
+    z-index: 1000;
+    overflow: visible;
+    margin-bottom: 40px;
+    padding: 14px 16px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 12px);
+    z-index: 1001;
+    display: grid;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid rgba(160, 208, 255, 0.14);
+    border-radius: 26px;
+    background: rgba(2, 10, 22, 0.96);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .mobile-menu[hidden] {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: grid;
+    gap: 8px;
+  }
+
+  .mobile-nav .page-link {
+    justify-content: flex-start;
+    min-height: 48px;
+    padding: 0 16px;
+    border: 1px solid rgba(160, 208, 255, 0.1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  /* Shared layout shifts */
+  .hero,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid,
+  .card-grid--4,
+  .timeline,
+  .metric-grid,
+  .check-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 320px;
+    gap: 36px;
+    align-items: center;
+  }
+
+  /* Footer and background tuning */
+  .footer-panel {
+    padding: 22px 24px;
+  }
+
+  .footer-copy {
+    max-width: 42ch;
+  }
+
+  .social-links {
+    gap: 16px;
+  }
+
+  .social-links a {
+    width: 46px;
+    height: 46px;
+  }
+
+  .site-footer::before {
+    inset: -28px -10px -12px;
+  }
+
+  .earth-stage {
+    right: -48vw;
+    bottom: -40vw;
+    width: min(112vw, 860px);
+    opacity: 0.68;
+  }
+
+  .glow-orb--left {
+    width: min(60vw, 560px);
+  }
+
+  .cursor-glow {
+    opacity: 0.55;
+  }
+}

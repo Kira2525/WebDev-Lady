@@ -1,8 +1,16 @@
 # Abyssal Blue Pro
 
-Version: 1.0
+Version 1.0
 
-Abyssal Blue Pro is a polished static HTML website template for scuba diving tours, marine wildlife centers, reef excursions, ocean experience brands, and conservation-focused adventure businesses.
+Abyssal Blue Pro is a premium static HTML website template designed for scuba diving tours, marine wildlife centers, reef excursions, ocean adventure brands, dive operators, and conservation-focused tourism businesses.
+
+Built with standard HTML, CSS, and JavaScript, the template requires no frameworks, package managers, build tools, or installation process.
+
+## Demo Content Notice
+
+Abyssal Blue Pro includes fictional demonstration content created to showcase the design and functionality of the template.
+
+Before publishing a live website, replace all demo content, branding, contact information, social links, pricing, imagery, and placeholder domains with your own.
 
 ## Requirements
 
@@ -12,37 +20,45 @@ Abyssal Blue Pro runs as a standard static HTML, CSS, and JavaScript website.
 
 ## Included HTML Pages
 
-- `index.html`
-- `about.html`
-- `wildlife.html`
-- `gallery.html`
-- `booking.html`
-- `contact.html`
-- `pricing.html`
-- `faq.html`
-- `thank-you.html`
-- `404.html`
+* `index.html`
+* `about.html`
+* `wildlife.html`
+* `gallery.html`
+* `booking.html`
+* `contact.html`
+* `pricing.html`
+* `faq.html`
+* `thank-you.html`
+* `404.html`
 
 ## Core Features
 
-- Multi-page static website with no build tools required
-- Responsive desktop, tablet, and mobile layouts
-- Animated ocean background with bubbles, fish, and canvas particles
-- Guided-dive pricing and booking flow
-- Filterable gallery with accessible lightbox
-- Contact and booking forms with demo thank-you redirect flow
-- SEO-ready metadata, manifest, robots file, and sitemap
-- Beginner-friendly setup and customization documentation
+* Premium multi-page website template
+* Responsive desktop, tablet, and mobile layouts
+* Animated ocean background with bubbles, fish, and particle effects
+* Guided-dive pricing and booking workflow
+* Filterable gallery with accessible lightbox
+* Contact and booking forms
+* Dynamic thank-you page messaging
+* Custom 404 page
+* SEO-ready metadata
+* Open Graph and social sharing support
+* `robots.txt`
+* `sitemap.xml`
+* `site.webmanifest`
+* Font Awesome icon support
+* No build tools required
 
 ## Quick Start
 
-1. Download or copy the full project folder.
-2. Open `index.html` directly in your browser for a quick preview.
-3. Replace the logo, images, business details, and package content.
-4. Replace placeholder URLs like `https://example.com/` with your live domain.
-5. Connect the forms to a live form handler if needed.
-6. Review the site on desktop, tablet, and mobile.
-7. Deploy to your hosting provider.
+1. Open `index.html` in your browser.
+2. Replace the logo and demo photography.
+3. Update business information and contact details.
+4. Update pricing and package content.
+5. Replace placeholder URLs such as `https://example.com/`.
+6. Configure booking and contact forms.
+7. Review desktop, tablet, and mobile layouts.
+8. Deploy to your preferred hosting provider.
 
 ## File Structure
 
@@ -59,7 +75,7 @@ AbyssalBlue-Pro/
 |-- thank-you.html
 |-- wildlife.html
 |-- README.md
-|-- license.txt
+|-- LICENSE.txt
 |-- robots.txt
 |-- sitemap.xml
 |-- site.webmanifest
@@ -88,47 +104,79 @@ AbyssalBlue-Pro/
 
 ## Customization Notes
 
-- Shared desktop and global styles live in `css/styles.css`.
-- Tablet layout overrides live in `css/tablet.css`.
-- Mobile layout overrides live in `css/mobile.css`.
-- Shared interactivity lives in `js/main.js`.
-- Images and brand assets live in `images/`.
-- Each HTML page includes its own page copy and metadata.
+* Shared desktop and global styles live in `css/styles.css`.
+* Tablet-specific layouts live in `css/tablet.css`.
+* Mobile-specific layouts live in `css/mobile.css`.
+* Interactive functionality lives in `js/main.js`.
+* Photography and branding assets live in `images/`.
+* Each HTML page contains its own content and metadata.
 
 ## Forms
 
-The included booking and contact forms are demonstration forms by default. They currently redirect to `thank-you.html`. Connect the forms to Formspree, Netlify Forms, EmailJS, or your own backend before launch if you want live submissions.
+The booking and contact forms are demonstration forms by default.
+
+Current behavior:
+
+```txt
+booking.html → thank-you.html
+contact.html → thank-you.html
+```
+
+To receive real submissions, connect the forms to:
+
+* Formspree
+* Netlify Forms
+* EmailJS
+* Getform
+* Custom Backend
+
+See the Form Setup Guide for configuration instructions.
 
 ## Deployment
 
 Abyssal Blue Pro can be deployed to virtually any static hosting provider, including:
 
-- Netlify
-- Vercel
-- GitHub Pages
-- Cloudflare Pages
-- cPanel / Shared Hosting
+* Netlify
+* Vercel
+* GitHub Pages
+* Cloudflare Pages
+* Shared Hosting
+* cPanel Hosting
 
 See the Hosting Guide for detailed deployment instructions.
 
 ## Included Documentation
 
-- [Setup Guide](docs/setup-guide.md)
-- [Customization Guide](docs/customization-guide.md)
-- [Image Replacement Guide](docs/image-replacement-guide.md)
-- [Form Setup Guide](docs/form-setup-guide.md)
-- [Hosting Guide](docs/hosting-guide.md)
+* Setup Guide
+* Customization Guide
+* Image Replacement Guide
+* Form Setup Guide
+* Hosting Guide
 
 ## Support
 
-Need help customizing the template?
-
 Customization services, updates, and additional support may be available separately.
 
-See `license.txt` for licensing details.
+Refer to:
+
+```txt
+LICENSE.txt
+```
+
+for licensing information and usage terms.
 
 ## License
 
-This template is provided under the Abyssal Blue Pro Single Purchase License.
+Abyssal Blue Pro is distributed under the Abyssal Blue Pro Single Purchase License.
 
-See `license.txt` for complete licensing terms.
+See:
+
+```txt
+LICENSE.txt
+```
+
+for complete licensing terms.
+
+---
+
+Abyssal Blue Pro © 2026 Web Dev Lady. All Rights Reserved.

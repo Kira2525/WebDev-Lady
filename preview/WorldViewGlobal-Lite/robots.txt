@@ -1,0 +1,8 @@
+# robots.txt
+
+# Allow all search engines to crawl the website
+User-agent: *
+Allow: /
+
+# Replace example.com with your actual domain after publishing
+Sitemap: https://example.com/sitemap.xml
