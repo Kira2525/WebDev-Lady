@@ -27,6 +27,14 @@ This allows the template to function immediately on any static hosting platform.
 
 The forms are configured for demonstration purposes.
 
+The included demo forms already use:
+
+```html
+method="post"
+```
+
+so they are ready to swap over to a real form handler.
+
 Current flow:
 
 1. Visitor completes the form.

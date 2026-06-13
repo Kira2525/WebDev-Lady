@@ -37,11 +37,11 @@
   }
 
   h1 {
-    font-size: 2.7rem;
+    font-size: 2.45rem;
   }
 
   h2 {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
 
   .section-shell,
@@ -51,7 +51,7 @@
   }
 
   .section-shell {
-    margin-bottom: 72px;
+    margin-bottom: 60px;
   }
 
   .hero-actions,
@@ -59,7 +59,7 @@
   .btn-row,
   .footer-bottom {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
   }
 
   .btn {
@@ -93,7 +93,7 @@
   .faq-item,
   .glass-panel,
   .site-footer-inner {
-    padding: 22px;
+    padding: 20px;
     border-radius: 24px;
   }
 
@@ -126,7 +126,7 @@
 
   .hero-visual .glass-panel,
   .page-visual .glass-panel {
-    padding: 22px;
+    padding: 20px;
   }
 
   .hero-planet-stage {

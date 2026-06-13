@@ -1,15 +1,5 @@
 const Stripe = require("stripe");
-
-const PRODUCT_PRICE_IDS = {
-  "cosmicorbit-lite": "price_1TdJ3jCNvIHQgqvuyPIJ7zWu",
-  "cosmicorbit-pro": "price_1TdIz2CNvIHQgqvu8sDTIP4Z",
-  "abyssalblue-lite": "price_1TdJ1ZCNvIHQgqvuRKx4Htyo",
-  "abyssalblue-pro": "price_1TcYUSCNvIHQgqvu27zSNtWG",
-  "velvetui-lite": "price_1TdJ5bCNvIHQgqvunGqLZwWG",
-  "velvetui-pro": "price_1TdJ4uCNvIHQgqvu6fqcKKqP",
-  "worldview-lite": "price_1TdKqaCNvIHQgqvuW3DYQ20O",
-  "worldview-pro": "price_1TdKkTCNvIHQgqvut3zwsTLj",
-};
+const productCatalog = require("../../js/product-catalog.js");
 
 function buildSiteUrl(event) {
   const origin = event.headers.origin;
@@ -42,9 +32,9 @@ exports.handler = async function (event) {
     return {
       statusCode: 204,
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: "",
+      body: ""
     };
   }
 
@@ -52,11 +42,11 @@ exports.handler = async function (event) {
     return {
       statusCode: 405,
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        error: "Method not allowed.",
-      }),
+        error: "Method not allowed."
+      })
     };
   }
 
@@ -66,17 +56,17 @@ exports.handler = async function (event) {
     }
 
     const { productKey } = JSON.parse(event.body || "{}");
-    const priceId = PRODUCT_PRICE_IDS[productKey];
+    const product = productCatalog[productKey];
 
-    if (!productKey || !priceId) {
+    if (!productKey || !product) {
       return {
         statusCode: 400,
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          error: "Invalid product key.",
-        }),
+          error: "Invalid product key."
+        })
       };
     }
 
@@ -92,26 +82,37 @@ exports.handler = async function (event) {
       mode: "payment",
       line_items: [
         {
-          price: priceId,
-          quantity: 1,
-        },
+          price_data: {
+            currency: "usd",
+            unit_amount: product.price * 100,
+            product_data: {
+              name: product.name,
+              description: product.description,
+              metadata: {
+                productKey,
+                version: product.version
+              }
+            }
+          },
+          quantity: 1
+        }
       ],
       success_url: successUrl,
       cancel_url: cancelUrl,
       client_reference_id: productKey,
       metadata: {
-        productKey,
-      },
+        productKey
+      }
     });
 
     return {
       statusCode: 200,
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        sessionId: session.id,
-      }),
+        sessionId: session.id
+      })
     };
   } catch (error) {
     console.error("Stripe Checkout Session error:", error.message);
@@ -119,11 +120,11 @@ exports.handler = async function (event) {
     return {
       statusCode: 500,
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        error: error.message,
-      }),
+        error: error.message
+      })
     };
   }
 };

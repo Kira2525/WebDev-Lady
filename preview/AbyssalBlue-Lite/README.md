@@ -8,7 +8,7 @@ Built with standard HTML, CSS, and JavaScript, Abyssal Blue Lite requires no fra
 
 Abyssal Blue Lite includes fictional demonstration content created to showcase the design and functionality of the template.
 
-Before publishing a live website, replace all demo branding, contact information, social media links, imagery, metadata, and placeholder domains with your own.
+Before publishing a live website, replace all demo branding, contact information, social media links, imagery, metadata, and starter domain values with your own.
 
 ## Features
 
@@ -21,10 +21,10 @@ Before publishing a live website, replace all demo branding, contact information
 * Hero, features, about, services, gallery, FAQ, and contact sections
 * Contact-focused call-to-action elements
 * Footer social media integration
-* SEO-ready metadata
-* robots.txt included
-* sitemap.xml included
-* site.webmanifest included
+* SEO-ready page structure and social sharing metadata
+* `robots.txt` included
+* `sitemap.xml` included
+* `site.webmanifest` included
 * Custom 404 page
 * No build tools required
 
@@ -60,7 +60,7 @@ docs/customization-guide.md
 1. Open `index.html` in your browser.
 2. Replace the logo and demo imagery.
 3. Update business information and contact details.
-4. Replace placeholder domains and metadata.
+4. Update metadata URLs, sitemap values, and social profile links.
 5. Customize colors and typography.
 6. Test desktop, tablet, and mobile layouts.
 7. Deploy to your preferred hosting provider.
@@ -168,4 +168,4 @@ for complete licensing terms and usage restrictions.
 
 ---
 
-Abyssal Blue Lite © 2026 Web Dev Lady. All Rights Reserved.
+Abyssal Blue Lite (c) 2026 Web Dev Lady. All Rights Reserved.

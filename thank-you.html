@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -11,18 +10,16 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Request Received | Web Dev Lady</title>
   <meta
     name="description"
-    content="Your message has been received by Web Dev Lady."
+    content="Your project brief has been received by Web Dev Lady."
   />
   <meta name="robots" content="noindex, nofollow" />
-
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/tablet.css" />
   <link rel="stylesheet" href="css/mobile.css" />
@@ -31,42 +28,168 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   />
 </head>
-
 <body class="success-page">
   <canvas id="pinkCanvas"></canvas>
   <div class="bg-overlay"></div>
 
-  <main class="success-main">
-    <section class="success-card">
-      <p class="eyebrow">Request Sent</p>
-      <h1>Thank You</h1>
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="images/webdevlady-logo.png" alt="Web Dev Lady logo" />
+      <span>WEB DEV <strong>LADY</strong></span>
+    </a>
 
-      <p>
-        Your request has been submitted successfully. Web Dev Lady will review
-        your details and follow up with the clearest next step.
-      </p>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      &#9776;
+    </button>
 
-      <div class="download-box">
-        <h2>What Happens Next</h2>
-        <p>
-          Expect a response with guidance, pricing direction, or follow-up
-          questions within 24-48 hours.
-        </p>
-        <a href="templates.html" class="btn primary download-btn">
-          Browse Templates
-        </a>
-      </div>
-
-      <a href="contact.html#project-form" class="home-link">
-        &larr; Back to Contact
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="templates.html">Templates</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html" class="cart-icon-link" aria-label="Shopping Cart">
+        <img src="images/cart-icon.png" alt="Shopping Cart" class="custom-cart-icon" />
       </a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-banner">
+      <img
+        src="images/webdevlady.png"
+        alt="Thank you banner"
+        width="1200"
+        height="500"
+        decoding="async"
+      />
+    </div>
+
+    <section class="success-main">
+      <div class="success-card thank-you-shell">
+        <p class="eyebrow">REQUEST RECEIVED</p>
+        <h1>Thank You</h1>
+        <p class="success-intro">
+          Your project brief has been submitted successfully.
+        </p>
+        <p class="success-intro">
+          No payment is required at this time.
+        </p>
+        <p class="success-intro">
+          I will review your project details and send a follow-up email with:
+        </p>
+
+        <ul class="feature-list thank-you-checklist">
+          <li>Project recommendation</li>
+          <li>Estimated timeline</li>
+          <li>Final package recommendation</li>
+          <li>Deposit amount, if applicable</li>
+          <li>Secure payment link</li>
+        </ul>
+
+        <div class="download-box thank-you-response-box">
+          <h2>Expected response time</h2>
+          <p>1-2 business days</p>
+        </div>
+
+        <div class="cart-info-grid thank-you-grid">
+          <section class="cart-info-section thank-you-summary-card">
+            <h3>Project Summary</h3>
+            <div class="thank-you-summary-list">
+              <div class="cart-meta-card">
+                <span>Selected service</span>
+                <strong id="thankYouService">Not provided</strong>
+              </div>
+              <div id="thankYouTemplateCard" class="cart-meta-card">
+                <span>Selected template</span>
+                <strong id="thankYouTemplate">Not applicable</strong>
+              </div>
+              <div class="cart-meta-card">
+                <span>Estimated project range</span>
+                <strong id="thankYouRange">To be reviewed</strong>
+              </div>
+              <div class="cart-meta-card">
+                <span>Preferred launch timeline</span>
+                <strong id="thankYouTimeline">Not provided</strong>
+              </div>
+            </div>
+
+            <div class="thank-you-list-block">
+              <h4>Requested features</h4>
+              <ul id="thankYouFeatures" class="feature-list">
+                <li>No major feature requests were detected from this submission.</li>
+              </ul>
+            </div>
+
+            <p class="thank-you-note">
+              Final pricing is confirmed after project review. No payment is required yet.
+            </p>
+          </section>
+
+          <section class="cart-info-section thank-you-steps-card">
+            <h3>What Happens Next</h3>
+            <ol class="thank-you-steps">
+              <li>Project brief submitted</li>
+              <li>Project reviewed</li>
+              <li>Recommendation email sent</li>
+              <li>Deposit requested, if approved</li>
+              <li>Project begins</li>
+            </ol>
+          </section>
+        </div>
+
+        <div class="hero-buttons success-actions">
+          <a href="templates.html" class="btn primary">Browse Templates</a>
+          <a href="pricing.html#service-pricing" class="btn secondary">View Pricing</a>
+        </div>
+
+        <div class="rating-panel">
+          <p class="tagline">RATE YOUR EXPERIENCE</p>
+          <h3>How did the inquiry process feel?</h3>
+          <div class="rating-stars" data-rating-group>
+            <button type="button" class="star-button" data-rating="1" aria-label="Rate 1 star">&#9733;</button>
+            <button type="button" class="star-button" data-rating="2" aria-label="Rate 2 stars">&#9733;</button>
+            <button type="button" class="star-button" data-rating="3" aria-label="Rate 3 stars">&#9733;</button>
+            <button type="button" class="star-button" data-rating="4" aria-label="Rate 4 stars">&#9733;</button>
+            <button type="button" class="star-button" data-rating="5" aria-label="Rate 5 stars">&#9733;</button>
+          </div>
+          <p class="rating-note" data-rating-note>Select a rating to leave quick feedback.</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="simple-footer">
-    <p>
-      &copy; 2026 Web Dev Lady. Digital Website Studio. All rights reserved.
-    </p>
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="images/webdevlady-logo.png" alt="Web Dev Lady logo" class="footer-logo" />
+      <h3>WEB DEV LADY</h3>
+      <p>
+        Premium website templates, launch support, and custom website builds for
+        businesses that want a polished online presence.
+      </p>
+      <a href="about.html#about-contact" class="btn secondary">Contact Web Dev Lady</a>
+    </div>
+
+    <div class="footer-social">
+      <p class="footer-label">Follow</p>
+      <div class="footer-social-links">
+        <a href="https://www.tiktok.com/@webdevlady" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/webdev_lady/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/webdevlady" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@WebDevLady" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.fiverr.com/sellers/kiraleeruck" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on Fiverr"><i class="fa-solid fa-briefcase"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Web Dev Lady. Digital Website Studio. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>

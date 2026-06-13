@@ -21,7 +21,7 @@ and redirect users to:
 thank-you.html
 ```
 
-No form data is stored or transmitted until a live form provider is connected.
+No form data is stored or transmitted until a live form workflow is connected.
 
 ---
 
@@ -53,16 +53,13 @@ Field names can be customized as needed.
 
 ---
 
-## Supported Providers
+## Connection Options
 
 Cosmic Orbit Pro can be connected to:
 
-* Netlify Forms
-* Formspree
-* Getform
-* EmailJS
-* Basin
-* Custom Backend APIs
+* Your preferred hosted form service
+* A custom backend or API route
+* A server-side submission workflow
 
 ---
 
@@ -70,7 +67,7 @@ Cosmic Orbit Pro can be connected to:
 
 The template ships with demo form behavior.
 
-This allows buyers to preview form submissions without configuring a provider.
+This allows buyers to preview form submissions without configuring a live form workflow.
 
 Demo logic is handled by:
 
@@ -88,111 +85,32 @@ if you want to remove or modify the demo functionality.
 
 ---
 
-# Netlify Forms
+# Hosted Form Service Setup
 
-Netlify Forms is one of the easiest options.
+If you use a hosted form service:
 
-### Form Requirements
+1. Create your form inside the service dashboard.
+2. Copy the submission endpoint or embed instructions.
+3. Replace the demo submission behavior with the service-specific form action or script.
+4. Submit a test entry and confirm delivery.
 
-Keep:
-
-```html
-<form
-  name="contact"
-  method="POST"
-  data-netlify="true">
-```
-
-Include:
-
-```html
-<input type="hidden"
-       name="form-name"
-       value="contact">
-```
-
-### Deployment
-
-1. Upload the site to Netlify.
-2. Publish the site.
-3. Submit a test form.
-4. Verify submissions appear in the Netlify dashboard.
-
-### Redirects
-
-You may:
-
-* Keep `thank-you.html`
-* Use Netlify success redirects
-* Use custom confirmation pages
-
----
-
-# Formspree
-
-### Setup
-
-1. Create a Formspree account.
-2. Create a new form.
-3. Copy the endpoint URL.
-4. Replace the form action.
-
-Example:
+Example form markup:
 
 ```html
 <form
-  action="https://formspree.io/f/your-id"
+  action="https://your-form-service.example/submit"
   method="POST">
 ```
-
-### Testing
 
 After deployment:
 
 * Submit a test message
-* Verify delivery
-* Verify redirects
+* Confirm successful delivery
+* Verify the success redirect
 
 ---
 
-# Getform
-
-### Setup
-
-1. Create a Getform account.
-2. Create a form endpoint.
-3. Copy the endpoint URL.
-4. Replace the form action.
-
-Example:
-
-```html
-<form
-  action="https://getform.io/f/your-id"
-  method="POST">
-```
-
----
-
-# EmailJS
-
-EmailJS allows forms to send emails directly from the browser.
-
-### Setup
-
-1. Create an EmailJS account.
-2. Create an email service.
-3. Create an email template.
-4. Add EmailJS credentials to the JavaScript.
-5. Replace demo form handling.
-
-### Notes
-
-EmailJS does not require a backend server.
-
----
-
-# Custom Backend
+# Custom Backend Setup
 
 You can connect the forms to your own API.
 
@@ -206,8 +124,8 @@ Example:
 
 Make sure your backend:
 
-* Accepts POST requests
-* Validates data
+* Accepts `POST` requests
+* Validates incoming data
 * Protects against spam
 * Redirects users after submission
 
@@ -217,30 +135,12 @@ Make sure your backend:
 
 Recommended options:
 
-### Netlify
-
-Use:
-
-```html
-netlify-honeypot="bot-field"
-```
-
-### Formspree
-
-Enable spam filtering in the dashboard.
-
-### Getform
-
-Enable built-in spam protection.
-
-### Custom APIs
-
-Implement:
-
 * Honeypot fields
-* CAPTCHA
+* CAPTCHA or challenge verification
 * Rate limiting
 * Server-side validation
+
+If you use a hosted form service, enable the spam controls available in that dashboard.
 
 ---
 
@@ -256,7 +156,7 @@ You may:
 
 * Keep the existing page
 * Replace it with a custom page
-* Use provider-specific success URLs
+* Configure a custom success URL
 
 Always test the final user flow after setup.
 
@@ -264,14 +164,14 @@ Always test the final user flow after setup.
 
 # Troubleshooting
 
-## Form Submits But No Email Arrives
+## Form Submits But No Message Arrives
 
 Check:
 
-* Provider dashboard
-* Spam folder
-* Endpoint URL
-* Form field names
+* The provider or backend logs
+* Spam or junk folders
+* The endpoint URL
+* The form field names
 
 ---
 
@@ -295,12 +195,12 @@ Check:
 
 ---
 
-## Provider Doesn't Detect Form
+## Provider or Backend Does Not Detect The Form
 
 Verify:
 
 * Form markup is correct
-* Hidden fields are present
+* Required hidden fields are present when your workflow needs them
 * Required attributes remain intact
 
 ---
@@ -309,22 +209,9 @@ Verify:
 
 Before launch:
 
-✓ Booking form submits successfully
-
-✓ Contact form submits successfully
-
-✓ Confirmation page loads
-
-✓ Mobile form layout works
-
-✓ Tablet form layout works
-
-✓ Email notifications arrive
-
-✓ Spam protection is enabled
-
-✓ Required fields validate correctly
-
-✓ Success redirects work properly
-
-✓ No JavaScript errors appear in the browser console
+- Booking form submits successfully
+- Contact form submits successfully
+- Confirmation page loads
+- Mobile form layout works
+- Tablet form layout works
+- Desktop form layout works

@@ -202,7 +202,7 @@ SSL enables secure HTTPS connections.
 Verify that your website loads using:
 
 ```text
-https://yourdomain.com
+https://example.com
 ```
 
 Most modern hosts provide SSL automatically.
@@ -218,7 +218,7 @@ Before launch:
 Replace:
 
 ```text
-https://yourdomain.com
+https://example.com
 ```
 
 with your live domain.
@@ -228,7 +228,7 @@ with your live domain.
 Verify:
 
 ```text
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://example.com/sitemap.xml
 ```
 
 matches your actual domain.

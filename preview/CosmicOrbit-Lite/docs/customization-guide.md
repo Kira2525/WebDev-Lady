@@ -49,9 +49,8 @@ You can edit:
 * Headlines
 * Paragraph text
 * Button labels
-* Service descriptions
+* Experience descriptions
 * Event information
-* Pricing content
 * Contact details
 * Footer content
 
@@ -71,17 +70,13 @@ Main introduction and CTA buttons.
 
 Company overview and mission.
 
-## Services
+## Experiences
 
-Featured offerings and experiences.
+Featured offerings and astronomy programs.
 
 ## Events
 
 Upcoming astronomy events and experiences.
-
-## Pricing
-
-Packages and pricing options.
 
 ## Contact
 
@@ -141,9 +136,8 @@ Default anchors:
 ```text
 #home
 #about
-#services
+#experiences
 #events
-#pricing
 #contact
 ```
 
@@ -237,7 +231,7 @@ site.webmanifest
 Replace:
 
 ```text
-https://yourdomain.com
+https://example.com
 ```
 
 with your actual domain.

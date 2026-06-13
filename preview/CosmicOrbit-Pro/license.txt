@@ -101,14 +101,10 @@ The client may not extract, reuse, redistribute, or resell the original template
 
 Cosmic Orbit Pro may be connected to third-party services such as:
 
-* Netlify
-* Vercel
-* Cloudflare
-* GitHub
-* Formspree
-* Getform
-* EmailJS
+* Static hosting platforms
+* Form handling services
 * Analytics providers
+* Custom APIs
 
 All third-party services are governed by their own terms and policies.
 

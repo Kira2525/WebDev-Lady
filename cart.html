@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
   <script src="js/product-catalog.js"></script>
   <script>
@@ -12,19 +11,16 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Your Cart | Web Dev Lady</title>
-
+  <title>Secure Checkout | Web Dev Lady</title>
   <meta
     name="description"
     content="Secure checkout for Web Dev Lady website templates."
   />
   <meta name="robots" content="noindex, nofollow" />
-
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/tablet.css" />
   <link rel="stylesheet" href="css/mobile.css" />
@@ -34,14 +30,13 @@
   />
   <script src="https://js.stripe.com/v3/"></script>
 </head>
-
 <body>
   <canvas id="pinkCanvas"></canvas>
   <div class="bg-overlay"></div>
 
   <header class="header">
     <a href="index.html" class="logo">
-      <img src="images/webdevlady-logo.png" alt="Web Dev Lady Logo">
+      <img src="images/webdevlady-logo.png" alt="Web Dev Lady logo" />
       <span>WEB DEV <strong>LADY</strong></span>
     </a>
 
@@ -62,61 +57,115 @@
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
       <a href="cart.html" class="cart-icon-link active" aria-label="Shopping Cart">
-        &#128722;
+        <img src="images/cart-icon.png" alt="Shopping Cart" class="custom-cart-icon" />
       </a>
     </nav>
   </header>
 
   <main>
+    <div class="page-banner">
+      <img
+        src="images/webdevlady.png"
+        alt="Web Dev Lady checkout banner"
+        width="1200"
+        height="500"
+        decoding="async"
+      />
+    </div>
+
     <section class="section cart-section">
       <p class="section-tag">SECURE CHECKOUT</p>
-      <h1>Complete Your Order</h1>
+      <h1>Complete your order.</h1>
 
       <div class="cart-page-grid">
         <div class="cart-item-card">
-          <div class="cart-image-wrap cart-image-wrap--placeholder" id="cartImageWrap">
-            <img
-              id="cartProductImage"
-              src="images/webdevlady.png"
-              alt="Web Dev Lady branded placeholder"
-            />
-          </div>
-
           <div class="cart-item-content">
-            <p class="tagline" id="cartProductTagline">TEMPLATE</p>
-            <h3 id="cartProductName">Loading Template...</h3>
+            <div class="cart-product-preview-card">
+              <div class="cart-product-visual" id="cartProductVisual">
+                <img
+                  id="cartProductImage"
+                  src=""
+                  alt=""
+                  loading="eager"
+                  decoding="async"
+                />
+                <div class="cart-image-fallback" id="cartImageFallback" hidden>
+                  <strong>Preview unavailable</strong>
+                  <p>
+                    The template preview image could not be loaded. You can still
+                    continue to checkout or open the live preview.
+                  </p>
+                </div>
+              </div>
 
-            <p id="cartProductDescription">
-              Please wait while your product loads.
-            </p>
+              <div class="cart-preview-actions">
+                <a
+                  id="cartPreviewBtn"
+                  href="templates.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn secondary"
+                >
+                  Live Preview
+                </a>
+              </div>
+            </div>
 
-            <ul class="feature-list" id="cartProductFeatures"></ul>
+            <div class="cart-product-copy">
+              <p class="tagline" id="cartProductTagline">TEMPLATE</p>
+              <h3 id="cartProductName">Loading template...</h3>
+              <p id="cartProductDescription">Please wait while your product loads.</p>
+            </div>
 
-            <div class="template-actions">
-              <a
-                id="cartPreviewBtn"
-                href="templates.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn secondary"
-              >
-                View Preview
-              </a>
+            <div class="cart-product-meta">
+              <div class="cart-meta-card">
+                <span>Version</span>
+                <strong id="cartProductVersion">-</strong>
+              </div>
+              <div class="cart-meta-card">
+                <span>Collection</span>
+                <strong id="cartProductFamily">-</strong>
+              </div>
+              <div class="cart-meta-card">
+                <span>Promo Price</span>
+                <strong id="cartProductPrice">$0</strong>
+                <small id="cartProductOriginalPrice" class="cart-original-price original-price"></small>
+              </div>
+            </div>
+
+            <div class="cart-info-grid">
+              <div class="cart-info-section">
+                <h4>What&apos;s Included</h4>
+                <ul class="feature-list" id="cartProductFeatures"></ul>
+              </div>
+
+              <div class="cart-info-section">
+                <h4>Need Help?</h4>
+                <p class="cart-help-copy">
+                  If you need help choosing the right version or want setup support,
+                  you can reach out before checkout.
+                </p>
+                <a href="about.html#about-contact" class="btn secondary">Contact Support</a>
+              </div>
             </div>
           </div>
         </div>
 
         <aside class="cart-checkout-card">
+          <p class="tagline">Checkout</p>
           <h3>Order Summary</h3>
 
           <div class="summary-row">
             <span id="summaryProductName">Template</span>
-            <strong id="summaryProductPrice">$0</strong>
+            <div class="summary-price-stack">
+              <strong id="summaryProductPrice">$0</strong>
+              <span id="summaryProductOriginalPrice" class="original-price"></span>
+            </div>
           </div>
 
           <div class="summary-row">
-            <span>Digital Delivery</span>
-            <strong>Instant</strong>
+            <span>Delivery</span>
+            <strong>Instant download</strong>
           </div>
 
           <div class="summary-row">
@@ -141,91 +190,53 @@
             </button>
 
             <p class="checkout-trust">
-              Secure checkout. Instant download. Digital product delivery.
+              Secure payments are powered by Stripe. After payment, your download page opens automatically.
             </p>
+
+            <ul class="security-list">
+              <li>Launch promo pricing reflected at checkout</li>
+              <li>Instant digital delivery</li>
+              <li>Support available if you need help locating files</li>
+            </ul>
 
             <p id="payment-message"></p>
           </form>
 
           <p class="checkout-note">
-            Secure payments are powered by Stripe. After successful payment,
-            you will be sent to the correct download page for your template.
+            Digital template sales are final after download. If you have a file
+            or delivery issue, contact support and help will be provided.
           </p>
 
-          <p class="checkout-note small-note">
-            Digital template sales are final after download. If you have a
-            download or file issue, contact support and I will help.
-          </p>
-
-          <a href="templates.html" class="back-link">
-            &larr; Back to Templates
-          </a>
+          <a href="templates.html" class="back-link">&larr; Back to Templates</a>
         </aside>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-brand">
-        <img
-          src="images/webdevlady-logo.png"
-          alt="Web Dev Lady Logo"
-          class="footer-logo"
-        >
-        <h3>WEB DEV LADY</h3>
-        <p>
-          Premium website templates, template customization, and custom website
-          builds for businesses that want a polished online presence.
-        </p>
-      </div>
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="images/webdevlady-logo.png" alt="Web Dev Lady logo" class="footer-logo" />
+      <h3>WEB DEV LADY</h3>
+      <p>
+        Premium website templates, launch support, and custom website builds for
+        businesses that want a polished online presence.
+      </p>
+      <a href="about.html#about-contact" class="btn secondary">Contact Web Dev Lady</a>
+    </div>
 
-      <div class="footer-links">
-        <h4>Navigation</h4>
-        <a href="index.html">Home</a>
-        <a href="templates.html">Templates</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="about.html">About</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="footer-links">
-        <h4>Services</h4>
-        <a href="templates.html">Template Store</a>
-        <a href="pricing.html#template-customization">Template Customization</a>
-        <a href="pricing.html#website-setup-service">Website Setup Service</a>
-        <a href="pricing.html#custom-website-builds">Custom Website Builds</a>
-        <a href="pricing.html#maintenance-plans">Maintenance Plans</a>
-      </div>
-
-      <div class="footer-links">
-        <h4>Follow</h4>
-        <a href="https://www.tiktok.com/@webdevlady" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-tiktok"></i> TikTok
-        </a>
-        <a href="https://www.instagram.com/webdev_lady/" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-instagram"></i> Instagram
-        </a>
-        <a href="https://www.facebook.com/webdevlady" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-facebook"></i> Facebook
-        </a>
-        <a href="https://www.youtube.com/@WebDevLady" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-youtube"></i> YouTube
-        </a>
-        <a href="https://www.fiverr.com/sellers/kiraleeruck" target="_blank" rel="noopener noreferrer">
-          <i class="fa-solid fa-briefcase"></i> Fiverr
-        </a>
-        <a href="mailto:webdevlady26@gmail.com">
-          <i class="fa-solid fa-envelope"></i> Email
-        </a>
+    <div class="footer-social">
+      <p class="footer-label">Follow</p>
+      <div class="footer-social-links">
+        <a href="https://www.tiktok.com/@webdevlady" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/webdev_lady/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/webdevlady" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@WebDevLady" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.fiverr.com/sellers/kiraleeruck" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on Fiverr"><i class="fa-solid fa-briefcase"></i></a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>
-        &copy; 2026 Web Dev Lady. Digital Website Studio. All rights reserved.
-      </p>
+      <p>&copy; 2026 Web Dev Lady. Digital Website Studio. All rights reserved.</p>
     </div>
   </footer>
 
@@ -235,40 +246,72 @@
     const productKey = params.get("product");
     const product = productKey ? cartProducts[productKey] : null;
 
-    window.selectedProduct = product
-      ? {
-          key: productKey,
-          ...product
-        }
-      : null;
+    window.selectedProduct = product ? { key: productKey, ...product } : null;
 
-    const cartImg = document.getElementById("cartProductImage");
-    const cartImageWrap = document.getElementById("cartImageWrap");
     const tagline = document.getElementById("cartProductTagline");
     const title = document.getElementById("cartProductName");
     const description = document.getElementById("cartProductDescription");
+    const productVersion = document.getElementById("cartProductVersion");
+    const productFamily = document.getElementById("cartProductFamily");
+    const productPrice = document.getElementById("cartProductPrice");
+    const productOriginalPrice = document.getElementById("cartProductOriginalPrice");
     const featuresList = document.getElementById("cartProductFeatures");
+    const productVisual = document.getElementById("cartProductVisual");
+    const productImage = document.getElementById("cartProductImage");
+    const imageFallback = document.getElementById("cartImageFallback");
     const previewBtn = document.getElementById("cartPreviewBtn");
     const summaryName = document.getElementById("summaryProductName");
     const summaryPrice = document.getElementById("summaryProductPrice");
+    const summaryOriginalPrice = document.getElementById("summaryProductOriginalPrice");
     const summaryType = document.getElementById("summaryProductType");
     const totalPrice = document.getElementById("summaryTotalPrice");
     const submitBtn = document.getElementById("submit");
 
+    function showImageFallback(message) {
+      productVisual.classList.add("is-fallback");
+      imageFallback.hidden = false;
+      productImage.style.display = "none";
+
+      if (message) {
+        imageFallback.querySelector("p").textContent = message;
+      }
+    }
+
+    function setProductImage(activeProduct) {
+      if (!activeProduct?.image) {
+        showImageFallback("A preview image is not available for this template yet. You can still continue to checkout or open the live preview.");
+        return;
+      }
+
+      productVisual.classList.remove("is-fallback");
+      imageFallback.hidden = true;
+      productImage.style.display = "block";
+      productImage.alt = activeProduct.name + " preview image";
+      productImage.onerror = function () {
+        showImageFallback("The selected template image could not be loaded. You can still continue to checkout or open the live preview.");
+      };
+      productImage.src = activeProduct.image;
+    }
+
     function showUnavailableProduct() {
-      cartImageWrap.classList.add("cart-image-wrap--placeholder");
       tagline.textContent = "SELECT A TEMPLATE";
-      title.textContent = "Choose a template before checkout";
-      description.textContent = "This checkout link is missing a valid product. Return to the template library and choose an active product to continue.";
-      cartImg.src = "images/webdevlady.png";
-      cartImg.alt = "Web Dev Lady branded placeholder";
+      title.textContent = "Your cart is currently empty";
+      description.textContent = "Choose an active template from the store to continue with a secure checkout.";
+      productVersion.textContent = "-";
+      productFamily.textContent = "-";
+      productPrice.textContent = "--";
+      productOriginalPrice.textContent = "";
       featuresList.innerHTML = "";
+      productImage.removeAttribute("src");
+      productImage.alt = "";
+      showImageFallback("Choose an active template from the store to load its preview image here.");
       previewBtn.href = "templates.html";
       previewBtn.removeAttribute("target");
       previewBtn.removeAttribute("rel");
       previewBtn.textContent = "Browse Templates";
       summaryName.textContent = "No product selected";
       summaryPrice.textContent = "--";
+      summaryOriginalPrice.textContent = "";
       summaryType.textContent = "Unavailable";
       totalPrice.textContent = "--";
       submitBtn.disabled = true;
@@ -276,18 +319,21 @@
     }
 
     function showActiveProduct(activeProduct) {
-      cartImageWrap.classList.remove("cart-image-wrap--placeholder");
-      cartImg.src = activeProduct.image;
-      cartImg.alt = activeProduct.name + " website template preview";
       tagline.textContent = activeProduct.tagline;
       title.textContent = activeProduct.name;
       description.textContent = activeProduct.description;
+      productVersion.textContent = activeProduct.version;
+      productFamily.textContent = activeProduct.family;
+      productPrice.textContent = activeProduct.priceLabel;
+      productOriginalPrice.textContent = activeProduct.originalPriceLabel || "";
+      setProductImage(activeProduct);
       previewBtn.href = activeProduct.preview;
       previewBtn.setAttribute("target", "_blank");
       previewBtn.setAttribute("rel", "noopener noreferrer");
-      previewBtn.textContent = "View " + activeProduct.version + " Preview";
+      previewBtn.textContent = "Live Preview";
       summaryName.textContent = activeProduct.name;
       summaryPrice.textContent = activeProduct.priceLabel;
+      summaryOriginalPrice.textContent = activeProduct.originalPriceLabel || "";
       summaryType.textContent = activeProduct.typeLabel;
       totalPrice.textContent = activeProduct.priceLabel;
       submitBtn.textContent = "Pay " + activeProduct.priceLabel + " Securely";

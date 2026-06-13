@@ -29,7 +29,7 @@ thank-you.html
 2. Replace demo photography in `images/`.
 3. Update the business name and contact information.
 4. Update pricing and package details.
-5. Replace placeholder URLs such as `https://example.com`.
+5. Update metadata URLs, sitemap values, and social profile links.
 6. Configure the booking and contact forms.
 7. Test the website locally.
 8. Deploy to your preferred hosting provider.
@@ -199,8 +199,8 @@ Before publishing:
 * Thank-you page works correctly
 * robots.txt uses the final domain
 * sitemap.xml uses the final domain
-* Canonical URLs no longer use placeholder domains
-* Open Graph URLs are updated
+* Canonical URLs match the intended production paths
+* Open Graph URLs and images are updated as needed
 * Favicon loads correctly
 * Manifest loads correctly
 * Mobile navigation functions properly

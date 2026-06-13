@@ -39,7 +39,7 @@
   }
 
   .footer-top {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .footer-brand {
@@ -58,6 +58,6 @@
   }
 
   .section-shell {
-    margin-bottom: 88px;
+    margin-bottom: 74px;
   }
 }

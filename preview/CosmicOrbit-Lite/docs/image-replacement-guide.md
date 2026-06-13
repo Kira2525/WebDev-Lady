@@ -2,7 +2,7 @@
 
 ## Overview
 
-Cosmic Orbit Lite includes a small collection of brand assets, hero artwork, and section imagery that can be replaced with your own content.
+Cosmic Orbit Lite includes a small collection of brand assets and optional supporting images that can be replaced with your own content.
 
 Most images are stored in:
 
@@ -31,7 +31,10 @@ images/section-image-3.jpg
 images/section-image-4.jpg
 ```
 
-Depending on future updates, additional images may be included.
+Notes:
+
+* `logo.svg`, `favicon.svg`, and `planet.png` are used by default.
+* `hero-image.jpg` and `section-image-1.jpg` through `section-image-4.jpg` are optional supporting assets included for alternate branding or future layout edits.
 
 ---
 
@@ -118,60 +121,37 @@ This graphic is used throughout the Cosmic Orbit Lite visual design.
 * PNG
 * Transparent background preferred
 * Square dimensions
-* 1500px–3000px wide
+* 1500px-3000px wide
 
 Keeping the filename unchanged is recommended.
 
 ---
 
-# Replace The Hero Image
+# Optional Supporting Images
 
-Current file:
+Optional files:
 
 ```text
 images/hero-image.jpg
-```
-
-Recommended size:
-
-```text
-1920 × 1080
-```
-
-Recommended formats:
-
-* WebP
-* JPG
-
-For best performance:
-
-```text
-Under 500 KB
-```
-
-whenever possible.
-
----
-
-# Replace Section Images
-
-Current files:
-
-```text
 images/section-image-1.jpg
 images/section-image-2.jpg
 images/section-image-3.jpg
 images/section-image-4.jpg
 ```
 
-These images support the content sections throughout the homepage.
+These files are included as optional source assets for future edits, alternate mockups, or marketing materials.
 
-## Best Practices
+## Recommended Sizes
 
-* Maintain similar aspect ratios
-* Use high-quality photography
-* Compress files before publishing
-* Keep visual style consistent
+* Hero-style images: 1920 x 1080
+* Social sharing images: 1200 x 630
+
+## Recommended Formats
+
+* WebP
+* JPG
+
+For best performance, keep large images under 500 KB whenever possible.
 
 ---
 
@@ -182,13 +162,13 @@ Social platforms use Open Graph images when links are shared.
 Typical example:
 
 ```html
-<meta property="og:image" content="https://yourdomain.com/images/social-preview.jpg">
+<meta property="og:image" content="https://example.com/images/social-preview.jpg">
 ```
 
 Recommended size:
 
 ```text
-1200 × 630
+1200 x 630
 ```
 
 Update this image whenever your branding changes.
@@ -308,8 +288,6 @@ Verify:
 * Path is correct
 * Upload completed successfully
 
----
-
 ## Image Appears Distorted
 
 Check:
@@ -317,8 +295,6 @@ Check:
 * Width and height settings
 * CSS object-fit rules
 * Container dimensions
-
----
 
 ## Image Appears Blurry
 
@@ -338,24 +314,13 @@ for large hero graphics.
 
 Before launch:
 
-✓ Logo replaced
-
-✓ Favicon replaced
-
-✓ Hero image replaced
-
-✓ Section images replaced
-
-✓ Open Graph image updated
-
-✓ Images optimized
-
-✓ Desktop layout tested
-
-✓ Tablet layout tested
-
-✓ Mobile layout tested
-
-✓ No broken image paths
-
-✓ Performance remains fast
+[ ] Logo replaced
+[ ] Favicon replaced
+[ ] Planet graphic replaced if needed
+[ ] Open Graph image updated
+[ ] Images optimized
+[ ] Desktop layout tested
+[ ] Tablet layout tested
+[ ] Mobile layout tested
+[ ] No broken image paths
+[ ] Performance remains fast

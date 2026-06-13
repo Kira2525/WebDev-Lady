@@ -41,7 +41,7 @@ Before launching your website:
 1. Replace all placeholder domains such as:
 
 ```txt
-https://example.com
+https://replace-before-launch.example
 ```
 
 2. Update:
@@ -69,13 +69,13 @@ Before publishing:
 Example:
 
 ```txt
-https://yourdomain.com
+https://your-live-domain.example
 ```
 
 or
 
 ```txt
-https://www.yourdomain.com
+https://www.your-live-domain.example
 ```
 
 Use only one version throughout the site.

@@ -23,10 +23,9 @@ The template includes:
 ```text
 images/logo.svg
 images/favicon.svg
+images/hero-orbit.svg
 images/planet.png
 ```
-
-Additional images may be included depending on the template version.
 
 ---
 
@@ -141,6 +140,35 @@ planet.png
 while keeping the same filename.
 
 No code changes required.
+
+---
+
+# Replace The Hero Orbit Graphic
+
+Current file:
+
+```text
+images/hero-orbit.svg
+```
+
+This graphic can be kept as-is, replaced with a new orbit-style illustration, or removed from the layout if your final design does not use it.
+
+## Recommended Formats
+
+* SVG (recommended)
+* PNG
+
+## Easiest Method
+
+Replace:
+
+```text
+hero-orbit.svg
+```
+
+with your own file using the same filename.
+
+No code changes are required when you keep the same filename.
 
 ---
 

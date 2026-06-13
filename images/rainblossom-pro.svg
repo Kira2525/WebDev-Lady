@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Rain Blossom Pro Preview</title>
+  <desc id="desc">Stylized preview card for the Rain Blossom Pro template.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#13020c"/>
+      <stop offset="52%" stop-color="#340c26"/>
+      <stop offset="100%" stop-color="#5f2047"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.32)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.08)"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff0f7"/>
+      <stop offset="100%" stop-color="#ff9dd8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="520" rx="36" fill="url(#bg)"/>
+  <circle cx="152" cy="110" r="88" fill="#ff8bd2" opacity="0.16"/>
+  <circle cx="650" cy="410" r="126" fill="#ffffff" opacity="0.08"/>
+  <rect x="72" y="52" width="656" height="416" rx="30" fill="#14030d" opacity="0.88" stroke="rgba(255,255,255,0.16)"/>
+  <rect x="98" y="84" width="604" height="352" rx="24" fill="url(#panel)" stroke="rgba(255,255,255,0.18)"/>
+  <rect x="126" y="116" width="250" height="248" rx="20" fill="#25101d" stroke="rgba(255,255,255,0.14)"/>
+  <rect x="146" y="138" width="210" height="82" rx="18" fill="url(#hero)"/>
+  <rect x="146" y="232" width="96" height="12" rx="6" fill="#f7dceb" opacity="0.78"/>
+  <rect x="146" y="256" width="176" height="12" rx="6" fill="#f7dceb" opacity="0.54"/>
+  <rect x="146" y="280" width="166" height="12" rx="6" fill="#f7dceb" opacity="0.54"/>
+  <rect x="146" y="304" width="128" height="12" rx="6" fill="#f7dceb" opacity="0.36"/>
+  <rect x="146" y="332" width="170" height="16" rx="8" fill="#ff8bd2" opacity="0.85"/>
+  <text x="410" y="158" fill="#ffb5de" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="4">RAIN BLOSSOM</text>
+  <text x="410" y="208" fill="#ffffff" font-family="Georgia, Times New Roman, serif" font-size="44">Pro</text>
+  <text x="410" y="248" fill="#f6dceb" font-family="Arial, Helvetica, sans-serif" font-size="20">Multi-page boutique presentation</text>
+  <rect x="410" y="286" width="214" height="12" rx="6" fill="#ffffff" opacity="0.72"/>
+  <rect x="410" y="312" width="188" height="12" rx="6" fill="#ffffff" opacity="0.48"/>
+  <rect x="410" y="338" width="196" height="12" rx="6" fill="#ffffff" opacity="0.32"/>
+  <rect x="410" y="366" width="162" height="12" rx="6" fill="#ffffff" opacity="0.32"/>
+  <rect x="410" y="392" width="138" height="34" rx="17" fill="#ff8bd2"/>
+  <text x="479" y="415" text-anchor="middle" fill="#2a0718" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700">Preview</text>
+</svg>

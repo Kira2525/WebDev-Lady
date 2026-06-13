@@ -98,13 +98,12 @@ Review and update:
 
 * Hero section
 * About section
-* Services section
+* Experiences section
 * Events section
-* Pricing section
 * Contact section
 * Footer content
 
-Replace all example content with your own business information.
+Replace the sample content, contact details, and example.com links with your own business information.
 
 ---
 
@@ -168,7 +167,7 @@ Before publishing:
 Search for:
 
 ```text
-https://yourdomain.com
+https://example.com
 ```
 
 and replace every occurrence with your live domain.
@@ -203,9 +202,8 @@ Verify:
 * Navigation anchors
 * Mobile menu
 * Hero section
-* Services section
+* Experiences section
 * Events section
-* Pricing section
 * Contact section
 * Footer links
 * 404 page

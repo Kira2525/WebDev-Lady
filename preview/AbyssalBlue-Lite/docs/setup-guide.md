@@ -75,10 +75,10 @@ Update:
 
 ### Step 5
 
-Replace placeholder domains such as:
+Update metadata and starter domain values such as:
 
 ```txt
-https://yourdomain.com
+https://replace-before-launch.example
 ```
 
 throughout the project.

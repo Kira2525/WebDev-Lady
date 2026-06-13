@@ -8,6 +8,8 @@ Cosmic Orbit Pro is a premium static HTML website template featuring a cinematic
 
 No build tools, package managers, frameworks, or server-side software are required.
 
+The default preview also uses external CDN assets for Google Fonts and Font Awesome icons.
+
 You can edit the template using:
 
 * Visual Studio Code
@@ -39,6 +41,7 @@ CosmicOrbit-Pro/
 ├── images/
 │   ├── logo.svg
 │   ├── favicon.svg
+│   ├── hero-orbit.svg
 │   └── planet.png
 │
 ├── css/
@@ -60,7 +63,7 @@ CosmicOrbit-Pro/
 ├── sitemap.xml
 ├── site.webmanifest
 ├── README.md
-└── LICENSE.txt
+└── license.txt
 ```
 
 ---
@@ -164,8 +167,11 @@ Contains:
 
 * Logo
 * Favicon
+* Hero orbit graphic
 * Planet artwork
 * Additional visual assets
+
+The default preview also loads Google Fonts and Font Awesome from external CDN sources.
 
 ---
 
@@ -188,18 +194,15 @@ Cosmic Orbit Pro includes:
 
 Before launch:
 
-1. Choose a form provider.
+1. Choose your preferred form service or custom endpoint.
 2. Configure submissions.
 3. Test notifications.
 4. Verify success redirects.
 
-Supported providers include:
+Supported setups include:
 
-* Netlify Forms
-* Formspree
-* Getform
-* EmailJS
-* Custom APIs
+* Hosted form services
+* Custom API endpoints
 
 See:
 

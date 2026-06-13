@@ -1,8 +1,8 @@
 {
-  "name": "Your Business Name",
-  "short_name": "Business",
-  "description": "Replace this description with your business, service, or brand description.",
-  "start_url": "index.html",
+  "name": "Abyssal Blue",
+  "short_name": "Abyssal Blue",
+  "description": "A premium static website template for scuba tours, marine wildlife experiences, and ocean adventure brands.",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#02111c",
   "theme_color": "#02111c",

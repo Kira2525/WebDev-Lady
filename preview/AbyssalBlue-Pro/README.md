@@ -41,7 +41,7 @@ Abyssal Blue Pro runs as a standard static HTML, CSS, and JavaScript website.
 * Contact and booking forms
 * Dynamic thank-you page messaging
 * Custom 404 page
-* SEO-ready metadata
+* SEO-ready page structure and social sharing metadata
 * Open Graph and social sharing support
 * `robots.txt`
 * `sitemap.xml`
@@ -55,7 +55,7 @@ Abyssal Blue Pro runs as a standard static HTML, CSS, and JavaScript website.
 2. Replace the logo and demo photography.
 3. Update business information and contact details.
 4. Update pricing and package content.
-5. Replace placeholder URLs such as `https://example.com/`.
+5. Update metadata URLs, sitemap values, and social profile links.
 6. Configure booking and contact forms.
 7. Review desktop, tablet, and mobile layouts.
 8. Deploy to your preferred hosting provider.
@@ -75,7 +75,7 @@ AbyssalBlue-Pro/
 |-- thank-you.html
 |-- wildlife.html
 |-- README.md
-|-- LICENSE.txt
+|-- license.txt
 |-- robots.txt
 |-- sitemap.xml
 |-- site.webmanifest
@@ -118,8 +118,8 @@ The booking and contact forms are demonstration forms by default.
 Current behavior:
 
 ```txt
-booking.html → thank-you.html
-contact.html → thank-you.html
+booking.html -> thank-you.html
+contact.html -> thank-you.html
 ```
 
 To receive real submissions, connect the forms to:
@@ -160,7 +160,7 @@ Customization services, updates, and additional support may be available separat
 Refer to:
 
 ```txt
-LICENSE.txt
+license.txt
 ```
 
 for licensing information and usage terms.
@@ -172,11 +172,11 @@ Abyssal Blue Pro is distributed under the Abyssal Blue Pro Single Purchase Licen
 See:
 
 ```txt
-LICENSE.txt
+license.txt
 ```
 
 for complete licensing terms.
 
 ---
 
-Abyssal Blue Pro © 2026 Web Dev Lady. All Rights Reserved.
+Abyssal Blue Pro (c) 2026 Web Dev Lady. All Rights Reserved.

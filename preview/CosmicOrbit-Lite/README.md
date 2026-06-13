@@ -63,7 +63,7 @@ Supported browsers:
 1. Open the project folder in your code editor.
 2. Preview `index.html` in a browser.
 3. Replace business content and branding.
-4. Update placeholder URLs.
+4. Replace the included `example.com` placeholders with your live URLs.
 5. Test desktop, tablet, and mobile layouts.
 6. Deploy to your preferred hosting provider.
 

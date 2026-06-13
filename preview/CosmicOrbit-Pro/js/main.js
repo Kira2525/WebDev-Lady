@@ -26,12 +26,10 @@ function initializeCosmicOrbit() {
 
   if (!reducedMotion) {
     createShootingStars();
-    addBackgroundMouseMovement();
   }
 
   initializeMobileNavigation();
   initializeActiveNavigation();
-  initializeSmoothScrolling(reducedMotion);
   initializeDemoForms();
   initializeRevealAnimations(reducedMotion);
   initializeCurrentYear();
@@ -66,7 +64,7 @@ function createShootingStars() {
 
   container.innerHTML = "";
 
-  const starCount = 7;
+  const starCount = 4;
 
   for (let i = 0; i < starCount; i++) {
     const star = document.createElement("span");
@@ -79,55 +77,6 @@ function createShootingStars() {
 
     container.appendChild(star);
   }
-}
-
-function addBackgroundMouseMovement() {
-  const glow = document.querySelector(".page-glow");
-  const starOverlay = document.querySelector(".star-overlay");
-
-  if (!glow && !starOverlay) return;
-
-  let mouseX = 0;
-  let mouseY = 0;
-  let glowX = 0;
-  let glowY = 0;
-  let starX = 0;
-  let starY = 0;
-  const startTime = performance.now();
-
-  window.addEventListener("mousemove", (event) => {
-    mouseX = (event.clientX / window.innerWidth - 0.5) * 18;
-    mouseY = (event.clientY / window.innerHeight - 0.5) * 18;
-  });
-
-  function animateBackground(now) {
-    const elapsed = (now - startTime) / 1000;
-    const ambientX = Math.sin(elapsed * 0.18) * 4.5;
-    const ambientY = Math.cos(elapsed * 0.14) * 3.5;
-    const targetGlowX = mouseX + ambientX;
-    const targetGlowY = mouseY + ambientY;
-    const targetStarX = mouseX * 0.32 + Math.sin(elapsed * 0.11) * 6;
-    const targetStarY = mouseY * 0.22 + Math.cos(elapsed * 0.09) * 4;
-
-    glowX += (targetGlowX - glowX) * 0.04;
-    glowY += (targetGlowY - glowY) * 0.04;
-    starX += (targetStarX - starX) * 0.025;
-    starY += (targetStarY - starY) * 0.025;
-
-    if (glow) {
-      glow.style.transform =
-        `translate3d(${glowX}px, ${glowY}px, 0) scale(1.03)`;
-    }
-
-    if (starOverlay) {
-      starOverlay.style.setProperty("--star-shift-x", `${starX}px`);
-      starOverlay.style.setProperty("--star-shift-y", `${starY}px`);
-    }
-
-    requestAnimationFrame(animateBackground);
-  }
-
-  requestAnimationFrame(animateBackground);
 }
 
 /* =========================================================
@@ -179,6 +128,12 @@ function initializeMobileNavigation() {
 
     closeMenu();
   });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 680) {
+      closeMenu();
+    }
+  });
 }
 
 /* =========================================================
@@ -209,34 +164,6 @@ function initializeActiveNavigation() {
 }
 
 /* =========================================================
-   SMOOTH SCROLLING FOR SAME-PAGE LINKS
-========================================================= */
-
-function initializeSmoothScrolling(reducedMotion) {
-  qsa('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", (event) => {
-      const targetId = anchor.getAttribute("href");
-
-      if (!targetId || targetId === "#") {
-        return;
-      }
-
-      const target = qs(targetId);
-
-      if (!target) {
-        return;
-      }
-
-      event.preventDefault();
-      target.scrollIntoView({
-        behavior: reducedMotion ? "auto" : "smooth",
-        block: "start"
-      });
-    });
-  });
-}
-
-/* =========================================================
    FORM DEMO REDIRECTS
 ========================================================= */
 
@@ -252,7 +179,7 @@ function initializeDemoForms() {
 
       if (status) {
         status.textContent =
-          "Demo form submitted. Connect Formspree, Netlify Forms, EmailJS, or your own backend before launch.";
+          "Thanks. Your request has been received and is being prepared for follow-up.";
         status.classList.add("is-visible");
       }
 
@@ -270,28 +197,7 @@ function initializeDemoForms() {
 function initializeRevealAnimations(reducedMotion) {
   const revealItems = qsa("[data-reveal]");
 
-  if (reducedMotion || !("IntersectionObserver" in window)) {
-    revealItems.forEach((item) => item.classList.add("is-visible"));
-    return;
-  }
-
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0.15
-    }
-  );
-
-  revealItems.forEach((item) => revealObserver.observe(item));
+  revealItems.forEach((item) => item.classList.add("is-visible"));
 }
 
 /* =========================================================

@@ -4,14 +4,14 @@ Version 1.0
 
 Cosmic Orbit Pro is a premium astronomy and observatory website template designed for planetariums, telescope experience companies, educational stargazing programs, astronomy clubs, science centers, school outreach organizations, and space-themed event businesses.
 
-Featuring a cinematic Three.js-powered cosmic background, responsive layouts, booking functionality, and modern marketing pages, Cosmic Orbit Pro is designed to help organizations establish a professional online presence without requiring complex development tools.
+Featuring a cinematic animated cosmic background, responsive layouts, booking functionality, and modern marketing pages, Cosmic Orbit Pro is designed to help organizations establish a professional online presence without requiring complex development tools.
 
 ---
 
 ## Features
 
 * Premium multi-page astronomy website template
-* Cinematic Three.js space background
+* Cinematic animated space background
 * Fully responsive desktop, tablet, and mobile layouts
 * Modern glass-inspired interface styling
 * Booking and contact forms included
@@ -31,8 +31,12 @@ Cosmic Orbit Pro is built using:
 * HTML5
 * CSS3
 * JavaScript
-* Three.js
 * Font Awesome
+
+External assets used by default:
+
+* Google Fonts
+* Font Awesome CDN
 
 No framework dependencies are required.
 
@@ -98,7 +102,7 @@ CosmicOrbit-Pro/
 ├── events.html
 ├── faq.html
 ├── index.html
-├── LICENSE.txt
+├── license.txt
 ├── pricing.html
 ├── README.md
 ├── robots.txt
@@ -121,6 +125,7 @@ CosmicOrbit-Pro/
 │
 ├── images/
 │   ├── favicon.svg
+│   ├── hero-orbit.svg
 │   ├── logo.svg
 │   └── planet.png
 │
@@ -174,13 +179,10 @@ Default behavior redirects users to:
 thank-you.html
 ```
 
-Supported providers:
+Supported connections:
 
-* Formspree
-* Netlify Forms
-* EmailJS
-* Getform
-* Custom APIs
+* Preferred form service
+* Custom API endpoint
 
 See:
 
@@ -194,14 +196,11 @@ for setup instructions.
 
 ## Deployment
 
-Compatible hosting providers:
+Compatible deployment options:
 
-* Netlify
-* Vercel
-* Cloudflare Pages
-* GitHub Pages
-* Shared Hosting
-* VPS Hosting
+* Static site hosts
+* Traditional web hosts
+* Custom server environments
 
 See:
 
@@ -269,7 +268,7 @@ Cosmic Orbit Pro is distributed under the included commercial license.
 See:
 
 ```text
-LICENSE.txt
+license.txt
 ```
 
 for complete licensing terms.

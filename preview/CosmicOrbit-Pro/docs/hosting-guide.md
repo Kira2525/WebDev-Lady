@@ -1,4 +1,4 @@
-﻿# Cosmic Orbit Pro Hosting Guide
+# Cosmic Orbit Pro Hosting Guide
 
 ## Overview
 
@@ -6,16 +6,14 @@ Cosmic Orbit Pro is a fully static HTML, CSS, and JavaScript website template.
 
 No build process, package manager, database, or server-side software is required.
 
-The template can be hosted on virtually any modern web hosting platform.
+The template can be deployed with virtually any modern web host that serves static files.
 
-Recommended providers:
+Recommended deployment paths:
 
-* Netlify
-* Vercel
-* Cloudflare Pages
-* GitHub Pages
-* Shared Hosting (cPanel)
-* VPS Hosting
+* Drag-and-drop static site hosting
+* Git-connected static site hosting
+* Traditional hosting control panels
+* Custom server environments
 
 ---
 
@@ -23,49 +21,62 @@ Recommended providers:
 
 Before publishing your website:
 
-✓ Replace placeholder content
-
-✓ Update branding
-
-✓ Replace logo and favicon
-
-✓ Configure contact and booking forms
-
-✓ Update social links
-
-✓ Update sitemap.xml
-
-✓ Update robots.txt
-
-✓ Update site.webmanifest
-
-✓ Test desktop, tablet, and mobile layouts
+- Replace placeholder content
+- Update branding
+- Replace logo and favicon
+- Configure contact and booking forms
+- Update social links
+- Update `sitemap.xml`
+- Update `robots.txt`
+- Update `site.webmanifest`
+- Test desktop, tablet, and mobile layouts
 
 ---
 
-# Netlify
+# Deployment Options
 
-Netlify is one of the easiest deployment options.
+## Option 1: Drag-and-Drop Static Hosting
 
-## Manual Deployment
+1. Create an account with your preferred static host.
+2. Open the new-site or upload area in that dashboard.
+3. Upload the full project folder or the extracted site files.
+4. Publish the site.
+5. Review the generated preview URL before connecting your final domain.
 
-1. Create a Netlify account.
-2. Click **Add New Site**.
-3. Select **Deploy Manually**.
-4. Drag the entire project folder into Netlify.
-5. Wait for deployment to finish.
+## Option 2: Git-Connected Static Hosting
 
-## Git Deployment
+1. Create a repository for the template files.
+2. Push the project to your preferred Git host.
+3. Connect the repository to your preferred static hosting platform.
+4. Confirm the site is configured as a plain static website.
+5. Publish and review the preview URL.
 
-1. Upload the template to GitHub.
-2. Connect GitHub to Netlify.
-3. Select your repository.
-4. Leave build settings empty.
-5. Deploy.
+## Option 3: Traditional Hosting Control Panel
 
-## Forms
+1. Sign in to your hosting control panel.
+2. Open the file manager for the website root directory.
+3. Upload the project files or a ZIP archive.
+4. Extract the archive if needed.
+5. Confirm the `css`, `js`, and `images` folders remain intact.
 
-Netlify supports built-in form handling.
+## Option 4: Custom Server Environment
+
+1. Copy the template files to the public web directory.
+2. Preserve the existing file and folder structure.
+3. Confirm the server is set to serve `index.html` as the default document.
+4. Test asset paths and page links after deployment.
+
+---
+
+# Form Handling
+
+Cosmic Orbit Pro does not require a specific form vendor.
+
+Connect the booking and contact forms to:
+
+* Your preferred form service
+* A custom API endpoint
+* A server-side submission workflow
 
 Review:
 
@@ -74,120 +85,6 @@ docs/form-setup-guide.md
 ```
 
 for setup instructions.
-
-## Custom Domains
-
-1. Open Site Settings.
-2. Select Domain Management.
-3. Add your domain.
-4. Follow the DNS instructions.
-
-Netlify automatically provides SSL certificates.
-
----
-
-# Vercel
-
-Vercel works well for static websites.
-
-## Deployment
-
-1. Create a Vercel account.
-2. Import your Git repository.
-3. Leave framework settings disabled if prompted.
-4. Deploy.
-
-## Notes
-
-* SSL included
-* Global CDN included
-* Custom domains supported
-
-For form handling use:
-
-* Formspree
-* Getform
-* EmailJS
-* Custom APIs
-
----
-
-# Cloudflare Pages
-
-Cloudflare Pages offers excellent performance and security.
-
-## Deployment
-
-1. Create a Cloudflare account.
-2. Open Pages.
-3. Create a new project.
-4. Connect GitHub or upload files.
-5. Deploy.
-
-## Benefits
-
-* Global CDN
-* Free SSL
-* DDoS protection
-* Fast worldwide delivery
-
----
-
-# GitHub Pages
-
-GitHub Pages is ideal for portfolios and simple business websites.
-
-## Deployment
-
-1. Create a GitHub repository.
-2. Upload the template files.
-3. Open Repository Settings.
-4. Select Pages.
-5. Choose the deployment branch.
-6. Save changes.
-
-GitHub will generate a public URL.
-
-## Important
-
-GitHub Pages does not process forms.
-
-Use:
-
-* Formspree
-* Getform
-* EmailJS
-* Custom backend
-
-for form submissions.
-
----
-
-# Shared Hosting (cPanel)
-
-Most traditional hosts support Cosmic Orbit Pro.
-
-Examples:
-
-* Hostinger
-* Bluehost
-* SiteGround
-* Namecheap
-* InMotion Hosting
-
-## Deployment
-
-1. Log into cPanel.
-2. Open File Manager.
-3. Navigate to:
-
-```text
-public_html
-```
-
-4. Upload the project files.
-5. Extract the ZIP archive if necessary.
-6. Confirm all folders remain intact.
 
 ---
 
@@ -220,10 +117,10 @@ Moving files without updating paths may break the site.
 
 After deployment:
 
-1. Purchase a domain.
-2. Add the domain to your hosting provider.
-3. Update DNS records.
-4. Wait for propagation.
+1. Purchase or choose your domain.
+2. Add the domain in your hosting dashboard.
+3. Update the required DNS records.
+4. Wait for DNS propagation to complete.
 
 DNS changes can take up to 48 hours to fully propagate.
 
@@ -239,9 +136,9 @@ Always verify:
 https://yourdomain.com
 ```
 
-loads correctly.
+loads correctly after launch.
 
-Most modern hosts provide SSL automatically.
+Most modern hosts provide SSL automatically or through a simple dashboard setup.
 
 ---
 
@@ -254,7 +151,7 @@ Before launch:
 Replace:
 
 ```text
-https://example.com
+https://yourdomain.com
 ```
 
 with your live domain.
@@ -264,10 +161,10 @@ with your live domain.
 Replace:
 
 ```text
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://yourdomain.com/sitemap.xml
 ```
 
-with your actual sitemap URL.
+with your final sitemap URL.
 
 ### Update Metadata
 
@@ -284,100 +181,20 @@ Review:
 
 Before publishing:
 
-✓ Logo updated
-
-✓ Favicon updated
-
-✓ Contact information updated
-
-✓ Social links updated
-
-✓ Booking form tested
-
-✓ Contact form tested
-
-✓ Sitemap updated
-
-✓ Robots.txt updated
-
-✓ Manifest updated
-
-✓ Desktop layout tested
-
-✓ Tablet layout tested
-
-✓ Mobile layout tested
-
-✓ Domain connected
-
-✓ SSL active
-
-✓ All navigation links verified
-
-✓ Thank-you page verified
-
-✓ 404 page verified
-
----
-
-# Troubleshooting
-
-## Styles Are Missing
-
-Verify:
-
-```text
-css/styles.css
-css/tablet.css
-css/mobile.css
-```
-
-were uploaded correctly.
-
----
-
-## Images Are Missing
-
-Verify:
-
-```text
-images/
-```
-
-was uploaded and image filenames match exactly.
-
----
-
-## Forms Do Not Work
-
-Check:
-
-* Provider configuration
-* Form action URL
-* JavaScript console errors
-* Success redirect settings
-
----
-
-## Navigation Links Fail
-
-Verify:
-
-* Page filenames
-* href values
-* Folder structure
-
----
-
-# Additional Documentation
-
-Included guides:
-
-```text
-docs/setup-guide.md
-docs/customization-guide.md
-docs/form-setup-guide.md
-docs/image-replacement-guide.md
-```
-
-Review those documents before launching your website.
+- Logo updated
+- Favicon updated
+- Contact information updated
+- Social links updated
+- Booking form tested
+- Contact form tested
+- `sitemap.xml` updated
+- `robots.txt` updated
+- `site.webmanifest` updated
+- Desktop layout tested
+- Tablet layout tested
+- Mobile layout tested
+- Domain connected
+- SSL active
+- Navigation verified
+- Thank-you page verified
+- `404.html` verified
