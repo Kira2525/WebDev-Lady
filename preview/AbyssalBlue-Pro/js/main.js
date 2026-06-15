@@ -130,7 +130,7 @@ function updateMenuButtonLabel(isOpen) {
 
   menuToggle.setAttribute(
     "aria-label",
-    isOpen ? "Close navigation menu" : "Open navigation menu"
+    isOpen ? "Close menu" : "Open menu"
   );
 }
 

@@ -1,75 +1,43 @@
-# VelvetUI Pro Template License
+# VelvetUI Pro Website Package License
 
-Copyright © 2026 VelvetUI
+Copyright 2026 VelvetUI. All rights reserved.
 
-All Rights Reserved.
-
-This website template and all included files, including source code, HTML files, CSS, JavaScript, graphics, icons, documentation, layouts, images, design assets, and supporting materials, are provided as part of the VelvetUI Pro template package.
+This license grants the purchaser a limited, non-exclusive, non-transferable license to use the VelvetUI Pro website package under the terms below.
 
 ## Permitted Use
 
-You may:
+The purchaser may:
 
-* Customize and modify the template for personal or commercial projects.
-* Use the template for client websites.
-* Edit the design, content, colors, typography, imagery, and functionality.
-* Deploy completed websites on personal, business, organization, or client-owned domains.
-* Create unlimited end-user websites using the template.
+* Use the website files for personal or commercial projects.
+* Modify the HTML, CSS, JavaScript, images, copy, and supporting files.
+* Use the package for client websites.
+* Host completed websites on public or private domains.
 
 ## Restrictions
 
-You may not:
+The purchaser may not:
 
-* Claim the original template design as your own creation.
-* Resell, redistribute, sublicense, share, or republish the template files as a standalone product.
-* Package the template as a competing website template, UI kit, theme, starter project, or design system.
-* Upload the template files to marketplaces, repositories, download sites, or file-sharing services.
-* Sell, distribute, or give away the source files in substantially the same form as originally provided.
-* Remove copyright notices from included documentation.
+* Resell, redistribute, sublicense, share, or republish the source package as a standalone product.
+* Package these files as a competing website product, UI kit, theme, starter project, or design system.
+* Upload the source package to marketplaces, public repositories, download sites, or file-sharing services.
+* Claim the original design system, layout, source files, or brand assets as original work for resale.
+* Use the fictional VELVET STUDIO identity in a way that suggests affiliation with a real company.
 
-## Demo Content Notice
+## Fictional Business Content
 
-VelvetUI Pro includes a fictional demonstration brand called **Velvet Studio**.
+VELVET STUDIO is a fictional interior design studio created for the included website experience. Business names, services, testimonials, contact details, prices, imagery, and written content are fictional brand materials.
 
-Velvet Studio exists solely to demonstrate the design, layout, and functionality of the template.
+When adapting the package for a real business, update business details, contact information, policies, imagery, metadata, and legal copy.
 
-All demo content included with the template, including but not limited to:
+## Third-Party Services
 
-* Business names
-* Logos
-* Services
-* Testimonials
-* Contact information
-* Pricing examples
-* Marketing copy
-* Portfolio content
-* Project descriptions
-* Images and graphics
+Any fonts, icons, libraries, platforms, or services referenced by the files may be subject to their own licenses and terms. The purchaser is responsible for reviewing and complying with applicable third-party terms.
 
-is provided for demonstration purposes only.
+## Warranty
 
-Any resemblance to real businesses, organizations, products, services, or individuals is purely coincidental.
+This package is provided "as is" without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement.
 
-Before publishing a live website, you should replace all demonstration content with your own branding, business information, contact details, policies, imagery, and marketing materials.
+The creator is not liable for claims, damages, losses, liabilities, costs, or expenses arising from use of the package or inability to use it.
 
-The template creator is not responsible for the use of demonstration content on a live website.
+By downloading, installing, modifying, or using VelvetUI Pro, the purchaser acknowledges and agrees to these terms.
 
-## Third-Party Assets
-
-Certain fonts, icons, libraries, or services referenced by the template may be subject to their own licenses and terms of use.
-
-It is the responsibility of the user to review and comply with any applicable third-party licenses when customizing or deploying the template.
-
-## No Warranty
-
-This template is provided "as is" without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.
-
-The creator shall not be liable for any claim, damages, losses, liabilities, costs, or expenses arising from the use of this template or any files included within it.
-
-## Acceptance of Terms
-
-By downloading, installing, modifying, or using VelvetUI Pro, you acknowledge and agree to the terms outlined in this license.
-
----
-
-Copyright © 2026 VelvetUI. All Rights Reserved.

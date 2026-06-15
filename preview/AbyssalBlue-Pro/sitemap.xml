@@ -1,37 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Replace this starter domain with the live production domain before launch. -->
 
   <url>
-    <loc>https://replace-before-launch.example/</loc>
+    <loc>https://www.abyssalblueadventures.com/</loc>
   </url>
 
   <url>
-    <loc>https://replace-before-launch.example/about.html</loc>
+    <loc>https://www.abyssalblueadventures.com/about.html</loc>
   </url>
 
   <url>
-    <loc>https://replace-before-launch.example/wildlife.html</loc>
+    <loc>https://www.abyssalblueadventures.com/wildlife.html</loc>
   </url>
 
   <url>
-    <loc>https://replace-before-launch.example/gallery.html</loc>
+    <loc>https://www.abyssalblueadventures.com/gallery.html</loc>
   </url>
 
   <url>
-    <loc>https://replace-before-launch.example/booking.html</loc>
+    <loc>https://www.abyssalblueadventures.com/booking.html</loc>
   </url>
 
   <url>
-    <loc>https://replace-before-launch.example/contact.html</loc>
+    <loc>https://www.abyssalblueadventures.com/contact.html</loc>
   </url>
 
   <url>
-    <loc>https://replace-before-launch.example/pricing.html</loc>
+    <loc>https://www.abyssalblueadventures.com/pricing.html</loc>
   </url>
 
   <url>
-    <loc>https://replace-before-launch.example/faq.html</loc>
+    <loc>https://www.abyssalblueadventures.com/faq.html</loc>
   </url>
 
 </urlset>
+

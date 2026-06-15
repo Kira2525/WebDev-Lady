@@ -1,196 +1,46 @@
-# VelvetUI Pro Setup Guide
+# Velvet Studio Setup Guide
 
-This guide walks through the initial setup process for VelvetUI Pro before customizing the template for a client project, business, agency, portfolio, or production website.
+Use this guide to review the VELVET STUDIO website before handoff or hosting.
 
-## 1. Review the Template Files
+## Page Map
 
-VelvetUI Pro includes the following pages:
+The website includes:
 
-```txt
-index.html
-about.html
-services.html
-features.html
-portfolio.html
-pricing.html
-faq.html
-contact.html
-404.html
-thank-you.html
-```
+* `index.html`
+* `about.html`
+* `services.html`
+* `features.html`
+* `pricing.html`
+* `portfolio.html`
+* `faq.html`
+* `contact.html`
+* `thank-you.html`
+* `404.html`
 
-Before making changes, open the template locally and review every page to understand the structure and content.
+## First Review
 
-## 2. Replace Demo Branding
+Open the site locally and move through every page from the primary navigation, footer links, call-to-action buttons, and contact flow. Check desktop, tablet, and phone widths. On compact screens, the navigation should use the diamond logo button.
 
-VelvetUI Pro ships with a fictional demonstration brand.
+## Business Details
 
-Before launch:
+Confirm the fictional studio details are consistent across the website:
 
-* Replace the demo business name
-* Replace the logo
-* Replace the favicon
-* Replace footer branding
-* Replace contact information
-* Replace social media links
+* Studio name: VELVET STUDIO
+* Domain: `https://velvetstudio.example`
+* Email: `hello@velvetstudio.example`
+* Location language and service area copy
+* Social profile URLs
+* Footer copyright line
 
-Search the project for the demo brand name to locate all branding references.
+## Contact Flow
 
-## 3. Update Images
+The inquiry form routes visitors to `thank-you.html`. For live collection, connect the form to a provider or backend and test the full submission path before accepting inquiries.
 
-The template includes demonstration imagery for presentation purposes.
+## Final Checks
 
-Before launching a real website:
-
-* Replace logo assets
-* Replace Open Graph images
-* Replace portfolio images
-* Replace showcase imagery
-* Replace any remaining placeholder graphics
-
-For detailed instructions, see:
-
-```txt
-docs/image-replacement-guide.md
-```
-
-## 4. Update Content
-
-Review and update content across:
-
-```txt
-index.html
-about.html
-services.html
-features.html
-portfolio.html
-pricing.html
-faq.html
-contact.html
-```
-
-Recommended updates:
-
-* Company information
-* Services
-* Portfolio projects
-* Pricing information
-* Testimonials
-* FAQ content
-* Contact details
-
-## 5. Configure the Contact Form
-
-The contact form is located in:
-
-```txt
-contact.html
-```
-
-By default, submissions redirect to:
-
-```txt
-thank-you.html
-```
-
-Before launching a production website, decide whether to:
-
-* Use Netlify Forms
-* Use Formspree
-* Use Getform
-* Use a custom backend
-* Keep the existing static thank-you page
-
-For setup instructions, see:
-
-```txt
-docs/form-setup-guide.md
-```
-
-## 6. Update SEO Settings
-
-Before publishing, update:
-
-* Page titles
-* Meta descriptions
-* Canonical URLs
-* Open Graph titles
-* Open Graph descriptions
-* Open Graph images
-* Twitter card metadata
-
-Also update:
-
-```txt
-robots.txt
-sitemap.xml
-site.webmanifest
-```
-
-Replace all example domains with the final production domain.
-
-## 7. Verify Navigation
-
-The navigation is duplicated across multiple pages for static-hosting compatibility.
-
-If you:
-
-* Add pages
-* Remove pages
-* Rename pages
-
-Update navigation links on all HTML files.
-
-Also verify footer navigation links remain consistent.
-
-## 8. Test Responsive Layouts
-
-Before launch, test:
-
-* Desktop
-* Tablet
-* Mobile
-
-Verify:
-
-* Navigation behavior
-* Hero sections
-* Content spacing
-* Portfolio layouts
-* Pricing cards
-* FAQ accordion
-* Contact form layout
-* Footer layout
-
-## 9. Test Site Functionality
-
-Review every page and verify:
-
-* Navigation links work correctly
-* CTA buttons work correctly
-* Images load correctly
-* Icons display correctly
-* Contact forms function correctly
-* Thank-you page loads correctly
-* 404 page functions correctly
-
-## 10. Final Launch Checklist
-
-Before publishing:
-
-* Replace all demo branding
-* Replace placeholder imagery
-* Update social media links
-* Update contact information
-* Configure the contact form
-* Update SEO metadata
-* Update robots.txt
-* Update sitemap.xml
-* Update site.webmanifest
-* Test all pages
-* Test all links
-* Test mobile responsiveness
-* Check for broken images
-* Check for broken links
-
-Once these steps are complete, VelvetUI Pro is ready for deployment on any static hosting platform.
+* All pages load without missing assets.
+* The sitemap and robots file use the correct domain.
+* The 404 page is present.
+* The thank-you page is present.
+* The mobile menu opens, closes, and keeps links readable.
+* Copy reads as VELVET STUDIO, not as package instructions.

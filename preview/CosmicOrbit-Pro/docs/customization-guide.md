@@ -179,7 +179,6 @@ Shipped assets include:
 
 - `images/logo.svg`
 - `images/favicon.svg`
-- `images/hero-orbit.svg`
 - `images/planet.png`
 
 If you replace files with different names, update the related HTML references.

@@ -4,7 +4,7 @@
 
 Thank you for purchasing Cosmic Orbit Pro.
 
-Cosmic Orbit Pro is a premium static HTML website template featuring a cinematic space-inspired design, responsive layouts, booking functionality, event pages, and modern business marketing sections.
+Cosmic Orbit Pro is a premium static HTML website template featuring a cinematic space-inspired design, responsive layouts, demo booking and contact forms, event pages, and modern business marketing sections.
 
 No build tools, package managers, frameworks, or server-side software are required.
 
@@ -41,7 +41,6 @@ CosmicOrbit-Pro/
 ├── images/
 │   ├── logo.svg
 │   ├── favicon.svg
-│   ├── hero-orbit.svg
 │   └── planet.png
 │
 ├── css/
@@ -191,6 +190,8 @@ Cosmic Orbit Pro includes:
 
 * Booking Form
 * Contact Form
+
+Both forms ship in demo mode and redirect to the included thank-you page until a live submission workflow is connected.
 
 Before launch:
 

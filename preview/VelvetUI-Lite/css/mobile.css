@@ -4,11 +4,9 @@
    spacing, typography, grids, and form adjustments.
 ========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   :root {
     --content-width: min(100% - 22px, 100%);
-    --section-space: 4rem;
-    --section-gap: 1rem;
     --nav-offset: 102px;
   }
 
@@ -18,17 +16,23 @@
 
   .nav {
     position: relative;
-    padding: 12px 14px;
-    gap: 12px;
+    padding: 11px 13px;
+    gap: 10px;
     border-radius: 22px;
     z-index: 1000;
     overflow: visible;
   }
 
+  .logo {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
   .menu-btn {
     display: inline-flex;
-    width: 42px;
-    height: 42px;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
     border-radius: 12px;
   }
 
@@ -41,7 +45,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 2px;
-    padding: 12px 14px 16px;
+    padding: 11px 13px 15px;
     border-radius: 20px;
     background: rgba(9, 1, 18, 0.97);
     border: 1px solid var(--glass-border);
@@ -55,6 +59,8 @@
     transition: opacity 0.22s ease, transform 0.22s ease;
     pointer-events: none;
     z-index: 1001;
+    max-height: min(74vh, calc(100vh - 120px));
+    overflow-y: auto;
   }
 
   .nav-links.active {
@@ -66,26 +72,38 @@
 
   .nav-links a {
     width: 100%;
+    min-height: 42px;
     padding: 10px 12px;
     border-radius: 12px;
-    font-size: 0.98rem;
-    color: var(--muted);
+    font-size: 0.94rem;
+    font-weight: 650;
+    line-height: 1.35;
+    color: rgba(255, 247, 251, 0.9);
     transition: background 0.18s ease, color 0.18s ease;
   }
 
   .nav-links a:hover,
-  .nav-links a:focus-visible {
-    background: rgba(255, 255, 255, 0.07);
+  .nav-links a:focus-visible,
+  .nav-links a.active,
+  .nav-links a[aria-current="page"] {
+    background: rgba(255, 255, 255, 0.10);
     color: var(--text);
   }
 
   .nav-links a::after {
     display: none;
   }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-space: 3.5rem;
+    --section-gap: 0.85rem;
+  }
 
   .page-shell {
-    padding-top: 2.5rem;
-    padding-bottom: 4rem;
+    padding-top: 2.15rem;
+    padding-bottom: 3.4rem;
   }
 
   .split-intro,
@@ -104,17 +122,17 @@
 
   h1 {
     max-width: 12ch;
-    font-size: clamp(2.4rem, 11vw, 4rem);
+    font-size: clamp(2.2rem, 10vw, 3.7rem);
   }
 
   h2 {
-    font-size: clamp(1.8rem, 8vw, 2.6rem);
+    font-size: clamp(1.65rem, 7vw, 2.35rem);
   }
 
   h3 {
     line-height: 1.08;
-    font-size: clamp(1.2rem, 5vw, 1.5rem);
-    margin-bottom: 10px;
+    font-size: clamp(1.08rem, 4.5vw, 1.38rem);
+    margin-bottom: 8px;
   }
 
   .lead,
@@ -129,32 +147,32 @@
   .contact-meta p,
   .thanks-card p,
   .error-card p {
-    font-size: 0.95rem;
-    line-height: 1.65;
+    font-size: 0.9rem;
+    line-height: 1.58;
   }
 
   .lead {
-    margin-top: 0.85rem;
-    font-size: 1rem;
+    margin-top: 0.7rem;
+    font-size: 0.96rem;
   }
 
   .section-copy {
-    margin-top: 0.65rem;
+    margin-top: 0.55rem;
   }
 
   .button-row {
     flex-direction: column;
     align-items: stretch;
-    gap: 10px;
-    margin-top: 1rem;
+    gap: 8px;
+    margin-top: 0.85rem;
   }
 
   .btn-primary,
   .btn-secondary,
   button.btn-primary {
     width: 100%;
-    min-height: 50px;
-    padding: 0.9rem 1.15rem;
+    min-height: 46px;
+    padding: 0.78rem 1rem;
   }
 
   .hero-image-frame {
@@ -180,13 +198,13 @@
   .hero-visual,
   .thanks-card,
   .error-card {
-    padding: 16px;
+    padding: 14px;
     border-radius: 20px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .section-heading {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   .pricing-grid,
@@ -196,7 +214,7 @@
   .process-timeline,
   .link-cluster,
   .service-grid {
-    gap: 2.5rem; 
+    gap: 1rem; 
   }
 
   .feature-icon {
@@ -213,13 +231,13 @@
 
   .tag-row,
   .contact-meta {
-    margin-top: 0.75rem;
+    margin-top: 0.6rem;
   }
 
   .info-list,
   .pricing-card ul,
   .hero-visual ul {
-    margin-top: 10px;
+    margin-top: 8px;
     margin-bottom: 0;
     padding-left: 1rem;
     line-height: 1.55;
@@ -228,19 +246,19 @@
   .info-list li,
   .pricing-card li,
   .hero-visual li {
-    margin-top: 6px;
-    margin-bottom: 10px;
+    margin-top: 4px;
+    margin-bottom: 8px;
   }
 
   .pricing-card h3 {
     max-width: 100%;
-    font-size: clamp(1.45rem, 6vw, 1.85rem);
+    font-size: clamp(1.28rem, 5.5vw, 1.65rem);
     line-height: 1.1;
   }
 
   .price {
-    margin-top: 0.65rem;
-    font-size: clamp(1.8rem, 9vw, 2.4rem);
+    margin-top: 0.5rem;
+    font-size: clamp(1.6rem, 8vw, 2.15rem);
   }
 
   .price-subtitle {
@@ -256,17 +274,17 @@
 
   .hero-stats {
     grid-template-columns: 1fr;
-    gap: 8px;
-    margin-top: 1rem;
+    gap: 6px;
+    margin-top: 0.85rem;
   }
 
   .hero-stats div {
-    padding: 12px;
+    padding: 10px;
     border-radius: 16px;
   }
 
   .hero-stats strong {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
   }
 
   .hero-stats span {
@@ -274,11 +292,11 @@
   }
 
   .faq-accordion {
-    gap: 10px;
+    gap: 8px;
   }
 
   .faq-accordion details {
-    padding: 1rem;
+    padding: 0.9rem;
     border-radius: 18px;
   }
 
@@ -288,7 +306,7 @@
   }
 
   .faq-accordion p {
-    margin-top: 0.75rem;
+    margin-top: 0.6rem;
     line-height: 1.6;
   }
 
@@ -300,13 +318,13 @@
 @media (max-width: 540px) {
   :root {
     --content-width: min(100% - 18px, 100%);
-    --section-space: 3.5rem;
+    --section-space: 3rem;
     --nav-offset: 96px;
   }
 
   .logo {
     gap: 8px;
-    font-size: 1.15rem;
+    font-size: 1.08rem;
   }
 
   .logo-image {
@@ -315,11 +333,11 @@
   }
 
   .nav {
-    padding: 11px 13px;
+    padding: 10px 12px;
   }
 
   .nav-links {
-    padding: 12px 13px 14px;
+    padding: 11px 12px 13px;
   }
 
   .tag {
@@ -338,7 +356,7 @@
   .thanks-card,
   .error-card,
   .site-footer {
-    padding: 0.95rem;
+    padding: 0.85rem;
     border-radius: 18px;
   }
 
@@ -350,4 +368,3 @@
     min-height: 180px;
   }
 }
-

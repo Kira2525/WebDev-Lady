@@ -26,6 +26,10 @@
   --radius-lg: 24px;
   --radius-md: 18px;
   --content-width: 1200px;
+  --sticky-header-offset: 18px;
+  --header-height: 96px;
+  --header-clearance: calc(var(--header-height) + var(--sticky-header-offset) + 22px);
+  --header-anchor-offset: calc(var(--header-height) + var(--sticky-header-offset) + 28px);
   --body-font: "Space Grotesk", "Segoe UI", sans-serif;
   --heading-font: "Orbitron", "Space Grotesk", sans-serif;
 }
@@ -43,11 +47,13 @@ html {
   overscroll-behavior-y: auto;
   background-color: #02060f;
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-anchor-offset);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  padding-top: var(--header-clearance);
   overflow-x: hidden;
   overscroll-behavior-x: none;
   overscroll-behavior-y: auto;
@@ -93,7 +99,7 @@ main {
 main[id],
 section[id],
 article[id] {
-  scroll-margin-top: 150px;
+  scroll-margin-top: var(--header-anchor-offset);
 }
 
 .skip-link {
@@ -128,6 +134,7 @@ article[id] {
   pointer-events: none;
   transform: translateZ(0);
   backface-visibility: hidden;
+  will-change: transform;
 }
 
 /* =========================================================
@@ -139,13 +146,19 @@ article[id] {
   contain: paint;
 }
 
+.page-glow::before {
+  will-change: transform;
+}
+
 /* =========================================================
    DENSE STAR FIELD
 ========================================================= */
 
 .star-overlay {
+  inset: -160px;
   z-index: 1;
   opacity: 0.44;
+  overflow: hidden;
   background-image:
     radial-gradient(circle at 6% 12%, rgba(255, 255, 255, 0.92) 0 1px, transparent 1.6px),
     radial-gradient(circle at 14% 72%, rgba(255, 255, 255, 0.6) 0 1px, transparent 1.8px),
@@ -178,9 +191,10 @@ article[id] {
     150px 150px,
     175px 175px,
     155px 155px;
-  transform: translate3d(var(--star-shift-x, 0px), var(--star-shift-y, 0px), 0);
+  transform: translate3d(0, 0, 0);
   filter: drop-shadow(0 0 2px rgba(162, 231, 255, 0.12));
   contain: paint;
+  will-change: transform;
   animation: starDrift 120s linear infinite;
 }
 
@@ -190,6 +204,8 @@ article[id] {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
 }
 
 .star-overlay::before {
@@ -203,7 +219,7 @@ article[id] {
     radial-gradient(circle at 52% 62%, rgba(129, 231, 255, 0.44) 0 0.85px, transparent 1.4px),
     radial-gradient(circle at 74% 34%, rgba(255, 255, 255, 0.44) 0 0.85px, transparent 1.4px);
   background-size: 120px 120px, 160px 160px, 140px 140px, 190px 190px, 100px 100px, 118px 118px, 136px 136px;
-  transform: translate3d(calc(var(--star-shift-x, 0px) * 0.55), calc(var(--star-shift-y, 0px) * 0.55), 0);
+  transform: translate3d(0, 0, 0);
   animation:
     starDriftReverse 165s linear infinite,
     twinkle 4.2s ease-in-out infinite,
@@ -222,7 +238,7 @@ article[id] {
     radial-gradient(circle at 66% 54%, rgba(255, 255, 255, 0.32) 0 0.8px, transparent 1.35px),
     radial-gradient(circle at 86% 18%, rgba(129, 231, 255, 0.3) 0 0.8px, transparent 1.35px);
   background-size: 90px 90px, 130px 130px, 110px 110px, 150px 150px, 78px 78px, 92px 92px, 106px 106px, 122px 122px;
-  transform: translate3d(calc(var(--star-shift-x, 0px) * 0.28), calc(var(--star-shift-y, 0px) * 0.28), 0);
+  transform: translate3d(0, 0, 0);
   animation:
     starDriftFar 210s linear infinite,
     twinkle 6.4s ease-in-out infinite,
@@ -252,61 +268,31 @@ article[id] {
 
 @keyframes starDrift {
   0% {
-    background-position:
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0;
+    transform: translate3d(0, 0, 0);
   }
 
   100% {
-    background-position:
-      -48px 70px,
-      -64px 92px,
-      -56px 84px,
-      -72px 108px,
-      -88px 132px,
-      -52px 80px,
-      -76px 116px,
-      -60px 90px,
-      -74px 114px,
-      -92px 138px,
-      -40px 62px,
-      -46px 70px,
-      -42px 66px,
-      -50px 76px,
-      -44px 68px;
+    transform: translate3d(-70px, 104px, 0);
   }
 }
 
 @keyframes starDriftReverse {
   0% {
-    background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    transform: translate3d(0, 0, 0);
   }
 
   100% {
-    background-position: 58px -42px, 76px -56px, 66px -50px, 88px -62px, 48px -34px, 54px -40px, 64px -46px;
+    transform: translate3d(64px, -47px, 0);
   }
 }
 
 @keyframes starDriftFar {
   0% {
-    background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    transform: translate3d(0, 0, 0);
   }
 
   100% {
-    background-position: -82px 44px, -96px 52px, -88px 48px, -102px 56px, -70px 38px, -76px 42px, -84px 46px, -92px 50px;
+    transform: translate3d(-86px, 47px, 0);
   }
 }
 
@@ -337,6 +323,7 @@ article[id] {
   pointer-events: none;
   opacity: 0.78;
   overflow: visible;
+  will-change: transform;
   animation: planetFloat 16s ease-in-out infinite alternate;
 }
 
@@ -350,6 +337,7 @@ article[id] {
     radial-gradient(circle at 56% 48%, rgba(55, 183, 255, 0.16), transparent 48%);
   filter: blur(22px);
   z-index: 0;
+  will-change: transform, opacity;
   animation: planetHaloPulse 18s ease-in-out infinite alternate;
 }
 
@@ -404,6 +392,15 @@ article[id] {
     radial-gradient(circle at 74% 74%, rgba(5, 12, 26, 0.24), transparent 28%);
   mix-blend-mode: screen;
   opacity: 0.7;
+}
+
+.planet-core,
+.planet-core::before,
+.planet-ring,
+.hero-planet-image,
+.shooting-star {
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .planet-ring {
@@ -662,6 +659,7 @@ ul {
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  contain: paint;
 }
 
 .card,
@@ -844,10 +842,12 @@ ul {
 ========================================================= */
 
 .site-header {
-  position: sticky;
-  top: 18px;
-  z-index: 120;
-  margin-top: 22px;
+  position: fixed;
+  top: var(--sticky-header-offset);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  margin-top: 0;
   padding: 18px 24px;
   display: flex;
   align-items: center;
@@ -856,6 +856,9 @@ ul {
   border: 1px solid rgba(129, 231, 255, 0.16);
   border-radius: 999px;
   background: rgba(5, 14, 27, 0.72);
+  isolation: isolate;
+  backface-visibility: hidden;
+  contain: paint;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow:
@@ -863,7 +866,6 @@ ul {
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-.site-header,
 main,
 .site-footer {
   position: relative;
@@ -951,35 +953,43 @@ main,
 
 .menu-toggle {
   display: none;
-  width: 52px;
-  height: 52px;
+  width: 54px;
+  height: 54px;
   padding: 0;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.06);
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 
-.menu-toggle span {
+.planet-icon {
+  position: relative;
   display: block;
-  width: 22px;
-  height: 2px;
-  margin: 5px auto;
-  border-radius: 999px;
-  background: var(--text-main);
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 35%,
+    #b9e7ff 0%,
+    #6fb8ff 30%,
+    #3d76d6 65%,
+    #122c63 100%
+  );
+  box-shadow: 0 0 14px rgba(126, 225, 255, 0.45);
 }
 
-.menu-toggle[aria-expanded="true"] span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.menu-toggle[aria-expanded="true"] span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle[aria-expanded="true"] span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.planet-icon::after {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 12px;
+  left: -8px;
+  top: 7px;
+  border: 2px solid rgba(126, 225, 255, 0.85);
+  border-radius: 50%;
+  transform: rotate(-18deg);
 }
 
 /* =========================================================
@@ -996,7 +1006,7 @@ main,
 }
 
 .home-hero {
-  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
 }
 
 .page-hero {
@@ -1045,6 +1055,10 @@ main,
   position: relative;
 }
 
+.home-hero .hero-visual {
+  justify-self: stretch;
+}
+
 /* =========================================================
    HERO PLANET VISUAL
 ========================================================= */
@@ -1066,6 +1080,11 @@ main,
   transform-style: preserve-3d;
 }
 
+.home-hero .hero-visual .glass-panel {
+  max-width: 680px;
+  margin-left: auto;
+}
+
 .hero-planet-image,
 .hero-visual img,
 .page-visual img {
@@ -1082,6 +1101,8 @@ main,
 .hero-planet-image {
   position: relative;
   z-index: 1;
+  aspect-ratio: 16 / 9;
+  height: clamp(250px, 23vw, 340px);
   transform-origin: center;
   animation: heroPlanetFloat 12s ease-in-out infinite;
 }
@@ -1773,14 +1794,26 @@ textarea.input-field {
   }
 }
 
-[data-reveal] {
+[data-reveal],
+[data-reveal].is-visible {
   opacity: 1;
   transform: none;
 }
 
-[data-reveal].is-visible {
-  opacity: 1;
-  transform: none;
+@media screen and (max-width: 1024px) {
+  .nav-menu.is-open {
+    display: flex;
+  }
+
+  .nav-menu a::before,
+  .nav-menu a::after {
+    display: none;
+  }
+
+  .nav-menu a.is-active,
+  .nav-menu a[aria-current="page"] {
+    background: rgba(129, 231, 255, 0.12);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

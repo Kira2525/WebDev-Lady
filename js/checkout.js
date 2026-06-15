@@ -1,4 +1,4 @@
-const STRIPE_PUBLIC_KEY = "pk_test_51Tb6cUCNvIHQgqvuzYAxs4S26Nvcxo2nMgPs16z2G9JKHw9r1dphVeXSbxxQKbdqdO1GAgxtug8NT7syyPLfSHCu00GOCDHRmx";
+const STRIPE_PUBLIC_KEY = "pk_live_51Tb6cUCNvIHQgqvuRtq4FerTZAMWcWcXLuLqRA6nYuhZm6DjgvKmU4DTJ7go4Vmkixv98wUOtjVztj0SC8cAGHXv00ZhB98aKl";
 const isPlaceholderKey =
   !STRIPE_PUBLIC_KEY || STRIPE_PUBLIC_KEY.includes("REPLACE_WITH");
 const stripe = !isPlaceholderKey && typeof Stripe === "function"

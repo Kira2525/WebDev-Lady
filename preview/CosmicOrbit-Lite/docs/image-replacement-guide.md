@@ -2,7 +2,7 @@
 
 ## Overview
 
-Cosmic Orbit Lite includes a small collection of brand assets and optional supporting images that can be replaced with your own content.
+Cosmic Orbit Lite includes a small collection of brand assets that can be replaced with your own content.
 
 Most images are stored in:
 
@@ -24,17 +24,11 @@ Current image files:
 images/logo.svg
 images/favicon.svg
 images/planet.png
-images/hero-image.jpg
-images/section-image-1.jpg
-images/section-image-2.jpg
-images/section-image-3.jpg
-images/section-image-4.jpg
 ```
 
 Notes:
 
 * `logo.svg`, `favicon.svg`, and `planet.png` are used by default.
-* `hero-image.jpg` and `section-image-1.jpg` through `section-image-4.jpg` are optional supporting assets included for alternate branding or future layout edits.
 
 ---
 
@@ -129,17 +123,7 @@ Keeping the filename unchanged is recommended.
 
 # Optional Supporting Images
 
-Optional files:
-
-```text
-images/hero-image.jpg
-images/section-image-1.jpg
-images/section-image-2.jpg
-images/section-image-3.jpg
-images/section-image-4.jpg
-```
-
-These files are included as optional source assets for future edits, alternate mockups, or marketing materials.
+This Lite package ships only the images used by the live website. If you add new supporting images for future sections, place them in the `images/` folder and update the related HTML paths.
 
 ## Recommended Sizes
 
@@ -233,7 +217,7 @@ Avoid uploading unnecessarily large images.
 Good example:
 
 ```html
-<img src="images/hero-image.jpg"
+<img src="images/stargazing-event.jpg"
      alt="Visitors enjoying a guided stargazing experience">
 ```
 

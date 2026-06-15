@@ -8,6 +8,7 @@
   /* Header + navigation */
 
   .site-header {
+    justify-content: space-between;
     padding: 20px 6%;
   }
 
@@ -25,12 +26,34 @@
     font-size: 1.2rem;
   }
 
-  .nav-menu {
-    gap: 16px;
+  .menu-toggle {
+    display: inline-flex;
+    flex: 0 0 auto;
   }
 
-  .nav-menu a {
-    font-size: 0.92rem;
+  .menu-toggle-logo {
+    position: relative;
+    z-index: 101;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.active {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 6%;
+    right: 6%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px;
+    border-radius: 24px;
+    background: rgba(0, 18, 30, 0.95);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(22px);
+    box-shadow: var(--shadow-soft);
   }
 
   /* Shared layout */

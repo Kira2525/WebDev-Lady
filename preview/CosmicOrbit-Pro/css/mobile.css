@@ -1,87 +1,50 @@
-@media screen and (max-width: 680px) {
-  .site-header {
-    width: min(92%, 100%);
-    top: 12px;
-    margin-top: 18px;
-    padding: 14px 18px;
-    border-radius: 28px;
+@media screen and (max-width: 760px) {
+  :root {
+    --header-offset: 104px;
   }
 
-  .site-brand span {
-    font-size: 1.08rem;
-  }
-
-  .nav-menu {
-    display: none;
-    position: absolute;
-    top: calc(100% + 14px);
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 22px;
-    border: 1px solid rgba(129, 231, 255, 0.18);
-    border-radius: 28px;
-    background: rgba(4, 12, 23, 0.96);
-    box-shadow: 0 22px 54px rgba(0, 0, 0, 0.38);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-
-  .nav-menu.is-open {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: inline-block;
-  }
-
-  h1 {
-    font-size: 2.45rem;
-  }
-
-  h2 {
-    font-size: 1.7rem;
-  }
-
+  .site-header,
   .section-shell,
-  .site-footer-inner,
-  .site-header {
+  .site-footer-inner {
     width: 92%;
   }
 
-  .section-shell {
-    margin-bottom: 60px;
+  .site-header {
+    border-radius: 28px;
   }
 
-  .hero-actions,
-  .section-actions,
-  .btn-row,
-  .footer-bottom {
-    flex-direction: column;
-    align-items: center;
+  .site-brand {
+    gap: 10px;
   }
 
-  .btn {
-    width: 100%;
+  .site-brand img {
+    width: 42px;
+    height: 42px;
   }
 
-  .hero-metrics,
-  .services-grid,
-  .events-grid,
-  .story-grid,
-  .directory-grid,
-  .details-grid,
-  .proof-grid,
-  .stats-grid,
-  .steps-grid,
-  .field-row,
-  .footer-top,
-  .team-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .site-brand span {
+    font-size: 1.02rem;
   }
 
+  h1 {
+    font-size: clamp(2.1rem, 10vw, 2.9rem);
+    line-height: 1.05;
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 6.8vw, 2.05rem);
+  }
+
+  .home-hero,
+  .page-hero,
+  .split-layout,
+  .form-layout {
+    gap: 28px;
+    padding-top: 48px;
+  }
+
+  .hero-visual .glass-panel,
+  .page-visual .glass-panel,
   .card,
   .form-card,
   .info-card,
@@ -97,39 +60,45 @@
     border-radius: 24px;
   }
 
-  .compare-table,
-  .compare-table thead,
-  .compare-table tbody,
-  .compare-table tr,
-  .compare-table th,
-  .compare-table td {
-    display: block;
+  .home-hero .hero-visual .glass-panel,
+  .page-visual .glass-panel {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .home-hero .hero-planet-image,
+  .page-visual img {
+    height: clamp(170px, 48vw, 220px);
+  }
+
+  .service-card-header,
+  .card-topline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-row,
+  .hero-actions,
+  .section-actions,
+  .footer-bottom {
+    align-items: stretch;
+  }
+
+  .btn {
     width: 100%;
   }
 
-  .compare-table thead {
-    display: none;
+  .compare-table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .compare-table tr + tr {
-    margin-top: 18px;
-  }
-
+  .compare-table th,
   .compare-table td {
-    border-width: 0 0 1px;
-    padding: 12px 0;
-  }
-
-  .footer-bottom {
-    gap: 10px;
-  }
-
-  .hero-visual .glass-panel,
-  .page-visual .glass-panel {
-    padding: 20px;
-  }
-
-  .hero-planet-stage {
-    margin-bottom: 18px;
+    min-width: 150px;
+    padding: 12px;
+    font-size: 0.9rem;
   }
 }

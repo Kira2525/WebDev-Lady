@@ -8,7 +8,12 @@ const productCatalog = {
     priceLabel: "$39",
     originalPrice: 59,
     originalPriceLabel: "$59",
-    image: "images/cosmicorbit-lite.png",
+    image: "images/Cosmic Orbit Lite/cosmicorbit-lite.png",
+    galleryImages: [
+      { src: "images/Cosmic Orbit Lite/cosmicorbit-lite.png", label: "Homepage - 1/3", altLabel: "Homepage" },
+      { src: "images/Cosmic Orbit Lite/cosmicorbit-lite-about.png", label: "About Section - 2/3", altLabel: "About Section" },
+      { src: "images/Cosmic Orbit Lite/cosmicorbit-lite-footer.png", label: "Footer - 3/3", altLabel: "Footer" }
+    ],
     preview: "preview/CosmicOrbit-Lite/index.html",
     downloadFile: "downloads/CosmicOrbit-Lite.zip",
     successUrl: "thank-you-lite.html?product=cosmicorbit-lite",
@@ -33,7 +38,12 @@ const productCatalog = {
     priceLabel: "$69",
     originalPrice: 99,
     originalPriceLabel: "$99",
-    image: "images/cosmicorbit-pro.png",
+    image: "images/Cosmic Orbit Pro/cosmicorbit-pro-home.png",
+    galleryImages: [
+      { src: "images/Cosmic Orbit Pro/cosmicorbit-pro-home.png", label: "Homepage - 1/3", altLabel: "Homepage" },
+      { src: "images/Cosmic Orbit Pro/cosmicorbit-pro-contact.png", label: "Contact Form - 2/3", altLabel: "Contact Form" },
+      { src: "images/Cosmic Orbit Pro/cosmicorbit-pro-thankyou.png", label: "Thank You Page - 3/3", altLabel: "Thank You Page" }
+    ],
     preview: "preview/CosmicOrbit-Pro/index.html",
     downloadFile: "downloads/CosmicOrbit-Pro.zip",
     successUrl: "thank-you-pro.html?product=cosmicorbit-pro",
@@ -60,7 +70,12 @@ const productCatalog = {
     priceLabel: "$39",
     originalPrice: 59,
     originalPriceLabel: "$59",
-    image: "images/abyssalblue-lite.png",
+    image: "images/Abyssal Blue Lite/abyssalblue-lite.png",
+    galleryImages: [
+      { src: "images/Abyssal Blue Lite/abyssalblue-lite.png", label: "Homepage - 1/3", altLabel: "Homepage" },
+      { src: "images/Abyssal Blue Lite/abyssalblue-lite-contact.png", label: "Contact Form - 2/3", altLabel: "Contact Form" },
+      { src: "images/Abyssal Blue Lite/abyssalblue-lite-footer.png", label: "Footer - 3/3", altLabel: "Footer" }
+    ],
     preview: "preview/AbyssalBlue-Lite/index.html",
     downloadFile: "downloads/AbyssalBlue-Lite.zip",
     successUrl: "thank-you-lite.html?product=abyssalblue-lite",
@@ -85,7 +100,12 @@ const productCatalog = {
     priceLabel: "$69",
     originalPrice: 99,
     originalPriceLabel: "$99",
-    image: "images/abyssalblue-pro.png",
+    image: "images/Abyssal Blue Pro/abyssalblue-pro.png",
+    galleryImages: [
+      { src: "images/Abyssal Blue Pro/abyssalblue-pro.png", label: "Homepage - 1/3", altLabel: "Homepage" },
+      { src: "images/Abyssal Blue Pro/abyssalblue-pro-booking.png", label: "Booking Page - 2/3", altLabel: "Booking Page" },
+      { src: "images/Abyssal Blue Pro/abyssalblue-pro-gallery.png", label: "Gallery Page - 3/3", altLabel: "Gallery Page" }
+    ],
     preview: "preview/AbyssalBlue-Pro/index.html",
     downloadFile: "downloads/AbyssalBlue-Pro.zip",
     successUrl: "thank-you-pro.html?product=abyssalblue-pro",
@@ -112,13 +132,18 @@ const productCatalog = {
     priceLabel: "$39",
     originalPrice: 59,
     originalPriceLabel: "$59",
-    image: "images/velvetui-lite.png",
+    image: "images/VelvetUI Lite/velvetui-lite-home.png",
+    galleryImages: [
+      { src: "images/VelvetUI Lite/velvetui-lite-home.png", label: "Homepage - 1/3", altLabel: "Homepage" },
+      { src: "images/VelvetUI Lite/velvetui-lite-contact.png", label: "Contact Form - 2/3", altLabel: "Contact Form" },
+      { src: "images/VelvetUI Lite/velvetui-lite-footer.png", label: "Footer - 3/3", altLabel: "Footer" }
+    ],
     preview: "preview/VelvetUI-Lite/index.html",
     downloadFile: "downloads/VelvetUI-Lite.zip",
     successUrl: "thank-you-lite.html?product=velvetui-lite",
     tagline: "Launch Promo",
     typeLabel: "Single-page template",
-    description: "A soft luxury single-page template for personal brands, coaches, beauty businesses, digital offers, and modern promotional websites.",
+    description: "A soft luxury single-page template for personal brands, coaches, premium service businesses, digital offers, and modern promotional websites.",
     features: [
       "Single-page website",
       "Responsive layout",
@@ -137,7 +162,12 @@ const productCatalog = {
     priceLabel: "$69",
     originalPrice: 99,
     originalPriceLabel: "$99",
-    image: "images/velvetui-pro.png",
+    image: "images/VelvetUI Pro/127.0.0.1_5500_index.html (3).png",
+    galleryImages: [
+      { src: "images/VelvetUI Pro/127.0.0.1_5500_index.html (3).png", label: "Homepage - 1/3", altLabel: "Homepage" },
+      { src: "images/VelvetUI Pro/127.0.0.1_5500_contact.html (2).png", label: "Contact Form - 2/3", altLabel: "Contact Form" },
+      { src: "images/VelvetUI Pro/127.0.0.1_5500_faq.html.png", label: "FAQ Page - 3/3", altLabel: "FAQ Page" }
+    ],
     preview: "preview/VelvetUI-Pro/index.html",
     downloadFile: "downloads/VelvetUI-Pro.zip",
     successUrl: "thank-you-pro.html?product=velvetui-pro",
@@ -164,7 +194,12 @@ const productCatalog = {
     priceLabel: "$39",
     originalPrice: 59,
     originalPriceLabel: "$59",
-    image: "images/worldviewglobal-pro.png",
+    image: "images/WorldView Lite/worldview-lite.png",
+    galleryImages: [
+      { src: "images/WorldView Lite/worldview-lite.png", label: "Homepage - 1/3", altLabel: "Homepage" },
+      { src: "images/WorldView Lite/worldview-lite-contact.png", label: "Contact Form - 2/3", altLabel: "Contact Form" },
+      { src: "images/WorldView Lite/worldview-lite-footer.png", label: "Footer - 3/3", altLabel: "Footer" }
+    ],
     preview: "preview/WorldViewGlobal-Lite/index.html",
     downloadFile: "downloads/WorldViewGlobal-Lite.zip",
     successUrl: "thank-you-lite.html?product=worldviewglobal-lite",
@@ -189,7 +224,12 @@ const productCatalog = {
     priceLabel: "$69",
     originalPrice: 99,
     originalPriceLabel: "$99",
-    image: "images/worldviewglobal-pro.png",
+    image: "images/WorldView Pro/worldview-pro.png",
+    galleryImages: [
+      { src: "images/WorldView Pro/worldview-pro.png", label: "Homepage - 1/3", altLabel: "Homepage" },
+      { src: "images/WorldView Pro/worldview-pro-contact.png", label: "Contact Form - 2/3", altLabel: "Contact Form" },
+      { src: "images/WorldView Pro/worldview-pro-footer.png", label: "Footer - 3/3", altLabel: "Footer" }
+    ],
     preview: "preview/WorldViewGlobal-Pro/index.html",
     downloadFile: "downloads/WorldViewGlobal-Pro.zip",
     successUrl: "thank-you-pro.html?product=worldviewglobal-pro",
@@ -204,56 +244,6 @@ const productCatalog = {
       "Editable HTML, CSS, and JavaScript",
       "Documentation included",
       "Commercial use license",
-      "Instant digital download"
-    ]
-  },
-  "rainblossom-lite": {
-    key: "rainblossom-lite",
-    name: "Rain Blossom Lite",
-    family: "Rain Blossom",
-    version: "Lite",
-    price: 39,
-    priceLabel: "$39",
-    originalPrice: 59,
-    originalPriceLabel: "$59",
-    image: "images/rainblossom-lite.svg",
-    preview: "preview/RainBlossom-Lite/index.html",
-    downloadFile: "downloads/RainBlossom-Lite.zip",
-    successUrl: "thank-you-lite.html?product=rainblossom-lite",
-    tagline: "New Arrival",
-    typeLabel: "Single-page template",
-    description: "A romantic, editorial-style single-page template for florists, beauty brands, event creatives, and boutique service businesses that want a polished feminine launch.",
-    features: [
-      "Single-page website",
-      "Editorial-inspired layout",
-      "Responsive desktop, tablet, and mobile design",
-      "Editable HTML and CSS",
-      "Documentation included",
-      "Instant digital download"
-    ]
-  },
-  "rainblossom-pro": {
-    key: "rainblossom-pro",
-    name: "Rain Blossom Pro",
-    family: "Rain Blossom",
-    version: "Pro",
-    price: 69,
-    priceLabel: "$69",
-    originalPrice: 99,
-    originalPriceLabel: "$99",
-    image: "images/rainblossom-pro.svg",
-    preview: "preview/RainBlossom-Pro/index.html",
-    downloadFile: "downloads/RainBlossom-Pro.zip",
-    successUrl: "thank-you-pro.html?product=rainblossom-pro",
-    tagline: "New Arrival",
-    typeLabel: "Multi-page template",
-    description: "A romantic multi-page template with richer storytelling, polished service sections, and a premium boutique presentation for beauty, fashion, and event-led brands.",
-    features: [
-      "Multi-page website",
-      "Home, about, and contact pages",
-      "Responsive desktop, tablet, and mobile design",
-      "Editable HTML and CSS",
-      "Documentation included",
       "Instant digital download"
     ]
   }

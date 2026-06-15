@@ -1,5 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
+Sitemap: https://www.abyssalblueadventures.com/sitemap.xml
 
-# Replace this sitemap URL with your live production domain before launch.
-Sitemap: https://replace-before-launch.example/sitemap.xml

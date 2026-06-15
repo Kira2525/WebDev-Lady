@@ -22,6 +22,7 @@ const bubbleLayer = document.getElementById("bubbleLayer");
 const fishLayer = document.getElementById("fishLayer");
 const oceanCanvas = document.getElementById("oceanCanvas");
 const slides = document.querySelectorAll(".hero-slider .slide");
+const collapsedNavMedia = window.matchMedia("(max-width: 1024px)");
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -36,6 +37,10 @@ function getHeaderOffset() {
 
 function prefersMotion() {
   return !prefersReducedMotion.matches;
+}
+
+function usesCollapsedNavigation() {
+  return collapsedNavMedia.matches;
 }
 
 function focusAnchorTarget(targetElement) {
@@ -59,19 +64,34 @@ function setMenuState(isOpen) {
     return;
   }
 
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
-  navMenu.classList.toggle("active", isOpen);
-  document.body.classList.toggle("menu-open", isOpen);
+  const shouldOpen = usesCollapsedNavigation() && isOpen;
+
+  menuToggle.classList.toggle("menu-active", shouldOpen);
+  menuToggle.setAttribute("aria-expanded", String(shouldOpen));
+  menuToggle.setAttribute("aria-label", shouldOpen ? "Close menu" : "Open menu");
+  navMenu.classList.toggle("active", shouldOpen);
+  document.body.classList.toggle("menu-open", shouldOpen);
 }
 
 if (menuToggle && navMenu) {
   setMenuState(false);
 
   menuToggle.addEventListener("click", () => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    if (!usesCollapsedNavigation()) {
+      return;
+    }
+
+    const isOpen = navMenu.classList.contains("active");
     setMenuState(!isOpen);
   });
+
+  const handleCollapsedNavChange = () => setMenuState(false);
+
+  if (typeof collapsedNavMedia.addEventListener === "function") {
+    collapsedNavMedia.addEventListener("change", handleCollapsedNavChange);
+  } else if (typeof collapsedNavMedia.addListener === "function") {
+    collapsedNavMedia.addListener(handleCollapsedNavChange);
+  }
 
   navMenu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => setMenuState(false));

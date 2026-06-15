@@ -63,17 +63,8 @@
       <span>Cosmic Orbit</span>
     </a>
 
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-controls="navMenu"
-      aria-expanded="false"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+      <span class="planet-icon"></span>
     </button>
 
     <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
@@ -124,6 +115,10 @@
             src="images/planet.png"
             alt="Stylized observatory display with a glowing planet and orbital star map."
             class="hero-planet-image"
+            width="1536"
+            height="1024"
+            decoding="async"
+            fetchpriority="high"
           />
 
           <div class="orbit-note-grid">

@@ -35,9 +35,9 @@
   --radius-sm: 16px;
 
   /* Layout */
-  --content-width: min(1200px, calc(100% - 40px));
-  --section-space: clamp(4.5rem, 7vw, 6.5rem);
-  --section-gap: clamp(1.25rem, 2vw, 2rem);
+  --content-width: min(1160px, calc(100% - 36px));
+  --section-space: clamp(3.8rem, 6vw, 5.8rem);
+  --section-gap: clamp(1rem, 1.6vw, 1.45rem);
   --nav-offset: 128px;
 
   /* Typography */
@@ -45,9 +45,9 @@
   --font-display: "Baskerville Old Face", "Palatino Linotype", Georgia, serif;
 
   /* Buttons and fields */
-  --button-height: 54px;
+  --button-height: 50px;
   --field-radius: 18px;
-  --field-padding: 0.95rem 1.1rem;
+  --field-padding: 0.82rem 0.98rem;
 
   /* Decorative showcase panels */
   --visual-one:
@@ -342,10 +342,8 @@ summary:focus-visible {
 
 .menu-btn {
   display: none;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0;
   width: 46px;
   height: 46px;
   padding: 0;
@@ -362,23 +360,21 @@ summary:focus-visible {
   border-color: rgba(255, 200, 225, 0.46);
 }
 
-.menu-btn .bar {
-  display: block;
-  width: 20px;
-  height: 1.5px;
-  background: var(--text);
-  border-radius: 2px;
-  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.22s ease, width 0.22s ease;
-  position: absolute;
+.menu-btn::before {
+  content: "";
+  width: 29px;
+  height: 29px;
+  background: url("../assets/velvetui-mark.svg") center / contain no-repeat;
+  filter: drop-shadow(0 0 14px rgba(255, 61, 138, 0.42));
+  transition: transform 0.28s ease, filter 0.28s ease;
 }
 
-.menu-btn .bar:nth-child(1) { transform: translateY(-6px); }
-.menu-btn .bar:nth-child(2) { transform: translateY(0); width: 14px; margin-left: -3px; }
-.menu-btn .bar:nth-child(3) { transform: translateY(6px); }
+.menu-btn.is-open::before {
+  transform: rotate(45deg) scale(0.94);
+  filter: drop-shadow(0 0 18px rgba(255, 208, 227, 0.52));
+}
 
-.menu-btn.is-open .bar:nth-child(1) { transform: translateY(0) rotate(45deg); width: 20px; }
-.menu-btn.is-open .bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.menu-btn.is-open .bar:nth-child(3) { transform: translateY(0) rotate(-45deg); width: 20px; }
+.menu-btn .bar { display: none; }
 
 /* =========================================================
    LAYOUT AND TYPOGRAPHY
@@ -391,7 +387,7 @@ summary:focus-visible {
 }
 
 .page-shell {
-  padding: clamp(3.75rem, 7vw, 5.25rem) 0 clamp(5.5rem, 8vw, 7.5rem);
+  padding: clamp(3rem, 5vw, 4.4rem) 0 clamp(4.6rem, 6vw, 6.2rem);
 }
 
 [id] { scroll-margin-top: var(--nav-offset); }
@@ -413,18 +409,18 @@ summary:focus-visible {
   min-height: calc(100vh - 188px);
   align-items: center;
   grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-  gap: clamp(2.5rem, 4vw, 4.75rem);
+  gap: clamp(1.8rem, 3vw, 3.2rem);
   padding-top: clamp(0.5rem, 1.8vw, 1.4rem);
 }
 
 .hero-copy {
   max-width: 42rem;
-  padding-block: clamp(0.6rem, 1.6vw, 1.4rem);
+  padding-block: clamp(0.35rem, 1.2vw, 1rem);
 }
 
 .hero-visual {
   align-self: stretch;
-  padding: clamp(1.8rem, 3vw, 2.45rem);
+  padding: clamp(1.4rem, 2.3vw, 1.95rem);
 }
 
 .split-intro {
@@ -440,7 +436,7 @@ summary:focus-visible {
 .service-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem; 
+  gap: 1.15rem; 
 }
 
 .process-timeline {
@@ -459,7 +455,7 @@ summary:focus-visible {
 .footer-grid {
   grid-template-columns: minmax(0, 1fr) auto auto;
   align-items: center;
-  gap: 28px;
+  gap: 20px;
 }
 
 .section-block {
@@ -471,13 +467,13 @@ summary:focus-visible {
   display: block;
   height: 1px;
   position: relative;
-  top: -2rem;
+  top: -1.6rem;
   background: linear-gradient(90deg, transparent, rgba(255, 77, 148, 0.28), rgba(196, 170, 255, 0.18), transparent);
 }
 
 .section-heading {
   max-width: 54rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.1rem;
 }
 
 .narrow { max-width: 760px; }
@@ -487,12 +483,12 @@ summary:focus-visible {
 .meta-label,
 .section-tag,
 .price-label {
-  margin: 0 0 14px;
+  margin: 0 0 11px;
   color: var(--primary-soft);
   text-transform: uppercase;
   letter-spacing: 0.26em;
   font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 0.66rem;
 }
 
 h1,
@@ -507,7 +503,7 @@ h3 {
 
 h1 {
   max-width: 11ch;
-  font-size: clamp(3.3rem, 6vw, 6rem);
+  font-size: clamp(2.9rem, 5.4vw, 5.2rem);
   text-shadow: 0 16px 60px rgba(0, 0, 0, 0.42);
   background: linear-gradient(160deg, #fff7fb 40%, #ffd0e3 70%, #c4aaff 100%);
   -webkit-background-clip: text;
@@ -515,8 +511,8 @@ h1 {
   background-clip: text;
 }
 
-h2 { font-size: clamp(2.2rem, 4.2vw, 4rem); }
-h3 { font-size: clamp(1.35rem, 2.6vw, 1.95rem); line-height: 1.08; }
+h2 { font-size: clamp(1.95rem, 3.8vw, 3.5rem); }
+h3 { font-size: clamp(1.22rem, 2.2vw, 1.72rem); line-height: 1.08; }
 
 p { margin: 0; }
 
@@ -534,20 +530,20 @@ p { margin: 0; }
 .error-card p,
 .hero-visual p {
   color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.78;
+  font-size: 0.96rem;
+  line-height: 1.66;
 }
 
 .lead {
   max-width: 42rem;
-  margin-top: 1.5rem;
+  margin-top: 1.15rem;
   color: rgba(255, 247, 251, 0.86);
-  font-size: clamp(1.06rem, 1.9vw, 1.16rem);
+  font-size: clamp(0.98rem, 1.6vw, 1.08rem);
 }
 
-.lead.compact { margin-top: 1rem; }
-.section-copy { margin-top: 1rem; max-width: 42rem; }
-.section-divider-label { margin-top: 1.8rem; }
+.lead.compact { margin-top: 0.85rem; }
+.section-copy { margin-top: 0.75rem; max-width: 40rem; }
+.section-divider-label { margin-top: 1.3rem; }
 
 /* =========================================================
    SHARED CARDS, BUTTONS, TAGS, AND VISUALS
@@ -567,7 +563,7 @@ p { margin: 0; }
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  padding: clamp(1.25rem, 2vw, 1.75rem);
+  padding: clamp(1.05rem, 1.8vw, 1.45rem);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   background:
@@ -602,8 +598,8 @@ p { margin: 0; }
 .button-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 2.1rem;
+  gap: 12px;
+  margin-top: 1.5rem;
 }
 
 .button-row.center { justify-content: center; }
@@ -613,9 +609,9 @@ p { margin: 0; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   min-height: var(--button-height);
-  padding: 0.98rem 1.55rem;
+  padding: 0.82rem 1.3rem;
   border-radius: 999px;
   border: 1px solid transparent;
   text-decoration: none;
@@ -626,7 +622,7 @@ p { margin: 0; }
 button.btn-primary {
   cursor: pointer;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.92rem;
 }
 
 .btn-primary {
@@ -911,10 +907,10 @@ button.btn-primary {
    FAQ, FORMS, CONTACT, AND SUPPORT PAGES
 ========================================================= */
 
-.faq-accordion { display: grid; gap: 16px; }
+.faq-accordion { display: grid; gap: 12px; }
 
 .faq-accordion details {
-  padding: 1.4rem 1.6rem;
+  padding: 1.1rem 1.28rem;
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.055);
@@ -935,7 +931,7 @@ button.btn-primary {
   align-items: center;
   color: var(--text);
   font-weight: 700;
-  gap: 18px;
+  gap: 12px;
 }
 
 .faq-accordion summary::-webkit-details-marker { display: none; }
@@ -948,21 +944,21 @@ button.btn-primary {
 }
 
 .faq-accordion details[open] summary::after { transform: rotate(45deg); }
-.faq-accordion p { margin-top: 1rem; }
+.faq-accordion p { margin-top: 0.8rem; }
 .faq-title { display: inline-flex; align-items: center; }
 
 .form-card,
 .sidebar-card { width: 100%; max-width: 760px; }
 
-.form-card form { display: grid; gap: 14px; }
-.form-grid { display: grid; gap: 14px; }
+.form-card form { display: grid; gap: 12px; }
+.form-grid { display: grid; gap: 12px; }
 .form-grid.two-column { grid-template-columns: 1fr 1fr; }
 
 label {
   display: grid;
   gap: 7px;
   color: var(--muted-strong);
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   font-weight: 600;
   letter-spacing: 0.01em;
 }
@@ -995,15 +991,15 @@ textarea { min-height: 150px; resize: vertical; }
 
 .form-note {
   color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.84rem;
+  line-height: 1.52;
   margin-bottom: 0.5rem;
 }
 
 .contact-meta {
-  margin-top: 1.8rem;
+  margin-top: 1.35rem;
   display: grid;
-  gap: 16px;
+  gap: 12px;
 }
 
 .contact-meta div {
@@ -1046,7 +1042,7 @@ textarea { min-height: 150px; resize: vertical; }
 
 .editorial-error-card {
   width: min(100%, 680px);
-  padding: clamp(2.6rem, 6vw, 3.6rem) clamp(1.6rem, 5vw, 3rem);
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.4rem, 3vw, 2.2rem);
   border-color: rgba(255, 220, 238, 0.28);
   border-radius: 34px;
   background:
@@ -1061,10 +1057,10 @@ textarea { min-height: 150px; resize: vertical; }
 
 .error-code {
   display: block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: rgba(255, 215, 236, 0.52);
   font-family: var(--font-display);
-  font-size: clamp(5rem, 15vw, 7.4rem);
+  font-size: clamp(4.4rem, 13vw, 6.4rem);
   line-height: 0.88;
   letter-spacing: -0.06em;
   text-transform: none;
@@ -1094,13 +1090,13 @@ textarea { min-height: 150px; resize: vertical; }
 .error-secondary-actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 2rem;
+  gap: 12px;
+  margin-top: 1.5rem;
 }
 
 .error-action-card {
-  min-height: 72px;
-  padding: 1rem 1.3rem;
+  min-height: 64px;
+  padding: 0.9rem 1.15rem;
   border-radius: 999px;
   text-decoration: none;
   color: rgba(255, 244, 250, 0.92);
@@ -1122,8 +1118,8 @@ textarea { min-height: 150px; resize: vertical; }
 
 .error-primary-actions {
   justify-content: center;
-  gap: 14px;
-  margin-top: 1.9rem;
+  gap: 12px;
+  margin-top: 1.4rem;
 }
 
 .error-primary-actions .btn-primary,
@@ -1134,8 +1130,8 @@ textarea { min-height: 150px; resize: vertical; }
 .link-cluster {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 2rem;
+  gap: 12px;
+  margin-top: 1.5rem;
 }
 
 .link-cluster .glass-card {
@@ -1143,7 +1139,7 @@ textarea { min-height: 150px; resize: vertical; }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-height: 76px;
+  min-height: 68px;
   text-decoration: none;
   color: var(--text);
 }
@@ -1155,7 +1151,7 @@ textarea { min-height: 150px; resize: vertical; }
 .site-footer {
   width: var(--content-width);
   margin: 0 auto 24px;
-  padding: 38px 36px 34px;
+  padding: 30px 28px 26px;
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   background:
@@ -1303,4 +1299,39 @@ textarea { min-height: 150px; resize: vertical; }
   margin-bottom: 4px;
   color: var(--primary-soft);
   font-size: 0.9rem;
+}
+
+/* =========================================================
+   HOMEPAGE: tighten oversized index hero / section gaps
+========================================================= */
+
+.page-shell > .hero-grid {
+  min-height: auto;
+  align-items: start;
+  padding-top: 0.2rem;
+}
+
+.page-shell > .hero-grid .hero-copy {
+  padding-top: clamp(0.25rem, 0.8vw, 0.6rem);
+}
+
+.page-shell > .hero-grid .hero-visual {
+  padding: clamp(1.1rem, 1.8vw, 1.55rem);
+}
+
+.page-shell > .hero-grid .image-placeholder {
+  margin-bottom: 1rem;
+}
+
+.page-shell > .hero-grid .hero-stats {
+  gap: 12px;
+  margin-top: 1.2rem;
+}
+
+.page-shell > .hero-grid ~ .section-block {
+  margin-top: clamp(2.4rem, 3.8vw, 3.4rem);
+}
+
+.page-shell > .hero-grid ~ .section-block::before {
+  top: -1.1rem;
 }

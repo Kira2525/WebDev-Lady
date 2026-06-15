@@ -4,19 +4,24 @@
 
 @media (max-width: 1024px) {
   :root {
-    --content-width: min(100% - 28px, 920px);
+    --content-width: min(100% - 22px, 920px);
   }
 
   .hero-grid,
   .page-hero,
   .contact-layout {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .hero-grid { min-height: auto; }
+  .page-shell > .hero-grid .hero-panel {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+  }
 
   .feature-grid,
-  .demo-grid,
   .showcase-grid,
   .pricing-grid,
   .testimonial-grid,
@@ -34,6 +39,7 @@
 
   .large-editorial-placeholder { min-height: 420px; }
   .moodboard-grid { grid-template-columns: repeat(4, 1fr); }
+  .site-footer { padding: 18px; }
 
   .footer-grid { text-align: center; }
 }

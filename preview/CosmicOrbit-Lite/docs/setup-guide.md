@@ -38,12 +38,7 @@ CosmicOrbit-Lite/
 ├── images/
 │   ├── logo.svg
 │   ├── favicon.svg
-│   ├── planet.png
-│   ├── hero-image.jpg
-│   ├── section-image-1.jpg
-│   ├── section-image-2.jpg
-│   ├── section-image-3.jpg
-│   └── section-image-4.jpg
+│   └── planet.png
 │
 └── docs/
     ├── setup-guide.md

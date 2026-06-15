@@ -1,185 +1,33 @@
-# VelvetUI Lite Image Replacement Guide
+# Velvet Studio Lite Image Guide
 
-VelvetUI Lite is primarily a code-driven website template with a minimal asset structure, making it fast and easy to customize.
+Image and brand assets live in `assets/`.
 
-This guide explains how to replace logos, favicons, social sharing images, and any additional imagery you choose to add.
+## Brand Assets
 
-## Included Brand Assets
+* `assets/velvetui-mark.svg` - Diamond logo mark
+* `assets/velvetui-favicon.svg` - Browser icon
+* `assets/velvetui-og.svg` - Social sharing artwork
 
-VelvetUI Lite includes the following branding files:
+The compact navigation uses `assets/velvetui-mark.svg` as the diamond menu icon.
 
-```txt
-assets/velvetui-mark.svg
-assets/velvetui-favicon.svg
-assets/velvetui-og.svg
-```
+## Editorial Images
 
-These files are used throughout the template for:
+Editorial photography lives in `assets/img/editorial/`.
 
-* Header branding
-* Footer branding
-* Browser favicon
-* Social sharing previews
-* Open Graph metadata
-* Mobile app icons
+Use JPG files for large room photography and keep filenames stable when possible. Existing page references will continue working when the same filenames are preserved.
 
-## Replacing the Brand Mark
+## Recommended Sizes
 
-To replace the logo:
+* Hero images: 1600px wide or larger
+* Portfolio images: 1200px wide or larger
+* Social image: 1200px by 630px
+* Favicon or mark: SVG preferred
 
-1. Add your new logo file to:
+## Alt Text
 
-```txt
-assets/
-```
+Whenever an image changes, update nearby `alt` text so it describes the visible room, project, or brand mark clearly.
 
-2. Update the image references in:
+## Review
 
-```txt
-index.html
-thank-you.html
-404.html
-```
+After changing imagery, check desktop, tablet, and phone views. Confirm crops feel intentional and no image appears stretched, blurry, or missing.
 
-3. Verify the logo displays correctly on desktop and mobile devices.
-
-For best results, use:
-
-```txt
-SVG
-```
-
-for logos and icons.
-
-## Replacing the Favicon
-
-Replace:
-
-```txt
-assets/velvetui-favicon.svg
-```
-
-or update the favicon references in the HTML files.
-
-After replacement, verify:
-
-* Browser tab icon
-* Bookmarks icon
-* Mobile shortcut icon
-
-## Replacing the Social Sharing Image
-
-Replace:
-
-```txt
-assets/velvetui-og.svg
-```
-
-or update the Open Graph image references.
-
-Check the following pages:
-
-```txt
-index.html
-thank-you.html
-404.html
-```
-
-Update:
-
-```txt
-og:image
-twitter:image
-```
-
-to point to your new image.
-
-## Recommended Social Preview Size
-
-For best social sharing results:
-
-```txt
-1200 × 630 pixels
-```
-
-This size works well for:
-
-* Facebook
-* LinkedIn
-* X
-* Discord
-
-## Adding Your Own Images
-
-VelvetUI Lite does not require photography to function.
-
-If you choose to add custom images:
-
-1. Place them in:
-
-```txt
-assets/
-```
-
-or a custom image folder of your choice.
-
-2. Update the image paths in:
-
-```txt
-index.html
-```
-
-3. Keep existing layout containers and CSS classes intact to preserve spacing and responsiveness.
-
-## Recommended Formats
-
-### Logos & Icons
-
-```txt
-SVG
-```
-
-### Photography
-
-```txt
-WebP
-JPG
-```
-
-### Social Sharing Images
-
-```txt
-PNG
-WebP
-JPG
-```
-
-## Image Optimization Tips
-
-Before uploading images:
-
-* Compress large files
-* Use modern formats when possible
-* Avoid excessively large dimensions
-* Test loading speed on mobile devices
-
-Optimized images improve:
-
-* Performance
-* SEO
-* Mobile experience
-* Core Web Vitals
-
-## Before Launch
-
-Before publishing:
-
-* Replace the logo
-* Replace the favicon
-* Replace the Open Graph image
-* Verify image paths
-* Test social sharing previews
-* Check mobile responsiveness
-* Check for missing images
-
-Once complete, VelvetUI Lite is ready for deployment with your own branding and media assets.

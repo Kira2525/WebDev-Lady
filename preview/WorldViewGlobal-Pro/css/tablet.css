@@ -6,14 +6,16 @@
   /* Header and menu adjustments */
   .site-shell {
     width: min(calc(100% - 36px), 960px);
-    padding-top: 24px;
+    padding-top: 132px;
   }
 
   .site-header {
-    position: relative;
+    position: fixed;
+    left: 18px;
+    right: 18px;
     z-index: 1000;
     padding: 14px 16px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
     overflow: visible;
   }
 
@@ -32,6 +34,13 @@
 
   .nav-toggle {
     display: inline-flex;
+  }
+
+  .nav-toggle-bar,
+  .nav-toggle-bar::before,
+  .nav-toggle-bar::after {
+    width: 28px;
+    height: 28px;
   }
 
   .mobile-menu {
@@ -97,9 +106,10 @@
 
   /* Footer and background adjustments */
   .footer-grid {
-    grid-template-columns: 1fr 320px;
-    gap: 36px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
     align-items: center;
+    text-align: center;
   }
 
   .footer-panel {

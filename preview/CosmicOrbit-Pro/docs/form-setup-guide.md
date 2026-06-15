@@ -33,10 +33,10 @@ Typical fields include:
 
 * Name
 * Email
-* Phone
-* Booking Type
-* Event Date
+* Experience Type
 * Guest Count
+* Preferred Date
+* Preferred Time Window
 * Message
 
 ### Contact Form

@@ -271,12 +271,17 @@ if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("active");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
   });
 
   nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("active");
       menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
     });
   });
 
@@ -286,6 +291,7 @@ if (menuToggle && nav) {
     if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
       nav.classList.remove("active");
       menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
     }
   });
 
@@ -293,6 +299,7 @@ if (menuToggle && nav) {
     if (event.key === "Escape") {
       nav.classList.remove("active");
       menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
     }
   });
 }
@@ -676,7 +683,7 @@ if (intakeForm) {
       secondary: "#2b2d33",
       accent: "#3f78ff"
     },
-    feminine: {
+    "soft-editorial": {
       primary: "#f6a9c7",
       secondary: "#f8dbe7",
       accent: "#b894ff"
@@ -727,7 +734,7 @@ if (intakeForm) {
       pageLimit: 8
     },
     "e-commerce-custom-website": {
-      label: "E-Commerce Custom Website",
+      label: "Online Store Custom Website",
       min: 2199,
       max: 3499,
       pageLimit: 10
@@ -751,7 +758,7 @@ if (intakeForm) {
     "business-custom-website":
       "Business Custom Website fits service-based businesses that need stronger messaging, structure, and strategy across multiple pages.",
     "e-commerce-custom-website":
-      "E-Commerce Custom Website adds deeper shop planning, product structure, and conversion-focused store questions.",
+      "Online Store Custom Website adds deeper shop planning, product structure, and conversion-focused store questions.",
     "premium-3d-custom-website":
       "Premium 3D Custom Website includes extra questions about motion, interactivity, and the immersive visual direction."
   };
@@ -1795,3 +1802,490 @@ if (intakeForm) {
     populateEstimatePreview(calculateEstimateDetails());
   });
 }
+
+const productGallerySlides = [
+  { suffix: "", label: "Homepage \u2022 1/3", altLabel: "Homepage" },
+  { suffix: "-contact", label: "Contact Form \u2022 2/3", altLabel: "Contact Form" },
+  { suffix: "-footer", label: "Footer \u2022 3/3", altLabel: "Footer" }
+];
+
+const templateFamilyDefinitions = [
+  {
+    name: "CosmicOrbit",
+    kicker: "Futuristic Sales Website",
+    summary:
+      "A bold futuristic template family for creators, SaaS brands, digital products, and service businesses that want a polished premium look.",
+    products: ["cosmicorbit-lite", "cosmicorbit-pro"]
+  },
+  {
+    name: "Abyssal Blue",
+    kicker: "Ocean-Inspired Website",
+    summary:
+      "A modern underwater-inspired template family for travel brands, attractions, hospitality businesses, and adventure-focused services.",
+    products: ["abyssalblue-lite", "abyssalblue-pro"]
+  },
+  {
+    name: "VelvetUI",
+    kicker: "Luxury Modern Website",
+    summary:
+      "A soft luxury template family for premium service brands, coaches, creators, digital offers, and personal brands that want a polished online look.",
+    products: ["velvetui-lite", "velvetui-pro"]
+  },
+  {
+    name: "WorldView Global",
+    kicker: "Business Website Template",
+    summary:
+      "A clean professional template family for agencies, consultants, startups, and service-based businesses that need a strong foundation.",
+    products: ["worldviewglobal-lite", "worldviewglobal-pro"]
+  }
+];
+
+const templateCollectionDefinitions = {
+  lite: [
+    "cosmicorbit-lite",
+    "abyssalblue-lite",
+    "velvetui-lite",
+    "worldviewglobal-lite"
+  ],
+  pro: [
+    "cosmicorbit-pro",
+    "abyssalblue-pro",
+    "velvetui-pro",
+    "worldviewglobal-pro"
+  ],
+  interactive: ["cosmicorbit-pro", "abyssalblue-pro", "worldviewglobal-pro"]
+};
+
+const featuredTemplateProductOrder = [
+  "cosmicorbit-pro",
+  "cosmicorbit-lite",
+  "abyssalblue-pro",
+  "abyssalblue-lite",
+  "velvetui-pro",
+  "velvetui-lite",
+  "worldviewglobal-pro",
+  "worldviewglobal-lite"
+];
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (character) => {
+    const entityMap = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    };
+
+    return entityMap[character] || character;
+  });
+}
+
+function getStoreProduct(productKey) {
+  if (typeof productCatalog === "undefined") {
+    return null;
+  }
+
+  return productCatalog[productKey] || null;
+}
+
+function attachImageFallback(image) {
+  const fallbackSrc = image?.dataset.fallbackSrc;
+
+  if (!image || !fallbackSrc) {
+    return;
+  }
+
+  image.addEventListener("error", () => {
+    if (image.dataset.fallbackApplied === "true") {
+      return;
+    }
+
+    image.dataset.fallbackApplied = "true";
+
+    if (image.getAttribute("src") !== fallbackSrc) {
+      image.setAttribute("src", fallbackSrc);
+    }
+  });
+}
+
+function buildTemplateCardMarkup(productKey) {
+  const product = getStoreProduct(productKey);
+
+  if (!product) {
+    return "";
+  }
+
+  const featuresMarkup = product.features
+    .slice(0, 4)
+    .map((feature) => `<li>${escapeHtml(feature)}</li>`)
+    .join("");
+
+  const fallbackAttribute = product.imageFallback
+    ? ` data-gallery-fallback="${escapeHtml(product.imageFallback)}"`
+    : "";
+
+  return `
+    <article class="template-version-card">
+      <div
+        class="template-version-media product-gallery"
+        data-gallery-product="${escapeHtml(product.name)}"
+        data-gallery-slug="${escapeHtml(product.key)}"${fallbackAttribute}
+        aria-label="${escapeHtml(product.name)} preview gallery"
+      >
+        <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)} homepage preview" />
+      </div>
+      <div class="template-version-body">
+        <div class="template-version-top">
+          <span class="template-version-pill">${escapeHtml(product.version)}</span>
+          <div class="template-version-price">
+            <span class="original-price">${escapeHtml(product.originalPriceLabel)}</span>
+            <span class="promo-price">${escapeHtml(product.priceLabel)}</span>
+          </div>
+        </div>
+        <h4>${escapeHtml(product.name)}</h4>
+        <ul class="template-version-features">
+          ${featuresMarkup}
+        </ul>
+        <div class="template-version-actions">
+          <a href="cart.html?product=${escapeHtml(product.key)}" class="btn primary">Buy ${escapeHtml(product.version)}</a>
+          <a href="${escapeHtml(product.preview)}" target="_blank" rel="noopener noreferrer" class="btn secondary">Live Preview</a>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function buildTemplateFamilyMarkup(family) {
+  const cardsMarkup = family.products.map(buildTemplateCardMarkup).join("");
+
+  return `
+    <article class="template-family-row">
+      <div class="template-family-head">
+        <div>
+          <p class="template-family-kicker">${escapeHtml(family.kicker)}</p>
+          <h3>${escapeHtml(family.name)}</h3>
+        </div>
+        <p class="template-family-summary">${escapeHtml(family.summary)}</p>
+      </div>
+      <div class="template-version-grid">
+        ${cardsMarkup}
+      </div>
+    </article>
+  `;
+}
+
+function buildFeaturedSlideMarkup(productKey, index) {
+  const product = getStoreProduct(productKey);
+
+  if (!product) {
+    return "";
+  }
+
+  const badgeLabel = "Launch Promo";
+
+  const fallbackAttribute = product.imageFallback
+    ? ` data-fallback-src="${escapeHtml(product.imageFallback)}"`
+    : "";
+
+  return `
+    <article class="featured-product template-version-card featured-template-card featured-carousel-slide${index === 0 ? " is-active" : ""}">
+      <div class="featured-template-head">
+        <h3>${escapeHtml(product.name)}</h3>
+        <span class="template-version-pill">${escapeHtml(badgeLabel)}</span>
+      </div>
+      <div class="template-version-media">
+        <img
+          src="${escapeHtml(product.image)}"
+          alt="${escapeHtml(product.name)} website template preview"${fallbackAttribute}
+        />
+      </div>
+      <div class="template-version-actions">
+        <a href="cart.html?product=${escapeHtml(product.key)}" class="btn primary">Buy ${escapeHtml(product.version)} - ${escapeHtml(product.priceLabel)}</a>
+        <a
+          href="${escapeHtml(product.preview)}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn secondary"
+        >
+          View ${escapeHtml(product.version)} Preview
+        </a>
+      </div>
+    </article>
+  `;
+}
+
+function initializeProductGallery(gallery) {
+  if (gallery.dataset.galleryReady === "true") {
+    return;
+  }
+
+  const productName = gallery.dataset.galleryProduct;
+  const slug = gallery.dataset.gallerySlug;
+
+  if (!productName || !slug) {
+    return;
+  }
+
+  gallery.dataset.galleryReady = "true";
+
+  const fallbackImage = gallery.querySelector("img");
+  const fallbackSrc =
+    gallery.dataset.galleryFallback ||
+    fallbackImage?.getAttribute("src") ||
+    `images/${slug}.png`;
+
+  gallery.innerHTML = `
+    <div class="gallery-track" aria-live="polite"></div>
+    <button class="gallery-btn gallery-prev" type="button" aria-label="Previous ${productName} screenshot">&#8249;</button>
+    <button class="gallery-btn gallery-next" type="button" aria-label="Next ${productName} screenshot">&#8250;</button>
+  `;
+
+  const track = gallery.querySelector(".gallery-track");
+  const prevButton = gallery.querySelector(".gallery-prev");
+  const nextButton = gallery.querySelector(".gallery-next");
+
+  if (!track || !prevButton || !nextButton) {
+    return;
+  }
+
+  const product = getStoreProduct(slug);
+  const gallerySlides = Array.isArray(product?.galleryImages) && product.galleryImages.length
+    ? product.galleryImages
+    : productGallerySlides.map((slide) => ({
+        ...slide,
+        src: `images/${slug}${slide.suffix}.png`
+      }));
+
+  const slides = gallerySlides.map((slide, index) => {
+    const figure = document.createElement("figure");
+    figure.className = `gallery-slide${index === 0 ? " is-active" : ""}`;
+    figure.innerHTML = `
+      <img
+        class="gallery-image"
+        src="${escapeHtml(slide.src)}"
+        alt="${productName} ${slide.altLabel} preview"
+        loading="${index === 0 ? "eager" : "lazy"}"
+        decoding="async"
+      />
+      <figcaption class="gallery-label">${slide.label}</figcaption>
+    `;
+
+    const image = figure.querySelector(".gallery-image");
+
+    image?.addEventListener("error", () => {
+      if (!image || image.dataset.fallbackApplied === "true") {
+        return;
+      }
+
+      image.dataset.fallbackApplied = "true";
+
+      if (image.getAttribute("src") !== fallbackSrc) {
+        image.setAttribute("src", fallbackSrc);
+      }
+    });
+
+    track.appendChild(figure);
+    return figure;
+  });
+
+  let currentIndex = 0;
+
+  function showSlide(nextIndex) {
+    slides[currentIndex]?.classList.remove("is-active");
+    slides[nextIndex]?.classList.add("is-active");
+    currentIndex = nextIndex;
+  }
+
+  nextButton.addEventListener("click", () => {
+    showSlide((currentIndex + 1) % slides.length);
+  });
+
+  prevButton.addEventListener("click", () => {
+    showSlide((currentIndex - 1 + slides.length) % slides.length);
+  });
+}
+
+function initializeProductGalleries(root = document) {
+  root.querySelectorAll(".product-gallery").forEach(initializeProductGallery);
+}
+
+function renderTemplateSections() {
+  const allTemplatesContainer = document.querySelector('[data-template-section="all"]');
+
+  if (!allTemplatesContainer || typeof productCatalog === "undefined") {
+    return;
+  }
+
+  allTemplatesContainer.innerHTML = templateFamilyDefinitions
+    .map(buildTemplateFamilyMarkup)
+    .join("");
+
+  Object.entries(templateCollectionDefinitions).forEach(([sectionKey, productKeys]) => {
+    const sectionContainer = document.querySelector(`[data-template-section="${sectionKey}"]`);
+
+    if (!sectionContainer) {
+      return;
+    }
+
+    sectionContainer.innerHTML = productKeys.map(buildTemplateCardMarkup).join("");
+  });
+
+  initializeProductGalleries(document);
+}
+
+function renderFeaturedCarousel() {
+  const carouselShell = document.querySelector("[data-featured-carousel]");
+
+  if (!carouselShell || typeof productCatalog === "undefined") {
+    return;
+  }
+
+  const track = carouselShell.querySelector(".featured-carousel-track");
+  const dots = carouselShell.querySelector(".featured-carousel-dots");
+  const prevButton = carouselShell.querySelector(".featured-carousel-prev");
+  const nextButton = carouselShell.querySelector(".featured-carousel-next");
+
+  if (!track || !dots || !prevButton || !nextButton) {
+    return;
+  }
+
+  track.innerHTML = featuredTemplateProductOrder
+    .map((productKey, index) => buildFeaturedSlideMarkup(productKey, index))
+    .join("");
+
+  dots.innerHTML = featuredTemplateProductOrder
+    .map(
+      (_, index) =>
+        `<button class="featured-carousel-dot${index === 0 ? " is-active" : ""}" type="button" aria-label="Show featured template ${index + 1}"${index === 0 ? ' aria-current="true"' : ""}></button>`
+    )
+    .join("");
+  dots.removeAttribute("aria-hidden");
+
+  const slides = Array.from(track.querySelectorAll(".featured-carousel-slide"));
+  const indicators = Array.from(dots.querySelectorAll(".featured-carousel-dot"));
+
+  if (!slides.length) {
+    return;
+  }
+
+  track.querySelectorAll("img[data-fallback-src]").forEach(attachImageFallback);
+
+  let currentIndex = 0;
+  let rotationTimer = null;
+
+  function syncCarouselHeight() {
+    const activeSlide = slides[currentIndex];
+
+    if (!activeSlide) {
+      return;
+    }
+
+    const slideHeight = activeSlide.offsetHeight || activeSlide.scrollHeight;
+
+    if (slideHeight > 0) {
+      track.style.height = `${slideHeight}px`;
+    }
+  }
+
+  function showSlide(nextIndex) {
+    if (nextIndex === currentIndex || !slides[nextIndex]) {
+      return;
+    }
+
+    slides[currentIndex]?.classList.remove("is-active");
+    indicators[currentIndex]?.classList.remove("is-active");
+    indicators[currentIndex]?.removeAttribute("aria-current");
+    slides[nextIndex]?.classList.add("is-active");
+    indicators[nextIndex]?.classList.add("is-active");
+    indicators[nextIndex]?.setAttribute("aria-current", "true");
+    currentIndex = nextIndex;
+    syncCarouselHeight();
+  }
+
+  function moveCarousel(direction) {
+    showSlide((currentIndex + direction + slides.length) % slides.length);
+  }
+
+  function startRotation() {
+    if (rotationTimer || slides.length < 2) {
+      return;
+    }
+
+    rotationTimer = window.setInterval(() => {
+      showSlide((currentIndex + 1) % slides.length);
+    }, 4500);
+  }
+
+  function stopRotation() {
+    if (!rotationTimer) {
+      return;
+    }
+
+    window.clearInterval(rotationTimer);
+    rotationTimer = null;
+  }
+
+  slides.forEach((slide) => {
+    slide.querySelectorAll("img").forEach((image) => {
+      image.addEventListener("load", syncCarouselHeight);
+    });
+  });
+
+  prevButton.addEventListener("click", () => {
+    stopRotation();
+    moveCarousel(-1);
+    startRotation();
+  });
+
+  nextButton.addEventListener("click", () => {
+    stopRotation();
+    moveCarousel(1);
+    startRotation();
+  });
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener("click", () => {
+      stopRotation();
+      showSlide(index);
+      startRotation();
+    });
+  });
+
+  carouselShell.addEventListener("mouseenter", stopRotation);
+  carouselShell.addEventListener("mouseleave", startRotation);
+  carouselShell.addEventListener("focusin", stopRotation);
+  carouselShell.addEventListener("focusout", () => {
+    window.setTimeout(() => {
+      if (!carouselShell.contains(document.activeElement) && !carouselShell.matches(":hover")) {
+        startRotation();
+      }
+    }, 0);
+  });
+
+  window.addEventListener("resize", syncCarouselHeight);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopRotation();
+      return;
+    }
+
+    if (!carouselShell.matches(":hover")) {
+      startRotation();
+    }
+  });
+
+  window.requestAnimationFrame(() => {
+    syncCarouselHeight();
+    window.setTimeout(syncCarouselHeight, 150);
+  });
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    startRotation();
+  }
+}
+
+renderTemplateSections();
+initializeProductGalleries(document);
+renderFeaturedCarousel();
+

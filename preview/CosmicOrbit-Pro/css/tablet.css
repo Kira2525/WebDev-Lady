@@ -1,30 +1,69 @@
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 761px) and (max-width: 1024px) {
+  :root {
+    --header-offset: 112px;
+  }
+
   .site-header {
-    width: min(94%, 980px);
+    width: min(var(--content-width), 94%);
+    top: 16px;
     padding: 16px 20px;
     gap: 18px;
+    border-radius: 999px;
+    flex-wrap: nowrap;
+  }
+
+  .site-brand span {
+    font-size: 1.18rem;
   }
 
   .nav-menu {
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    padding: 18px;
+    border-radius: 24px;
+    gap: 10px;
+    border-color: rgba(159, 238, 255, 0.42);
+    background: linear-gradient(180deg, #163251 0%, #081525 100%);
+    box-shadow:
+      0 28px 76px rgba(0, 0, 0, 0.7),
+      0 0 0 1px rgba(159, 238, 255, 0.08),
+      0 0 30px rgba(129, 231, 255, 0.18);
   }
 
-  .home-hero,
+  .nav-menu a {
+    padding: 13px 15px;
+  }
+
+  h1 {
+    font-size: clamp(2.6rem, 5.6vw, 3.7rem);
+  }
+
+  h2 {
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  }
+
+  .home-hero {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: 24px;
+    padding-top: 52px;
+  }
+
+  .home-hero .hero-visual .glass-panel,
+  .page-visual .glass-panel {
+    max-width: 780px;
+  }
+
+  .home-hero .hero-planet-image,
+  .page-visual img {
+    height: clamp(280px, 46vw, 400px);
+  }
+
   .page-hero,
   .split-layout,
-  .form-layout,
-  .team-grid,
-  .contact-grid,
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-hero,
-  .page-hero {
-    min-height: auto;
-    padding-top: 50px;
+  .form-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
   }
 
   .services-grid,
@@ -33,31 +72,20 @@
   .directory-grid,
   .details-grid,
   .proof-grid,
-  .stats-grid,
-  .steps-grid {
+  .team-grid,
+  .contact-grid,
+  .steps-grid,
+  .pricing-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .footer-top {
-    grid-template-columns: 1fr;
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .footer-brand {
-    max-width: none;
-    grid-column: 1 / -1;
-  }
-
-  .hero-metrics {
-    max-width: 760px;
-  }
-
-  .hero-visual,
-  .page-visual {
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
-  .section-shell {
-    margin-bottom: 74px;
+  .compare-table th,
+  .compare-table td {
+    padding: 14px 12px;
+    font-size: 0.92rem;
   }
 }

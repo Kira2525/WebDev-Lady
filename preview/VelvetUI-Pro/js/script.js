@@ -7,18 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
   initFaqBehavior();
   initStickyNavState();
   initScrollReveal();
+  initStaticInquiryForm();
   initCanvasBackground();
 });
 
 /* =========================================================
-   MOBILE NAVIGATION — Hamburger ↔ X
+   MOBILE NAVIGATION — Diamond menu
 ========================================================= */
 
 function initMobileNavigation() {
   const menuButton = document.querySelector(".menu-btn");
   const navLinks   = document.querySelector(".nav-links");
   if (!menuButton || !navLinks) return;
-  const mobileNavQuery = window.matchMedia("(max-width: 768px)");
+  const mobileNavQuery = window.matchMedia("(max-width: 1024px)");
 
   function openNav() {
     navLinks.classList.add("active");
@@ -127,6 +128,20 @@ function initScrollReveal() {
     });
   }, { threshold: 0.1, rootMargin: "0px 0px -60px 0px" });
   items.forEach((el) => observer.observe(el));
+}
+
+/* =========================================================
+   STATIC INQUIRY FORM
+========================================================= */
+
+function initStaticInquiryForm() {
+  const form = document.querySelector("form[data-static-form='true']");
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    window.location.href = form.getAttribute("action") || "thank-you.html";
+  });
 }
 
 /* =========================================================

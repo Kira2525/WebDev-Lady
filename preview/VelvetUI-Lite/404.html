@@ -4,45 +4,52 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>VELVET STUDIO | Page Not Found</title>
+  <title>VELVET STUDIO | Boutique Interior Design Studio</title>
   <meta
     name="description"
-    content="The page you were looking for could not be found. Return to VELVET STUDIO to continue exploring the studio."
+    content="VELVET STUDIO is a luxury interior design studio creating warm, layered homes, boutique hospitality spaces, and thoughtfully curated interiors."
   />
-  <meta name="robots" content="noindex,follow" />
   <meta name="theme-color" content="#120217" />
-  <link rel="canonical" href="https://velvetstudio-lite.example/404.html" />
+  <link rel="canonical" href="https://velvetstudio.example/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="VELVET STUDIO | Page Not Found" />
+  <meta property="og:title" content="VELVET STUDIO | Boutique Interior Design Studio" />
   <meta
     property="og:description"
-    content="This VELVET STUDIO page does not exist or has moved. Return to the homepage, services, or contact page."
+    content="VELVET STUDIO is a luxury interior design studio creating warm, layered homes, boutique hospitality spaces, and thoughtfully curated interiors."
   />
-  <meta property="og:url" content="https://velvetstudio-lite.example/404.html" />
-  <meta property="og:image" content="https://velvetstudio-lite.example/assets/velvetui-og.svg" />
-  <meta property="og:image:alt" content="Velvet Studio editorial brand preview" />
+  <meta property="og:url" content="https://velvetstudio.example/" />
+  <meta property="og:image" content="https://velvetstudio.example/assets/velvetui-og.svg" />
+  <meta property="og:image:alt" content="Velvet Studio interiors and design studio preview" />
   <meta property="og:site_name" content="VELVET STUDIO" />
   <meta property="og:locale" content="en_US" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="VELVET STUDIO | Page Not Found" />
+  <meta name="twitter:title" content="VELVET STUDIO | Boutique Interior Design Studio" />
   <meta
     name="twitter:description"
-    content="Return to VELVET STUDIO and continue exploring interior design services and project examples."
+    content="VELVET STUDIO is a luxury interior design studio creating warm, layered homes, boutique hospitality spaces, and thoughtfully curated interiors."
   />
-  <meta name="twitter:image" content="https://velvetstudio-lite.example/assets/velvetui-og.svg" />
-  <meta name="twitter:image:alt" content="Velvet Studio editorial brand preview" />
+  <meta name="twitter:image" content="https://velvetstudio.example/assets/velvetui-og.svg" />
+  <meta name="twitter:image:alt" content="Velvet Studio interiors and design studio preview" />
 
   <link rel="icon" type="image/svg+xml" href="assets/velvetui-mark.svg" />
   <link rel="shortcut icon" href="assets/velvetui-mark.svg" />
   <link rel="apple-touch-icon" href="assets/velvetui-mark.svg" />
   <link rel="manifest" href="site.webmanifest" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
+
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/tablet.css" />
   <link rel="stylesheet" href="css/mobile.css" />
 </head>
-<body class="error-page" data-canvas-mode="hero">
+
+<body data-canvas-mode="hero">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <canvas id="heroCanvas" aria-hidden="true"></canvas>
 
@@ -57,11 +64,48 @@
     <div class="brass-corner corner-four"></div>
   </div>
 
+  <header class="site-header">
+    <div class="nav glass-card">
+      <a class="logo" href="#home" aria-label="VELVET STUDIO home">
+        <img
+          src="assets/velvetui-mark.svg"
+          alt=""
+          class="logo-image"
+          width="42"
+          height="42"
+        />
+        <span>VELVET STUDIO</span>
+      </a>
+
+      <button
+        class="menu-btn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        aria-label="Open navigation"
+      >
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#home">Studio</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#features">Approach</a>
+        <a href="#showcase">Portfolio</a>
+        <a href="#pricing">Investment</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main id="main-content" class="page-shell error-shell">
     <section class="glass-card error-card editorial-error-card" aria-labelledby="error-title">
-      <section class="glass-card error-card">
       <span class="error-code">404</span>
-      <h2>The room you were looking for is not on this floor.</h2>
+      <h2 id="error-title">The room you were looking for is not on this floor.</h2>
       <p>The link may be outdated, the page may have moved, or the address may have been entered incorrectly. You can return to the main site or jump straight to services and inquiries.</p>
 
       <div class="error-secondary-actions" aria-label="Quick links">
@@ -76,7 +120,6 @@
     </section>
   </main>
 
-  <!-- Footer: update social URLs and copyright details before publishing -->
   <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-copy">

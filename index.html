@@ -83,7 +83,8 @@
       aria-label="Open navigation menu"
       aria-expanded="false"
     >
-      &#9776;
+      <img src="images/webdevlady-logo.png" alt="" aria-hidden="true" />
+      <span class="sr-only">Menu</span>
     </button>
 
     <nav class="nav" id="nav">
@@ -157,48 +158,12 @@
     <section class="section">
       <p class="section-tag">FEATURED TEMPLATE</p>
       <h2>See a product first, not a long sales pitch.</h2>
-      <article class="featured-product template-version-card featured-template-card">
-        <div class="template-version-media">
-          <img
-            src="images/cosmicorbit-pro.png"
-            alt="CosmicOrbit Pro website template preview"
-          />
-        </div>
-        <div class="template-version-body">
-          <div class="template-version-top">
-            <span class="template-version-pill">Best Seller</span>
-            <div class="template-version-price">
-              <span class="original-price">$99</span>
-              <span class="promo-price">$69</span>
-            </div>
-          </div>
-          <h3>CosmicOrbit Pro</h3>
-          <p class="featured-template-summary">
-            CosmicOrbit Pro is a premium multi-page website template for creators,
-            service businesses, startups, and digital products that want a polished,
-            modern launch with a luxury feel.
-          </p>
-          <ul class="template-version-features">
-            <li>Multi-page website with stronger layouts</li>
-            <li>Responsive desktop, tablet, and mobile design</li>
-            <li>Editable HTML, CSS, and JavaScript</li>
-            <li>Documentation included</li>
-            <li>Commercial use license</li>
-            <li>Instant digital download</li>
-          </ul>
-          <div class="template-version-actions">
-            <a href="cart.html?product=cosmicorbit-pro" class="btn primary">Buy Pro - $69</a>
-            <a
-              href="preview/CosmicOrbit-Pro/index.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn secondary"
-            >
-              View Pro Preview
-            </a>
-          </div>
-        </div>
-      </article>
+      <div class="featured-carousel-shell" data-featured-carousel>
+        <button class="featured-carousel-btn featured-carousel-prev" type="button" aria-label="Previous featured template">&#8249;</button>
+        <div class="featured-carousel-track"></div>
+        <button class="featured-carousel-btn featured-carousel-next" type="button" aria-label="Next featured template">&#8250;</button>
+        <div class="featured-carousel-dots" aria-hidden="true"></div>
+      </div>
     </section>
 
     <section class="section comparison-section">
@@ -256,7 +221,16 @@
       <div class="card-grid card-grid--four">
         <article class="card home-start-card home-start-card--templates">
           <span>01</span>
-          <p class="service-price">Launch promo: Lite $39 / Pro $69</p>
+          <div class="service-sale-block">
+            <div class="service-sale-pricing">
+              <span class="promo-price">Lite $39</span>
+              <span class="original-price">Lite $59</span>
+            </div>
+            <div class="service-sale-pricing">
+              <span class="promo-price">Pro $69</span>
+              <span class="original-price">Pro $99</span>
+            </div>
+          </div>
           <h3>DIY Templates</h3>
           <p>
             Best for business owners who want the fastest path to a polished site
@@ -364,7 +338,7 @@
       <h2>Browse more launch-ready designs without leaving the homepage.</h2>
       <div class="homepage-templates-grid">
         <article class="template-mini-card">
-          <img src="images/cosmicorbit-pro.png" alt="CosmicOrbit template preview" />
+          <img src="images/Cosmic Orbit Pro/cosmicorbit-pro-home.png" alt="CosmicOrbit template preview" />
           <div class="template-mini-body">
             <h3>CosmicOrbit</h3>
             <p>Bold futuristic presentation for service brands, digital products, and premium launches.</p>
@@ -377,10 +351,10 @@
         </article>
 
         <article class="template-mini-card">
-          <img src="images/rainblossom-pro.svg" alt="Rain Blossom template preview" />
+          <img src="images/WorldView Pro/worldview-pro.png" alt="WorldView Global template preview" />
           <div class="template-mini-body">
-            <h3>Rain Blossom</h3>
-            <p>Soft editorial style for florists, beauty brands, boutique services, and feminine launches.</p>
+            <h3>WorldView Global</h3>
+            <p>Clean professional layouts for agencies, consultants, startups, and launch-ready business sites.</p>
             <div class="template-mini-meta">
               <span>Lite <span class="sale-price">$39</span> <span class="original-price">$59</span></span>
               <span>Pro <span class="sale-price">$69</span> <span class="original-price">$99</span></span>
@@ -390,7 +364,7 @@
         </article>
 
         <article class="template-mini-card">
-          <img src="images/abyssalblue-pro.png" alt="Abyssal Blue template preview" />
+          <img src="images/Abyssal Blue Pro/abyssalblue-pro.png" alt="Abyssal Blue template preview" />
           <div class="template-mini-body">
             <h3>Abyssal Blue</h3>
             <p>Ocean-inspired layouts for travel, hospitality, attractions, wellness, and adventure brands.</p>
@@ -486,6 +460,7 @@
     </div>
   </footer>
 
+  <script src="js/product-catalog.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

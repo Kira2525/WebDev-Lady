@@ -1,198 +1,39 @@
-# VelvetUI Lite Customization Guide
+# Velvet Studio Lite Content Guide
 
-VelvetUI Lite is built to stay simple, lightweight, and easy to customize.
+This file notes the main places to maintain VELVET STUDIO Lite content.
 
-Use this guide to update the most common customer-facing parts of the template.
+## Brand Text
 
-## File Structure
+Primary brand text appears in the header, footer, metadata, and structured data. Keep the name as `VELVET STUDIO` unless the fictional brand changes.
 
-```txt
-/
-├── 404.html
-├── index.html
-├── LICENSE.txt
-├── README.md
-├── robots.txt
-├── site.webmanifest
-├── sitemap.xml
-└── thank-you.html
-```
+## Page Sections
 
-## Change the Business Name
+Edit section copy in `index.html`:
 
-Update the demo business name in:
-
-```txt
-index.html
-thank-you.html
-404.html
-site.webmanifest
-```
-
-Also check each page’s `<head>` section for:
-
-```txt
-<title>
-meta description
-canonical URL
-Open Graph tags
-Twitter tags
-```
-
-## Change Colors
-
-Open each HTML file and look for the main CSS variables in the style section.
-
-Update variables such as:
-
-```css
---bg
---bg-soft
---bg-deep
---primary
---primary-soft
---secondary-soft
---text
---muted
-```
-
-These control the main color system for the template.
-
-## Change Fonts
-
-Update the font import in the `<head>` section of each HTML file.
-
-Then update the font variables in the CSS:
-
-```css
---font-body
---font-display
-```
-
-## Change Content
-
-Most of the website content is located in:
-
-```txt
-index.html
-```
-
-Edit the page sections directly, including:
-
-```txt
-#home
-#about
-#services
-#features
-#showcase
-#pricing
-#faq
-#contact
-```
-
-Update:
-
-* Business name
-* Tagline
-* About text
+* Home
+* About
 * Services
-* Features
-* Showcase content
-* Pricing
-* FAQ answers
-* Contact details
+* Approach
+* Portfolio
+* Investment
+* FAQ
+* Contact
 
-## Change Social Links
+Confirmation copy lives in `thank-you.html`. Error-page copy lives in `404.html`.
 
-Update the footer social links in:
+## Visual Settings
 
-```txt
-index.html
-thank-you.html
-404.html
-```
+Global colors, fonts, card styles, buttons, image treatments, footer styling, and layout primitives live in `css/styles.css`. Tablet and phone refinements live in `css/tablet.css` and `css/mobile.css`.
 
-The default footer social links are:
+## Navigation
 
-```txt
-Instagram
-Pinterest
-Facebook
-TikTok
-LinkedIn
-```
+The primary navigation links to sections on `index.html`. Keep each `href` aligned with the matching section `id`.
 
-Remove any platforms you do not use.
+## Metadata
 
-## Change Metadata
+Each HTML file includes a title, description, canonical URL, Open Graph data, and X card data. Keep these descriptions concise and specific to the page.
 
-Update the `<head>` content in:
+## Quality Review
 
-```txt
-index.html
-thank-you.html
-404.html
-```
+Before handoff, search the project for outdated names, old domains, unused notes, and broken links. Then open the site at desktop, tablet, and phone widths.
 
-Check:
-
-```txt
-<title>
-meta description
-canonical URL
-Open Graph tags
-Twitter card tags
-favicon links
-manifest link
-```
-
-Also update:
-
-```txt
-robots.txt
-sitemap.xml
-site.webmanifest
-```
-
-## Change the Form Behavior
-
-The contact form is located in:
-
-```txt
-index.html
-```
-
-By default, it redirects to:
-
-```txt
-thank-you.html
-```
-
-To connect the form to a real service, update the form tag in `index.html`.
-
-Common options include:
-
-* Netlify Forms
-* Formspree
-* Getform
-* Custom backend
-
-## Before Launch
-
-Before publishing:
-
-* Replace all demo text
-* Replace the business name
-* Update contact details
-* Update social links
-* Update SEO metadata
-* Update `robots.txt`
-* Update `sitemap.xml`
-* Update `site.webmanifest`
-* Test the form
-* Test the thank-you page
-* Test the 404 page
-* Check mobile layout
-* Check all links
-
-VelvetUI Lite is ready for launch once the demo branding, links, form behavior, and metadata are updated.

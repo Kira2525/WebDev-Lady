@@ -1,7 +1,7 @@
-{
-  "name": "Abyssal Blue",
-  "short_name": "Abyssal Blue",
-  "description": "A premium static website template for scuba tours, marine wildlife experiences, and ocean adventure brands.",
+﻿{
+  "name": "Abyssal Blue Adventures",
+  "short_name": "Abyssal Blue Adventures",
+  "description": "Premium scuba diving, snorkeling tours, private charters, wildlife excursions, reef exploration, and sunset cruises in the Florida Keys.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#02111c",
@@ -15,3 +15,4 @@
     }
   ]
 }
+

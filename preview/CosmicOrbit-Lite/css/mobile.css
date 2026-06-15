@@ -1,57 +1,167 @@
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 760px) {
+  :root {
+    --sticky-header-offset: 10px;
+  }
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
   .site-header {
-    width: min(92%, 100%);
-    top: 12px;
-    margin-top: 18px;
-    padding: 14px 18px;
-    border-radius: 28px;
+    position: fixed;
+    top: var(--sticky-header-offset);
+    z-index: 1000;
+    width: calc(100vw - 32px);
+    max-width: calc(100vw - 32px);
+    margin-top: 14px;
+    padding: 12px 14px;
+    gap: 12px;
+    border-radius: 26px;
+    contain: none;
+    overflow: visible;
+  }
+
+  main {
+    z-index: 1;
+  }
+
+  .site-brand {
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .site-brand img {
+    width: 40px;
+    height: 40px;
   }
 
   .site-brand span {
-    font-size: 1.08rem;
+    overflow: hidden;
+    font-size: clamp(0.95rem, 4.8vw, 1.08rem);
+    letter-spacing: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .nav-menu {
     display: none;
     position: absolute;
-    top: calc(100% + 14px);
+    top: calc(100% + 10px);
     left: 0;
     right: 0;
     width: 100%;
-    padding: 22px;
-    border: 1px solid rgba(129, 231, 255, 0.18);
-    border-radius: 28px;
-    background: rgba(4, 12, 23, 0.96);
-    box-shadow: 0 22px 54px rgba(0, 0, 0, 0.38);
+    max-height: calc(100dvh - 112px);
+    overflow-y: auto;
+    padding: 16px;
+    border: 1px solid rgba(129, 231, 255, 0.28);
+    border-radius: 22px;
+    background: rgba(4, 12, 23, 0.98);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.68);
     flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-
-  .nav-menu.is-open {
-    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    z-index: 1001;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
   }
 
   .menu-toggle {
-    display: inline-block;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 auto;
+    border-radius: 16px;
+  }
+
+  .nav-menu a {
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    border-radius: 14px;
+    color: #f4fbff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: left;
+    background: rgba(255,255,255,0.05);
   }
 
   h1 {
-    font-size: 2.45rem;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    font-size: clamp(1.85rem, 8.6vw, 2.15rem);
+    letter-spacing: 0;
+    line-height: 1.08;
   }
 
   h2 {
-    font-size: 1.7rem;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    font-size: clamp(1.55rem, 8vw, 1.7rem);
+    letter-spacing: 0;
+  }
+
+  h3,
+  h4 {
+    letter-spacing: 0;
+  }
+
+  .eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
   }
 
   .section-shell,
-  .site-footer-inner,
-  .site-header {
-    width: 92%;
+  .site-footer-inner {
+    width: calc(100vw - 32px);
+    max-width: calc(100vw - 32px);
   }
 
   .section-shell {
-    margin-bottom: 60px;
+    margin-bottom: 52px;
+  }
+
+  .home-hero,
+  .page-hero,
+  .split-layout,
+  .form-layout,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero,
+  .page-hero {
+    min-height: auto;
+    padding-top: 34px;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .hero-copy,
+  .page-copy,
+  .hero-content {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-copy p,
+  .page-copy p {
+    max-width: none;
+    margin-top: 12px;
+    font-size: 0.97rem;
+    line-height: 1.58;
+  }
+
+  .hero-actions,
+  .section-actions {
+    margin-top: 20px;
   }
 
   .hero-actions,
@@ -64,6 +174,8 @@
 
   .btn {
     width: 100%;
+    min-height: 50px;
+    padding: 13px 20px;
   }
 
   .hero-metrics,
@@ -93,8 +205,15 @@
   .faq-item,
   .glass-panel,
   .site-footer-inner {
-    padding: 20px;
-    border-radius: 24px;
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .service-card-header,
+  .card-topline {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .compare-table,
@@ -126,10 +245,33 @@
 
   .hero-visual .glass-panel,
   .page-visual .glass-panel {
-    padding: 20px;
+    padding: 16px;
+  }
+
+  .home-hero .hero-visual .glass-panel {
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .home-hero .hero-planet-image {
+    height: clamp(170px, 48vw, 220px);
   }
 
   .hero-planet-stage {
     margin-bottom: 18px;
+  }
+
+  .hero-metrics {
+    gap: 12px;
+    margin-top: 22px;
+  }
+
+  .hero-metrics .stat-card {
+    padding: 16px;
+  }
+
+  .hero-visual,
+  .page-visual {
+    width: 100%;
   }
 }

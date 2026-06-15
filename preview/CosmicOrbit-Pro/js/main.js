@@ -130,7 +130,7 @@ function initializeMobileNavigation() {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 680) {
+    if (window.innerWidth > 1024) {
       closeMenu();
     }
   });

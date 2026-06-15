@@ -9,16 +9,16 @@
     content="Contact VELVET STUDIO to inquire about residential design, furnishing plans, boutique rental styling, or renovation support."
   />
   <meta name="theme-color" content="#120217" />
-  <link rel="canonical" href="https://velvetstudio.design/contact.html" />
+  <link rel="canonical" href="https://velvetstudio.example/contact.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="VELVET STUDIO | Contact" />
   <meta
     property="og:description"
     content="Submit a design inquiry to VELVET STUDIO and share your rooms, timing, and project goals."
   />
-  <meta property="og:url" content="https://velvetstudio.design/contact.html" />
-  <meta property="og:image" content="https://velvetstudio.design/assets/img/velvetui-og.svg" />
-  <meta property="og:image:alt" content="Velvet Studio editorial brand preview" />
+  <meta property="og:url" content="https://velvetstudio.example/contact.html" />
+  <meta property="og:image" content="https://velvetstudio.example/assets/img/editorial/juniper-row-lounge.jpg" />
+  <meta property="og:image:alt" content="Velvet Studio interiors and design studio preview" />
   <meta property="og:site_name" content="VELVET STUDIO" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,8 +27,8 @@
     name="twitter:description"
     content="Start a design inquiry for a room refresh, full-home direction, furnishing plan, or renovation palette."
   />
-  <meta name="twitter:image" content="https://velvetstudio.design/assets/img/velvetui-og.svg" />
-  <meta name="twitter:image:alt" content="Velvet Studio editorial brand preview" />
+  <meta name="twitter:image" content="https://velvetstudio.example/assets/img/editorial/juniper-row-lounge.jpg" />
+  <meta name="twitter:image:alt" content="Velvet Studio interiors and design studio preview" />
   <link rel="icon" type="image/svg+xml" href="assets/img/velvetui-mark.svg" />
   <link rel="shortcut icon" href="assets/img/velvetui-mark.svg" />
   <link rel="apple-touch-icon" href="assets/img/velvetui-mark.svg" />
@@ -121,8 +121,8 @@
       <article class="glass-card form-card">
         <p class="eyebrow">Design Inquiry</p>
         <h3>Start with the essentials.</h3>
-        <p class="form-note">Share the basics below and we will follow up with the best starting recommendation for your space.</p>
-        <form action="thank-you.html" method="get">
+        <p class="form-note" id="inquiry-form-note">Share a few details and the studio will follow up with the best next step for your space.</p>
+        <form action="thank-you.html" method="get" data-static-form="true" aria-describedby="inquiry-form-note inquiry-form-disclaimer">
           <div class="form-grid two-column">
             <label for="contact-name">
               Name
@@ -175,6 +175,7 @@
           <div class="button-row">
             <button class="btn-primary" type="submit">Send Inquiry</button>
           </div>
+          <p class="form-disclaimer" id="inquiry-form-disclaimer">Your inquiry opens a private follow-up conversation about scope, timing, and fit.</p>
         </form>
       </article>
 

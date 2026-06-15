@@ -4,7 +4,7 @@ Version 1.0
 
 Cosmic Orbit Pro is a premium astronomy and observatory website template designed for planetariums, telescope experience companies, educational stargazing programs, astronomy clubs, science centers, school outreach organizations, and space-themed event businesses.
 
-Featuring a cinematic animated cosmic background, responsive layouts, booking functionality, and modern marketing pages, Cosmic Orbit Pro is designed to help organizations establish a professional online presence without requiring complex development tools.
+Featuring a cinematic animated cosmic background, responsive layouts, demo booking and contact forms, and modern marketing pages, Cosmic Orbit Pro is designed to help organizations establish a professional online presence without requiring complex development tools.
 
 ---
 
@@ -14,7 +14,7 @@ Featuring a cinematic animated cosmic background, responsive layouts, booking fu
 * Cinematic animated space background
 * Fully responsive desktop, tablet, and mobile layouts
 * Modern glass-inspired interface styling
-* Booking and contact forms included
+* Demo booking and contact forms with setup guide
 * Shared navigation with active-page highlighting
 * SEO-ready structure
 * Custom 404 page
@@ -125,7 +125,6 @@ CosmicOrbit-Pro/
 │
 ├── images/
 │   ├── favicon.svg
-│   ├── hero-orbit.svg
 │   ├── logo.svg
 │   └── planet.png
 │
@@ -173,7 +172,7 @@ Included forms:
 * Booking Form
 * Contact Form
 
-Default behavior redirects users to:
+Default demo behavior redirects users to:
 
 ```text
 thank-you.html
@@ -183,6 +182,8 @@ Supported connections:
 
 * Preferred form service
 * Custom API endpoint
+
+No form data is stored or transmitted until the buyer connects a live form service or backend.
 
 See:
 

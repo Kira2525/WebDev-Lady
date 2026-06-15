@@ -6,20 +6,20 @@
 @media (max-width: 1024px) {
   :root {
     --content-width: min(100% - 32px, 940px);
-    --section-space: clamp(4.75rem, 8vw, 6.25rem);
-    --section-gap: 1.75rem;
+    --section-space: clamp(4rem, 7vw, 5.4rem);
+    --section-gap: 1.45rem;
     --nav-offset: 118px;
   }
 
   .site-header { padding-top: 14px; }
 
   .nav {
-    padding: 15px 22px;
-    gap: 18px;
+    padding: 14px 20px;
+    gap: 14px;
   }
 
   .nav-links {
-    gap: 18px;
+    gap: 14px;
   }
 
   .nav-links a {
@@ -27,8 +27,8 @@
   }
 
   .page-shell {
-    padding-top: 3.3rem;
-    padding-bottom: 5.4rem;
+    padding-top: 2.9rem;
+    padding-bottom: 4.6rem;
   }
 
   .hero-grid,
@@ -37,7 +37,7 @@
   .pricing-grid,
   .contact-layout {
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+    gap: 1.45rem;
   }
 
   .hero-grid {
@@ -53,28 +53,28 @@
   .feature-grid,
   .showcase-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    gap: 14px;
   }
 
   .process-timeline {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    gap: 14px;
   }
 
   .deliverable-strip {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 14px;
   }
 
-  .section-heading { margin-bottom: 1.75rem; }
+  .section-heading { margin-bottom: 1.35rem; }
 
   h1 {
     max-width: 12ch;
-    font-size: clamp(3rem, 7vw, 5rem);
+    font-size: clamp(2.8rem, 6.4vw, 4.6rem);
   }
 
-  h2 { font-size: clamp(2rem, 4.8vw, 3.3rem); }
-  h3 { font-size: clamp(1.35rem, 2.8vw, 1.8rem); }
+  h2 { font-size: clamp(1.85rem, 4.4vw, 3rem); }
+  h3 { font-size: clamp(1.22rem, 2.4vw, 1.64rem); }
 
   .glass-card,
   .feature-card,
@@ -87,12 +87,12 @@
   .thanks-card,
   .error-card,
   .site-footer {
-    padding: 1.7rem;
+    padding: 1.45rem;
     border-radius: 25px;
   }
 
   .button-row {
-    margin-top: 1.6rem;
+    margin-top: 1.3rem;
   }
 
   .feature-icon {
@@ -112,16 +112,16 @@
 
   .hero-stats {
     gap: 12px;
-    margin-top: 1.6rem;
+    margin-top: 1.3rem;
   }
 
   .hero-stats div {
-    padding: 16px 14px;
+    padding: 14px 12px;
     border-radius: 20px;
   }
 
   .hero-stats strong {
-    font-size: 1.55rem;
+    font-size: 1.4rem;
   }
 
   .hero-stats span {
@@ -130,7 +130,7 @@
 
   .tag-row,
   .contact-meta {
-    margin-top: 1.2rem;
+    margin-top: 1rem;
   }
 
   .info-list,
@@ -141,31 +141,31 @@
   }
 
   .price {
-    margin-top: 1rem;
-    font-size: clamp(2rem, 5vw, 3rem);
+    margin-top: 0.8rem;
+    font-size: clamp(1.8rem, 4.6vw, 2.7rem);
   }
 
   .faq-accordion {
-    gap: 12px;
+    gap: 10px;
   }
 
   .faq-accordion details {
-    padding: 1.2rem 1.3rem;
+    padding: 1rem 1.15rem;
   }
 
   .editorial-error-card {
     width: min(100%, 720px);
-    padding: 2.4rem 1.8rem;
+    padding: 2rem 1.6rem;
   }
 
   .error-title {
     max-width: 13ch;
-    font-size: clamp(2.1rem, 6vw, 3.4rem);
+    font-size: clamp(1.9rem, 5.5vw, 3rem);
   }
 
   .error-secondary-actions {
-    gap: 12px;
-    margin-top: 1.75rem;
+    gap: 10px;
+    margin-top: 1.4rem;
   }
 
   .footer-grid {
@@ -184,8 +184,8 @@
   }
 
   h1 { max-width: 12.2ch; }
-  h2 { font-size: clamp(1.95rem, 5vw, 3rem); }
-  h3 { font-size: clamp(1.32rem, 3vw, 1.72rem); }
+  h2 { font-size: clamp(1.8rem, 4.6vw, 2.8rem); }
+  h3 { font-size: clamp(1.18rem, 2.7vw, 1.58rem); }
 
   .hero-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -63,18 +63,9 @@
       <span>Cosmic Orbit</span>
     </a>
 
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-controls="navMenu"
-      aria-expanded="false"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+  <span class="planet-icon"></span>
+</button>
 
     <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
       <a href="index.html">Home</a>
@@ -128,7 +119,11 @@
               src="images/planet.png"
               alt="Stylized observatory display with a glowing planet and orbital star map."
               class="hero-planet-image"
-            />
+            width="1536"
+            height="1024"
+            decoding="async"
+            fetchpriority="high"
+/>
           </div>
 
           <div class="orbit-note-grid">
@@ -207,7 +202,7 @@
     <!-- Events Section -->
     <section class="section-shell">
       <div class="section-header">
-        <p class="eyebrow">Upcoming Events</p>
+        <p class="eyebrow">Featured Events</p>
         <h2>Special nights built around the sky's most exciting moments.</h2>
         <p>
           Join public events that pair celestial highlights with guided storytelling, hands-on activities,
@@ -217,21 +212,21 @@
 
       <div class="events-grid">
         <article class="event-card interactive-card" data-reveal>
-          <time datetime="2026-08-12">August 12, 2026</time>
+          <span class="event-label">Seasonal Highlight</span>
           <h3>Perseid Meteor Shower Watch Party</h3>
           <p>Bring a blanket, settle into the observation lawn, and follow the sky with live meteor-tracking commentary.</p>
           <a href="events.html#meteor-watch" class="service-link">View event <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </article>
 
         <article class="event-card interactive-card" data-reveal>
-          <time datetime="2026-06-19">June 19, 2026</time>
+          <span class="event-label">Moon Viewing Program</span>
           <h3>Moon Viewing Night</h3>
           <p>See craters, maria, and lunar shadows up close through guided telescope stations built for all ages.</p>
           <a href="events.html#moon-night" class="service-link">See the lineup <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </article>
 
         <article class="event-card interactive-card" data-reveal>
-          <time datetime="2026-07-10">July 10, 2026</time>
+          <span class="event-label">Family Program</span>
           <h3>Family Space Night</h3>
           <p>Interactive constellation games, mini-presentations, and telescope viewing designed for younger explorers.</p>
           <a href="events.html#family-space-night" class="service-link">Plan your visit <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>

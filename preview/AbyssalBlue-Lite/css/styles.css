@@ -801,6 +801,64 @@ main,
   color: var(--accent);
 }
 
+.booking-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.booking-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.booking-form label span {
+  font-size: 0.95rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.booking-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.booking-form select option {
+  color: var(--bg-deep);
+}
+
+.booking-form .btn {
+  width: 100%;
+}
+
+.form-note {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
 /* ================= FOOTER ================= */
 .site-footer {
   width: 90%;

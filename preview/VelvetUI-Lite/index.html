@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Site metadata: replace the title, description, and domain placeholders before launch -->
   <title>VELVET STUDIO | Boutique Interior Design Studio</title>
   <meta
     name="description"
     content="VELVET STUDIO is a luxury interior design studio creating warm, layered homes, boutique hospitality spaces, and thoughtfully curated interiors."
   />
   <meta name="theme-color" content="#120217" />
-  <link rel="canonical" href="https://velvetstudio-lite.example/" />
+  <link rel="canonical" href="https://velvetstudio.example/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="VELVET STUDIO | Boutique Interior Design Studio" />
@@ -19,9 +18,9 @@
     property="og:description"
     content="VELVET STUDIO is a luxury interior design studio creating warm, layered homes, boutique hospitality spaces, and thoughtfully curated interiors."
   />
-  <meta property="og:url" content="https://velvetstudio-lite.example/" />
-  <meta property="og:image" content="https://velvetstudio-lite.example/assets/velvetui-og.svg" />
-  <meta property="og:image:alt" content="Velvet Studio editorial brand preview" />
+  <meta property="og:url" content="https://velvetstudio.example/" />
+  <meta property="og:image" content="https://velvetstudio.example/assets/velvetui-og.svg" />
+  <meta property="og:image:alt" content="Velvet Studio interiors and design studio preview" />
   <meta property="og:site_name" content="VELVET STUDIO" />
   <meta property="og:locale" content="en_US" />
 
@@ -31,23 +30,20 @@
     name="twitter:description"
     content="VELVET STUDIO is a luxury interior design studio creating warm, layered homes, boutique hospitality spaces, and thoughtfully curated interiors."
   />
-  <meta name="twitter:image" content="https://velvetstudio-lite.example/assets/velvetui-og.svg" />
-  <meta name="twitter:image:alt" content="Velvet Studio editorial brand preview" />
+  <meta name="twitter:image" content="https://velvetstudio.example/assets/velvetui-og.svg" />
+  <meta name="twitter:image:alt" content="Velvet Studio interiors and design studio preview" />
 
-  <!-- Replace these icons if the customer changes the brand mark -->
   <link rel="icon" type="image/svg+xml" href="assets/velvetui-mark.svg" />
   <link rel="shortcut icon" href="assets/velvetui-mark.svg" />
   <link rel="apple-touch-icon" href="assets/velvetui-mark.svg" />
   <link rel="manifest" href="site.webmanifest" />
 
-  <!-- Font Awesome powers the footer social icons and a few supporting interface icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     referrerpolicy="no-referrer"
   />
 
-  <!-- Main and responsive stylesheets: keep all three files linked -->
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/tablet.css" />
   <link rel="stylesheet" href="css/mobile.css" />
@@ -57,7 +53,6 @@
   <a class="skip-link" href="#main-content">Skip to content</a>
   <canvas id="heroCanvas" aria-hidden="true"></canvas>
 
-  <!-- Shared decorative background layer inspired by VelvetUI Pro -->
   <div class="studio-art-layer" aria-hidden="true">
     <div class="art-word art-word-velvet">VELVET</div>
     <div class="art-word art-word-studio">STUDIO</div>
@@ -69,7 +64,6 @@
     <div class="brass-corner corner-four"></div>
   </div>
 
-  <!-- Header: update navigation labels here if the customer renames sections -->
   <header class="site-header">
     <div class="nav glass-card">
       <a class="logo" href="#home" aria-label="VELVET STUDIO home">
@@ -109,7 +103,6 @@
   </header>
 
   <main id="main-content" class="page-shell">
-    <!-- Hero section: this is the homepage content from VelvetUI Pro -->
     <section class="hero-grid" id="home">
       <div class="hero-copy">
         <p class="eyebrow">Boutique Interior Design Studio</p>
@@ -172,7 +165,6 @@
       </aside>
     </section>
 
-    <!-- About section: this condenses the Pro about page into a one-page block -->
     <section class="section-block" id="about">
       <div class="split-intro">
         <div class="section-heading">
@@ -222,7 +214,6 @@
       </div>
     </section>
 
-    <!-- Services section: keep these cards easy to edit if customers change offerings -->
     <section class="section-block" id="services">
       <div class="split-intro">
         <div class="section-heading">
@@ -349,7 +340,6 @@
       </div>
     </section>
 
-    <!-- Approach section: this combines the Pro approach and process language into one block -->
     <section class="section-block" id="features">
       <div class="split-intro">
         <div class="section-heading">
@@ -421,7 +411,6 @@
       </div>
     </section>
 
-    <!-- Portfolio section: this uses the project preview copy from VelvetUI Pro -->
     <section class="section-block" id="showcase">
       <div class="split-intro">
         <div class="section-heading">
@@ -529,7 +518,6 @@
       </div>
     </section>
 
-    <!-- Investment section: customers can change package names and prices here -->
     <section class="section-block" id="pricing">
       <div class="split-intro">
         <div class="section-heading">
@@ -617,7 +605,6 @@
       </div>
     </section>
 
-    <!-- FAQ section: these details are wired to the accordion logic in js/script.js -->
     <section class="section-block" id="faq">
       <div class="split-intro">
         <div class="section-heading">
@@ -703,7 +690,6 @@
       </div>
     </section>
 
-    <!-- Contact section: customers can replace the form action later if they connect a real backend -->
     <section class="section-block" id="contact">
       <div class="section-heading narrow">
         <p class="eyebrow">Contact</p>
@@ -717,9 +703,9 @@
         <article class="glass-card form-card">
           <p class="eyebrow">Design Inquiry</p>
           <h3>Start with the essentials.</h3>
-          <p class="form-note">Share the basics below and we will follow up with the best starting recommendation for your space.</p>
+          <p class="form-note">Share a few details and the studio will follow up with the best next step for your space.</p>
 
-          <form action="thank-you.html" method="get">
+          <form action="thank-you.html" method="get" data-static-form="true">
             <div class="form-grid two-column">
               <label for="contact-name">
                 Name
@@ -775,7 +761,7 @@
 
             <div class="button-row">
               <button class="btn-primary" type="submit">
-                <span>Send Inquiry</span>
+                <span>Preview Inquiry Flow</span>
                 <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
               </button>
             </div>
@@ -806,7 +792,6 @@
     </section>
   </main>
 
-  <!-- Footer: update social URLs and copyright details before publishing -->
   <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-copy">

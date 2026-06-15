@@ -1,202 +1,34 @@
-# VelvetUI Pro Form Setup Guide
+# Velvet Studio Inquiry Form Guide
 
-VelvetUI Pro includes a fully designed contact form and thank-you page that work immediately on static hosting.
+The contact form is located in `contact.html` and sends visitors to `thank-you.html` after submission.
 
-By default, the contact form redirects visitors to:
+## Current Behavior
 
-```txt
-thank-you.html
-```
-
-This allows the template to function without requiring a backend, database, or third-party service.
-
-## Contact Form Location
-
-The contact form is located in:
-
-```txt
-contact.html
-```
-
-The confirmation page is located in:
-
-```txt
-thank-you.html
-```
-
-## Default Configuration
-
-Current setup:
+The form uses:
 
 ```html
-<form method="GET" action="thank-you.html">
+action="thank-you.html"
+method="get"
+data-static-form="true"
 ```
 
-Default behavior:
+The JavaScript intercepts this local static flow so inquiry details are not appended to the URL. This keeps local review clean while the confirmation page remains available.
 
-* No server required
-* No coding required
-* Works on any static host
-* Redirects visitors to the included thank-you page
+## Live Collection
 
-This configuration is intended for demonstration purposes and should be connected to a live form service before launching a production website.
+To collect real inquiries, connect the form to a service or backend endpoint:
 
-## Included Form Fields
+1. Update the `action` value.
+2. Update the `method` if the provider requires it.
+3. Remove `data-static-form="true"` when the provider handles submission.
+4. Keep the `name` attributes on all fields.
+5. Submit a test inquiry and confirm delivery.
 
-VelvetUI Pro ships with the following fields:
+## Confirmation Page
 
-```txt
-name
-company
-email
-project-type
-timeline
-budget
-project-brief
-```
+`thank-you.html` is the confirmation page. Keep its copy short, reassuring, and aligned with VELVET STUDIO's voice.
 
-You may add, remove, or rename fields as needed.
+## Fields
 
-## Option 1: Netlify Forms
+The form collects name, email, project type, timeline, budget, and project notes. Keep labels plain and readable so clients can complete the form quickly.
 
-Netlify Forms allows you to collect submissions without building a backend.
-
-### Update the Form
-
-Replace the existing form tag with:
-
-```html
-<form
-  name="contact"
-  method="POST"
-  data-netlify="true"
->
-```
-
-Add the following hidden field directly inside the form:
-
-```html
-<input
-  type="hidden"
-  name="form-name"
-  value="contact"
-/>
-```
-
-### Deploy
-
-Upload the site to Netlify.
-
-Form submissions will automatically appear in your Netlify dashboard.
-
-## Option 2: Formspree
-
-Create a Formspree account and generate a form endpoint.
-
-Replace the form action with:
-
-```html
-<form
-  action="https://formspree.io/f/your-id"
-  method="POST"
->
-```
-
-Submissions will be delivered directly to your email inbox.
-
-## Option 3: Getform
-
-Create a Getform endpoint and replace the form action:
-
-```html
-<form
-  action="https://getform.io/f/your-endpoint"
-  method="POST"
->
-```
-
-Submissions can then be managed from your Getform dashboard.
-
-## Option 4: Custom Backend
-
-If you maintain your own server or API:
-
-```html
-<form
-  action="/api/contact"
-  method="POST"
->
-```
-
-Your backend should:
-
-* Validate submissions
-* Process form data
-* Send email notifications
-* Store records if required
-* Return a success response
-
-## Thank-You Page
-
-VelvetUI Pro includes a dedicated confirmation page:
-
-```txt
-thank-you.html
-```
-
-You may:
-
-* Keep the existing page
-* Customize the messaging
-* Replace it with your own success page
-* Redirect users elsewhere after submission
-
-## Spam Protection
-
-For production websites, consider adding:
-
-* Netlify Spam Protection
-* Google reCAPTCHA
-* hCaptcha
-* Honeypot fields
-
-Always test spam protection before launch.
-
-## Testing Checklist
-
-Before publishing:
-
-* Submit a real test inquiry
-* Verify email notifications
-* Verify submission storage
-* Test all required fields
-* Test mobile usability
-* Verify validation messages
-* Confirm thank-you page redirects correctly
-* Test the form on the live domain
-
-## Supported Providers
-
-VelvetUI Pro is compatible with:
-
-* Netlify Forms
-* Formspree
-* Getform
-* Basin
-* Custom PHP Backends
-* Node.js Applications
-* Serverless Functions
-
-No structural changes to the template are required when using any of the above services.
-
-## Launch Reminder
-
-Before delivering a finished website:
-
-* Replace placeholder contact information
-* Update social media links
-* Test every form field
-* Verify notifications are working
-* Verify the thank-you page experience
-
-A contact form should always be tested on the live website before launch.

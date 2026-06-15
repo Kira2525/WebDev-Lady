@@ -28,11 +28,11 @@ function initializeCosmicOrbit() {
     createShootingStars();
   }
 
+  initializeHeaderLayout();
   initializeMobileNavigation();
   initializeActiveNavigation();
   initializeSectionNavigation();
   initializeSmoothScrolling(reducedMotion);
-  initializeRevealAnimations(reducedMotion);
   initializeCurrentYear();
 }
 
@@ -131,7 +131,7 @@ function initializeMobileNavigation() {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 680) {
+    if (window.innerWidth > 1024) {
       closeMenu();
     }
   });
@@ -230,13 +230,53 @@ function initializeSmoothScrolling(reducedMotion) {
 }
 
 /* =========================================================
-   REVEAL ANIMATIONS
+   HEADER LAYOUT
 ========================================================= */
 
-function initializeRevealAnimations(reducedMotion) {
-  const revealItems = qsa("[data-reveal]");
+function initializeHeaderLayout() {
+  const header = qs(".site-header");
 
-  revealItems.forEach((item) => item.classList.add("is-visible"));
+  if (!header) {
+    return;
+  }
+
+  const root = document.documentElement;
+  let frameId = null;
+
+  function syncHeaderMetrics() {
+    frameId = null;
+
+    const styles = window.getComputedStyle(header);
+    const topOffset = parseFloat(styles.top) || 0;
+    const headerHeight = Math.ceil(header.getBoundingClientRect().height);
+
+    root.style.setProperty("--header-height", `${headerHeight}px`);
+    root.style.setProperty(
+      "--header-clearance",
+      `${Math.ceil(headerHeight + topOffset + 22)}px`
+    );
+    root.style.setProperty(
+      "--header-anchor-offset",
+      `${Math.ceil(headerHeight + topOffset + 28)}px`
+    );
+  }
+
+  function requestSync() {
+    if (frameId !== null) {
+      cancelAnimationFrame(frameId);
+    }
+
+    frameId = requestAnimationFrame(syncHeaderMetrics);
+  }
+
+  requestSync();
+
+  window.addEventListener("resize", requestSync, { passive: true });
+  window.addEventListener("orientationchange", requestSync, { passive: true });
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(requestSync).catch(() => {});
+  }
 }
 
 /* =========================================================
