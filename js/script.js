@@ -2285,7 +2285,47 @@ function renderFeaturedCarousel() {
   }
 }
 
+function initializeTemplateFilters() {
+  const filterButtons = Array.from(document.querySelectorAll("[data-template-filter]"));
+  const templateRows = Array.from(document.querySelectorAll("[data-template-family]"));
+
+  if (!filterButtons.length || !templateRows.length) {
+    return;
+  }
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedFilter = button.dataset.templateFilter || "all";
+
+      filterButtons.forEach((filterButton) => {
+        const isActive = filterButton === button;
+        filterButton.classList.toggle("is-active", isActive);
+        filterButton.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+
+      templateRows.forEach((row) => {
+        const cards = Array.from(row.querySelectorAll("[data-template-tags]"));
+        let hasVisibleCard = false;
+
+        cards.forEach((card) => {
+          const tags = (card.dataset.templateTags || "").split(/\s+/).filter(Boolean);
+          const isVisible = selectedFilter === "all" || tags.includes(selectedFilter);
+
+          card.classList.toggle("is-filter-hidden", !isVisible);
+
+          if (isVisible) {
+            hasVisibleCard = true;
+          }
+        });
+
+        row.classList.toggle("is-filter-hidden", !hasVisibleCard);
+      });
+    });
+  });
+}
+
 renderTemplateSections();
+initializeTemplateFilters();
 initializeProductGalleries(document);
 renderFeaturedCarousel();
 

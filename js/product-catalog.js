@@ -162,11 +162,11 @@ const productCatalog = {
     priceLabel: "$69",
     originalPrice: 99,
     originalPriceLabel: "$99",
-    image: "images/VelvetUI Pro/127.0.0.1_5500_index.html (3).png",
+    image: "images/VelvetUI Pro/velvetui-pro.png",
     galleryImages: [
-      { src: "images/VelvetUI Pro/127.0.0.1_5500_index.html (3).png", label: "Homepage - 1/3", altLabel: "Homepage" },
-      { src: "images/VelvetUI Pro/127.0.0.1_5500_contact.html (2).png", label: "Contact Form - 2/3", altLabel: "Contact Form" },
-      { src: "images/VelvetUI Pro/127.0.0.1_5500_faq.html.png", label: "FAQ Page - 3/3", altLabel: "FAQ Page" }
+      { src: "images/VelvetUI Pro/velvetui-pro.png", label: "Homepage - 1/3", altLabel: "Homepage" },
+      { src: "images/VelvetUI Pro/velvetui-pro-contact.png", label: "Contact Form - 2/3", altLabel: "Contact Form" },
+      { src: "images/VelvetUI Pro/velvetui-pro-faq.png", label: "FAQ Page - 3/3", altLabel: "FAQ Page" }
     ],
     preview: "preview/VelvetUI-Pro/index.html",
     downloadFile: "downloads/VelvetUI-Pro.zip",

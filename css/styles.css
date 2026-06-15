@@ -1970,7 +1970,8 @@ summary:focus-visible {
 }
 
 .template-section-jump:hover,
-.template-section-jump:focus-visible {
+.template-section-jump:focus-visible,
+.template-section-jump.is-active {
   transform: translateY(-2px);
   border-color: rgba(255, 184, 228, 0.56);
   background: rgba(255, 20, 147, 0.12);
@@ -1983,6 +1984,11 @@ summary:focus-visible {
 .template-section-jump:focus-visible {
   outline: 2px solid rgba(255, 184, 228, 0.8);
   outline-offset: 2px;
+}
+
+.template-version-card.is-filter-hidden,
+.template-family-row.is-filter-hidden {
+  display: none;
 }
 
 .template-browse-section {
@@ -2048,6 +2054,12 @@ summary:focus-visible {
   font-weight: 900;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+}
+
+.template-version-pill--soon {
+  border-color: rgba(255, 184, 228, 0.42);
+  background: rgba(255, 20, 147, 0.12);
+  color: #ffe1f0;
 }
 
 .template-version-price {
