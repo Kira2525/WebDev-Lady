@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       404 Page | Rain Blossom
+
+       CUSTOMER NOTES:
+       - This page appears when someone visits a broken or missing page.
+       - To customize this file, search for "CUSTOMIZE" comments.
+       - Keep file paths the same unless you rename folders/files.
+  ========================================================== -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CUSTOMIZE: Browser tab title -->
+  <title>404 | Rain Blossom</title>
+
+  <!-- CUSTOMIZE: SEO page description -->
+  <meta
+    name="description"
+    content="Oops, it looks like the page you are looking for got rained on. Return to Rain Blossom to explore luxury garden weddings, venue spaces, packages, and private tours."
+  />
+
+  <!-- CUSTOMIZE: Browser/mobile theme color -->
+  <meta name="theme-color" content="#14251c" />
+
+  <!-- CUSTOMIZE: Social sharing preview -->
+  <meta property="og:title" content="404 | Rain Blossom" />
+  <meta
+    property="og:description"
+    content="Oops, it looks like this Rain Blossom page got rained on. Return home or schedule a private tour."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/social-preview.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="404 | Rain Blossom" />
+  <meta
+    name="twitter:description"
+    content="Oops, it looks like this page got rained on. Return to Rain Blossom."
+  />
+  <meta name="twitter:image" content="assets/images/social-preview.jpg" />
+
+  <!-- CUSTOMIZE: Favicon / app icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body>
+  <!-- Accessibility skip link -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================================================
+       Header / Navigation
+
+       CUSTOMIZE:
+       - Replace logo image in assets/images/logo.jpg
+       - Change brand name and tagline below
+       - Edit menu links in BOTH desktop-nav and mobile-menu
+  ========================================================== -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html" aria-label="Rain Blossom home">
+      <img
+        src="assets/images/logo.jpg"
+        alt="Rain Blossom logo"
+        class="logo-img"
+      />
+
+      <span class="brand-text">
+        <span class="brand-name">Rain Blossom</span>
+        <span class="brand-tagline">Garden Weddings & Events</span>
+      </span>
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="spaces.html">Spaces</a>
+      <a href="packages.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="mobileMenu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile navigation -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="spaces.html">Spaces</a>
+      <a href="packages.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a class="mobile-cta" href="contact.html">Schedule a Tour</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- =========================================================
+         404 Hero Section
+
+         CUSTOMIZE:
+         - Replace video: assets/videos/rain-blossom-hero.mp4
+         - Edit headline, text, and buttons
+    ========================================================== -->
+    <section class="hero page-video-hero" aria-label="Page not found">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-hidden="true"
+      >
+        <source src="assets/videos/rain-blossom-hero.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Page Not Found</p>
+
+        <h1>404</h1>
+
+        <p class="hero-subtitle">
+          Oops, looks like the page you’re looking for got rained on.
+        </p>
+
+        <p class="hero-copy">
+          We checked the garden path, the flower arch, and the reception hall,
+          but this page is nowhere to be found. It may have moved, changed names,
+          or washed away in the rain.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="index.html">
+            Return Home
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn btn-secondary" href="contact.html">
+            Schedule a Tour
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card" aria-label="Helpful page links">
+        <span class="hero-card-label">Lost Guest?</span>
+        <strong>Try another garden path</strong>
+        <p>
+          Home, spaces, packages, gallery, testimonials, FAQ, and contact are
+          still blooming.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Useful Links Section
+
+         CUSTOMIZE:
+         - Edit these cards to point visitors toward your most important pages.
+    ========================================================== -->
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Useful Links</p>
+        <h2>Choose a better path through the garden.</h2>
+      </div>
+
+      <div class="card-grid three-columns">
+        <article class="price-card">
+          <span class="package-label">Start Here</span>
+          <h3>Home</h3>
+          <p>
+            Return to the main Rain Blossom page and explore the full venue
+            experience.
+          </p>
+          <a href="index.html">Go Home</a>
+        </article>
+
+        <article class="price-card featured">
+          <span class="package-label">Popular</span>
+          <h3>Venue Spaces</h3>
+          <p>
+            View ceremony gardens, reception halls, private lounges, and estate
+            suites.
+          </p>
+          <a href="spaces.html">View Spaces</a>
+        </article>
+
+        <article class="price-card">
+          <span class="package-label">Next Step</span>
+          <h3>Contact</h3>
+          <p>
+            Schedule a private tour or ask about packages, dates, and event
+            options.
+          </p>
+          <a href="contact.html">Contact Us</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       Footer
+
+       CUSTOMIZE:
+       - Replace social links with real business links.
+       - Replace footer tagline if needed.
+  ========================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-follow">Follow Us</p>
+
+      <div class="footer-socials" aria-label="Social links">
+        <a
+          href="https://facebook.com"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://instagram.com"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://pinterest.com"
+          aria-label="Pinterest"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-pinterest-p" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://tiktok.com"
+          aria-label="TikTok"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Luxury Garden Weddings & Events</span>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> Rain Blossom. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating call-to-action button -->
+  <a href="contact.html" class="floating-tour-btn">
+    Schedule a Tour
+  </a>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

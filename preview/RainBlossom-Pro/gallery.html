@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       Gallery Page | Rain Blossom
+
+       CUSTOMER NOTES:
+       - This page displays gallery images and featured venue views.
+       - To customize this page, search for "CUSTOMIZE" comments.
+       - Replace image files inside assets/images/.
+       - Keep file names the same if you do not want to edit paths.
+  ========================================================== -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CUSTOMIZE: Browser tab title -->
+  <title>Gallery | Rain Blossom</title>
+
+  <!-- CUSTOMIZE: SEO description -->
+  <meta
+    name="description"
+    content="Explore the Rain Blossom gallery featuring romantic garden weddings, floral details, elegant receptions, and rain-kissed event spaces."
+  />
+
+  <!-- CUSTOMIZE: Mobile browser theme color -->
+  <meta name="theme-color" content="#14251c" />
+
+  <!-- CUSTOMIZE: Social sharing preview -->
+  <meta property="og:title" content="Gallery | Rain Blossom" />
+  <meta
+    property="og:description"
+    content="View romantic garden wedding photos, floral details, luxury receptions, and Rain Blossom event spaces."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/social-preview.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery | Rain Blossom" />
+  <meta
+    name="twitter:description"
+    content="A luxury garden wedding venue gallery with floral details, romantic spaces, and elegant receptions."
+  />
+  <meta name="twitter:image" content="assets/images/social-preview.jpg" />
+
+  <!-- CUSTOMIZE: Favicon / app icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body>
+  <!-- Accessibility skip link -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================================================
+       Header / Navigation
+
+       CUSTOMIZE:
+       - Replace logo image in assets/images/logo.jpg
+       - Edit the business name and tagline below
+       - Edit menu links in BOTH desktop-nav and mobile-menu
+  ========================================================== -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html" aria-label="Rain Blossom home">
+      <img
+        src="assets/images/logo.jpg"
+        alt="Rain Blossom logo"
+        class="logo-img"
+      />
+
+      <span class="brand-text">
+        <span class="brand-name">Rain Blossom</span>
+        <span class="brand-tagline">Garden Weddings & Events</span>
+      </span>
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="spaces.html">Spaces</a>
+      <a href="packages.html">Packages</a>
+      <a class="is-active" href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="mobileMenu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile navigation -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="spaces.html">Spaces</a>
+      <a href="packages.html">Packages</a>
+      <a class="is-active" href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a class="mobile-cta" href="contact.html">Schedule a Tour</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- =========================================================
+         Hero Section
+
+         CUSTOMIZE:
+         - Replace video: assets/videos/rain-blossom-hero.mp4
+         - Edit headline, intro text, and buttons
+    ========================================================== -->
+    <section class="hero page-video-hero" aria-label="Rain Blossom gallery">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-hidden="true"
+      >
+        <source src="assets/videos/rain-blossom-hero.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Gallery</p>
+
+        <h1>Romantic moments surrounded by flowers and rain.</h1>
+
+        <p class="hero-copy">
+          Explore soft garden views, elegant receptions, floral details, and
+          celebration spaces designed to feel timeless, intimate, and cinematic.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">
+            Schedule a Tour
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn btn-secondary" href="spaces.html">
+            View Spaces
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Main Gallery
+
+         CUSTOMIZE:
+         - Replace the image files in assets/images/.
+         - Update each alt="" description to match the new image.
+         - For best results, use horizontal images with similar sizes.
+    ========================================================== -->
+    <section class="section gallery-section">
+      <div class="section-heading">
+        <p class="eyebrow">Rain Blossom Moments</p>
+        <h2>A closer look at the estate.</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <img
+          src="assets/images/gallery-01.jpg"
+          alt="Rain droplets on bright orange flowers"
+        />
+
+        <img
+          src="assets/images/gallery-02.jpg"
+          alt="Romantic wedding table with floral decor"
+        />
+
+        <img
+          src="assets/images/gallery-03.jpg"
+          alt="Garden path surrounded by blooming flowers"
+        />
+
+        <img
+          src="assets/images/gallery-04.jpg"
+          alt="Outdoor wedding ceremony chairs in a garden"
+        />
+
+        <img
+          src="assets/images/gallery-05.jpg"
+          alt="Wedding bouquet with warm floral colors"
+        />
+
+        <img
+          src="assets/images/gallery-06.jpg"
+          alt="Elegant reception with candlelight and flowers"
+        />
+
+        <img
+          src="assets/images/ceremony-garden.jpg"
+          alt="Outdoor garden ceremony space"
+        />
+
+        <img
+          src="assets/images/reception-hall.jpg"
+          alt="Luxury reception hall with floral details"
+        />
+
+        <img
+          src="assets/images/garden-lounge.jpg"
+          alt="Private garden lounge for guests"
+        />
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Tour Banner
+
+         CUSTOMIZE:
+         - Edit banner headline and button link.
+    ========================================================== -->
+    <section class="experience-banner" aria-label="Private tours">
+      <div>
+        <p class="eyebrow">Private Tours</p>
+        <h2>See the gardens, suites, and reception spaces in person.</h2>
+      </div>
+
+      <a href="contact.html" class="btn btn-light">Schedule a Tour</a>
+    </section>
+
+    <!-- =========================================================
+         Featured Views
+
+         CUSTOMIZE:
+         - Replace the images, icons, headings, and descriptions.
+         - Icon classes use Font Awesome.
+    ========================================================== -->
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Featured Views</p>
+        <h2>Designed to photograph beautifully from every angle.</h2>
+      </div>
+
+      <div class="card-grid three-columns">
+        <article class="feature-card">
+          <img
+            src="assets/images/ceremony-garden.jpg"
+            alt="Garden ceremony area with floral scenery"
+          />
+
+          <div class="card-body">
+            <i class="fa-solid fa-ring" aria-hidden="true"></i>
+            <h3>Ceremony Gardens</h3>
+            <p>
+              Open-air vows, floral walkways, and peaceful garden surroundings
+              for romantic ceremonies.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <img
+            src="assets/images/reception-hall.jpg"
+            alt="Elegant reception hall with floral details"
+          />
+
+          <div class="card-body">
+            <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i>
+            <h3>Reception Moments</h3>
+            <p>
+              Warm interiors, candlelit tables, and refined spaces for dinner,
+              speeches, and dancing.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <img
+            src="assets/images/garden-lounge.jpg"
+            alt="Private garden lounge area"
+          />
+
+          <div class="card-body">
+            <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+            <h3>Private Retreats</h3>
+            <p>
+              Quiet lounges and garden corners for portraits, cocktail hour,
+              and guest comfort.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Final Call-To-Action
+
+         CUSTOMIZE:
+         - Edit headline, text, and button link.
+    ========================================================== -->
+    <section class="section">
+      <div class="cta-card">
+        <p class="eyebrow">Plan Your Celebration</p>
+
+        <h2>Your Rain Blossom story starts here.</h2>
+
+        <p>
+          Tell us about your event date, guest count, and vision. Our team will
+          help you explore the best spaces and package options.
+        </p>
+
+        <a href="contact.html" class="btn btn-primary">
+          Contact Us
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       Footer
+
+       CUSTOMIZE:
+       - Replace social media links with real business links.
+       - Replace footer tagline if needed.
+  ========================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-follow">Follow Us</p>
+
+      <div class="footer-socials" aria-label="Social links">
+        <a
+          href="https://facebook.com"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://instagram.com"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://pinterest.com"
+          aria-label="Pinterest"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-pinterest-p" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://tiktok.com"
+          aria-label="TikTok"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Luxury Garden Weddings & Events</span>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> Rain Blossom. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating call-to-action button -->
+  <a href="contact.html" class="floating-tour-btn">
+    Schedule a Tour
+  </a>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

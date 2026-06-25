@@ -1,0 +1,751 @@
+/* =========================================================
+   FreshNest Cleaning Co.
+   Desktop Stylesheet
+
+   ---------------------------------------------------------
+   TABLE OF CONTENTS
+   ---------------------------------------------------------
+
+   01. Root Variables
+   02. Reset & Base Styles
+   03. Header / Navigation
+   04. Buttons
+   05. Hero Section
+   06. Trust Bar
+   07. General Sections
+   08. Cards & Grids
+   09. Pricing
+   10. Process
+   11. Gallery
+   12. Reviews
+   13. FAQ
+   14. Contact
+   15. Footer
+   16. Mobile Call Button
+   17. 404 Page
+
+   IMPORTANT:
+   - This file is DESKTOP ONLY.
+   - Do not add tablet or mobile media queries here.
+   - Tablet styles go in css/tablet.css.
+   - Mobile styles go in css/mobile.css.
+========================================================= */
+
+
+/* =========================================================
+   01. ROOT VARIABLES
+========================================================= */
+
+:root {
+    --ink: #17252a;
+    --muted: #5a6872;
+
+    --paper: #ffffff;
+    --wash: #f5f8f7;
+    --soft-mint: #edf4f3;
+
+    --mint: #2f8f83;
+    --mint-dark: #1f665f;
+    --blue: #245c73;
+    --blue-dark: #173d4d;
+    --coral: #d97855;
+
+    --line: #d9e2e0;
+    --shadow: 0 18px 45px rgba(23, 37, 42, 0.12);
+    --shadow-strong: 0 22px 60px rgba(23, 37, 42, 0.18);
+
+    --radius: 12px;
+}
+
+
+/* =========================================================
+   02. RESET & BASE STYLES
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--wash);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   03. HEADER / NAVIGATION
+========================================================= */
+
+.site-header {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 10px 30px rgba(23, 37, 42, 0.08);
+    display: grid;
+    gap: 18px;
+    grid-template-columns: auto 1fr auto;
+    left: 0;
+    padding: 16px clamp(18px, 5vw, 64px);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: var(--mint-dark);
+    font-size: 1.35rem;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+/* Hidden on desktop. Mobile.css turns it on. */
+.menu-toggle {
+    display: none;
+}
+
+.site-nav {
+    display: flex;
+    gap: clamp(14px, 2.4vw, 30px);
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.site-nav a {
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 700;
+    position: relative;
+    transition: color 0.25s ease;
+    white-space: nowrap;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.site-nav a.active {
+    color: var(--mint-dark);
+}
+
+.site-nav a.active::after {
+    background: var(--mint);
+    border-radius: 999px;
+    bottom: -8px;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+
+/* =========================================================
+   04. BUTTONS
+========================================================= */
+
+.header-action,
+.btn,
+button {
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    font-weight: 800;
+    justify-content: center;
+    line-height: 1.1;
+    padding: 14px 22px;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header-action,
+.btn.primary,
+button {
+    background: var(--mint);
+    color: #ffffff;
+}
+
+.header-action:hover,
+.btn.primary:hover,
+button:hover {
+    background: var(--mint-dark);
+    box-shadow: 0 10px 24px rgba(31, 102, 95, 0.22);
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--ink);
+}
+
+.btn.secondary:hover {
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   05. HERO SECTION
+========================================================= */
+
+.hero {
+    align-items: center;
+    background-image: url("../assets/freshnest-hero.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    min-height: 76vh;
+    padding: 120px clamp(18px, 5vw, 64px) 72px;
+    position: relative;
+}
+
+.hero-overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(14, 34, 38, 0.78),
+        rgba(14, 34, 38, 0.48),
+        rgba(14, 34, 38, 0.12)
+    );
+    inset: 0;
+    position: absolute;
+}
+
+.hero-content {
+    color: #ffffff;
+    max-width: 680px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: var(--coral);
+    font-size: 0.78rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.hero .eyebrow {
+    color: #f2b39c;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.12;
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 4.8rem);
+    max-width: 760px;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.85rem);
+}
+
+.hero-copy {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.12rem;
+    margin: 22px 0 30px;
+    max-width: 620px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hero-proof {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.hero-proof span {
+    color: #ffd166;
+    font-weight: 900;
+}
+
+.hero-proof p {
+    color: rgba(255, 255, 255, 0.86);
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   06. TRUST BAR
+========================================================= */
+
+.trust-bar {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.trust-bar div {
+    padding: 24px clamp(18px, 5vw, 44px);
+}
+
+.trust-bar strong,
+.trust-bar span {
+    display: block;
+}
+
+.trust-bar strong {
+    color: var(--blue);
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.trust-bar span {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   07. GENERAL SECTIONS
+========================================================= */
+
+.section {
+    padding: 82px clamp(18px, 5vw, 64px);
+}
+
+.section-heading {
+    margin: 0 auto 34px;
+    max-width: 760px;
+    text-align: center;
+}
+
+.intro {
+    background: var(--paper);
+}
+
+.intro p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 1.08rem;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   08. CARDS & GRIDS
+========================================================= */
+
+.card-grid,
+.price-grid,
+.steps,
+.quote-grid {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0 auto;
+    max-width: 1120px;
+}
+
+.service-card,
+.price-card,
+.steps div,
+blockquote,
+details,
+form {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.service-card,
+.price-card,
+.steps div,
+blockquote {
+    padding: 28px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover,
+.price-card:hover,
+.steps div:hover,
+blockquote:hover {
+    box-shadow: var(--shadow-strong);
+    transform: translateY(-4px);
+}
+
+.icon,
+.steps span {
+    align-items: center;
+    background: #e7f2f0;
+    border-radius: 10px;
+    color: var(--mint-dark);
+    display: inline-flex;
+    font-size: 1rem;
+    font-weight: 900;
+    height: 44px;
+    justify-content: center;
+    margin-bottom: 22px;
+    width: 44px;
+}
+
+.service-card h3,
+.steps h3,
+.price-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.service-card p,
+.steps p,
+.price-card p,
+.price-card span,
+blockquote p,
+.faq-list p {
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   09. PRICING
+========================================================= */
+
+.pricing-section,
+.testimonials {
+    background: var(--soft-mint);
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.price-card.featured {
+    border-color: var(--mint);
+    box-shadow: 0 20px 55px rgba(47, 143, 131, 0.22);
+}
+
+.badge {
+    align-self: flex-start;
+    background: var(--mint);
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+    padding: 7px 12px;
+    text-transform: uppercase;
+}
+
+.price-card strong {
+    color: var(--blue);
+    font-size: 2.45rem;
+    line-height: 1;
+    margin: 24px 0 8px;
+}
+
+.price-card span {
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   10. PROCESS
+========================================================= */
+
+.process {
+    background: var(--paper);
+}
+
+
+/* =========================================================
+   11. GALLERY
+========================================================= */
+
+.gallery {
+    background: var(--paper);
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 0 auto;
+    max-width: 1120px;
+}
+
+.gallery-grid img {
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/* =========================================================
+   12. REVIEWS
+========================================================= */
+
+.rating-box {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 0 auto 24px;
+    max-width: 420px;
+    padding: 18px 22px;
+    text-align: center;
+}
+
+.rating-box strong,
+.rating-box span {
+    display: block;
+}
+
+.rating-box strong {
+    color: var(--blue);
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+}
+
+.rating-box span {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.quote-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+blockquote p {
+    font-size: 1.06rem;
+    margin-bottom: 18px;
+}
+
+cite {
+    color: var(--mint-dark);
+    font-style: normal;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   13. FAQ
+========================================================= */
+
+.faq-list {
+    display: grid;
+    gap: 14px;
+    margin: 0 auto;
+    max-width: 860px;
+}
+
+details {
+    box-shadow: none;
+    padding: 20px 22px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 800;
+}
+
+details p {
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   14. CONTACT
+========================================================= */
+
+.contact-section {
+    align-items: center;
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    color: #ffffff;
+    display: grid;
+    gap: 42px;
+    grid-template-columns: 0.9fr 1.1fr;
+    padding: 82px clamp(18px, 5vw, 64px);
+}
+
+.contact-copy {
+    max-width: 540px;
+}
+
+.contact-copy .eyebrow {
+    color: #f2b39c;
+}
+
+.contact-copy h2 {
+    color: #ffffff;
+    margin-bottom: 18px;
+}
+
+.contact-copy p {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.contact-details {
+    display: grid;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.contact-details a {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+form {
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+    display: grid;
+    gap: 16px;
+    padding: 30px;
+}
+
+label {
+    display: grid;
+    gap: 7px;
+}
+
+label span {
+    color: var(--ink);
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+input,
+select,
+textarea {
+    background: #f7faf9;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--ink);
+    font: inherit;
+    padding: 13px 14px;
+    width: 100%;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--mint);
+    outline: 3px solid rgba(47, 143, 131, 0.18);
+}
+
+button {
+    width: 100%;
+}
+
+
+/* =========================================================
+   15. FOOTER
+========================================================= */
+
+footer {
+    background: #13272e;
+    color: rgba(255, 255, 255, 0.76);
+    display: grid;
+    gap: 8px;
+    padding: 34px clamp(18px, 5vw, 64px);
+    text-align: center;
+}
+
+footer p:first-child {
+    color: #ffffff;
+    font-weight: 900;
+}
+
+footer a {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   16. MOBILE CALL BUTTON
+========================================================= */
+
+.mobile-call {
+    display: none;
+}
+
+
+/* =========================================================
+   17. 404 PAGE
+========================================================= */
+
+.error-page {
+    background: linear-gradient(135deg, var(--soft-mint), #ffffff);
+    min-height: 100vh;
+}
+
+.error-wrap {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 28px;
+}
+
+.error-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 660px;
+    padding: 46px;
+    text-align: center;
+}
+
+.error-card .logo {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.error-card h1 {
+    color: var(--ink);
+    font-size: 3.2rem;
+    margin-bottom: 18px;
+}
+
+.error-card p:not(.eyebrow) {
+    color: var(--muted);
+    margin: 0 auto 28px;
+    max-width: 500px;
+}
+
+.error-card .hero-actions {
+    justify-content: center;
+}

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       Contact Page | Rain Blossom
+
+       CUSTOMER NOTES:
+       - This page contains the contact details, tour request form,
+         quick FAQ, and final call-to-action.
+       - To customize this page, search for "CUSTOMIZE" comments.
+       - The form currently sends visitors to thank-you.html.
+       - To receive real form submissions, connect the form to
+         Formspree, Netlify Forms, Basin, or your own backend.
+  ========================================================== -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CUSTOMIZE: Browser tab title -->
+  <title>Contact | Rain Blossom</title>
+
+  <!-- CUSTOMIZE: SEO description -->
+  <meta
+    name="description"
+    content="Schedule a private tour, request package information, or start planning your Rain Blossom wedding or private celebration."
+  />
+
+  <!-- CUSTOMIZE: Mobile browser theme color -->
+  <meta name="theme-color" content="#14251c" />
+
+  <!-- CUSTOMIZE: Social sharing preview -->
+  <meta property="og:title" content="Contact | Rain Blossom" />
+  <meta
+    property="og:description"
+    content="Schedule a private tour or request package details for your Rain Blossom wedding or private event."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/social-preview.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Rain Blossom" />
+  <meta
+    name="twitter:description"
+    content="Start planning your Rain Blossom wedding or private celebration."
+  />
+  <meta name="twitter:image" content="assets/images/social-preview.jpg" />
+
+  <!-- CUSTOMIZE: Favicon / app icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body>
+  <!-- Accessibility skip link -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================================================
+       Header / Navigation
+
+       CUSTOMIZE:
+       - Replace logo image in assets/images/logo.jpg
+       - Edit the business name and tagline below
+       - Edit menu links in BOTH desktop-nav and mobile-menu
+  ========================================================== -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html" aria-label="Rain Blossom home">
+      <img
+        src="assets/images/logo.jpg"
+        alt="Rain Blossom logo"
+        class="logo-img"
+      />
+
+      <span class="brand-text">
+        <span class="brand-name">Rain Blossom</span>
+        <span class="brand-tagline">Garden Weddings & Events</span>
+      </span>
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="spaces.html">Spaces</a>
+      <a href="packages.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="faq.html">FAQ</a>
+      <a class="is-active" href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="mobileMenu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile navigation -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="spaces.html">Spaces</a>
+      <a href="packages.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="faq.html">FAQ</a>
+      <a class="is-active" href="contact.html">Contact</a>
+      <a class="mobile-cta" href="#inquiry">Schedule a Tour</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- =========================================================
+         Hero Section
+
+         CUSTOMIZE:
+         - Replace video: assets/videos/rain-blossom-hero.mp4
+         - Edit headline, intro text, and buttons
+    ========================================================== -->
+    <section class="hero page-video-hero" aria-label="Contact Rain Blossom">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-hidden="true"
+      >
+        <source src="assets/videos/rain-blossom-hero.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Contact Rain Blossom</p>
+
+        <h1>Let’s start planning your celebration.</h1>
+
+        <p class="hero-copy">
+          Whether you are planning a wedding, private event, anniversary, or
+          special gathering, we would love to hear more about your vision.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#inquiry">
+            Schedule a Tour
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn btn-secondary" href="packages.html">
+            View Packages
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Contact Form Section
+
+         CUSTOMIZE:
+         - Replace phone, email, and location.
+         - To make the form send real emails, replace:
+           action="thank-you.html"
+           with your form service endpoint.
+         - Example Formspree:
+           action="https://formspree.io/f/YOUR_FORM_ID"
+           method="POST"
+    ========================================================== -->
+    <section class="section" id="inquiry">
+      <div class="contact-card">
+        <div class="contact-copy">
+          <p class="eyebrow">Get In Touch</p>
+
+          <h2>Schedule a private estate tour.</h2>
+
+          <p>
+            Tell us about your event and preferred date. Our team will help you
+            explore venue spaces, package options, and availability.
+          </p>
+
+          <div class="contact-details">
+            <a href="tel:+15550192840">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              (555) 019-2840
+            </a>
+
+            <a href="mailto:hello@rainblossom.com">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              hello@rainblossom.com
+            </a>
+
+            <span>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              Meadowbrook Valley
+            </span>
+          </div>
+        </div>
+
+        <form class="contact-form" action="thank-you.html" method="GET">
+          <div class="form-row">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              autocomplete="tel"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="eventType">Event Type</label>
+            <select id="eventType" name="eventType">
+              <option value="">Select an event type</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Anniversary">Anniversary</option>
+              <option value="Bridal Shower">Bridal Shower</option>
+              <option value="Private Dinner">Private Dinner</option>
+              <option value="Corporate Event">Corporate Event</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="guests">Estimated Guests</label>
+            <input
+              type="number"
+              id="guests"
+              name="guests"
+              min="1"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="date">Preferred Date</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Tell Us About Your Event</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+            ></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Submit Inquiry
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Visit Banner
+
+         CUSTOMIZE:
+         - Edit the banner text and button link.
+    ========================================================== -->
+    <section class="experience-banner" aria-label="Visit Rain Blossom estate">
+      <div>
+        <p class="eyebrow">Visit The Estate</p>
+        <h2>Experience Rain Blossom in person.</h2>
+      </div>
+
+      <a href="#inquiry" class="btn btn-light">Schedule a Tour</a>
+    </section>
+
+    <!-- =========================================================
+         Quick FAQ Section
+
+         CUSTOMIZE:
+         - Edit, add, or remove FAQ questions below.
+         - For the full FAQ page, edit faq.html.
+    ========================================================== -->
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Frequently Asked Questions</p>
+        <h2>Before your visit.</h2>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>Do I need an appointment?</summary>
+          <p>Yes. Estate tours are available by appointment only.</p>
+        </details>
+
+        <details>
+          <summary>How far in advance should I book?</summary>
+          <p>
+            Popular dates can reserve months in advance, so we recommend
+            reaching out early.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I bring vendors?</summary>
+          <p>Yes. Outside vendors are welcome.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Final Call-To-Action
+
+         CUSTOMIZE:
+         - Edit headline, text, and button link.
+    ========================================================== -->
+    <section class="section">
+      <div class="cta-card">
+        <p class="eyebrow">Private Tours</p>
+
+        <h2>Your celebration begins here.</h2>
+
+        <p>
+          Schedule a private tour and discover the beauty of Rain Blossom.
+        </p>
+
+        <a href="#inquiry" class="btn btn-primary">
+          Schedule a Tour
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       Footer
+
+       CUSTOMIZE:
+       - Replace social media links with real business links.
+       - Replace footer tagline if needed.
+  ========================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-follow">Follow Us</p>
+
+      <div class="footer-socials" aria-label="Social links">
+        <a
+          href="https://facebook.com"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://instagram.com"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://pinterest.com"
+          aria-label="Pinterest"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-pinterest-p" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://tiktok.com"
+          aria-label="TikTok"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Luxury Garden Weddings & Events</span>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> Rain Blossom. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating call-to-action button -->
+  <a href="#inquiry" class="floating-tour-btn">
+    Schedule a Tour
+  </a>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

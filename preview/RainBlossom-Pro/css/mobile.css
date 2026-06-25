@@ -1,0 +1,369 @@
+/* =========================================================
+   Rain Blossom - Mobile Styles
+========================================================= */
+
+/* =========================================================
+   01. Mobile Navigation / Hamburger Menu
+========================================================= */
+
+@media (max-width: 720px) {
+  .desktop-nav,
+  .header-cta {
+    display: none;
+  }
+
+  .site-header {
+    top: 12px;
+    width: calc(100% - 20px);
+    height: 72px;
+    padding: 0 14px;
+    border-radius: 24px;
+  }
+
+  .nav-toggle {
+    margin-left: auto;
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid rgba(255, 243, 216, 0.26);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    width: 20px;
+    height: 2px;
+    display: block;
+    border-radius: 999px;
+    background: var(--cream);
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  .nav-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    z-index: 60;
+    padding: 14px;
+    display: grid;
+    gap: 8px;
+    border: 1px solid rgba(216, 180, 106, 0.24);
+    border-radius: 24px;
+    background: rgba(5, 5, 5, 0.96);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobile-menu a {
+    padding: 13px 14px;
+    border-radius: 14px;
+    color: var(--cream);
+    font-size: 0.92rem;
+    font-weight: 900;
+  }
+
+  .mobile-menu a:hover,
+  .mobile-menu a.is-active {
+    background: rgba(255, 243, 216, 0.1);
+    color: var(--gold);
+  }
+
+  .mobile-menu .mobile-cta {
+    margin-top: 4px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--poppy), var(--gold));
+    color: var(--black);
+  }
+
+  .mobile-menu .mobile-cta:hover {
+    color: var(--black);
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* =========================================================
+   02. Mobile Header / Brand
+========================================================= */
+
+@media (max-width: 720px) {
+  .brand-mark,
+  .logo-img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand-name {
+    font-size: 1.15rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+/* =========================================================
+   03. Mobile Hero
+========================================================= */
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 90vh;
+    padding: 120px 20px 70px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 4.5rem);
+    line-height: 0.95;
+  }
+
+  .hero-subtitle {
+    margin-top: 18px;
+    font-size: 1.4rem;
+  }
+
+  .hero-copy {
+    margin-top: 18px;
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-card,
+  .scroll-cue {
+    display: none;
+  }
+}
+
+/* =========================================================
+   04. Mobile Sections / Cards / Gallery
+========================================================= */
+
+@media (max-width: 720px) {
+  .section {
+    padding: 70px 20px;
+  }
+
+  .section-grid,
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+
+  .section-copy h2,
+  .section-heading h2,
+  .experience-banner h2,
+  .contact-copy h2,
+  .cta-card h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .three-columns,
+  .gallery-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: 260px;
+  }
+
+  .feature-card {
+    min-height: 420px;
+  }
+
+  .price-card.featured {
+    transform: none;
+  }
+}
+
+/* =========================================================
+   05. Mobile Images
+========================================================= */
+
+@media (max-width: 720px) {
+  .image-stack img {
+    height: 280px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .floating-note {
+    position: relative;
+    left: 0;
+    bottom: auto;
+    width: calc(100% - 40px);
+    max-width: none;
+    margin: -30px auto 0;
+  }
+}
+
+/* =========================================================
+   06. Mobile CTA / Contact
+========================================================= */
+
+@media (max-width: 720px) {
+  .experience-banner {
+    width: calc(100% - 20px);
+    padding: 32px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 24px;
+  }
+
+  .experience-banner .btn {
+    width: 100%;
+  }
+
+  .contact-card {
+    padding: 26px;
+    border-radius: 24px;
+  }
+
+  .contact-form {
+    gap: 16px;
+  }
+
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    min-height: 54px;
+  }
+
+  .cta-card {
+    padding: 40px 24px;
+    border-radius: 24px;
+  }
+
+  .floating-tour-btn {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    width: auto;
+    padding: 14px 18px;
+  }
+}
+
+/* =========================================================
+   07. Mobile Footer
+========================================================= */
+
+@media (max-width: 720px) {
+  .site-footer {
+    padding: 54px 20px 90px;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-socials a {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer-socials i {
+    font-size: 1.65rem;
+  }
+
+  .copyright,
+  .footer-bottom {
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   08. Small Phone Adjustments
+========================================================= */
+
+@media (max-width: 480px) {
+  .brand-tagline {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+  }
+
+  .eyebrow::before,
+  .eyebrow::after {
+    width: 18px;
+  }
+
+  .gallery-grid img {
+    height: 220px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .cta-card {
+    padding: 32px 20px;
+  }
+}

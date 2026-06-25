@@ -1,0 +1,389 @@
+/* =========================================================
+   Rain Blossom Lite - Mobile Styles
+========================================================= */
+
+/* =========================================================
+   01. Mobile Navigation / Hamburger Menu
+========================================================= */
+
+@media (max-width: 720px) {
+  .desktop-nav,
+  .header-cta {
+    display: none;
+  }
+
+  .site-header {
+    top: 12px;
+    width: calc(100% - 20px);
+    min-height: 70px;
+    height: auto;
+    padding: 10px 14px;
+    border-radius: 24px;
+  }
+
+  .nav-toggle {
+    margin-left: auto;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid rgba(255, 246, 228, 0.24);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    width: 20px;
+    height: 2px;
+    display: block;
+    border-radius: 999px;
+    background: var(--cream);
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  .nav-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    z-index: 60;
+    padding: 14px;
+    display: grid;
+    gap: 8px;
+    border: 1px solid rgba(202, 168, 94, 0.24);
+    border-radius: 24px;
+    background: rgba(15, 20, 17, 0.97);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobile-menu a {
+    padding: 13px 14px;
+    border-radius: 14px;
+    color: var(--cream);
+    font-size: 0.9rem;
+    font-weight: 900;
+  }
+
+  .mobile-menu a:hover,
+  .mobile-menu a.is-active {
+    background: rgba(255, 246, 228, 0.1);
+    color: var(--gold);
+  }
+
+  .mobile-menu .mobile-cta {
+    margin-top: 4px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--poppy), var(--gold));
+    color: var(--black);
+  }
+
+  .mobile-menu .mobile-cta:hover {
+    color: var(--black);
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* =========================================================
+   02. Mobile Header / Brand
+========================================================= */
+
+@media (max-width: 720px) {
+  .brand-mark,
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-name {
+    font-size: 1.12rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.56rem;
+    letter-spacing: 0.11em;
+  }
+}
+
+/* =========================================================
+   03. Mobile Hero
+========================================================= */
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 88vh;
+    padding: 116px 20px 68px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 13vw, 4.3rem);
+    line-height: 0.96;
+  }
+
+  .hero-subtitle {
+    margin-top: 18px;
+    font-size: 1.35rem;
+  }
+
+  .hero-copy {
+    margin-top: 18px;
+    font-size: 0.94rem;
+  }
+
+  .hero-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-card,
+  .scroll-cue {
+    display: none;
+  }
+}
+
+/* =========================================================
+   04. Mobile Sections / Cards / Gallery
+========================================================= */
+
+@media (max-width: 720px) {
+  .section {
+    padding: 66px 20px;
+  }
+
+  .section-grid,
+  .contact-card {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .section-copy h2,
+  .section-heading h2,
+  .experience-banner h2,
+  .contact-copy h2,
+  .cta-card h2 {
+    font-size: clamp(2rem, 9vw, 2.9rem);
+  }
+
+  .three-columns,
+  .gallery-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid img {
+    height: 250px;
+  }
+
+  .feature-card {
+    min-height: 400px;
+  }
+
+  .price-card.featured {
+    transform: none;
+  }
+
+  .card-body {
+    padding: 24px;
+  }
+
+  .price-card,
+  .testimonial-card {
+    padding: 26px;
+  }
+}
+
+/* =========================================================
+   05. Mobile Images
+========================================================= */
+
+@media (max-width: 720px) {
+  .image-stack img {
+    height: 280px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .floating-note {
+    position: relative;
+    left: 0;
+    bottom: auto;
+    width: calc(100% - 34px);
+    max-width: none;
+    margin: -28px auto 0;
+  }
+}
+
+/* =========================================================
+   06. Mobile CTA / Contact
+========================================================= */
+
+@media (max-width: 720px) {
+  .experience-banner {
+    width: calc(100% - 20px);
+    padding: 30px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 24px;
+  }
+
+  .experience-banner .btn {
+    width: 100%;
+  }
+
+  .contact-card {
+    padding: 26px;
+    border-radius: 24px;
+  }
+
+  .contact-form {
+    gap: 16px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    min-height: 54px;
+  }
+
+  .cta-card {
+    padding: 38px 24px;
+    border-radius: 24px;
+  }
+
+  .floating-tour-btn {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    width: auto;
+    padding: 14px 18px;
+  }
+}
+
+/* =========================================================
+   07. Mobile Footer
+========================================================= */
+
+@media (max-width: 720px) {
+  .site-footer {
+    padding: 52px 20px 92px;
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-socials a {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+  }
+
+  .footer-socials i {
+    font-size: 1.55rem;
+  }
+
+  .copyright,
+  .footer-bottom {
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   08. Small Phone Adjustments
+========================================================= */
+
+@media (max-width: 480px) {
+  .brand-tagline {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .hero h1 {
+    font-size: 2.9rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.18rem;
+  }
+
+  .eyebrow {
+    font-size: 0.64rem;
+    letter-spacing: 0.15em;
+  }
+
+  .eyebrow::before,
+  .eyebrow::after {
+    width: 18px;
+  }
+
+  .gallery-grid img {
+    height: 220px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .cta-card {
+    padding: 32px 20px;
+  }
+
+  .floating-tour-btn {
+    font-size: 0.9rem;
+  }
+}

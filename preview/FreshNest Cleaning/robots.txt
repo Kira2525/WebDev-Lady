@@ -1,0 +1,25 @@
+```txt
+# =========================================================
+# FreshNest Cleaning Co.
+# robots.txt
+#
+# CUSTOMER NOTES:
+# - This file tells search engines which pages to crawl.
+# - Most customers will not need to edit this file.
+# - Replace the sitemap URL below with your own website.
+# =========================================================
+
+# Allow all search engines
+User-agent: *
+
+# Allow access to the entire website
+Allow: /
+
+# Block common system folders (optional)
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Replace with your own sitemap URL after publishing
+Sitemap: https://www.yourwebsite.com/sitemap.xml
+```

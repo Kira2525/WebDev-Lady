@@ -19,12 +19,49 @@ function buildSiteUrl(event) {
   return "http://localhost:8888";
 }
 
-function getSuccessPath(productKey) {
-  const thankYouPage = productKey.endsWith("-pro")
-    ? "thank-you-pro.html"
-    : "thank-you-lite.html";
+function jsonResponse(statusCode, body) {
+  return {
+    statusCode,
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  };
+}
 
-  return `${thankYouPage}?product=${encodeURIComponent(productKey)}`;
+function normalizeCartItems(payload) {
+  if (Array.isArray(payload.items)) {
+    return payload.items;
+  }
+
+  if (payload.productKey) {
+    return [
+      {
+        productKey: payload.productKey,
+        quantity: payload.quantity || 1
+      }
+    ];
+  }
+
+  return [];
+}
+
+function getValidatedLineItems(payload) {
+  return normalizeCartItems(payload).map((item) => {
+    const productKey = String(item.productKey || "").trim();
+    const product = productCatalog[productKey];
+    const quantity = Math.max(1, Math.min(99, Number.parseInt(item.quantity, 10) || 1));
+
+    if (!productKey || !product) {
+      throw new Error(`Invalid product key: ${productKey || "missing"}.`);
+    }
+
+    return {
+      productKey,
+      product,
+      quantity
+    };
+  });
 }
 
 exports.handler = async function (event) {
@@ -39,15 +76,9 @@ exports.handler = async function (event) {
   }
 
   if (event.httpMethod !== "POST") {
-    return {
-      statusCode: 405,
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        error: "Method not allowed."
-      })
-    };
+    return jsonResponse(405, {
+      error: "Method not allowed."
+    });
   }
 
   try {
@@ -55,76 +86,59 @@ exports.handler = async function (event) {
       throw new Error("Missing STRIPE_SECRET_KEY environment variable.");
     }
 
-    const { productKey } = JSON.parse(event.body || "{}");
-    const product = productCatalog[productKey];
+    const payload = JSON.parse(event.body || "{}");
+    const cartItems = getValidatedLineItems(payload);
 
-    if (!productKey || !product) {
-      return {
-        statusCode: 400,
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          error: "Invalid product key."
-        })
-      };
+    if (!cartItems.length) {
+      return jsonResponse(400, {
+        error: "Your cart is empty."
+      });
     }
 
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
     const siteUrl = buildSiteUrl(event);
-    const successUrl = new URL(getSuccessPath(productKey), `${siteUrl}/`).href;
-    const cancelUrl = new URL(
-      `cart.html?product=${encodeURIComponent(productKey)}`,
+    const productKeys = cartItems.map((item) => item.productKey).join(",");
+    const successUrl = new URL(
+      `success.html?products=${encodeURIComponent(productKeys)}`,
       `${siteUrl}/`
     ).href;
+    const cancelUrl = new URL("cart.html", `${siteUrl}/`).href;
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
-      line_items: [
-        {
-          price_data: {
-            currency: "usd",
-            unit_amount: product.price * 100,
-            product_data: {
-              name: product.name,
-              description: product.description,
-              metadata: {
-                productKey,
-                version: product.version
-              }
+      line_items: cartItems.map(({ productKey, product, quantity }) => ({
+        price_data: {
+          currency: "usd",
+          unit_amount: Math.round(product.price * 100),
+          product_data: {
+            name: product.name,
+            description: product.description,
+            metadata: {
+              productKey,
+              version: product.version
             }
-          },
-          quantity: 1
-        }
-      ],
+          }
+        },
+        quantity
+      })),
       success_url: successUrl,
       cancel_url: cancelUrl,
-      client_reference_id: productKey,
+      client_reference_id: cartItems.map((item) => item.productKey).join("|"),
       metadata: {
-        productKey
+        productKeys,
+        itemCount: String(cartItems.length)
       }
     });
 
-    return {
-      statusCode: 200,
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        sessionId: session.id
-      })
-    };
+    return jsonResponse(200, {
+      sessionId: session.id,
+      url: session.url
+    });
   } catch (error) {
     console.error("Stripe Checkout Session error:", error.message);
 
-    return {
-      statusCode: 500,
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        error: error.message
-      })
-    };
+    return jsonResponse(500, {
+      error: error.message
+    });
   }
 };

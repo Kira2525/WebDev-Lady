@@ -101,24 +101,6 @@
     display: none;
   }
 
-  .nav a.cart-icon-link {
-    width: 100%;
-    height: auto;
-    min-width: 0;
-    min-height: 52px;
-    padding: 8px 14px;
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-  }
-
-  .nav a.cart-icon-link img.custom-cart-icon {
-    width: 46px;
-    height: 46px;
-    max-width: none;
-    max-height: none;
-    object-fit: contain;
-  }
-
   .hero {
     padding: 44px 6%;
     min-height: auto;
@@ -179,7 +161,6 @@
     margin-bottom: 8px;
   }
 
-  @media (max-width: 760px) {
   .opening-sale-card,
   .sale-card {
     margin-top: 34px;
@@ -188,7 +169,6 @@
   .btn {
     margin-bottom: 14px;
   }
-}
 
   .template-grid,
   .service-grid,
@@ -640,5 +620,159 @@
 
   .template-mini-card img {
     height: 260px;
+  }
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .store-hero {
+    min-height: auto;
+    padding: 70px 0;
+  }
+
+  .store-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .store-button {
+    width: 100%;
+  }
+
+  .hero-feature-row,
+  .hero-stat-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .store-nav {
+    gap: 6px;
+  }
+
+}
+/* Keep headers pinned on mobile without covering store-page heroes */
+@media (max-width: 760px) {
+  html {
+    padding-top: 0;
+  }
+
+  body.store-page {
+    padding-top: 0;
+  }
+
+  body:not(.store-page) {
+    padding-top: 88px;
+  }
+
+  .store-header {
+    position: sticky;
+    top: 0;
+    z-index: 3000;
+  }
+
+  body.store-page .store-hero {
+    padding-top: 16px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+  }
+
+  .nav {
+    z-index: 2999;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    top: 0;
+  }
+}
+/* Final mobile sticky navigation spacing */
+@media (max-width: 760px) {
+  html {
+    padding-top: 0;
+    scroll-padding-top: 88px;
+  }
+
+  body.store-page {
+    padding-top: 0;
+  }
+
+  body:not(.store-page) {
+    padding-top: 88px;
+  }
+
+  .store-header,
+  .header {
+    top: 0;
+    z-index: 10000;
+  }
+
+  .store-header {
+    position: sticky;
+  }
+
+  .header {
+    position: fixed;
+  }
+
+  .store-nav,
+  .nav {
+    z-index: 10001;
+  }
+
+  .nav {
+    top: calc(100% + 8px);
+    max-height: calc(100vh - 88px);
+  }
+}
+/* Final fixed header visibility guard */
+@media (max-width: 760px) {
+  :root {
+    --store-fixed-header-offset: 52px;
+    --legacy-fixed-header-offset: 148px;
+  }
+
+  html {
+    padding-top: 0;
+    scroll-padding-top: var(--legacy-fixed-header-offset);
+  }
+
+  body.store-page {
+    padding-top: var(--store-fixed-header-offset);
+  }
+
+  body:not(.store-page) {
+    padding-top: var(--legacy-fixed-header-offset);
+  }
+
+  body.store-page > .store-header {
+    position: fixed;
+    top: 0;
+    z-index: 20000;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 20000;
+  }
+
+  .store-nav,
+  .nav {
+    z-index: 20001;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --store-fixed-header-offset: 56px;
   }
 }

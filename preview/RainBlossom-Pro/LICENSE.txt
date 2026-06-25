@@ -1,0 +1,57 @@
+# Rain Blossom Website Template License
+
+**Copyright © 2026 Web Dev Lady. All Rights Reserved.**
+
+## License
+
+By purchasing or downloading this template, you are granted a non-exclusive, non-transferable license to use this template under the following terms.
+
+### You May
+
+* Use this template for one personal or commercial website.
+* Modify colors, fonts, images, text, layouts, and styling.
+* Add or remove pages.
+* Replace branding with your own.
+* Hire a developer to customize the template for you.
+
+### You May Not
+
+* Resell this template.
+* Redistribute this template for free.
+* Share the source files with others.
+* Upload the template to template marketplaces or repositories.
+* Claim this template as your own original work.
+* Sell modified versions of this template.
+* Include this template in any website builder, theme library, or SaaS product without written permission.
+
+### Images & Demo Content
+
+All demo images, logos, text, business names, reviews, and branding are provided for demonstration purposes only.
+
+Customers should replace all demo content with their own before publishing a live website.
+
+### Support
+
+Your purchase includes documentation for basic customization.
+
+Additional customization services are available separately through Web Dev Lady.
+
+### Warranty
+
+This template is provided "as is" without warranties of any kind.
+
+Web Dev Lady is not responsible for any damages, loss of data, loss of business, or other issues resulting from the use of this template.
+
+### Limitation of Liability
+
+In no event shall Web Dev Lady be liable for any indirect, incidental, special, or consequential damages arising from the use of this template.
+
+### Contact
+
+For support, licensing questions, or custom development:
+
+**Web Dev Lady**
+
+Website: https://webdevlady.netlify.app
+
+Copyright © 2026 Web Dev Lady. All Rights Reserved.

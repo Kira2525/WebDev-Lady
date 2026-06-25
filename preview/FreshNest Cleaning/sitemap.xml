@@ -1,0 +1,43 @@
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+=========================================================
+FreshNest Cleaning Co.
+Sitemap
+
+CUSTOMER NOTES:
+- Replace https://www.yourwebsite.com with your own domain.
+- Add or remove pages as needed.
+=========================================================
+-->
+
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Home Page -->
+    <url>
+        <loc>https://www.yourwebsite.com/</loc>
+        <lastmod>2026-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Thank You Page -->
+    <url>
+        <loc>https://www.yourwebsite.com/thank-you.html</loc>
+        <lastmod>2026-01-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.30</priority>
+    </url>
+
+    <!-- 404 Page -->
+    <url>
+        <loc>https://www.yourwebsite.com/404.html</loc>
+        <lastmod>2026-01-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.10</priority>
+    </url>
+
+</urlset>
+```

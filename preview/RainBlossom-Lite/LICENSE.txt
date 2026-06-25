@@ -1,0 +1,58 @@
+# Rain Blossom Lite Website Template License
+
+**Copyright © 2026 Web Dev Lady. All Rights Reserved.**
+
+## License
+
+By purchasing or downloading this template, you are granted a non-exclusive, non-transferable license to use this template under the following terms.
+
+## You May
+
+* Use this template for **one personal or commercial website**.
+* Customize colors, fonts, images, videos, text, layouts, and styling.
+* Add, remove, or edit sections.
+* Replace all demo branding with your own.
+* Connect forms, analytics, and third-party services.
+* Hire a developer to customize the template for you.
+
+## You May Not
+
+* Resell or redistribute this template in its original form.
+* Share, upload, or distribute the source files to others.
+* Upload this template to template marketplaces, repositories, or file-sharing websites.
+* Claim this template as your own original work.
+* Include this template in any website builder, theme library, SaaS platform, or AI-generated template collection without written permission from Web Dev Lady.
+
+## Demo Content
+
+All demo images, videos, logos, business names, text, testimonials, and branding are provided for demonstration purposes only.
+
+Before publishing a live website, customers are responsible for replacing all demo content with their own or ensuring they have permission to use any remaining assets.
+
+## Support
+
+Your purchase includes documentation for basic customization.
+
+Support does not include custom development, content creation, third-party software configuration, or troubleshooting caused by customer modifications.
+
+Custom development services are available separately through Web Dev Lady.
+
+## Warranty
+
+This template is provided **"as is"** without warranties of any kind, either expressed or implied.
+
+## Limitation of Liability
+
+Web Dev Lady shall not be liable for any direct, indirect, incidental, consequential, or special damages resulting from the use or inability to use this template, including but not limited to loss of profits, business interruption, or loss of data.
+
+## Contact
+
+For support, licensing questions, or custom development:
+
+**Web Dev Lady**
+
+Website: https://webdevlady.netlify.app
+
+---
+
+**Copyright © 2026 Web Dev Lady. All Rights Reserved.**

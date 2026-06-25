@@ -1,359 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R74R9S9ZZL"></script>
-  <script src="js/product-catalog.js"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag("js", new Date());
-    gtag("config", "G-R74R9S9ZZL");
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Secure Checkout | Web Dev Lady</title>
-  <meta
-    name="description"
-    content="Secure checkout for Web Dev Lady website templates."
-  />
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <title>Shopping Cart | Website Templates | Web Dev Lady</title>
+  <meta name="description" content="Review selected Web Dev Lady website templates, WordPress themes, and HTML templates before checkout." />
+  <link rel="canonical" href="https://webdevlady.netlify.app/cart.html" />
+  <meta name="robots" content="noindex,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Web Dev Lady" />
+  <meta property="og:title" content="Shopping Cart | Website Templates | Web Dev Lady" />
+  <meta property="og:description" content="Review selected Web Dev Lady website templates, WordPress themes, and HTML templates before checkout." />
+  <meta property="og:url" content="https://webdevlady.netlify.app/cart.html" />
+  <meta property="og:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shopping Cart | Website Templates | Web Dev Lady" />
+  <meta name="twitter:description" content="Review selected Web Dev Lady website templates, WordPress themes, and HTML templates before checkout." />
+  <meta name="twitter:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
+  <link rel="icon" href="assets/images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
   <link rel="manifest" href="site.webmanifest" />
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://webdevlady.netlify.app/#organization","name":"Web Dev Lady","url":"https://webdevlady.netlify.app/","logo":{"@type":"ImageObject","url":"https://webdevlady.netlify.app/assets/images/favicon.png"},"sameAs":["https://www.tiktok.com/@webdevlady","https://www.instagram.com/webdev_lady/","https://www.facebook.com/webdevlady","https://www.youtube.com/@WebDevLady"]},{"@type":["LocalBusiness","ProfessionalService"],"@id":"https://webdevlady.netlify.app/#localbusiness","name":"Web Dev Lady","url":"https://webdevlady.netlify.app/","image":"https://webdevlady.netlify.app/images/webdevlady.png","email":"webdevlady26@gmail.com","priceRange":"$9.99-$1500+","areaServed":{"@type":"Country","name":"United States"},"description":"Web Dev Lady sells modern website templates, WordPress themes, HTML templates, responsive business website templates, and small business website design support."},{"@type":"WebSite","@id":"https://webdevlady.netlify.app/#website","url":"https://webdevlady.netlify.app/","name":"Web Dev Lady","publisher":{"@id":"https://webdevlady.netlify.app/#organization"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://webdevlady.netlify.app/cart.html#webpage","url":"https://webdevlady.netlify.app/cart.html","name":"Shopping Cart | Website Templates | Web Dev Lady","description":"Review selected Web Dev Lady website templates, WordPress themes, and HTML templates before checkout.","isPartOf":{"@id":"https://webdevlady.netlify.app/#website"},"about":{"@id":"https://webdevlady.netlify.app/#organization"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"https://webdevlady.netlify.app/cart.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://webdevlady.netlify.app/"},{"@type":"ListItem","position":2,"name":"Cart","item":"https://webdevlady.netlify.app/cart.html"}]}]}
+  </script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/tablet.css" />
   <link rel="stylesheet" href="css/mobile.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
-  <script src="https://js.stripe.com/v3/"></script>
 </head>
-<body>
-  <canvas id="pinkCanvas"></canvas>
-  <div class="bg-overlay"></div>
-
-  <header class="header">
-    <a href="index.html" class="logo">
-      <img src="images/webdevlady-logo.png" alt="Web Dev Lady logo" />
-      <span>WEB DEV <strong>LADY</strong></span>
-    </a>
-
-    <button
-      class="menu-toggle"
-      id="menuToggle"
-      aria-label="Open navigation menu"
-      aria-expanded="false"
-    >
-      <img src="images/webdevlady-logo.png" alt="" aria-hidden="true" />
-      <span class="sr-only">Menu</span>
-    </button>
-
-    <nav class="nav" id="nav">
-      <a href="index.html">Home</a>
-      <a href="templates.html">Templates</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-      <a href="cart.html" class="cart-icon-link active" aria-label="Shopping Cart">
-        <img src="images/cart-icon.png" alt="Shopping Cart" class="custom-cart-icon" />
+<body class="store-page cart-page">
+  <header class="store-header">
+    <div class="store-shell store-header__inner">
+      <a class="store-logo" href="index.html" aria-label="Web Dev Lady home">
+        <span class="store-logo__icon" aria-hidden="true"></span>
+        <span class="store-logo__wordmark"><span>Web </span><span class="store-logo__accent">Dev</span><span> Lady</span></span>
       </a>
-    </nav>
+      <button class="store-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="storeNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="store-nav" id="storeNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="store-cart-link active" href="cart.html">Cart (<span data-cart-count>0</span>)</a>
+      </nav>
+    </div>
   </header>
 
+
   <main>
-    <div class="page-banner">
-      <img
-        src="images/webdevlady.png"
-        alt="Web Dev Lady checkout banner"
-        width="1200"
-        height="500"
-        decoding="async"
-      />
-    </div>
 
-    <section class="section cart-section">
-      <p class="section-tag">SECURE CHECKOUT</p>
-      <h1>Complete your order.</h1>
-
-      <div class="cart-page-grid">
-        <div class="cart-item-card">
-          <div class="cart-item-content">
-            <div class="cart-product-preview-card">
-              <div class="cart-product-visual" id="cartProductVisual">
-                <img
-                  id="cartProductImage"
-                  src="images/webdevlady-logo.png"
-                  alt="Selected template preview"
-                  loading="eager"
-                  decoding="async"
-                />
-                <div class="cart-image-fallback" id="cartImageFallback" hidden>
-                  <strong>Preview unavailable</strong>
-                  <p>
-                    The template preview image could not be loaded. You can still
-                    continue to checkout or open the live preview.
-                  </p>
-                </div>
-              </div>
-
-              <div class="cart-preview-actions">
-                <a
-                  id="cartPreviewBtn"
-                  href="templates.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn secondary"
-                >
-                  Live Preview
-                </a>
-              </div>
-            </div>
-
-            <div class="cart-product-copy">
-              <p class="tagline" id="cartProductTagline">TEMPLATE</p>
-              <h3 id="cartProductName">Loading template...</h3>
-              <p id="cartProductDescription">Please wait while your product loads.</p>
-            </div>
-
-            <div class="cart-product-meta">
-              <div class="cart-meta-card">
-                <span>Version</span>
-                <strong id="cartProductVersion">-</strong>
-              </div>
-              <div class="cart-meta-card">
-                <span>Collection</span>
-                <strong id="cartProductFamily">-</strong>
-              </div>
-              <div class="cart-meta-card">
-                <span>Promo Price</span>
-                <strong id="cartProductPrice">$0</strong>
-                <small id="cartProductOriginalPrice" class="cart-original-price original-price"></small>
-              </div>
-            </div>
-
-            <div class="cart-info-grid">
-              <div class="cart-info-section">
-                <h4>What&apos;s Included</h4>
-                <ul class="feature-list" id="cartProductFeatures"></ul>
-              </div>
-
-              <div class="cart-info-section">
-                <h4>Need Help?</h4>
-                <p class="cart-help-copy">
-                  If you need help choosing the right version or want setup support,
-                  you can reach out before checkout.
-                </p>
-                <a href="about.html#about-contact" class="btn secondary">Contact Support</a>
-              </div>
-            </div>
-          </div>
+    <section class="store-shell store-section">
+      <div class="store-section__header">
+        <div>
+          <p class="section-eyebrow">Shopping Cart</p>
+          <h1>Review your templates.</h1>
         </div>
+        <a class="store-button store-button--secondary" href="index.html#wordpress-themes">Continue Shopping</a>
+      </div>
 
-        <aside class="cart-checkout-card">
-          <p class="tagline">Checkout</p>
-          <h3>Order Summary</h3>
+      <div class="cart-layout">
+        <section class="cart-panel" aria-labelledby="cart-items-heading">
+          <h2 id="cart-items-heading">Cart Items</h2>
+          <div class="cart-items" id="cartItems"></div>
+        </section>
 
+        <aside class="cart-panel" aria-labelledby="cart-summary-heading">
+          <h2 id="cart-summary-heading">Order Summary</h2>
           <div class="summary-row">
-            <span id="summaryProductName">Template</span>
-            <div class="summary-price-stack">
-              <strong id="summaryProductPrice">$0</strong>
-              <span id="summaryProductOriginalPrice" class="original-price"></span>
-            </div>
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">$0</strong>
           </div>
-
           <div class="summary-row">
-            <span>Delivery</span>
-            <strong>Instant download</strong>
+            <span>Digital delivery</span>
+            <strong>$0</strong>
           </div>
-
-          <div class="summary-row">
-            <span>Product Type</span>
-            <strong id="summaryProductType">Template</strong>
-          </div>
-
           <div class="summary-total">
             <span>Total</span>
-            <strong id="summaryTotalPrice">$0</strong>
+            <strong id="cartTotal">$0</strong>
           </div>
-
-          <form id="payment-form">
-            <div id="payment-element">
-              <div class="payment-placeholder">
-                Secure checkout is loading...
-              </div>
-            </div>
-
-            <button id="submit" class="btn primary checkout-btn" type="submit">
-              Pay Securely
-            </button>
-
-            <p class="checkout-trust">
-              Secure payments are powered by Stripe. After payment, your download page opens automatically.
-            </p>
-
-            <ul class="security-list">
-              <li>Launch promo pricing reflected at checkout</li>
-              <li>Instant digital delivery</li>
-              <li>Support available if you need help locating files</li>
-            </ul>
-
-            <p id="payment-message"></p>
-          </form>
-
-          <p class="checkout-note">
-            Digital template sales are final after download. If you have a file
-            or delivery issue, contact support and help will be provided.
-          </p>
-
-          <a href="templates.html" class="back-link">&larr; Back to Templates</a>
+          <button class="store-button store-button--primary" id="checkoutButton" type="button">Checkout</button>
+          <p class="checkout-message" id="checkoutMessage" aria-live="polite"></p>
         </aside>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-brand">
-      <img src="images/webdevlady-logo.png" alt="Web Dev Lady logo" class="footer-logo" />
-      <h3>WEB DEV LADY</h3>
-      <p>
-        Premium website templates, launch support, and custom website builds for
-        businesses that want a polished online presence.
-      </p>
-      <a href="about.html#about-contact" class="btn secondary">Contact Web Dev Lady</a>
-    </div>
-
-    <div class="footer-social">
-      <p class="footer-label">Follow</p>
-      <div class="footer-social-links">
-        <a href="https://www.tiktok.com/@webdevlady" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://www.instagram.com/webdev_lady/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.facebook.com/webdevlady" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.youtube.com/@WebDevLady" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on YouTube"><i class="fa-brands fa-youtube"></i></a>
-        <a href="https://www.fiverr.com/sellers/kiraleeruck" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Web Dev Lady on Fiverr"><i class="fa-solid fa-briefcase"></i></a>
+  <footer class="store-footer">
+    <div class="store-shell store-footer__inner">
+      <nav class="store-footer__links" aria-label="Footer navigation">
+        <a href="support.html">Support</a>
+        <a href="refund-policy.html">Refund Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+<div class="footer-social" aria-label="Social media links">
+        <a href="https://www.tiktok.com/@webdevlady" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+          <span class="sr-only">TikTok</span>
+        </a>
+        <a href="https://www.instagram.com/webdev_lady/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/webdevlady" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
+        <a href="https://www.youtube.com/@WebDevLady" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          <span class="sr-only">YouTube</span>
+        </a>
       </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 Web Dev Lady. Digital Website Studio. All rights reserved.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Web Dev Lady. Digital website templates.</p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    const cartProducts = window.productCatalog || {};
-    const params = new URLSearchParams(window.location.search);
-    const productKey = params.get("product");
-    const product = productKey ? cartProducts[productKey] : null;
-
-    window.selectedProduct = product ? { key: productKey, ...product } : null;
-
-    const tagline = document.getElementById("cartProductTagline");
-    const title = document.getElementById("cartProductName");
-    const description = document.getElementById("cartProductDescription");
-    const productVersion = document.getElementById("cartProductVersion");
-    const productFamily = document.getElementById("cartProductFamily");
-    const productPrice = document.getElementById("cartProductPrice");
-    const productOriginalPrice = document.getElementById("cartProductOriginalPrice");
-    const featuresList = document.getElementById("cartProductFeatures");
-    const productVisual = document.getElementById("cartProductVisual");
-    const productImage = document.getElementById("cartProductImage");
-    const imageFallback = document.getElementById("cartImageFallback");
-    const previewBtn = document.getElementById("cartPreviewBtn");
-    const summaryName = document.getElementById("summaryProductName");
-    const summaryPrice = document.getElementById("summaryProductPrice");
-    const summaryOriginalPrice = document.getElementById("summaryProductOriginalPrice");
-    const summaryType = document.getElementById("summaryProductType");
-    const totalPrice = document.getElementById("summaryTotalPrice");
-    const submitBtn = document.getElementById("submit");
-
-    function showImageFallback(message) {
-      productVisual.classList.add("is-fallback");
-      imageFallback.hidden = false;
-      productImage.style.display = "none";
-
-      if (message) {
-        imageFallback.querySelector("p").textContent = message;
-      }
-    }
-
-    function setProductImage(activeProduct) {
-      if (!activeProduct?.image) {
-        showImageFallback("A preview image is not available for this template yet. You can still continue to checkout or open the live preview.");
-        return;
-      }
-
-      productVisual.classList.remove("is-fallback");
-      imageFallback.hidden = true;
-      productImage.style.display = "block";
-      productImage.alt = activeProduct.name + " preview image";
-      productImage.onerror = function () {
-        showImageFallback("The selected template image could not be loaded. You can still continue to checkout or open the live preview.");
-      };
-      productImage.src = activeProduct.image;
-    }
-
-    function showUnavailableProduct() {
-      tagline.textContent = "SELECT A TEMPLATE";
-      title.textContent = "Your cart is currently empty";
-      description.textContent = "Choose an active template from the store to continue with a secure checkout.";
-      productVersion.textContent = "-";
-      productFamily.textContent = "-";
-      productPrice.textContent = "--";
-      productOriginalPrice.textContent = "";
-      featuresList.innerHTML = "";
-      productImage.removeAttribute("src");
-      productImage.alt = "";
-      showImageFallback("Choose an active template from the store to load its preview image here.");
-      previewBtn.href = "templates.html";
-      previewBtn.removeAttribute("target");
-      previewBtn.removeAttribute("rel");
-      previewBtn.textContent = "Browse Templates";
-      summaryName.textContent = "No product selected";
-      summaryPrice.textContent = "--";
-      summaryOriginalPrice.textContent = "";
-      summaryType.textContent = "Unavailable";
-      totalPrice.textContent = "--";
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Select a Template First";
-    }
-
-    function showActiveProduct(activeProduct) {
-      tagline.textContent = activeProduct.tagline;
-      title.textContent = activeProduct.name;
-      description.textContent = activeProduct.description;
-      productVersion.textContent = activeProduct.version;
-      productFamily.textContent = activeProduct.family;
-      productPrice.textContent = activeProduct.priceLabel;
-      productOriginalPrice.textContent = activeProduct.originalPriceLabel || "";
-      setProductImage(activeProduct);
-      previewBtn.href = activeProduct.preview;
-      previewBtn.setAttribute("target", "_blank");
-      previewBtn.setAttribute("rel", "noopener noreferrer");
-      previewBtn.textContent = "Live Preview";
-      summaryName.textContent = activeProduct.name;
-      summaryPrice.textContent = activeProduct.priceLabel;
-      summaryOriginalPrice.textContent = activeProduct.originalPriceLabel || "";
-      summaryType.textContent = activeProduct.typeLabel;
-      totalPrice.textContent = activeProduct.priceLabel;
-      submitBtn.textContent = "Pay " + activeProduct.priceLabel + " Securely";
-      featuresList.innerHTML = "";
-
-      activeProduct.features.forEach((feature) => {
-        const li = document.createElement("li");
-        li.textContent = feature;
-        featuresList.appendChild(li);
-      });
-    }
-
-    if (!product) {
-      showUnavailableProduct();
-    } else {
-      showActiveProduct(product);
-    }
-  </script>
-  <script src="js/script.js"></script>
-  <script src="js/checkout.js"></script>
+  <script src="js/store.js"></script>
 </body>
 </html>

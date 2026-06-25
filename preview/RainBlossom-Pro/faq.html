@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       FAQ Page | Rain Blossom
+
+       CUSTOMER NOTES:
+       - This page answers common customer questions.
+       - To customize this page, search for "CUSTOMIZE" comments.
+       - FAQ dropdown behavior is controlled in js/main.js.
+       - Edit the questions directly inside each <details> block.
+  ========================================================== -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CUSTOMIZE: Browser tab title -->
+  <title>FAQ | Rain Blossom</title>
+
+  <!-- CUSTOMIZE: SEO description -->
+  <meta
+    name="description"
+    content="Find answers to common questions about Rain Blossom wedding venue tours, packages, guest capacity, vendors, weather plans, booking, and private events."
+  />
+
+  <!-- CUSTOMIZE: Mobile browser theme color -->
+  <meta name="theme-color" content="#14251c" />
+
+  <!-- CUSTOMIZE: Social sharing preview -->
+  <meta property="og:title" content="FAQ | Rain Blossom" />
+  <meta
+    property="og:description"
+    content="Questions about Rain Blossom tours, wedding packages, vendors, weather plans, and event booking."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/social-preview.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FAQ | Rain Blossom" />
+  <meta
+    name="twitter:description"
+    content="Helpful answers for planning your Rain Blossom wedding or private celebration."
+  />
+  <meta name="twitter:image" content="assets/images/social-preview.jpg" />
+
+  <!-- CUSTOMIZE: Favicon / app icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body>
+  <!-- Accessibility skip link -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================================================
+       Header / Navigation
+
+       CUSTOMIZE:
+       - Replace logo image in assets/images/logo.jpg
+       - Edit the business name and tagline below
+       - Edit menu links in BOTH desktop-nav and mobile-menu
+  ========================================================== -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html" aria-label="Rain Blossom home">
+      <img
+        src="assets/images/logo.jpg"
+        alt="Rain Blossom logo"
+        class="logo-img"
+      />
+
+      <span class="brand-text">
+        <span class="brand-name">Rain Blossom</span>
+        <span class="brand-tagline">Garden Weddings & Events</span>
+      </span>
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="spaces.html">Spaces</a>
+      <a href="packages.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a class="is-active" href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="mobileMenu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Mobile navigation -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="spaces.html">Spaces</a>
+      <a href="packages.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a class="is-active" href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a class="mobile-cta" href="contact.html">Schedule a Tour</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- =========================================================
+         Hero Section
+
+         CUSTOMIZE:
+         - Replace video: assets/videos/rain-blossom-hero.mp4
+         - Edit headline, intro text, and buttons
+    ========================================================== -->
+    <section
+      class="hero page-video-hero"
+      aria-label="Rain Blossom frequently asked questions"
+    >
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-hidden="true"
+      >
+        <source src="assets/videos/rain-blossom-hero.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Frequently Asked Questions</p>
+
+        <h1>Everything to know before you visit.</h1>
+
+        <p class="hero-copy">
+          Planning a wedding or private celebration comes with details. Start
+          here for common questions about tours, packages, vendors, weather
+          plans, and booking.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">
+            Schedule a Tour
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn btn-secondary" href="packages.html">
+            View Packages
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FAQ Group 1: Tours & Booking
+
+         CUSTOMIZE:
+         - Edit questions inside <summary>
+         - Edit answers inside the matching <p>
+    ========================================================== -->
+    <section class="section faq-section">
+      <div class="section-grid">
+        <div class="section-copy">
+          <p class="eyebrow">Tours & Booking</p>
+
+          <h2>Start with the basics.</h2>
+
+          <p>
+            These questions help guests understand how tours, availability,
+            booking, and event planning usually work at Rain Blossom.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Do I need an appointment to tour the estate?</summary>
+            <p>
+              Yes. Private estate tours are available by appointment so the team
+              can give you a focused walkthrough of the ceremony spaces,
+              reception areas, suites, and gardens.
+            </p>
+          </details>
+
+          <details>
+            <summary>How far in advance should I book?</summary>
+            <p>
+              Popular wedding dates can reserve months in advance. Reaching out
+              early gives you more flexibility with dates, spaces, and package
+              options.
+            </p>
+          </details>
+
+          <details>
+            <summary>What information should I send before requesting details?</summary>
+            <p>
+              Your preferred date or season, estimated guest count, event type,
+              and any must-have spaces are helpful starting points.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I request package pricing before touring?</summary>
+            <p>
+              Yes. You can request package information first, then schedule a
+              private tour once you have a better idea of the best fit.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FAQ Group 2: Venue Details
+    ========================================================== -->
+    <section class="section faq-section">
+      <div class="section-grid">
+        <div class="section-copy">
+          <p class="eyebrow">Venue Details</p>
+
+          <h2>Spaces, guests, and event flow.</h2>
+
+          <p>
+            Rain Blossom is designed for smooth movement between ceremony
+            spaces, portrait areas, lounges, receptions, and guest gathering
+            points.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>How many guests can Rain Blossom host?</summary>
+            <p>
+              The estate can host celebrations up to 250 guests, depending on
+              selected spaces, layout, event style, and package details.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can we host both ceremony and reception onsite?</summary>
+            <p>
+              Yes. Full estate packages can include ceremony spaces, reception
+              areas, preparation suites, and guest-friendly gathering areas.
+            </p>
+          </details>
+
+          <details>
+            <summary>Are private events allowed?</summary>
+            <p>
+              Yes. Rain Blossom can be used for bridal showers, anniversary
+              dinners, private dinners, retreats, editorial shoots, and brand
+              gatherings.
+            </p>
+          </details>
+
+          <details>
+            <summary>Are preparation suites included?</summary>
+            <p>
+              Selected packages may include private preparation suites.
+              Availability depends on the package, schedule, and spaces
+              reserved.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Planning Support Banner
+    ========================================================== -->
+    <section class="experience-banner" aria-label="Planning support">
+      <div>
+        <p class="eyebrow">Planning Support</p>
+        <h2>Good planning keeps the day beautiful, calm, and on schedule.</h2>
+      </div>
+
+      <a href="contact.html" class="btn btn-light">Ask a Question</a>
+    </section>
+
+    <!-- =========================================================
+         FAQ Group 3: Vendors & Weather
+    ========================================================== -->
+    <section class="section faq-section">
+      <div class="section-grid">
+        <div class="section-copy">
+          <p class="eyebrow">Vendors & Weather</p>
+
+          <h2>Practical details matter.</h2>
+
+          <p>
+            The goal is a celebration that feels polished without guests
+            noticing the logistics. These details help keep the day comfortable.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Do you allow outside vendors?</summary>
+            <p>
+              Yes. Outside vendors are welcome. Preferred vendor recommendations
+              may also be available if you want help finding trusted options.
+            </p>
+          </details>
+
+          <details>
+            <summary>What happens if it rains?</summary>
+            <p>
+              Rain Blossom offers covered and indoor options so your celebration
+              can continue comfortably while still keeping the garden atmosphere
+              intact.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can vendors tour the space before the event?</summary>
+            <p>
+              Vendor walkthroughs can usually be arranged after booking so teams
+              can confirm layouts, timing, delivery access, and setup needs.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can we take photos around the estate?</summary>
+            <p>
+              Yes. The gardens, pathways, lounges, and reception areas are
+              designed with photography in mind.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Final Call-To-Action
+    ========================================================== -->
+    <section class="section">
+      <div class="cta-card">
+        <p class="eyebrow">Still Have Questions?</p>
+
+        <h2>Let’s talk through your celebration.</h2>
+
+        <p>
+          Tell us your event type, guest count, preferred date, and the kind of
+          atmosphere you want. The Rain Blossom team can help you choose the
+          right spaces and package.
+        </p>
+
+        <a href="contact.html" class="btn btn-primary">
+          Contact Rain Blossom
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       Footer
+
+       CUSTOMIZE:
+       - Replace social media links with real business links.
+       - Replace footer tagline if needed.
+  ========================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-follow">Follow Us</p>
+
+      <div class="footer-socials" aria-label="Social links">
+        <a
+          href="https://facebook.com"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://instagram.com"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://pinterest.com"
+          aria-label="Pinterest"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-pinterest-p" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://tiktok.com"
+          aria-label="TikTok"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Luxury Garden Weddings & Events</span>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> Rain Blossom. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating call-to-action button -->
+  <a href="contact.html" class="floating-tour-btn">
+    Schedule a Tour
+  </a>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

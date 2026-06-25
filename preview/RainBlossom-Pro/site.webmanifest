@@ -1,0 +1,38 @@
+{
+  "// =====================================================": "",
+  "// Rain Blossom Web App Manifest": "",
+  "// Replace the values below with your own business info.": "",
+  "// =====================================================": "",
+
+  "name": "Your Business Name",
+  "short_name": "Your Business",
+
+  "description": "Replace this with a short description of your business or website.",
+
+  "start_url": "/",
+
+  "display": "standalone",
+
+  "background_color": "#050505",
+
+  "theme_color": "#14251c",
+
+  "icons": [
+    {
+      "//": "Replace this icon with your own favicon.",
+      "src": "assets/images/favicon.png",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+/* =========================================================
+   FreshNest Cleaning Co.
+   Mobile Stylesheet
+
+   ---------------------------------------------------------
+   TABLE OF CONTENTS
+   ---------------------------------------------------------
+
+   01. Mobile Base
+   02. Header & Hamburger Menu
+   03. Hero Section
+   04. Trust Bar
+   05. Sections
+   06. Cards & Grids
+   07. Pricing
+   08. Gallery
+   09. Reviews
+   10. Contact
+   11. Footer
+   12. Sticky Mobile Call Button
+   13. 404 Page
+
+   IMPORTANT:
+   - This file controls screens 560px and smaller.
+   - Keep desktop styles in css/styles.css.
+   - Keep tablet styles in css/tablet.css.
+========================================================= */
+
+@media (max-width: 560px) {
+
+    /* =====================================================
+       01. MOBILE BASE
+    ===================================================== */
+
+    html {
+        scroll-padding-top: 84px;
+    }
+
+    body {
+        font-size: 0.96rem;
+        overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       02. HEADER & HAMBURGER MENU
+    ===================================================== */
+
+    .site-header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        padding: 14px 18px;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .menu-toggle {
+        align-items: center;
+        background: var(--mint);
+        border: 0;
+        border-radius: 999px;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-flex;
+        font-size: 1.35rem;
+        font-weight: 900;
+        height: 42px;
+        justify-content: center;
+        padding: 0;
+        width: 42px;
+    }
+
+    .site-nav {
+        background: #ffffff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        grid-column: 1 / -1;
+        margin-left: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .site-nav.is-open {
+        display: flex;
+    }
+
+    .site-nav a {
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+        display: block;
+        font-size: 0.98rem;
+        padding: 14px 16px;
+    }
+
+    .site-nav a:last-child {
+        border-bottom: 0;
+    }
+
+    .site-nav a.active::after {
+        display: none;
+    }
+
+    .header-action {
+        display: none;
+    }
+
+
+    /* =====================================================
+       03. HERO SECTION
+    ===================================================== */
+
+    .hero {
+        background-position: 58% center;
+        min-height: 84vh;
+        padding: 132px 18px 56px;
+    }
+
+    h1 {
+        font-size: 2.45rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-copy {
+        font-size: 1rem;
+    }
+
+    .hero-actions,
+    .btn {
+        width: 100%;
+    }
+
+    .hero-proof {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+
+    /* =====================================================
+       04. TRUST BAR
+    ===================================================== */
+
+    .trust-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-bar div {
+        padding: 22px 18px;
+    }
+
+
+    /* =====================================================
+       05. SECTIONS
+    ===================================================== */
+
+    .section,
+    .contact-section {
+        padding: 64px 18px;
+    }
+
+    .section-heading {
+        margin-bottom: 28px;
+    }
+
+
+    /* =====================================================
+       06. CARDS & GRIDS
+    ===================================================== */
+
+    .card-grid,
+    .price-grid,
+    .steps,
+    .quote-grid,
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card,
+    .price-card,
+    .steps div,
+    blockquote,
+    form {
+        padding: 22px;
+    }
+
+
+    /* =====================================================
+       07. PRICING
+    ===================================================== */
+
+    .price-card strong {
+        font-size: 2.2rem;
+    }
+
+
+    /* =====================================================
+       08. GALLERY
+    ===================================================== */
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       09. REVIEWS
+    ===================================================== */
+
+    .rating-box {
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       10. CONTACT
+    ===================================================== */
+
+    .contact-copy {
+        max-width: 100%;
+    }
+
+    form {
+        padding: 24px;
+    }
+
+
+    /* =====================================================
+       11. FOOTER
+    ===================================================== */
+
+    footer {
+        padding: 34px 18px 92px;
+    }
+
+
+    /* =====================================================
+       12. STICKY MOBILE CALL BUTTON
+    ===================================================== */
+
+    .mobile-call {
+        background: var(--mint);
+        border-radius: 999px;
+        bottom: 18px;
+        box-shadow: 0 14px 35px rgba(23, 37, 42, 0.25);
+        color: #ffffff;
+        display: inline-flex;
+        font-weight: 900;
+        justify-content: center;
+        left: 18px;
+        padding: 15px 20px;
+        position: fixed;
+        right: 18px;
+        z-index: 200;
+    }
+
+
+    /* =====================================================
+       13. 404 PAGE
+    ===================================================== */
+
+    .error-card {
+        padding: 34px 22px;
+    }
+
+    .error-card h1 {
+        font-size: 2.15rem;
+    }
+}

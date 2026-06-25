@@ -56,6 +56,11 @@ if (paymentForm) {
         throw new Error(data.error || "Unable to start Stripe checkout.");
       }
 
+      if (data.url) {
+        window.location.href = data.url;
+        return;
+      }
+
       const { error } = await stripe.redirectToCheckout({
         sessionId: data.sessionId,
       });
@@ -109,3 +114,4 @@ function setLoading(isLoading) {
     }
   }
 }
+

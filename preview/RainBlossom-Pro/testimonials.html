@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       Testimonials Page | Rain Blossom
+
+       CUSTOMER NOTES:
+       - This page displays customer reviews and a featured wedding story.
+       - To customize this page, search for "CUSTOMIZE" comments.
+       - Edit review text, reviewer names, images, and call-to-action links.
+       - Reviews are sample/demo content. Replace them with real reviews.
+  ========================================================== -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CUSTOMIZE: Browser tab title -->
+  <title>Testimonials | Rain Blossom</title>
+
+  <!-- CUSTOMIZE: SEO description -->
+  <meta
+    name="description"
+    content="Read kind words from couples and guests who celebrated weddings, private events, and unforgettable garden moments at Rain Blossom."
+  />
+
+  <!-- CUSTOMIZE: Mobile browser theme color -->
+  <meta name="theme-color" content="#14251c" />
+
+  <!-- CUSTOMIZE: Social sharing preview -->
+  <meta property="og:title" content="Testimonials | Rain Blossom" />
+  <meta
+    property="og:description"
+    content="Read reviews and celebration stories from Rain Blossom couples and guests."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/social-preview.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Testimonials | Rain Blossom" />
+  <meta
+    name="twitter:description"
+    content="Kind words from Rain Blossom weddings and private garden celebrations."
+  />
+  <meta name="twitter:image" content="assets/images/social-preview.jpg" />
+
+  <!-- CUSTOMIZE: Favicon / app icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body>
+  <!-- Accessibility skip link -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================================================
+       Header / Navigation
+
+       CUSTOMIZE:
+       - Replace logo image in assets/images/logo.jpg
+       - Edit business name and tagline below
+       - Edit links in BOTH desktop-nav and mobile-menu
+  ========================================================== -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html" aria-label="Rain Blossom home">
+      <img
+        src="assets/images/logo.jpg"
+        alt="Rain Blossom logo"
+        class="logo-img"
+      />
+
+      <span class="brand-text">
+        <span class="brand-name">Rain Blossom</span>
+        <span class="brand-tagline">Garden Weddings & Events</span>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="spaces.html">Spaces</a>
+      <a href="packages.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="is-active" href="testimonials.html">Testimonials</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="mobileMenu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="spaces.html">Spaces</a>
+      <a href="packages.html">Packages</a>
+      <a href="gallery.html">Gallery</a>
+      <a class="is-active" href="testimonials.html">Testimonials</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a class="mobile-cta" href="contact.html">Schedule a Tour</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- =========================================================
+         Hero Section
+
+         CUSTOMIZE:
+         - Replace video: assets/videos/rain-blossom-hero.mp4
+         - Edit headline, intro text, and buttons
+    ========================================================== -->
+    <section class="hero page-video-hero" aria-label="Rain Blossom testimonials">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        aria-hidden="true"
+      >
+        <source src="assets/videos/rain-blossom-hero.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Kind Words</p>
+
+        <h1>Celebrations remembered with warmth.</h1>
+
+        <p class="hero-copy">
+          From intimate garden vows to full estate celebrations, Rain Blossom is
+          designed for meaningful moments, beautiful photos, and memories guests
+          keep talking about.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">
+            Schedule a Tour
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+
+          <a class="btn btn-secondary" href="gallery.html">
+            View Gallery
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Main Reviews Section
+
+         CUSTOMIZE:
+         - Replace sample review text with real customer reviews.
+         - Replace reviewer names inside each <span>.
+    ========================================================== -->
+    <section class="section testimonials-section">
+      <div class="section-heading">
+        <p class="eyebrow">Client Reviews</p>
+        <h2>Words from unforgettable celebrations.</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <div class="stars" aria-label="Five star review">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+          </div>
+
+          <p>
+            “The gardens felt peaceful, romantic, and private. Every photo
+            looked like it belonged in a magazine.”
+          </p>
+          <span>— Amelia & Rowan</span>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars" aria-label="Five star review">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+          </div>
+
+          <p>
+            “Rain Blossom gave us the exact feeling we wanted: elegant, relaxed,
+            and completely unforgettable.”
+          </p>
+          <span>— Celeste M.</span>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars" aria-label="Five star review">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+          </div>
+
+          <p>
+            “The estate was beautiful from ceremony to reception. The floral
+            views made the entire day feel magical.”
+          </p>
+          <span>— Harper J.</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Featured Wedding Story
+
+         CUSTOMIZE:
+         - Replace story copy and image.
+         - Image path: assets/images/ceremony-garden.jpg
+    ========================================================== -->
+    <section class="section">
+      <div class="section-grid">
+        <div class="section-copy">
+          <p class="eyebrow">Wedding Story</p>
+
+          <h2>A ceremony that felt calm, private, and cinematic.</h2>
+
+          <p>
+            One couple chose Blossom Lawn for golden-hour vows followed by a
+            candlelit reception inside The Glass Hall. Their guests moved easily
+            between garden paths, cocktail areas, and the reception space without
+            the day feeling rushed.
+          </p>
+
+          <p>
+            The result was a celebration that felt intimate, polished, and deeply
+            personal. That is the kind of experience Rain Blossom is designed to
+            create.
+          </p>
+        </div>
+
+        <div class="image-stack">
+          <img
+            src="assets/images/ceremony-garden.jpg"
+            alt="Romantic garden ceremony at Rain Blossom"
+          />
+
+          <div class="floating-note">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            <span>
+              Golden-hour ceremony, garden portraits, and a smooth reception
+              flow.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Experience Banner
+
+         CUSTOMIZE:
+         - Edit banner headline and button link.
+    ========================================================== -->
+    <section class="experience-banner" aria-label="Guest experience">
+      <div>
+        <p class="eyebrow">Guest Experience</p>
+        <h2>
+          Beautiful spaces are only part of it. The day needs to feel effortless.
+        </h2>
+      </div>
+
+      <a href="contact.html" class="btn btn-light">Schedule a Tour</a>
+    </section>
+
+    <!-- =========================================================
+         More Reviews Section
+
+         CUSTOMIZE:
+         - Replace these sample reviews with real reviews.
+         - Add or remove cards as needed.
+    ========================================================== -->
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">More Reviews</p>
+        <h2>Small details guests notice.</h2>
+      </div>
+
+      <div class="card-grid three-columns">
+        <article class="testimonial-card">
+          <div class="stars" aria-label="Five star review">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+          </div>
+
+          <p>
+            “The rain made the gardens even prettier. Somehow the whole day felt
+            planned for it.”
+          </p>
+          <span>— Nora P.</span>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars" aria-label="Five star review">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+          </div>
+
+          <p>
+            “The space felt high-end without feeling stiff. Our guests were
+            comfortable the entire evening.”
+          </p>
+          <span>— Marcus L.</span>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="stars" aria-label="Five star review">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+          </div>
+
+          <p>
+            “Every corner had a photo opportunity. The venue made the whole event
+            feel more expensive.”
+          </p>
+          <span>— Elise R.</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         Final Call-To-Action
+
+         CUSTOMIZE:
+         - Edit headline, text, and button link.
+    ========================================================== -->
+    <section class="section">
+      <div class="cta-card">
+        <p class="eyebrow">Plan Your Visit</p>
+
+        <h2>See why couples remember Rain Blossom.</h2>
+
+        <p>
+          Schedule a private tour and explore the ceremony gardens, reception
+          spaces, suites, and guest areas in person.
+        </p>
+
+        <a href="contact.html" class="btn btn-primary">
+          Schedule a Tour
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       Footer
+
+       CUSTOMIZE:
+       - Replace social media links with real business links.
+       - Replace footer tagline if needed.
+  ========================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-follow">Follow Us</p>
+
+      <div class="footer-socials" aria-label="Social links">
+        <a
+          href="https://facebook.com"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://instagram.com"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://pinterest.com"
+          aria-label="Pinterest"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-pinterest-p" aria-hidden="true"></i>
+        </a>
+
+        <a
+          href="https://tiktok.com"
+          aria-label="TikTok"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Luxury Garden Weddings & Events</span>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> Rain Blossom. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating call-to-action button -->
+  <a href="contact.html" class="floating-tour-btn">
+    Schedule a Tour
+  </a>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
