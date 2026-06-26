@@ -154,8 +154,8 @@
         </div>
 
         <div class="hero-buttons success-actions">
-          <a href="templates.html" class="btn primary">Browse Templates</a>
-          <a href="pricing.html#service-pricing" class="btn secondary">View Pricing</a>
+          <a href="index.html#templates" class="btn primary">Browse Templates</a>
+          <a href="contact.html" class="btn secondary">View Pricing</a>
         </div>
 
         <div class="rating-panel">
@@ -182,7 +182,7 @@
         Premium website templates, launch support, and custom website builds for
         businesses that want a polished online presence.
       </p>
-      <a href="about.html#about-contact" class="btn secondary">Contact Web Dev Lady</a>
+      <a href="contact.html" class="btn secondary">Contact Web Dev Lady</a>
     </div>
 
     <div class="footer-social">
@@ -201,6 +201,82 @@
     </div>
   </footer>
 
+  <script src="js/product-catalog.js"></script>
+  <script>
+    (function () {
+      const STORE_CART_KEY = "webDevLadyTemplateCart";
+      const params = new URLSearchParams(window.location.search);
+      const productParam = params.get("product");
+      const productsParam = params.get("products");
+      const productKeys = (productsParam || productParam || "")
+        .split(",")
+        .map((key) => key.trim())
+        .filter(Boolean);
+
+      if (!productKeys.length) return;
+
+      const catalog = window.productCatalog || {};
+      const purchasedProducts = productKeys
+        .map((key) => catalog[key])
+        .filter(Boolean);
+      const shell = document.querySelector(".thank-you-shell");
+
+      if (!shell) return;
+
+      const eyebrow = shell.querySelector(".eyebrow");
+      const title = shell.querySelector("h1");
+      const introBlocks = shell.querySelectorAll(".success-intro");
+      const checklist = shell.querySelector(".thank-you-checklist");
+      const responseBox = shell.querySelector(".thank-you-response-box");
+      const responseTitle = responseBox?.querySelector("h2");
+      const responseText = responseBox?.querySelector("p");
+      const summaryGrid = shell.querySelector(".thank-you-grid");
+      const actions = shell.querySelector(".success-actions");
+      const contactLink = '<a href="contact.html" class="btn secondary">Contact Web Dev Lady</a>';
+
+      if (eyebrow) eyebrow.textContent = purchasedProducts.length ? "PAYMENT RECEIVED" : "DOWNLOAD HELP";
+      if (title) title.textContent = purchasedProducts.length ? "Payment Successful" : "Download Not Found";
+      if (introBlocks[0]) {
+        introBlocks[0].textContent = purchasedProducts.length
+          ? "Your payment was processed successfully. Your download is ready."
+          : "We could not match this purchase to a current product.";
+      }
+      if (introBlocks[1]) {
+        introBlocks[1].textContent = purchasedProducts.length
+          ? "Use the button below to download your template ZIP file."
+          : "Return to the template library or contact Web Dev Lady if you need help locating your download.";
+      }
+      if (introBlocks[2]) introBlocks[2].hidden = true;
+      if (checklist) checklist.hidden = true;
+      if (summaryGrid) summaryGrid.hidden = true;
+
+      if (purchasedProducts.length) {
+        try {
+          window.localStorage?.removeItem(STORE_CART_KEY);
+        } catch (error) {
+          console.warn("Unable to clear cart after checkout", error);
+        }
+
+        if (responseTitle) responseTitle.textContent = "Your download is ready";
+        if (responseText) {
+          responseText.textContent = purchasedProducts.length === 1
+            ? "Click below to download your template ZIP file."
+            : "Click below to download your template ZIP files.";
+        }
+        if (actions) {
+          actions.innerHTML = purchasedProducts
+            .map((product) => `<a href="${product.downloadFile}" class="btn primary" download>Download ${product.name}</a>`)
+            .join("") + contactLink;
+        }
+      } else {
+        if (responseTitle) responseTitle.textContent = "Download support";
+        if (responseText) responseText.textContent = "Send the product name or order email and I will help you locate the file.";
+        if (actions) {
+          actions.innerHTML = '<a href="index.html#templates" class="btn primary">Browse Templates</a>' + contactLink;
+        }
+      }
+    })();
+  </script>
   <script src="js/script.js"></script>
 </body>
 </html>

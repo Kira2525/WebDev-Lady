@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       BEACHWAVE THANK YOU PAGE
+       Fictional resort demo confirmation page.
+
+       CUSTOMER NOTES:
+       - This page appears after the contact form is submitted.
+       - The form is static by default.
+       - Connect the form to a real form provider, booking tool, CRM,
+         or backend before launching a real business website.
+  ========================================================== -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CUSTOMIZE: Change this title for your business -->
+  <title>Thank You | BeachWave Resort</title>
+
+  <!-- CUSTOMIZE: Change this SEO description -->
+  <meta
+    name="description"
+    content="Thank-you confirmation page for the fictional BeachWave Resort demo website."
+  />
+
+  <!-- CUSTOMIZE: Replace with your own logo/icon -->
+  <link rel="icon" type="image/png" href="images/beachwave-icon.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+  
+  <!-- CUSTOMIZE: Update site.webmanifest with your business name, colors, and icons -->
+<link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+  <canvas id="beachCanvas"></canvas>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <a href="index.html" class="logo" aria-label="BeachWave Resort home">
+      <img src="images/beachwave-logo.png" alt="BeachWave Resort Logo" />
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="pricing.html">Packages</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button
+      class="menu-btn"
+      type="button"
+      onclick="toggleMenu()"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+  </header>
+
+  <main>
+
+    <!-- THANK YOU MESSAGE -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Thank You</p>
+
+        <h1>Your stay inquiry has been received.</h1>
+
+        <p class="hero-text">
+          Thanks for contacting BeachWave Resort. This is a fictional demo
+          confirmation page. On a live website, this page can confirm that a
+          guest inquiry, booking request, or contact form was submitted.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="index.html" class="btn primary">Back Home</a>
+          <a href="gallery.html" class="btn secondary">View Gallery</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <p class="card-label">What Happens Next</p>
+
+        <h2>Demo follow-up flow</h2>
+
+        <ul>
+          <li>A real business would review the inquiry</li>
+          <li>The guest would receive a confirmation email</li>
+          <li>Availability and package details would be confirmed</li>
+          <li>Final booking steps would be sent to the guest</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DEMO NOTE -->
+    <section class="section cta-section">
+      <p class="eyebrow">Launch Note</p>
+
+      <h2>Connect the form before publishing.</h2>
+
+      <p>
+        The included contact form is static by default. Before using this for a
+        real resort, rental, travel business, or beach club, connect the form to
+        a form provider, CRM, booking tool, email service, or custom backend.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn primary">Back To Contact</a>
+        <a href="pricing.html" class="btn secondary">View Packages</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="logo" aria-label="BeachWave Resort home">
+        <img src="images/beachwave-logo.png" alt="BeachWave Resort Logo" />
+      </a>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="pricing.html">Packages</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <p>
+        © 2026 BeachWave Resort. Demo website for template preview purposes only.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,663 @@
+﻿/* =========================================================
+   BEACHWAVE RESORT — DESKTOP CSS
+   Main stylesheet
+
+   CUSTOMER NOTES:
+   - Change the colors in :root to rebrand the whole site.
+   - Change --site-width to make the layout wider or narrower.
+   - Change --radius to make cards sharper or rounder.
+   - Keep tablet.css and mobile.css linked after this file.
+========================================================= */
+
+
+/* =========================================================
+   01. CUSTOMIZE BRAND SETTINGS
+========================================================= */
+
+:root {
+  /* Main brand colors */
+  --deep: #04131a;
+  --deep-2: #062026;
+  --cyan: #7df8ff;
+  --gold: #ffd36e;
+  --white: #ffffff;
+
+  /* Text colors */
+  --text: #e7f8ff;
+  --muted: #b9dce4;
+
+  /* Card and border styling */
+  --glass-strong: rgba(255, 255, 255, 0.17);
+  --glass-soft: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.18);
+  --shadow: rgba(0, 0, 0, 0.48);
+
+  /* Layout controls */
+  --site-width: 1180px;
+  --site-padding: 92%;
+  --radius: 8px;
+  --section-space: 120px;
+
+  /* Typography */
+  --font-main: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   02. RESET + BASE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-main);
+  color: var(--white);
+  background: var(--deep);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -8;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(125, 248, 255, 0.14), transparent 32%),
+    radial-gradient(circle at 80% 10%, rgba(255, 211, 110, 0.12), transparent 30%),
+    linear-gradient(rgba(4, 19, 26, 0.18), rgba(4, 19, 26, 0.45));
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+#beachCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  pointer-events: none;
+  background: var(--deep);
+}
+
+
+/* =========================================================
+   03. HEADER
+========================================================= */
+
+.navbar {
+  position: relative;
+  z-index: 20;
+  width: min(var(--site-width), var(--site-padding));
+  margin: 0 auto;
+  padding: 10px 0;
+  min-height: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* CUSTOMIZE: Change logo height here */
+.logo img {
+  height: 145px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 999px;
+  background: rgba(4, 19, 26, 0.45);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 12px 18px;
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.nav-links a.active {
+  color: var(--deep);
+  background: linear-gradient(135deg, var(--white), var(--cyan), var(--gold));
+  box-shadow: 0 0 25px rgba(125, 248, 255, 0.25);
+}
+
+.menu-btn {
+  display: none;
+  cursor: pointer;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  font-size: 24px;
+}
+
+
+/* =========================================================
+   04. HERO
+========================================================= */
+
+.hero {
+  width: min(var(--site-width), var(--site-padding));
+  min-height: 74vh;
+  margin: 35px auto 90px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-content {
+  animation: fadeUp 0.8s ease both;
+}
+
+.eyebrow,
+.card-label {
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  max-width: 760px;
+  margin: 16px 0;
+  font-size: clamp(48px, 6.8vw, 82px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+h2 {
+  max-width: 900px;
+  margin: 12px 0 24px;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin: 10px 0;
+  font-size: 25px;
+}
+
+.hero-text,
+.section p,
+.feature-card p,
+.pricing-card p,
+.hero-card li,
+.value-grid li,
+.pricing-list li {
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+
+/* =========================================================
+   05. BUTTONS + LINKS
+========================================================= */
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+  padding: 15px 25px;
+  border-radius: 999px;
+  font-weight: 900;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.primary {
+  color: var(--deep-2);
+  background: linear-gradient(90deg, var(--white), var(--cyan), var(--gold));
+  box-shadow: 0 0 45px rgba(125, 248, 255, 0.28);
+}
+
+.secondary {
+  color: var(--white);
+  background: var(--glass-soft);
+  border: 1px solid var(--border);
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--gold);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  color: var(--white);
+}
+
+
+/* =========================================================
+   06. CARDS
+========================================================= */
+
+.hero-card,
+.feature-card,
+.pricing-card,
+.highlight-box,
+.value-grid > div,
+.testimonial-card,
+.faq-item,
+.gallery-card,
+.contact-card {
+  position: relative;
+  padding: 34px;
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, var(--glass-strong), rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--border);
+  backdrop-filter: blur(22px);
+  box-shadow:
+    0 30px 80px var(--shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.hero-card {
+  animation: floatCard 5s ease-in-out infinite;
+}
+
+.hero-card ul,
+.value-grid ul,
+.pricing-list {
+  padding-left: 20px;
+}
+
+.hero-card li,
+.value-grid li,
+.pricing-list li {
+  margin: 12px 0;
+}
+
+.feature-card {
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+.feature-card span {
+  color: var(--gold);
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.highlight-box {
+  border-color: rgba(125, 248, 255, 0.42);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.52),
+    0 0 55px rgba(125, 248, 255, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   07. STATS
+========================================================= */
+
+.hero-stats {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.hero-stats div {
+  padding: 18px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+}
+
+.hero-stats strong {
+  display: block;
+  color: var(--white);
+  font-size: 30px;
+}
+
+.hero-stats span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   08. SECTIONS + GRIDS
+========================================================= */
+
+.section {
+  width: min(var(--site-width), var(--site-padding));
+  margin: var(--section-space) auto;
+}
+
+.feature-grid,
+.testimonial-grid,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.split,
+.value-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.center-btn {
+  margin-top: 34px;
+  text-align: center;
+}
+
+
+/* =========================================================
+   09. PRICING / PACKAGES
+========================================================= */
+
+.pricing-card {
+  max-width: 560px;
+}
+
+.pricing-card.featured {
+  border-color: rgba(255, 211, 110, 0.48);
+}
+
+.price {
+  margin: 10px 0;
+  color: var(--white) !important;
+  font-size: 64px !important;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.pricing-list {
+  margin: 24px 0;
+  columns: 2;
+}
+
+
+/* =========================================================
+   10. CTA SECTIONS
+========================================================= */
+
+.cta-section {
+  text-align: center;
+  padding: 52px;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at top, rgba(125, 248, 255, 0.16), transparent 42%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.46);
+}
+
+.cta-section h2,
+.cta-section p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-section p {
+  max-width: 760px;
+}
+
+.cta-section .hero-buttons {
+  justify-content: center;
+}
+
+
+/* =========================================================
+   11. CONTACT FORM
+========================================================= */
+
+.contact {
+  text-align: center;
+}
+
+.contact-card {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  text-align: left;
+}
+
+.form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.form-field.full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  color: var(--text);
+  font-weight: 900;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 16px;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font: inherit;
+}
+
+.form-field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(231, 248, 255, 0.62);
+}
+
+.form-field select {
+  color-scheme: dark;
+}
+
+
+/* =========================================================
+   12. GALLERY
+========================================================= */
+
+.gallery-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--glass-soft);
+}
+
+/* CUSTOMIZE: Replace .scene-preview with real images if preferred */
+.gallery-card .scene-preview {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 58% 34%, rgba(255, 211, 110, 0.92) 0 10%, transparent 11%),
+    linear-gradient(180deg, #6b2766 0%, #ff8a5b 42%, #0a6c85 43%, #06333e 78%, #b9793f 79%);
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.34);
+}
+
+
+/* =========================================================
+   13. FAQ
+========================================================= */
+
+.faq-item h3 {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   14. FOOTER
+========================================================= */
+
+footer {
+  width: min(var(--site-width), var(--site-padding));
+  margin: 0 auto;
+  padding: 50px 0;
+  color: #c7e9ee;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.footer-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.footer-links a:hover {
+  color: var(--white);
+}
+
+
+/* =========================================================
+   15. ANIMATIONS
+========================================================= */
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-16px) rotate(1deg);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   16. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

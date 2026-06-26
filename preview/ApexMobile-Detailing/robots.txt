@@ -1,0 +1,25 @@
+# =========================================================
+# Apex Mobile Detailing
+# robots.txt
+#
+# CUSTOMIZE:
+# Replace the sitemap URL below with your own domain
+#
+# Example:
+# Sitemap: https://www.yourdomain.com/sitemap.xml
+# =========================================================
+
+User-agent: *
+
+# Allow search engines to crawl the entire website
+Allow: /
+
+# Block system or development folders if they exist
+Disallow: /css/
+Disallow: /js/
+
+# If your images are inside /images/, they remain crawlable
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://www.yourdomain.com/sitemap.xml

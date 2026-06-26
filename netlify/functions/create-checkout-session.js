@@ -99,7 +99,7 @@ exports.handler = async function (event) {
     const siteUrl = buildSiteUrl(event);
     const productKeys = cartItems.map((item) => item.productKey).join(",");
     const successUrl = new URL(
-      `success.html?products=${encodeURIComponent(productKeys)}`,
+      `thank-you.html?products=${encodeURIComponent(productKeys)}`,
       `${siteUrl}/`
     ).href;
     const cancelUrl = new URL("cart.html", `${siteUrl}/`).href;

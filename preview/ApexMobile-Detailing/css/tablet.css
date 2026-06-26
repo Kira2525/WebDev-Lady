@@ -1,0 +1,124 @@
+/* =========================================================
+   Apex Mobile Detailing
+   tablet.css
+
+   CUSTOMIZE:
+   - This file controls tablet screens only.
+   - Main colors are controlled in css/styles.css inside :root.
+   - Keep this file loaded after css/styles.css.
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  /* =========================
+     Header / Navigation
+  ========================= */
+
+  .header {
+    padding: 20px 6%;
+    gap: 24px;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .nav a {
+    font-size: 14px;
+  }
+
+  /* =========================
+     Hero
+  ========================= */
+
+  .hero {
+    min-height: auto;
+    padding: 80px 6%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 760px;
+  }
+
+  .hero-content .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero h1,
+  .section h1 {
+    font-size: 48px;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  /* =========================
+     Sections
+  ========================= */
+
+  .features,
+  .section,
+  .cta {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .section,
+  .cta {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .section h2,
+  .cta h2 {
+    font-size: 38px;
+  }
+
+  /* =========================
+     Grids / Cards
+  ========================= */
+
+  .service-grid,
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .featured {
+    transform: none;
+  }
+
+  .featured:hover {
+    transform: translateY(-6px);
+  }
+
+  .contact-layout {
+    max-width: 760px;
+  }
+
+  /* =========================
+     Footer
+  ========================= */
+
+  footer {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "BeachWave Resort",
+  "short_name": "BeachWave",
+  "description": "A premium animated beach resort website template.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#04131a",
+  "theme_color": "#04131a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/beachwave-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/beachwave-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

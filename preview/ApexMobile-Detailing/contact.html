@@ -1,0 +1,307 @@
+<!-- ========================= -->
+<!-- contact.html -->
+<!-- CUSTOMIZE: This contact page is built so customers can easily edit business info, form fields, service areas, FAQs, and links. -->
+<!-- ========================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- CUSTOMIZE: Page title and SEO description -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | Apex Mobile Detailing</title>
+  <meta name="description"
+    content="Book a mobile detailing appointment with Apex Mobile Detailing. Request interior cleaning, exterior detailing, full detail packages, ceramic coating, and mobile auto detailing service." />
+
+  <!-- CUSTOMIZE: Favicon logo letter -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='black'/%3E%3Ctext x='50' y='62' font-size='46' text-anchor='middle' fill='%23d4af37' font-family='Arial'%3EA%3C/text%3E%3C/svg%3E" />
+
+  <!-- CUSTOMIZE: Keep these paths unless CSS files are renamed -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- ========================= -->
+  <!-- HEADER / NAVIGATION -->
+  <!-- CUSTOMIZE:
+     - Change "A" to your business initial.
+     - Change APEX and DETAIL to your business name.
+     - Keep page links the same unless file names change.
+-->
+  <!-- ========================= -->
+  <header class="header">
+    <a href="index.html" class="logo" aria-label="Apex Mobile Detailing Home">
+      <div class="logo-icon">A</div>
+      <div class="logo-text">APEX<span>DETAIL</span></div>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="nav-btn" aria-current="page">Book Now</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========================= -->
+    <!-- CONTACT / BOOKING SECTION -->
+    <!-- CUSTOMIZE:
+       - Edit heading, intro text, phone, email, hours, and service area.
+       - The form currently sends users to thank-you.html.
+       - For Formspree/Netlify/etc., replace action and method based on your form provider.
+  -->
+    <!-- ========================= -->
+    <section class="section contact">
+      <p class="section-tag">Book Now</p>
+      <h1>Request An Appointment</h1>
+
+      <div class="contact-layout">
+
+        <div class="contact-info">
+          <h2>Premium Mobile Detailing At Your Location</h2>
+
+          <p>
+            Book a professional mobile detail for your car, truck, SUV, or luxury vehicle.
+            We bring the service to your driveway, office, or apartment.
+          </p>
+
+          <div class="contact-box">
+            <h3>Phone</h3>
+            <p>
+              <a href="tel:5555555555">(555) 555-5555</a>
+            </p>
+          </div>
+
+          <div class="contact-box">
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:info@apexdetail.com">info@apexdetail.com</a>
+            </p>
+          </div>
+
+          <div class="contact-box">
+            <h3>Hours</h3>
+            <p>Mon - Sat • 8AM - 6PM</p>
+          </div>
+
+          <div class="contact-box">
+            <h3>Service Area</h3>
+            <p>Phoenix, Mesa, Scottsdale, Tempe, and nearby areas.</p>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- BOOKING FORM -->
+        <!-- CUSTOMIZE:
+           - Change action="thank-you.html" if using a real form service.
+           - Add or remove package options as needed.
+           - Keep name="" attributes because form services use them.
+      -->
+        <!-- ========================= -->
+        <form action="thank-you.html" method="get">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="Full Name" required />
+
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="Email Address" required />
+
+          <label for="phone">Phone Number</label>
+          <input id="phone" name="phone" type="tel" placeholder="Phone Number" required />
+
+          <label for="package">Select Package</label>
+          <select id="package" name="package" required>
+            <option value="">Select Package</option>
+            <option value="Basic Wash">Basic Wash</option>
+            <option value="Full Detail">Full Detail</option>
+            <option value="Elite Detail">Elite Detail</option>
+            <option value="Ceramic Coating">Ceramic Coating</option>
+          </select>
+
+          <label for="vehicle">Vehicle Details</label>
+          <textarea id="vehicle" name="vehicle"
+            placeholder="Tell us about your vehicle, preferred date, location, and service needs." rows="6"></textarea>
+
+          <button type="submit">Send Booking Request</button>
+
+          <p class="form-trust">
+            Secure booking • Mobile service • Fast response time
+          </p>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- SERVICE AREAS -->
+    <!-- CUSTOMIZE: Edit city names and descriptions. -->
+    <!-- ========================= -->
+    <section class="section dark">
+      <p class="section-tag">Service Areas</p>
+      <h2>Mobile Detailing Near You</h2>
+
+      <div class="service-grid">
+        <div class="card">
+          <h3>Phoenix</h3>
+          <p>Mobile detailing available throughout the Phoenix area.</p>
+        </div>
+
+        <div class="card">
+          <h3>Mesa</h3>
+          <p>Convenient driveway detailing for Mesa customers.</p>
+        </div>
+
+        <div class="card">
+          <h3>Scottsdale</h3>
+          <p>Premium detailing for luxury vehicles and daily drivers.</p>
+        </div>
+
+        <div class="card">
+          <h3>Tempe</h3>
+          <p>Mobile service for homes, apartments, and office locations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- NEXT STEPS -->
+    <!-- CUSTOMIZE: Edit the booking process steps. -->
+    <!-- ========================= -->
+    <section class="section">
+      <p class="section-tag">Next Steps</p>
+      <h2>What Happens After You Book</h2>
+
+      <div class="service-grid">
+        <div class="card">
+          <h3>1. Submit Request</h3>
+          <p>Complete the booking form with your contact information and package choice.</p>
+        </div>
+
+        <div class="card">
+          <h3>2. Confirmation</h3>
+          <p>We contact you to confirm your appointment time, vehicle details, and location.</p>
+        </div>
+
+        <div class="card">
+          <h3>3. Mobile Detail</h3>
+          <p>We arrive at your location and complete your selected detailing service.</p>
+        </div>
+
+        <div class="card">
+          <h3>4. Enjoy The Finish</h3>
+          <p>Your vehicle is cleaned, refreshed, and ready to drive with a premium finish.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- BOOKING FAQ -->
+    <!-- CUSTOMIZE: Edit questions and answers. -->
+    <!-- ========================= -->
+    <section class="section dark">
+      <p class="section-tag">Questions</p>
+      <h2>Booking FAQ</h2>
+
+      <div class="service-grid">
+        <div class="card">
+          <h3>Do I need water or electricity?</h3>
+          <p>Most mobile detailing appointments can be handled with our own setup, depending on package and location.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>How long does it take?</h3>
+          <p>Most appointments take between 1.5 and 4 hours depending on the package and vehicle condition.</p>
+        </div>
+
+        <div class="card">
+          <h3>Can I book same-day?</h3>
+          <p>Same-day appointments may be available depending on schedule and service area.</p>
+        </div>
+
+        <div class="card">
+          <h3>What payments are accepted?</h3>
+          <p>Cash, card, and digital payments may be accepted after appointment confirmation.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- CUSTOMIZE:
+     Replace the social media links below with your own.
+-->
+  <!-- ========================= -->
+  <footer>
+
+    <div class="footer-logo">
+
+      <div class="logo-icon small">
+        A
+      </div>
+
+      <p>
+        APEX<span>DETAIL</span>
+      </p>
+
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer Navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Social Icons -->
+    <div class="social-links">
+
+      <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <a href="#" aria-label="TikTok" target="_blank" rel="noopener">
+        <i class="fab fa-tiktok"></i>
+      </a>
+
+      <a href="#" aria-label="X" target="_blank" rel="noopener">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+
+      <a href="#" aria-label="YouTube" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+      </a>
+
+    </div>
+
+    <p>
+      © 2026 Apex Mobile Detailing. All rights reserved.
+    </p>
+
+  </footer>
+
+  <!-- CUSTOMIZE: Keep this path unless script.js is renamed -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>

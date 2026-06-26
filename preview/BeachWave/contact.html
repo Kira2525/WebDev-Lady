@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       BEACHWAVE CONTACT PAGE
+       Fictional resort demo website.
+
+       CUSTOMER NOTES:
+       - Replace the demo contact information with your own.
+       - Connect the form to your preferred form provider,
+         booking system, CRM, email service, or backend.
+       - The included form submits to thank-you.html by default.
+  ========================================================== -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CUSTOMIZE -->
+  <title>Contact | BeachWave Resort</title>
+
+  <!-- CUSTOMIZE -->
+  <meta
+    name="description"
+    content="Contact the fictional BeachWave Resort to request availability, vacation packages, guest information, or booking assistance."
+  />
+
+  <link rel="icon" type="image/png" href="images/beachwave-icon.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+
+<!-- CUSTOMIZE: Update site.webmanifest with your business name, colors, and icons -->
+<link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+
+<canvas id="beachCanvas"></canvas>
+
+<!-- HEADER -->
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+<img src="images/beachwave-logo.png" alt="BeachWave Resort Logo">
+</a>
+
+<nav class="nav-links" id="navLinks">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="pricing.html">Packages</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html" class="active">Contact</a>
+
+</nav>
+
+<button
+class="menu-btn"
+type="button"
+onclick="toggleMenu()"
+aria-label="Open menu"
+aria-expanded="false">
+☰
+</button>
+
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero contact">
+
+<div class="hero-content">
+
+<p class="eyebrow">
+Contact BeachWave Resort
+</p>
+
+<h1>
+We're here to help plan your stay.
+</h1>
+
+<p class="hero-text">
+BeachWave Resort is a fictional business created to demonstrate this website
+template. Use this page to answer guest questions, receive booking inquiries,
+or connect visitors with your reservation team.
+</p>
+
+</div>
+
+<!-- CONTACT FORM -->
+
+<form
+class="contact-card"
+action="thank-you.html"
+method="get">
+
+<p class="card-label">
+Booking Inquiry
+</p>
+
+<h2>
+Request Information
+</h2>
+
+<div class="form-grid">
+
+<div class="form-field">
+
+<label for="name">
+Full Name
+</label>
+
+<input
+id="name"
+name="name"
+type="text"
+placeholder="John Smith"
+required>
+
+</div>
+
+<div class="form-field">
+
+<label for="email">
+Email Address
+</label>
+
+<input
+id="email"
+name="email"
+type="email"
+placeholder="john@example.com"
+required>
+
+</div>
+
+<div class="form-field">
+
+<label for="interest">
+I'm Interested In
+</label>
+
+<select
+id="interest"
+name="interest"
+required>
+
+<option value="">
+Select an option
+</option>
+
+<option>
+Oceanfront Stay
+</option>
+
+<option>
+Family Vacation
+</option>
+
+<option>
+Spa Package
+</option>
+
+<option>
+Private Event
+</option>
+
+<option>
+Beach Activities
+</option>
+
+<option>
+General Question
+</option>
+
+</select>
+
+</div>
+
+<div class="form-field">
+
+<label for="date">
+Preferred Arrival Date
+</label>
+
+<input
+id="date"
+name="date"
+type="date">
+
+</div>
+
+<div class="form-field full">
+
+<label for="message">
+Message
+</label>
+
+<textarea
+id="message"
+name="message"
+placeholder="Tell us how we can help..."
+required></textarea>
+
+</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<button
+class="btn primary"
+type="submit">
+Send Inquiry
+</button>
+
+</div>
+
+</form>
+
+</section>
+
+<!-- CONTACT INFORMATION -->
+
+<section class="section">
+
+<p class="eyebrow">
+Contact Information
+</p>
+
+<h2>
+Sample contact details for this fictional resort.
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<span>01</span>
+
+<h3>
+Email
+</h3>
+
+<p>
+reservations@beachwave-demo.com
+</p>
+
+<p>
+Replace with your own reservation or support email.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<span>02</span>
+
+<h3>
+Phone
+</h3>
+
+<p>
+(305) 555-0187
+</p>
+
+<p>
+Replace this fictional phone number with your business number.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<span>03</span>
+
+<h3>
+Location
+</h3>
+
+<p>
+125 Ocean View Drive<br>
+Sunset Bay, FL 33100
+</p>
+
+<p>
+This is a fictional address used for demonstration purposes.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section cta-section">
+
+<p class="eyebrow">
+Need More Information?
+</p>
+
+<h2>
+We're looking forward to hearing from you.
+</h2>
+
+<p>
+Whether you're planning a relaxing vacation, family getaway,
+or special celebration, our fictional reservation team is
+ready to help demonstrate how this contact page works.
+</p>
+
+<div class="hero-buttons">
+
+<a href="pricing.html" class="btn primary">
+View Packages
+</a>
+
+<a href="gallery.html" class="btn secondary">
+Browse Gallery
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-inner">
+
+<a href="index.html" class="logo">
+<img src="images/beachwave-logo.png" alt="BeachWave Resort Logo">
+</a>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="pricing.html">Packages</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<p>
+© 2026 BeachWave Resort. Demo website for template preview purposes only.
+</p>
+
+</div>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
+

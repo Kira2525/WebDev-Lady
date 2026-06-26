@@ -1,0 +1,780 @@
+/* =========================================================
+   Apex Mobile Detailing
+   styles.css
+
+   TABLE OF CONTENTS
+   01. Customer Customization Settings
+   02. Reset / Base Styles
+   03. Header / Navigation
+   04. Hero Section
+   05. Buttons
+   06. Sections / Feature Boxes
+   07. Cards / Services
+   08. Pricing
+   09. Gallery
+   10. Contact / Forms
+   11. CTA / Thank You / 404
+   12. Footer
+
+   NOTE:
+   - Tablet styles belong in css/tablet.css.
+   - Mobile styles belong in css/mobile.css.
+   - Do not add media queries here unless you want all responsive styles in one file.
+========================================================= */
+
+
+/* =========================================================
+   01. Customer Customization Settings
+
+   CUSTOMIZE HERE:
+   - Main colors
+   - Font
+   - Border radius
+   - Section spacing
+   - Hero background image
+
+   TIP:
+   Customers can change the full website look by editing this section only.
+========================================================= */
+
+:root {
+  /* Main website colors */
+  --color-bg: #0b0b0b;
+  --color-bg-dark: #050505;
+  --color-surface: #151515;
+  --color-surface-light: #181818;
+  --color-border: #292929;
+
+  /* Text colors */
+  --color-text: #ffffff;
+  --color-muted: #cccccc;
+  --color-soft: #dddddd;
+
+  /* Accent color */
+  --color-accent: #d4af37;
+  --color-accent-text: #000000;
+
+  /* Font */
+  --font-main: Arial, Helvetica, sans-serif;
+
+  /* Rounded corners */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-card: 22px;
+  --radius-pill: 999px;
+
+  /* Spacing */
+  --section-padding: 90px 8%;
+  --header-padding: 22px 8%;
+
+  /* Hero image */
+  --hero-image: url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1600&q=80");
+
+  /* Shadows */
+  --shadow-accent-soft: 0 18px 40px rgba(212, 175, 55, 0.12);
+  --shadow-accent-strong: 0 20px 40px rgba(212, 175, 55, 0.18);
+}
+
+
+/* =========================================================
+   02. Reset / Base Styles
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+
+/* =========================================================
+   03. Header / Navigation
+
+   CUSTOMIZE:
+   - Header spacing: --header-padding in :root
+   - Logo colors: --color-accent and --color-accent-text
+========================================================= */
+
+.header {
+  width: 100%;
+  padding: var(--header-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.94);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 46px;
+  height: 46px;
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: 900;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+.logo-icon.small {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.logo-text,
+.footer-logo p {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo-text span,
+.footer-logo span {
+  color: var(--color-accent);
+}
+
+.nav,
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav a,
+.footer-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.nav a:hover,
+.footer-nav a:hover,
+.nav a[aria-current="page"] {
+  color: var(--color-accent);
+}
+
+.nav-btn {
+  background: var(--color-accent);
+  color: var(--color-accent-text) !important;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   04. Hero Section
+
+   CUSTOMIZE:
+   - Hero background: --hero-image in :root
+   - Hero text is edited in index.html
+========================================================= */
+
+.hero {
+  min-height: 90vh;
+  padding: var(--section-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.84)),
+    var(--hero-image);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+.tagline,
+.section-tag {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.hero h1,
+.section h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero-text,
+.section-intro {
+  font-size: 19px;
+  color: var(--color-soft);
+  margin: 0 auto 32px;
+  max-width: 720px;
+}
+
+.hero-content .hero-text {
+  margin-left: 0;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-trust,
+.form-trust {
+  margin-top: 22px;
+  color: var(--color-muted);
+  font-size: 15px;
+}
+
+.hero-card {
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.hero-logo-placeholder,
+.logo-large-placeholder {
+  width: 76px;
+  height: 76px;
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+  font-weight: 900;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.45);
+}
+
+.logo-large-placeholder {
+  width: 86px;
+  height: 86px;
+  font-size: 48px;
+}
+
+.hero-card h3 {
+  color: var(--color-muted);
+  margin-bottom: 5px;
+}
+
+.hero-card h2 {
+  color: var(--color-accent);
+  font-size: 64px;
+  line-height: 1.1;
+}
+
+.hero-card p {
+  color: var(--color-soft);
+}
+
+
+/* =========================================================
+   05. Buttons
+
+   CUSTOMIZE:
+   - Button color: --color-accent in :root
+   - Button roundness: --radius-pill in :root
+========================================================= */
+
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.btn:hover,
+button:hover,
+.price-card a:hover {
+  transform: translateY(-3px);
+}
+
+.primary {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+.secondary {
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.center-link {
+  text-align: center;
+  margin-top: 42px;
+}
+
+
+/* =========================================================
+   06. Sections / Feature Boxes
+========================================================= */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding: 45px 8%;
+  background: #111111;
+}
+
+.features div {
+  background: var(--color-surface-light);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  border: 1px solid #252525;
+}
+
+.features h3 {
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.features p {
+  color: var(--color-muted);
+}
+
+.section {
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 42px;
+  margin-bottom: 42px;
+}
+
+.dark {
+  background: var(--color-bg-dark);
+}
+
+
+/* =========================================================
+   07. Cards / Services
+========================================================= */
+
+.service-grid,
+.pricing-grid,
+.gallery {
+  display: grid;
+  gap: 24px;
+}
+
+.service-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card,
+.price-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.card:hover,
+.price-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-accent-soft);
+}
+
+.card h3,
+.price-card h3 {
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.card p,
+.price-card p {
+  color: var(--color-muted);
+}
+
+.service-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 22px;
+}
+
+.service-list {
+  margin-top: 18px;
+  padding-left: 18px;
+  color: var(--color-muted);
+}
+
+.service-list li {
+  margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   08. Pricing
+========================================================= */
+
+.pricing-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.price-card {
+  text-align: center;
+}
+
+.price-card h4 {
+  font-size: 42px;
+  margin: 18px 0;
+}
+
+.price-card a {
+  display: inline-block;
+  margin-top: 22px;
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.featured {
+  border: 2px solid var(--color-accent);
+  transform: scale(1.05);
+}
+
+.featured:hover {
+  transform: scale(1.05) translateY(-6px);
+}
+
+.featured span {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   09. Gallery
+========================================================= */
+
+.gallery {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.gallery-filters button {
+  width: auto;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.gallery-item {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid #333333;
+  background: #111111;
+  transition: 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-accent-strong);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   10. Contact / Forms
+========================================================= */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 36px;
+  align-items: start;
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-info {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+}
+
+.contact-info h2,
+.contact-info h3 {
+  color: var(--color-accent);
+}
+
+.contact-info p {
+  color: var(--color-muted);
+}
+
+.contact-box {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-box a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  color: var(--color-accent);
+}
+
+.contact form {
+  width: 100%;
+  display: grid;
+  gap: 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+}
+
+label {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 16px;
+  background: #111111;
+  border: 1px solid #333333;
+  color: var(--color-text);
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888888;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+button {
+  padding: 16px;
+  border: none;
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   11. CTA / Thank You / 404
+========================================================= */
+
+.cta {
+  padding: var(--section-padding);
+  text-align: center;
+  background: linear-gradient(135deg, #171717, #000000);
+}
+
+.cta h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  color: var(--color-muted);
+  margin-bottom: 30px;
+}
+
+.thank-you-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 26px;
+  padding: 50px;
+}
+
+
+/* =========================================================
+   12. Footer
+========================================================= */
+
+footer {
+  padding: 35px 8%;
+  text-align: center;
+  background: var(--color-bg-dark);
+  color: #aaaaaa;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+}
+
+.footer-logo p {
+  color: var(--color-text);
+}
+
+.footer-nav {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+   Footer Social Icons
+========================================================= */
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.social-links a {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--color-accent);
+  color: var(--color-accent-text);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(212, 175, 55, 0.25);
+}

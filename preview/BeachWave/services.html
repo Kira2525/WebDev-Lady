@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       BEACHWAVE SERVICES / EXPERIENCES PAGE
+       Fictional resort demo page.
+
+       CUSTOMER NOTES:
+       - Replace services, packages, amenities, and descriptions.
+       - This page is written for a fake beach resort business.
+       - Use this page for resort services, tours, rentals, events,
+         spa offers, beach activities, or guest experiences.
+  ========================================================== -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CUSTOMIZE: Change this title for your business -->
+  <title>Services | BeachWave Resort</title>
+
+  <!-- CUSTOMIZE: Change this SEO description -->
+  <meta
+    name="description"
+    content="Explore fictional BeachWave Resort services including oceanfront stays, beach activities, spa experiences, dining, events, and vacation packages."
+  />
+
+  <!-- CUSTOMIZE: Replace with your own logo/icon -->
+  <link rel="icon" type="image/png" href="images/beachwave-icon.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+
+<!-- CUSTOMIZE: Update site.webmanifest with your business name, colors, and icons -->
+<link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+  <canvas id="beachCanvas"></canvas>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <a href="index.html" class="logo" aria-label="BeachWave Resort home">
+      <img src="images/beachwave-logo.png" alt="BeachWave Resort Logo" />
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="pricing.html">Packages</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button
+      class="menu-btn"
+      type="button"
+      onclick="toggleMenu()"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Guest Experiences</p>
+
+        <h1>Resort services made for slow days and sunset nights.</h1>
+
+        <p class="hero-text">
+          BeachWave Resort is a fictional beach getaway created for this demo.
+          Use this page to present guest services, room options, tours, spa
+          treatments, dining experiences, events, and beach activities.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="pricing.html" class="btn primary">View Packages</a>
+          <a href="contact.html" class="btn secondary">Request Info</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <p class="card-label">Guest Services</p>
+
+        <h2>Everything for the stay</h2>
+
+        <ul>
+          <li>Oceanfront rooms and private suites</li>
+          <li>Beach activities and guided tours</li>
+          <li>Spa, wellness, and relaxation offers</li>
+          <li>Private dining and event options</li>
+          <li>Simple booking inquiry flow</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MAIN SERVICES -->
+    <section class="section">
+      <p class="eyebrow">What We Offer</p>
+
+      <h2>Fictional services for a polished resort website.</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <span>01</span>
+          <h3>Oceanfront Stays</h3>
+          <p>
+            Showcase rooms, villas, suites, private balconies, beach views,
+            family spaces, and extended stay options.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span>02</span>
+          <h3>Beach Adventures</h3>
+          <p>
+            Promote snorkeling, paddleboarding, boat rides, surfing lessons,
+            beach rentals, and local guided tours.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span>03</span>
+          <h3>Spa & Wellness</h3>
+          <p>
+            Present massages, facials, yoga sessions, wellness retreats,
+            meditation spaces, and relaxation packages.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span>04</span>
+          <h3>Dining & Drinks</h3>
+          <p>
+            Highlight beachfront dining, breakfast service, private dinners,
+            cocktail hours, and sunset meal experiences.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span>05</span>
+          <h3>Private Events</h3>
+          <p>
+            Advertise destination weddings, beach dinners, family celebrations,
+            retreats, live music, and private group rentals.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span>06</span>
+          <h3>Booking Support</h3>
+          <p>
+            Point guests toward a reservation form, booking engine, phone
+            number, email address, or custom checkout process.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE FLOW -->
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Guest Journey</p>
+
+        <h2>Help visitors understand what happens next.</h2>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Simple Stay Planning</h3>
+
+        <ul>
+          <li>Choose a package or experience</li>
+          <li>Send a booking inquiry</li>
+          <li>Confirm dates, guests, and add-ons</li>
+          <li>Receive final booking details</li>
+          <li>Arrive ready for the beach</li>
+        </ul>
+
+        <p>
+          This section can be edited for any real business process, including
+          direct booking, phone reservations, email inquiries, or third-party
+          booking platforms.
+        </p>
+      </div>
+    </section>
+
+    <!-- ADD-ONS -->
+    <section class="section">
+      <p class="eyebrow">Optional Add-Ons</p>
+
+      <h2>Use this area to promote upgrades and extras.</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Romance Package</h3>
+          <p>
+            Add flowers, private dining, sunset seating, celebration decor, or
+            anniversary details.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Family Beach Day</h3>
+          <p>
+            Offer beach games, shaded seating, snack baskets, rentals, and
+            family-friendly activities.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Wellness Upgrade</h3>
+          <p>
+            Include yoga, massage, spa credit, meditation sessions, or quiet
+            retreat experiences.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+      <p class="eyebrow">Next Step</p>
+
+      <h2>Pair the experience with strong visuals and clear packages.</h2>
+
+      <p>
+        Use the gallery page to show the destination, then guide visitors to
+        packages or a booking inquiry.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="gallery.html" class="btn primary">View Gallery</a>
+        <a href="pricing.html" class="btn secondary">See Packages</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="logo" aria-label="BeachWave Resort home">
+        <img src="images/beachwave-logo.png" alt="BeachWave Resort Logo" />
+      </a>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="pricing.html">Packages</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <p>
+        © 2026 BeachWave Resort. Demo website for template preview purposes only.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

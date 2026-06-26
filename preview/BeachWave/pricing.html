@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       BEACHWAVE PRICING / PACKAGES PAGE
+       Fictional resort demo page.
+
+       CUSTOMER NOTES:
+       - Replace package names, prices, details, taxes, fees, and availability.
+       - These prices are fake demo prices.
+       - Connect buttons to a real booking page, contact form, or checkout system.
+  ========================================================== -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CUSTOMIZE: Change this title for your business -->
+  <title>Packages | BeachWave Resort</title>
+
+  <!-- CUSTOMIZE: Change this SEO description -->
+  <meta
+    name="description"
+    content="View fictional BeachWave Resort vacation packages, oceanfront stays, spa upgrades, beach experiences, and sample demo pricing."
+  />
+
+  <!-- CUSTOMIZE: Replace with your own logo/icon -->
+  <link rel="icon" type="image/png" href="images/beachwave-icon.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+
+<!-- CUSTOMIZE: Update site.webmanifest with your business name, colors, and icons -->
+<link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+  <canvas id="beachCanvas"></canvas>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <a href="index.html" class="logo" aria-label="BeachWave Resort home">
+      <img src="images/beachwave-logo.png" alt="BeachWave Resort Logo" />
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="pricing.html" class="active">Packages</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button
+      class="menu-btn"
+      type="button"
+      onclick="toggleMenu()"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Sample Resort Packages</p>
+
+        <h1>Choose a stay that fits your beach escape.</h1>
+
+        <p class="hero-text">
+          BeachWave Resort is a fictional demo business. These sample packages
+          show how a resort, vacation rental, beach club, or travel brand can
+          present pricing in a clean and polished way.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn primary">Request A Stay</a>
+          <a href="faq.html" class="btn secondary">Read FAQ</a>
+        </div>
+      </div>
+
+      <div class="pricing-card featured">
+        <p class="card-label">Most Popular</p>
+
+        <h2>Ocean Escape</h2>
+
+        <p class="price">$499</p>
+
+        <p>
+          Sample two-night package for demonstration only. Replace this with
+          real rates, booking rules, taxes, fees, and availability.
+        </p>
+
+        <ul class="pricing-list">
+          <li>Two-night ocean view stay</li>
+          <li>Daily breakfast for two</li>
+          <li>Welcome refreshments</li>
+          <li>Beach activity credit</li>
+          <li>Pool and lounge access</li>
+          <li>Optional spa upgrade</li>
+          <li>Flexible check-in request</li>
+          <li>Demo pricing only</li>
+        </ul>
+
+        <a href="contact.html" class="btn primary">Request This Package</a>
+      </div>
+    </section>
+
+    <!-- PACKAGE OPTIONS -->
+    <section class="section">
+      <p class="eyebrow">Package Options</p>
+
+      <h2>Flexible sample offers for different guests.</h2>
+
+      <div class="feature-grid">
+        <div class="pricing-card">
+          <p class="card-label">Couples</p>
+
+          <h3>Sunset Retreat</h3>
+
+          <p class="price">$349</p>
+
+          <p>
+            A fictional romantic getaway package for couples looking for a
+            quiet coastal weekend.
+          </p>
+
+          <ul class="pricing-list">
+            <li>One-night suite stay</li>
+            <li>Sunset dinner reservation</li>
+            <li>Welcome drinks</li>
+            <li>Late checkout request</li>
+          </ul>
+
+          <a href="contact.html" class="btn secondary">Ask About This</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <p class="card-label">Popular</p>
+
+          <h3>Ocean Escape</h3>
+
+          <p class="price">$499</p>
+
+          <p>
+            A fictional two-night resort package with beach access, breakfast,
+            and guest activity credit.
+          </p>
+
+          <ul class="pricing-list">
+            <li>Two-night ocean view stay</li>
+            <li>Daily breakfast</li>
+            <li>Beach activity credit</li>
+            <li>Pool and lounge access</li>
+          </ul>
+
+          <a href="contact.html" class="btn primary">Ask About This</a>
+        </div>
+
+        <div class="pricing-card">
+          <p class="card-label">Family</p>
+
+          <h3>Coastal Family Stay</h3>
+
+          <p class="price">$699</p>
+
+          <p>
+            A fictional family package for beach days, relaxed meals, and
+            simple guest activities.
+          </p>
+
+          <ul class="pricing-list">
+            <li>Two-night family room stay</li>
+            <li>Breakfast for four</li>
+            <li>Beach game rentals</li>
+            <li>Family welcome basket</li>
+          </ul>
+
+          <a href="contact.html" class="btn secondary">Ask About This</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INCLUDED EXPERIENCE -->
+    <section class="section">
+      <p class="eyebrow">What Guests Can Add</p>
+
+      <h2>Upsells and add-ons are easy to showcase.</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <span>01</span>
+          <h3>Spa Upgrade</h3>
+          <p>
+            Add massage, facial, wellness, yoga, or retreat-style services to
+            any package.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span>02</span>
+          <h3>Beach Activities</h3>
+          <p>
+            Promote snorkeling, paddleboarding, boat tours, beach rentals, or
+            guided local experiences.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span>03</span>
+          <h3>Dining Experience</h3>
+          <p>
+            Feature private dinners, beachfront dining, sunset meals, catering,
+            or celebration packages.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPORTANT NOTES -->
+    <section class="section split">
+      <div>
+        <p class="eyebrow">Booking Notes</p>
+
+        <h2>Make pricing clear before guests contact you.</h2>
+      </div>
+
+      <div class="highlight-box">
+        <h3>Demo Pricing Notice</h3>
+
+        <p>
+          All prices on this demo page are fictional and for template preview
+          purposes only. A real business should replace them with accurate
+          rates, taxes, fees, cancellation rules, availability, and booking
+          terms.
+        </p>
+
+        <ul>
+          <li>Replace sample prices before launch</li>
+          <li>Add taxes and cleaning fees if needed</li>
+          <li>Include refund or cancellation rules</li>
+          <li>Connect buttons to a real booking process</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+      <p class="eyebrow">Ready To Book</p>
+
+      <h2>Request your fictional BeachWave stay.</h2>
+
+      <p>
+        This call-to-action can send guests to a booking form, reservation
+        system, phone number, email address, or custom checkout page.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn primary">Request A Stay</a>
+        <a href="gallery.html" class="btn secondary">View Gallery</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="index.html" class="logo" aria-label="BeachWave Resort home">
+        <img src="images/beachwave-logo.png" alt="BeachWave Resort Logo" />
+      </a>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="pricing.html">Packages</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <p>
+        © 2026 BeachWave Resort. Demo website for template preview purposes only.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

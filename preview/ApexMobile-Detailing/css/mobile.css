@@ -1,0 +1,265 @@
+/* =========================================================
+   Apex Mobile Detailing
+   mobile.css
+
+   CUSTOMIZE:
+   - This file controls phones only.
+   - Main colors are controlled in css/styles.css inside :root.
+   - Keep this file loaded after styles.css and tablet.css.
+========================================================= */
+
+@media (max-width: 760px) {
+
+  /* =========================
+     Base
+  ========================= */
+
+  body {
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* =========================
+     Header / Navigation
+  ========================= */
+
+  .header {
+    padding: 16px 6%;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 22px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .nav-btn {
+    padding: 9px 16px !important;
+  }
+
+  /* =========================
+     Hero
+  ========================= */
+
+  .hero {
+    min-height: auto;
+    padding: 64px 6%;
+    flex-direction: column;
+    text-align: center;
+    gap: 34px;
+    background-position: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .tagline,
+  .section-tag {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero h1,
+  .section h1 {
+    font-size: 36px;
+    line-height: 1.12;
+  }
+
+  .hero-text,
+  .section-intro {
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .hero-card {
+    width: 100%;
+    min-width: 0;
+    padding: 30px 22px;
+  }
+
+  .hero-card h2 {
+    font-size: 52px;
+  }
+
+  .hero-logo-placeholder,
+  .logo-large-placeholder {
+    width: 70px;
+    height: 70px;
+    font-size: 38px;
+  }
+
+  /* =========================
+     Sections
+  ========================= */
+
+  .features,
+  .section,
+  .cta {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+
+  .section,
+  .cta {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .section h2,
+  .cta h2 {
+    font-size: 32px;
+    line-height: 1.15;
+    margin-bottom: 30px;
+  }
+
+  .section-intro {
+    margin-bottom: 30px;
+  }
+
+  /* =========================
+     Cards / Grids
+  ========================= */
+
+  .service-grid,
+  .pricing-grid,
+  .gallery,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .price-card,
+  .contact-info,
+  .contact form,
+  .thank-you-card {
+    padding: 24px;
+  }
+
+  .featured {
+    transform: none;
+  }
+
+  .featured:hover {
+    transform: translateY(-6px);
+  }
+
+  .service-img {
+    height: 210px;
+  }
+
+  /* =========================
+     Gallery
+  ========================= */
+
+  .gallery {
+    gap: 20px;
+  }
+
+  .gallery-item {
+    height: 250px;
+  }
+
+  .gallery-overlay {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .gallery-filters {
+    gap: 10px;
+  }
+
+  .gallery-filters button {
+    padding: 9px 14px;
+    font-size: 14px;
+  }
+
+  /* =========================
+     Contact Form
+  ========================= */
+
+  .contact-layout {
+    gap: 24px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  textarea {
+    min-height: 130px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  /* =========================
+     Footer
+  ========================= */
+
+  footer {
+    padding: 34px 6%;
+  }
+
+  .footer-logo {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-logo p {
+    font-size: 20px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

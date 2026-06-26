@@ -33,7 +33,7 @@ const templateProducts = [
     image: "images/FreshNest/freshnest-index.png",
     soldCount: 7,
     demo: "preview/FreshNest%20Cleaning/index.html",
-    downloadFile: "downloads/freshnest.zip",
+    downloadFile: "downloads/FreshNest Cleaning.zip",
     tags: ["Cleaning Business", "Home Services", "Local Business", "HTML Website"]
   },
   {
@@ -50,7 +50,7 @@ const templateProducts = [
     image: "images/Rain Blossom Lite/rainblossom-lite.png",
     soldCount: 3,
     demo: "preview/RainBlossom-Lite/index.html",
-    downloadFile: "downloads/rain blossom lite.zip",
+    downloadFile: "downloads/RainBlossom-Lite.zip",
     tags: ["Wedding", "Event Planning", "Landing Page", "HTML Website"]
   },
   {
@@ -67,8 +67,42 @@ const templateProducts = [
     image: "images/Rain Blossom Pro/rainblossom-pro.png",
     soldCount: 2,
     demo: "preview/RainBlossom-Pro/index.html",
-    downloadFile: "downloads/rain blossom pro.zip",
+    downloadFile: "downloads/RainBlossom-Pro.zip",
     tags: ["Wedding", "Event Planning", "HTML Website", "Local Business"]
+  },
+  {
+    id: "apexmobile-detailing",
+    name: "Apex Mobile Detailing",
+    tier: "pro",
+    type: "HTML Website",
+    format: "full-website",
+    formatTags: ["full-website", "html-website", "business"],
+    businessTags: ["auto-detailing", "home-services", "local-business", "business"],
+    business: "Mobile detailing, auto care, and local service businesses",
+    description: "A polished multi-page website for mobile detailing and auto care businesses with services, pricing, gallery, and booking-focused contact flow.",
+    price: 19.99,
+    image: "images/Apex Mobile Detailing/apex-home.png",
+    soldCount: 1,
+    demo: "preview/ApexMobile-Detailing/index.html",
+    downloadFile: "downloads/ApexMobile-Detailing.zip",
+    tags: ["Auto Detailing", "Local Business", "HTML Website"]
+  },
+  {
+    id: "beachwave",
+    name: "BeachWave",
+    tier: "pro",
+    type: "HTML Website",
+    format: "full-website",
+    formatTags: ["full-website", "html-website", "travel", "creative"],
+    businessTags: ["travel", "hospitality", "tourism", "local-business"],
+    business: "Resorts, vacation rentals, beach clubs, travel brands, and hospitality businesses",
+    description: "A premium animated beach resort website template with pages for stays, services, gallery, FAQ, pricing, and contact requests.",
+    price: 19.99,
+    image: "images/Beach Wave/beachwave-mobile.png",
+    soldCount: 1,
+    demo: "preview/BeachWave/index.html",
+    downloadFile: "downloads/BeachWave.zip",
+    tags: ["Travel", "Hospitality", "HTML Website"]
   },
   {
     id: "abyssalblue-lite",
@@ -453,7 +487,7 @@ function buildProductCard(product) {
       : ' target="_blank" rel="noopener noreferrer"';
 
   return `
-    <article class="product-card product-card--compact${isComingSoon ? " product-card--coming-soon" : ""}" data-template-card data-tier="${product.tier}" data-format="${product.format}" data-filter-formats="${formatTags.join(" ")}" data-business="${businessTags.join(" ")}" data-search="${searchText}">
+    <article id="${product.id}" class="product-card product-card--compact${isComingSoon ? " product-card--coming-soon" : ""}" data-template-card data-tier="${product.tier}" data-format="${product.format}" data-filter-formats="${formatTags.join(" ")}" data-business="${businessTags.join(" ")}" data-search="${searchText}">
       <div class="product-card__image">
         <img src="${product.image}" alt="${product.name} preview" loading="lazy">
         ${!isComingSoon && product.soldCount ? `<span class="product-card__sold-badge">${product.soldCount} sold</span>` : ""}

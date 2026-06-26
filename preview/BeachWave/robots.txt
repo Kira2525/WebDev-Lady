@@ -1,0 +1,16 @@
+```txt
+# =========================================================
+# BeachWave Resort
+# robots.txt
+#
+# CUSTOMER NOTES:
+# - This file allows search engines to index your website.
+# - Replace the sitemap URL with your own domain after launch.
+# =========================================================
+
+User-agent: *
+Allow: /
+
+# Replace this URL with your own domain.
+Sitemap: https://www.example.com/sitemap.xml
+```

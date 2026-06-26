@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- =========================================================
+       BEACHWAVE GALLERY PAGE
+       Fictional resort demo website.
+
+       CUSTOMER NOTES:
+       - Replace these placeholder gallery cards with your own
+         licensed images.
+       - Add photos of rooms, beaches, pools, dining,
+         attractions, or guest experiences.
+  ========================================================== -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CUSTOMIZE: Change this title -->
+  <title>Gallery | BeachWave Resort</title>
+
+  <!-- CUSTOMIZE: Change this SEO description -->
+  <meta name="description"
+    content="Browse the fictional BeachWave Resort gallery featuring oceanfront views, guest accommodations, dining, activities, and coastal experiences." />
+
+  <!-- CUSTOMIZE: Replace with your own logo/icon -->
+  <link rel="icon" type="image/png" href="images/beachwave-icon.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+
+<!-- CUSTOMIZE: Update site.webmanifest with your business name, colors, and icons -->
+<link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+
+  <canvas id="beachCanvas"></canvas>
+
+  <!-- HEADER -->
+  <header class="navbar">
+
+    <a href="index.html" class="logo" aria-label="BeachWave Resort home">
+      <img src="images/beachwave-logo.png" alt="BeachWave Resort Logo" />
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="pricing.html">Packages</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+      ☰
+    </button>
+
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <p class="eyebrow">Photo Gallery</p>
+
+        <h1>Explore the resort before your stay.</h1>
+
+        <p class="hero-text">
+          BeachWave Resort is a fictional destination created to demonstrate
+          this website design. Replace these placeholder panels with your own
+          professional photography to showcase accommodations, amenities,
+          attractions, dining, and unforgettable guest experiences.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="pricing.html" class="btn primary">View Packages</a>
+          <a href="contact.html" class="btn secondary">Book Your Stay</a>
+        </div>
+
+      </div>
+
+      <div class="hero-card">
+
+        <p class="card-label">Gallery Highlights</p>
+
+        <h2>Show guests what makes your destination unique.</h2>
+
+        <ul>
+          <li>Oceanfront accommodations</li>
+          <li>Beach and resort amenities</li>
+          <li>Dining experiences</li>
+          <li>Guest activities</li>
+          <li>Local attractions</li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+  <!-- GALLERY -->
+  <section class="section">
+  
+    <p class="eyebrow">Resort Gallery</p>
+  
+    <h2>Explore the BeachWave Resort experience.</h2>
+  
+    <div class="gallery-grid">
+  
+      <div class="gallery-card">
+        <img src="images/oceanfront-suites.jpg" alt="Oceanfront suites overlooking the ocean at sunset" />
+        <h3>Oceanfront Suites</h3>
+        <p>Spacious beachfront suites with private balconies, modern amenities, and panoramic ocean views.</p>
+      </div>
+  
+      <div class="gallery-card">
+        <img src="images/private-beach.jpg" alt="Private beach with cabanas at sunset" />
+        <h3>Private Beach</h3>
+        <p>Relax on soft sand with cabanas, lounge seating, palm trees, and peaceful ocean views.</p>
+      </div>
+  
+      <div class="gallery-card">
+        <img src="images/dining.jpg" alt="Dining area with sunset ocean view" />
+        <h3>Dining</h3>
+        <p>Enjoy beachfront dining, candlelit tables, tropical views, and warm sunset atmosphere.</p>
+      </div>
+  
+      <div class="gallery-card">
+        <img src="images/activities.jpg" alt="Kayaking on clear tropical water at sunset" />
+        <h3>Activities</h3>
+        <p>Explore the water with kayaking, guided beach activities, and scenic coastal adventures.</p>
+      </div>
+  
+      <div class="gallery-card">
+        <img src="images/spa.jpg" alt="Luxury spa room with ocean sunset view" />
+        <h3>Spa & Wellness</h3>
+        <p>Unwind in peaceful spa spaces designed for massage, relaxation, and oceanfront wellness.</p>
+      </div>
+  
+      <div class="gallery-card">
+        <img src="images/attractions.jpg" alt="Coastal town with shopping and sunset views" />
+        <h3>Local Attractions</h3>
+        <p>Discover nearby shopping, nightlife, sightseeing, excursions, and surrounding destinations.</p>
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  <!-- CTA -->
+  
+  <section class="section cta-section">
+  
+    <p class="eyebrow">Plan Your Visit</p>
+  
+    <h2>Ready to experience BeachWave Resort?</h2>
+  
+    <p>
+      Continue exploring our packages or send a booking inquiry to begin
+      planning your stay.
+    </p>
+  
+    <div class="hero-buttons">
+      <a href="pricing.html" class="btn primary">View Packages</a>
+      <a href="contact.html" class="btn secondary">Contact Us</a>
+    </div>
+  
+  </section>
+  
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <a href="index.html" class="logo">
+        <img src="images/beachwave-logo.png" alt="BeachWave Resort Logo" />
+      </a>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="pricing.html">Packages</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <p>
+        © 2026 BeachWave Resort. Demo website for template preview purposes only.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

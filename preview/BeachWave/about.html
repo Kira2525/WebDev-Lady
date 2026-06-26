@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       BEACHWAVE ABOUT PAGE
+       Fictional resort demo website.
+
+       CUSTOMER NOTES:
+       - Replace all business information with your own.
+       - Update the story, amenities, location, and services.
+       - This page demonstrates how an About page could look
+         for a real beach resort, vacation rental, or travel business.
+  ========================================================== -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CUSTOMIZE -->
+  <title>About | BeachWave Resort</title>
+
+  <!-- CUSTOMIZE -->
+  <meta
+    name="description"
+    content="Learn about the fictional BeachWave Resort, a tropical destination featuring oceanfront accommodations, relaxing amenities, and unforgettable coastal experiences."
+  />
+
+  <link rel="icon" type="image/png" href="images/beachwave-icon.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tablet.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+
+<!-- CUSTOMIZE: Update site.webmanifest with your business name, colors, and icons -->
+<link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+
+<canvas id="beachCanvas"></canvas>
+
+<!-- HEADER -->
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+<img src="images/beachwave-logo.png" alt="BeachWave Resort Logo">
+</a>
+
+<nav class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="about.html" class="active">About</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="pricing.html">Packages</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<button
+class="menu-btn"
+type="button"
+onclick="toggleMenu()"
+aria-label="Open menu"
+aria-expanded="false">
+☰
+</button>
+
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<p class="eyebrow">
+About BeachWave Resort
+</p>
+
+<h1>
+Where unforgettable coastal memories begin.
+</h1>
+
+<p class="hero-text">
+BeachWave Resort is a fictional destination created to demonstrate this website
+template. Replace this content with your own resort, vacation rental, beach
+club, hotel, or travel business information.
+</p>
+
+<div class="hero-buttons">
+
+<a href="gallery.html" class="btn primary">
+View Gallery
+</a>
+
+<a href="contact.html" class="btn secondary">
+Contact Us
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<p class="card-label">
+About Our Resort
+</p>
+
+<h2>
+Relax. Explore. Recharge.
+</h2>
+
+<ul>
+<li>Oceanfront accommodations</li>
+<li>Private beach access</li>
+<li>Spa and wellness services</li>
+<li>Local dining experiences</li>
+<li>Family-friendly activities</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- STORY -->
+
+<section class="section split">
+
+<div>
+
+<p class="eyebrow">
+Our Story
+</p>
+
+<h2>
+Inspired by the beauty of the coast.
+</h2>
+
+</div>
+
+<div>
+
+<p>
+BeachWave Resort is a fictional business designed to showcase how an elegant
+hospitality website can present its story, amenities, and guest experience.
+</p>
+
+<p>
+Whether you operate a luxury resort, boutique hotel, beachfront villa,
+vacation rental, or travel destination, this section is intended to introduce
+your brand and create a personal connection with visitors.
+</p>
+
+<p>
+Replace this content with your own company history, mission, or destination
+story.
+</p>
+
+</div>
+
+</section>
+
+<!-- HIGHLIGHTS -->
+
+<section class="section">
+
+<p class="eyebrow">
+Why Guests Visit
+</p>
+
+<h2>
+Everything needed for a relaxing getaway.
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<span>01</span>
+
+<h3>
+Ocean Views
+</h3>
+
+<p>
+Highlight beautiful beaches, private balconies, waterfront rooms, and scenic
+coastal landscapes.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<span>02</span>
+
+<h3>
+Relaxation
+</h3>
+
+<p>
+Promote wellness, spa treatments, pools, yoga, quiet retreats, and peaceful
+guest experiences.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<span>03</span>
+
+<h3>
+Adventure
+</h3>
+
+<p>
+Showcase snorkeling, boating, paddleboarding, sightseeing, hiking, or guided
+excursions.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AMENITIES -->
+
+<section class="section split">
+
+<div class="highlight-box">
+
+<p class="card-label">
+Sample Amenities
+</p>
+
+<h3>
+Everything for your stay.
+</h3>
+
+<ul>
+<li>Oceanfront suites</li>
+<li>Infinity pool</li>
+<li>Beachfront dining</li>
+<li>Spa & wellness center</li>
+<li>Fitness center</li>
+<li>Daily guest activities</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<p class="eyebrow">
+Guest Experience
+</p>
+
+<h2>
+Designed around comfort and convenience.
+</h2>
+
+<p>
+Every detail of this fictional resort focuses on helping guests relax,
+reconnect, and enjoy their surroundings. Replace this section with information
+about your own accommodations, services, or hospitality philosophy.
+</p>
+
+</div>
+
+</section>
+
+<!-- PERFECT FOR -->
+
+<section class="section">
+
+<p class="eyebrow">
+Ideal For
+</p>
+
+<h2>
+Welcome every type of traveler.
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<span>01</span>
+<h3>Couples</h3>
+<p>Romantic getaways, anniversaries, and honeymoon escapes.</p>
+</div>
+
+<div class="feature-card">
+<span>02</span>
+<h3>Families</h3>
+<p>Comfortable accommodations and activities for every age.</p>
+</div>
+
+<div class="feature-card">
+<span>03</span>
+<h3>Groups</h3>
+<p>Corporate retreats, reunions, and destination celebrations.</p>
+</div>
+
+<div class="feature-card">
+<span>04</span>
+<h3>Wellness Travelers</h3>
+<p>Spa treatments, yoga sessions, and peaceful surroundings.</p>
+</div>
+
+<div class="feature-card">
+<span>05</span>
+<h3>Adventure Seekers</h3>
+<p>Water sports, guided tours, and outdoor experiences.</p>
+</div>
+
+<div class="feature-card">
+<span>06</span>
+<h3>Weekend Visitors</h3>
+<p>Short coastal escapes and relaxing vacation packages.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="section">
+
+<p class="eyebrow">
+Resort Highlights
+</p>
+
+<h2>
+Sample facts about this fictional destination.
+</h2>
+
+<div class="hero-stats">
+
+<div>
+<strong>24</strong>
+<span>Ocean View Suites</span>
+</div>
+
+<div>
+<strong>5★</strong>
+<span>Demo Rating</span>
+</div>
+
+<div>
+<strong>12</strong>
+<span>Guest Experiences</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section cta-section">
+
+<p class="eyebrow">
+Plan Your Stay
+</p>
+
+<h2>
+Experience the beauty of BeachWave Resort.
+</h2>
+
+<p>
+This fictional About page demonstrates how a hospitality business can share
+its story, build trust, and encourage visitors to explore packages or submit
+a booking inquiry.
+</p>
+
+<div class="hero-buttons">
+
+<a href="pricing.html" class="btn primary">
+View Packages
+</a>
+
+<a href="contact.html" class="btn secondary">
+Book Now
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-inner">
+
+<a href="index.html" class="logo">
+<img src="images/beachwave-logo.png" alt="BeachWave Resort Logo">
+</a>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="pricing.html">Packages</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<p>
+© 2026 BeachWave Resort. Demo website for template preview purposes only.
+</p>
+
+</div>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

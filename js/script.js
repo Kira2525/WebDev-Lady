@@ -1837,6 +1837,20 @@ const templateFamilyDefinitions = [
     summary:
       "A clean professional template family for agencies, consultants, startups, and service-based businesses that need a strong foundation.",
     products: ["worldviewglobal-lite", "worldviewglobal-pro"]
+  },
+  {
+    name: "Apex Mobile Detailing",
+    kicker: "Auto Detailing Website",
+    summary:
+      "A polished template for mobile detailing, auto care, and local service businesses that need services, pricing, gallery, and contact pages.",
+    products: ["apexmobile-detailing"]
+  },
+  {
+    name: "BeachWave",
+    kicker: "Hospitality Website Template",
+    summary:
+      "A premium animated template for resorts, vacation rentals, beach clubs, travel brands, and hospitality businesses.",
+    products: ["beachwave"]
   }
 ];
 
@@ -1851,9 +1865,11 @@ const templateCollectionDefinitions = {
     "cosmicorbit-pro",
     "abyssalblue-pro",
     "velvetui-pro",
-    "worldviewglobal-pro"
+    "worldviewglobal-pro",
+    "apexmobile-detailing",
+    "beachwave"
   ],
-  interactive: ["cosmicorbit-pro", "abyssalblue-pro", "worldviewglobal-pro"]
+  interactive: ["cosmicorbit-pro", "abyssalblue-pro", "worldviewglobal-pro", "beachwave"]
 };
 
 const featuredTemplateProductOrder = [
@@ -1864,7 +1880,9 @@ const featuredTemplateProductOrder = [
   "velvetui-pro",
   "velvetui-lite",
   "worldviewglobal-pro",
-  "worldviewglobal-lite"
+  "worldviewglobal-lite",
+  "apexmobile-detailing",
+  "beachwave"
 ];
 
 function escapeHtml(value) {

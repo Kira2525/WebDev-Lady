@@ -1,0 +1,190 @@
+/* =========================================================
+   BEACHWAVE RESORT — TABLET CSS
+   768px - 1024px
+
+   CUSTOMER NOTES:
+   - This file only controls tablet layouts.
+   - Edit logo size, spacing, and grid layouts here.
+   - Keep this file linked AFTER style.css.
+========================================================= */
+
+
+/* =========================================================
+   TABLET LAYOUT
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  :root {
+    /* CUSTOMIZE */
+    --tablet-width: 94%;
+    --tablet-card-padding: 30px;
+    --tablet-section-space: 100px;
+  }
+
+
+  /* =======================================================
+     HEADER
+  ======================================================= */
+
+  .navbar {
+    width: var(--tablet-width);
+    min-height: 110px;
+    padding: 12px 0;
+  }
+
+  /* CUSTOMIZE: Tablet logo size */
+  .logo img {
+    height: 100px;
+  }
+
+  .nav-links {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .nav-links a {
+    padding: 10px 13px;
+    font-size: 14px;
+  }
+
+
+  /* =======================================================
+     HERO
+  ======================================================= */
+
+  .hero {
+    width: var(--tablet-width);
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin: 30px auto 90px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-card {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .hero-stats {
+    max-width: 720px;
+    margin: 34px auto 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  /* =======================================================
+     TYPOGRAPHY
+  ======================================================= */
+
+  h1 {
+    max-width: 100%;
+    font-size: clamp(56px, 7vw, 78px);
+    line-height: 0.95;
+    letter-spacing: -2px;
+  }
+
+  h2 {
+    font-size: clamp(40px, 5vw, 56px);
+  }
+
+
+  /* =======================================================
+     SECTIONS
+  ======================================================= */
+
+  .section {
+    width: var(--tablet-width);
+    margin: var(--tablet-section-space) auto;
+  }
+
+  .split,
+  .value-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .feature-grid,
+  .gallery-grid,
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+
+  /* =======================================================
+     CARDS
+  ======================================================= */
+
+  .hero-card,
+  .feature-card,
+  .pricing-card,
+  .highlight-box,
+  .value-grid > div,
+  .testimonial-card,
+  .faq-item,
+  .gallery-card,
+  .contact-card {
+    padding: var(--tablet-card-padding);
+  }
+
+
+  /* =======================================================
+     PRICING
+  ======================================================= */
+
+  .pricing-card {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .pricing-list {
+    columns: 2;
+  }
+
+
+  /* =======================================================
+     CONTACT FORM
+  ======================================================= */
+
+  .contact-card {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+
+  /* =======================================================
+     CALL TO ACTION
+  ======================================================= */
+
+  .cta-section {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .cta-section .hero-buttons {
+    justify-content: center;
+  }
+
+
+  /* =======================================================
+     FOOTER
+  ======================================================= */
+
+  .footer-inner {
+    gap: 20px;
+  }
+
+  .footer-links {
+    gap: 18px;
+  }
+
+}
