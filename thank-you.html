@@ -10,27 +10,68 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Request Received | Web Dev Lady</title>
-  <meta name="description" content="Confirmation page for Web Dev Lady website template support, service, and project requests." />
+  <title>Order or Request Received | Web Dev Lady</title>
+  <meta name="description" content="Confirmation and digital download access for Web Dev Lady website template orders, support requests, and project inquiries." />
   <link rel="canonical" href="https://webdevlady.netlify.app/thank-you.html" />
   <meta name="robots" content="noindex,follow" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Web Dev Lady" />
-  <meta property="og:title" content="Request Received | Web Dev Lady" />
-  <meta property="og:description" content="Confirmation page for Web Dev Lady website template support, service, and project requests." />
+  <meta property="og:title" content="Order or Request Received | Web Dev Lady" />
+  <meta property="og:description" content="Confirmation and digital download access for Web Dev Lady website template orders, support requests, and project inquiries." />
   <meta property="og:url" content="https://webdevlady.netlify.app/thank-you.html" />
   <meta property="og:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
+  <meta property="og:image:alt" content="Web Dev Lady website template store" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Request Received | Web Dev Lady" />
-  <meta name="twitter:description" content="Confirmation page for Web Dev Lady website template support, service, and project requests." />
+  <meta name="twitter:title" content="Order or Request Received | Web Dev Lady" />
+  <meta name="twitter:description" content="Confirmation and digital download access for Web Dev Lady website template orders, support requests, and project inquiries." />
   <meta name="twitter:image" content="https://webdevlady.netlify.app/images/webdevlady.png" />
+  <meta name="twitter:image:alt" content="Web Dev Lady website template store" />
   <link rel="icon" href="assets/images/favicon.ico" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
   <link rel="apple-touch-icon" href="assets/images/favicon.png" />
   <link rel="manifest" href="site.webmanifest" />
   <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://webdevlady.netlify.app/#organization","name":"Web Dev Lady","url":"https://webdevlady.netlify.app/","logo":{"@type":"ImageObject","url":"https://webdevlady.netlify.app/assets/images/favicon.png"},"sameAs":["https://www.tiktok.com/@webdevlady","https://www.instagram.com/webdev_lady/","https://www.facebook.com/webdevlady","https://www.youtube.com/@WebDevLady"]},{"@type":["LocalBusiness","ProfessionalService"],"@id":"https://webdevlady.netlify.app/#localbusiness","name":"Web Dev Lady","url":"https://webdevlady.netlify.app/","image":"https://webdevlady.netlify.app/images/webdevlady.png","email":"webdevlady26@gmail.com","priceRange":"$9.99-$1500+","areaServed":{"@type":"Country","name":"United States"},"description":"Web Dev Lady sells modern website templates, WordPress themes, HTML templates, responsive business website templates, and small business website design support."},{"@type":"WebSite","@id":"https://webdevlady.netlify.app/#website","url":"https://webdevlady.netlify.app/","name":"Web Dev Lady","publisher":{"@id":"https://webdevlady.netlify.app/#organization"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://webdevlady.netlify.app/thank-you.html#webpage","url":"https://webdevlady.netlify.app/thank-you.html","name":"Request Received | Web Dev Lady","description":"Confirmation page for Web Dev Lady website template support, service, and project requests.","isPartOf":{"@id":"https://webdevlady.netlify.app/#website"},"about":{"@id":"https://webdevlady.netlify.app/#organization"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"https://webdevlady.netlify.app/thank-you.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://webdevlady.netlify.app/"},{"@type":"ListItem","position":2,"name":"Request Received","item":"https://webdevlady.netlify.app/thank-you.html"}]}]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://webdevlady.netlify.app/thank-you.html#webpage",
+      "url": "https://webdevlady.netlify.app/thank-you.html",
+      "name": "Order or Request Received | Web Dev Lady",
+      "description": "Confirmation and digital download access for Web Dev Lady website template orders, support requests, and project inquiries.",
+      "isPartOf": {
+        "@id": "https://webdevlady.netlify.app/#website"
+      },
+      "about": {
+        "@id": "https://webdevlady.netlify.app/#store"
+      },
+      "publisher": {
+        "@id": "https://webdevlady.netlify.app/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://webdevlady.netlify.app/thank-you.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://webdevlady.netlify.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Confirmation",
+          "item": "https://webdevlady.netlify.app/thank-you.html"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
 
@@ -203,24 +244,14 @@
 
   <script src="js/product-catalog.js"></script>
   <script>
-    (function () {
+    (async function () {
       const STORE_CART_KEY = "webDevLadyTemplateCart";
       const params = new URLSearchParams(window.location.search);
-      const productParam = params.get("product");
-      const productsParam = params.get("products");
-      const productKeys = (productsParam || productParam || "")
-        .split(",")
-        .map((key) => key.trim())
-        .filter(Boolean);
-
-      if (!productKeys.length) return;
+      const sessionId = params.get("session_id");
+      if (!sessionId) return;
 
       const catalog = window.productCatalog || {};
-      const purchasedProducts = productKeys
-        .map((key) => catalog[key])
-        .filter(Boolean);
       const shell = document.querySelector(".thank-you-shell");
-
       if (!shell) return;
 
       const eyebrow = shell.querySelector(".eyebrow");
@@ -234,29 +265,54 @@
       const actions = shell.querySelector(".success-actions");
       const contactLink = '<a href="contact.html" class="btn secondary">Contact Web Dev Lady</a>';
 
-      if (eyebrow) eyebrow.textContent = purchasedProducts.length ? "PAYMENT RECEIVED" : "DOWNLOAD HELP";
-      if (title) title.textContent = purchasedProducts.length ? "Payment Successful" : "Download Not Found";
-      if (introBlocks[0]) {
-        introBlocks[0].textContent = purchasedProducts.length
-          ? "Your payment was processed successfully. Your download is ready."
-          : "We could not match this purchase to a current product.";
-      }
-      if (introBlocks[1]) {
-        introBlocks[1].textContent = purchasedProducts.length
-          ? "Use the button below to download your template ZIP file."
-          : "Return to the template library or contact Web Dev Lady if you need help locating your download.";
-      }
+      if (eyebrow) eyebrow.textContent = "VERIFYING PAYMENT";
+      if (title) title.textContent = "Confirming Your Purchase";
+      if (introBlocks[0]) introBlocks[0].textContent = "Please wait while your Stripe payment is securely verified.";
+      if (introBlocks[1]) introBlocks[1].hidden = true;
       if (introBlocks[2]) introBlocks[2].hidden = true;
       if (checklist) checklist.hidden = true;
       if (summaryGrid) summaryGrid.hidden = true;
+      if (responseTitle) responseTitle.textContent = "Payment verification";
+      if (responseText) responseText.textContent = "Checking your completed Stripe Checkout Session.";
+      if (actions) actions.innerHTML = "";
 
-      if (purchasedProducts.length) {
+      try {
+        const response = await fetch(
+          `/.netlify/functions/verify-checkout-session?session_id=${encodeURIComponent(sessionId)}`,
+          { headers: { Accept: "application/json" } }
+        );
+        const data = await response.json();
+        if (!response.ok || !data.verified) {
+          throw new Error(data.error || "Payment could not be verified.");
+        }
+
+        const purchasedProducts = data.products
+          .map((purchasedProduct) => {
+            const catalogProduct = catalog[purchasedProduct.productKey];
+            if (!catalogProduct || catalogProduct.downloadFile !== purchasedProduct.downloadFile) return null;
+            return {
+              ...catalogProduct,
+              quantity: purchasedProduct.quantity
+            };
+          })
+          .filter(Boolean);
+        if (!purchasedProducts.length || purchasedProducts.length !== data.products.length) {
+          throw new Error("Purchased product details could not be matched.");
+        }
+
         try {
           window.localStorage?.removeItem(STORE_CART_KEY);
         } catch (error) {
           console.warn("Unable to clear cart after checkout", error);
         }
 
+        if (eyebrow) eyebrow.textContent = "PAYMENT RECEIVED";
+        if (title) title.textContent = "Payment Successful";
+        if (introBlocks[0]) introBlocks[0].textContent = "Your payment was verified successfully. Your download is ready.";
+        if (introBlocks[1]) {
+          introBlocks[1].hidden = false;
+          introBlocks[1].textContent = "Use the button below to download your template ZIP file.";
+        }
         if (responseTitle) responseTitle.textContent = "Your download is ready";
         if (responseText) {
           responseText.textContent = purchasedProducts.length === 1
@@ -268,12 +324,38 @@
             .map((product) => `<a href="${product.downloadFile}" class="btn primary" download>Download ${product.name}</a>`)
             .join("") + contactLink;
         }
-      } else {
-        if (responseTitle) responseTitle.textContent = "Download support";
-        if (responseText) responseText.textContent = "Send the product name or order email and I will help you locate the file.";
-        if (actions) {
-          actions.innerHTML = '<a href="index.html#templates" class="btn primary">Browse Templates</a>' + contactLink;
+
+        try {
+          const trackingKey = `webDevLadyPurchaseTracked:${data.transactionId}`;
+          if (typeof window.gtag === "function" && !window.sessionStorage.getItem(trackingKey)) {
+            window.gtag("event", "purchase", {
+              transaction_id: data.transactionId,
+              value: data.value,
+              currency: data.currency,
+              items: purchasedProducts.map((product) => ({
+                item_id: product.key,
+                item_name: product.name,
+                item_variant: product.version,
+                price: product.price,
+                quantity: product.quantity
+              }))
+            });
+            window.sessionStorage.setItem(trackingKey, "1");
+          }
+        } catch (error) {
+          console.warn("Purchase analytics could not be recorded.", error);
         }
+      } catch (error) {
+        if (eyebrow) eyebrow.textContent = "DOWNLOAD HELP";
+        if (title) title.textContent = "Payment Verification Needed";
+        if (introBlocks[0]) introBlocks[0].textContent = "We could not verify this checkout session automatically.";
+        if (introBlocks[1]) {
+          introBlocks[1].hidden = false;
+          introBlocks[1].textContent = "Your paid download has not been exposed. Contact Web Dev Lady with your order email for help.";
+        }
+        if (responseTitle) responseTitle.textContent = "Download support";
+        if (responseText) responseText.textContent = error.message;
+        if (actions) actions.innerHTML = contactLink;
       }
     })();
   </script>

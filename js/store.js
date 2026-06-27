@@ -3,14 +3,14 @@ const STORE_CART_KEY = "webDevLadyTemplateCart";
 const templateProducts = [
   {
     id: "techpulse-it-wordpress",
-    name: "TechPulse IT",
+    name: "TechPulse IT Services WordPress Theme",
     tier: "pro",
     type: "WordPress Theme",
     format: "wordpress",
     formatTags: ["wordpress", "tech"],
     businessTags: ["it-services", "tech-support", "local-business", "tech"],
     business: "IT Services / Tech Support",
-    description: "A professional WordPress theme for IT companies, managed service providers, cybersecurity firms, and tech support businesses.",
+    description: "A professional WordPress theme for IT companies, managed service providers, cybersecurity firms, and tech support businesses that need a credible, lead-focused website.",
     price: 29.99,
     image: "images/TechPulse IT/home.png",
     soldCount: 4,
@@ -21,14 +21,14 @@ const templateProducts = [
   },
   {
     id: "freshnest",
-    name: "FreshNest",
+    name: "FreshNest Cleaning Website Template",
     tier: "lite",
     type: "Landing Page",
     format: "landing-page",
     formatTags: ["landing-page", "html-website", "business"],
     businessTags: ["cleaning-business", "home-services", "local-business"],
     business: "Cleaning companies and home service businesses",
-    description: "A focused landing page for cleaning businesses that need a clear offer, trust-building sections, and fast lead capture.",
+    description: "A responsive cleaning business landing page template with service highlights, trust-building sections, pricing content, and clear calls to action for local leads.",
     price: 9.99,
     image: "images/FreshNest/freshnest-index.png",
     soldCount: 7,
@@ -38,14 +38,14 @@ const templateProducts = [
   },
   {
     id: "rainblossom-lite",
-    name: "Rain Blossom Lite",
+    name: "Rain Blossom Lite Wedding Landing Page Template",
     tier: "lite",
     type: "Landing Page",
     format: "landing-page",
     formatTags: ["landing-page", "html-website", "creative"],
     businessTags: ["wedding", "event-planning", "local-business"],
     business: "Wedding planners and event coordinators",
-    description: "A polished landing page for wedding professionals who want to showcase packages, style, testimonials, and inquiry next steps.",
+    description: "A romantic wedding landing page template for planners and venues, with polished package, gallery, testimonial, and inquiry sections in a responsive HTML design.",
     price: 9.99,
     image: "images/Rain Blossom Lite/rainblossom-lite.png",
     soldCount: 3,
@@ -55,14 +55,14 @@ const templateProducts = [
   },
   {
     id: "rainblossom-pro",
-    name: "Rain Blossom Pro",
+    name: "Rain Blossom Pro Wedding Website Template",
     tier: "pro",
     type: "HTML Website",
     format: "full-website",
     formatTags: ["full-website", "html-website", "creative"],
     businessTags: ["wedding", "event-planning", "local-business"],
     business: "Wedding planners and event coordinators",
-    description: "A romantic multi-page wedding website template with expanded pages, galleries, packages, testimonials, and contact flow.",
+    description: "A romantic multi-page wedding website template for planners and venues, featuring galleries, packages, testimonials, FAQs, and a complete inquiry flow.",
     price: 19.99,
     image: "images/Rain Blossom Pro/rainblossom-pro.png",
     soldCount: 2,
@@ -72,14 +72,14 @@ const templateProducts = [
   },
   {
     id: "apexmobile-detailing",
-    name: "Apex Mobile Detailing",
+    name: "Apex Mobile Detailing Website Template",
     tier: "pro",
     type: "HTML Website",
     format: "full-website",
     formatTags: ["full-website", "html-website", "business"],
     businessTags: ["auto-detailing", "home-services", "local-business", "business"],
     business: "Mobile detailing, auto care, and local service businesses",
-    description: "A polished multi-page website for mobile detailing and auto care businesses with services, pricing, gallery, and booking-focused contact flow.",
+    description: "A responsive multi-page auto detailing website template with services, pricing, project gallery, and booking-focused contact pages for mobile detailers.",
     price: 19.99,
     image: "images/Apex Mobile Detailing/apex-home.png",
     soldCount: 1,
@@ -89,14 +89,14 @@ const templateProducts = [
   },
   {
     id: "beachwave",
-    name: "BeachWave",
+    name: "BeachWave Resort Website Template",
     tier: "pro",
     type: "HTML Website",
     format: "full-website",
     formatTags: ["full-website", "html-website", "travel", "creative"],
     businessTags: ["travel", "hospitality", "tourism", "local-business"],
     business: "Resorts, vacation rentals, beach clubs, travel brands, and hospitality businesses",
-    description: "A premium animated beach resort website template with pages for stays, services, gallery, FAQ, pricing, and contact requests.",
+    description: "A premium animated resort website template for hotels, vacation rentals, beach clubs, and travel brands, with pages for stays, amenities, galleries, pricing, FAQs, and inquiries.",
     price: 19.99,
     image: "images/Beach Wave/beachwave-mobile.png",
     soldCount: 1,
@@ -106,14 +106,14 @@ const templateProducts = [
   },
   {
     id: "abyssalblue-lite",
-    name: "Abyssal Blue Lite",
+    name: "Abyssal Blue Lite Tourism Website Template",
     tier: "lite",
     type: "Full Website",
     format: "full-website",
     formatTags: ["full-website", "html-website", "travel", "creative"],
     businessTags: ["travel", "tourism", "aquarium", "local-business"],
     business: "Aquariums, attractions, tourism brands, and experience businesses",
-    description: "A visual HTML website for tourism and attraction brands with immersive sections and visitor-focused content.",
+    description: "An immersive tourism website template for aquariums, attractions, tours, and experience brands, with responsive visitor-focused sections and ocean-inspired visuals.",
     price: 9.99,
     image: "images/Abyssal Blue Lite/abyssalblue-lite.png",
     soldCount: 5,
@@ -123,14 +123,14 @@ const templateProducts = [
   },
   {
     id: "abyssalblue-pro",
-    name: "Abyssal Blue Pro",
+    name: "Abyssal Blue Pro Aquarium Website Template",
     tier: "pro",
     type: "Full Website",
     format: "full-website",
     formatTags: ["full-website", "html-website", "travel", "creative"],
     businessTags: ["travel", "tourism", "aquarium", "local-business"],
     business: "Aquariums, attractions, tourism brands, and experience businesses",
-    description: "A premium multi-page HTML website for tourism brands with booking, gallery, wildlife, and visitor information pages.",
+    description: "A premium multi-page aquarium and tourism website template with booking, gallery, wildlife, visitor information, and contact pages for attraction-based businesses.",
     price: 19.99,
     image: "images/Abyssal Blue Pro/abyssalblue-pro.png",
     soldCount: 2,
@@ -140,14 +140,14 @@ const templateProducts = [
   },
   {
     id: "cosmicorbit-lite",
-    name: "Cosmic Orbit Lite",
+    name: "Cosmic Orbit Lite Creative Website Template",
     tier: "lite",
     type: "Full Website",
     format: "full-website",
     formatTags: ["full-website", "html-website", "travel", "tech", "creative"],
     businessTags: ["travel", "tech", "creative", "business"],
     business: "Futuristic brands, event experiences, digital launches, and creative service businesses",
-    description: "A bold futuristic website template for creators, digital brands, startups, and premium launches.",
+    description: "A bold futuristic website template for creators, startups, digital brands, and event launches that want a responsive, high-impact online presence.",
     price: 9.99,
     image: "images/Cosmic Orbit Lite/cosmicorbit-lite.png",
     soldCount: 6,
@@ -157,14 +157,14 @@ const templateProducts = [
   },
   {
     id: "cosmicorbit-pro",
-    name: "Cosmic Orbit Pro",
+    name: "Cosmic Orbit Pro Creative Business Website Template",
     tier: "pro",
     type: "Full Website",
     format: "full-website",
     formatTags: ["full-website", "html-website", "travel", "tech", "creative"],
     businessTags: ["travel", "tech", "creative", "business"],
     business: "Futuristic brands, event experiences, digital launches, and creative service businesses",
-    description: "A premium cosmic-inspired website for launches, events, services, and high-impact creative brands.",
+    description: "A premium futuristic multi-page website template for creative businesses, launches, events, and digital services, with polished layouts and conversion-focused sections.",
     price: 19.99,
     image: "images/Cosmic Orbit Pro/cosmicorbit-pro-home.png",
     soldCount: 3,
@@ -174,14 +174,14 @@ const templateProducts = [
   },
   {
     id: "velvetui-lite",
-    name: "Velvet UI Lite",
+    name: "Velvet UI Lite Interior Design Website Template",
     tier: "lite",
     type: "HTML Website",
     format: "full-website",
     formatTags: ["full-website", "html-website", "portfolio", "creative", "business"],
     businessTags: ["home-design", "portfolio", "creative"],
     business: "Home design studios, interior designers, portfolios, and boutique creative brands",
-    description: "A refined editorial-style website for interior design, home styling, and portfolio-driven businesses.",
+    description: "A refined interior design website template for home stylists, boutique studios, and portfolio-led creative businesses that need an elegant responsive showcase.",
     price: 9.99,
     image: "images/VelvetUI Lite/velvetui-lite-home.png",
     soldCount: 5,
@@ -191,14 +191,14 @@ const templateProducts = [
   },
   {
     id: "velvetui-pro",
-    name: "Velvet UI Pro",
+    name: "Velvet UI Pro Interior Design Website Template",
     tier: "pro",
     type: "HTML Website",
     format: "full-website",
     formatTags: ["full-website", "html-website", "portfolio", "creative", "business"],
     businessTags: ["home-design", "portfolio", "creative"],
     business: "Home design studios, interior designers, portfolios, and boutique creative brands",
-    description: "A premium full website for design studios with portfolio, services, FAQ, contact, and project showcase pages.",
+    description: "A premium multi-page interior design website template with portfolio, services, project showcase, FAQ, and contact pages for studios and luxury creative brands.",
     price: 19.99,
     image: "images/VelvetUI Pro/velvetui-pro.png",
     soldCount: 2,
@@ -208,14 +208,14 @@ const templateProducts = [
   },
   {
     id: "worldviewglobal-lite",
-    name: "WorldView Global Lite",
+    name: "WorldView Global Lite Business Website Template",
     tier: "lite",
     type: "HTML Website",
     format: "full-website",
     formatTags: ["full-website", "html-website", "business", "consulting"],
     businessTags: ["business"],
     business: "Consultants, agencies, startups, and professional service businesses",
-    description: "A clean global business website for service providers that need a polished, professional online presence.",
+    description: "A professional business website template for consultants, agencies, startups, and service providers that need a responsive, credible online presence.",
     price: 9.99,
     image: "images/WorldView Lite/worldview-lite.png",
     soldCount: 4,
@@ -225,14 +225,14 @@ const templateProducts = [
   },
   {
     id: "worldviewglobal-pro",
-    name: "WorldView Global Pro",
+    name: "WorldView Global Pro Business Website Template",
     tier: "pro",
     type: "HTML Website",
     format: "full-website",
     formatTags: ["full-website", "html-website", "business", "consulting"],
     businessTags: ["business"],
     business: "Consultants, agencies, startups, and professional service businesses",
-    description: "A premium multi-page business website with solutions, use cases, showcase, pricing, FAQ, and contact pages.",
+    description: "A premium multi-page business website template with solutions, use cases, showcase, pricing, FAQ, and contact pages for agencies and professional service companies.",
     price: 19.99,
     image: "images/WorldView Pro/worldview-pro.png",
     soldCount: 1,
@@ -250,7 +250,7 @@ const comingSoonProducts = [
     type: "Coming Soon",
     format: "coming-soon",
     formatTags: ["coming-soon", "wordpress", "landing-page", "business"],
-    businessTags: ["restaurant", "real-estate", "fitness", "beauty-salon", "construction", "consulting", "cleaning-business", "it-services", "home-design", "wedding", "travel", "local-business", "business"],
+    businessTags: ["restaurant", "local-business", "business"],
     business: "Restaurants, cafes, food trucks, and local hospitality brands",
     description: "A restaurant-focused website template is being prepared for menus, reservations, and local discovery.",
     image: "assets/images/placeholders/coming-soon-01.png",
@@ -264,7 +264,7 @@ const comingSoonProducts = [
     type: "Coming Soon",
     format: "coming-soon",
     formatTags: ["coming-soon", "wordpress", "landing-page", "full-website", "business"],
-    businessTags: ["restaurant", "real-estate", "fitness", "beauty-salon", "construction", "consulting", "cleaning-business", "it-services", "home-design", "wedding", "travel", "local-business", "business"],
+    businessTags: ["real-estate", "local-business", "business"],
     business: "Real estate agents, brokerages, and property-focused businesses",
     description: "A real estate website template is coming soon for listings, lead capture, and local market credibility.",
     image: "assets/images/placeholders/coming-soon-02.png",
@@ -278,7 +278,7 @@ const comingSoonProducts = [
     type: "Coming Soon",
     format: "coming-soon",
     formatTags: ["coming-soon", "wordpress", "landing-page", "full-website"],
-    businessTags: ["restaurant", "real-estate", "fitness", "beauty-salon", "construction", "consulting", "cleaning-business", "it-services", "home-design", "wedding", "local-business"],
+    businessTags: ["fitness", "local-business"],
     business: "Fitness coaches, trainers, gyms, and wellness service providers",
     description: "A fitness template is coming soon for programs, testimonials, class offers, and booking-focused calls to action.",
     image: "assets/images/placeholders/coming-soon-03.png",
@@ -292,7 +292,7 @@ const comingSoonProducts = [
     type: "Coming Soon",
     format: "coming-soon",
     formatTags: ["coming-soon", "wordpress", "landing-page", "full-website", "creative"],
-    businessTags: ["restaurant", "real-estate", "fitness", "beauty-salon", "construction", "consulting", "cleaning-business", "it-services", "home-design", "wedding", "local-business"],
+    businessTags: ["beauty-salon", "local-business"],
     business: "Beauty salons, stylists, spas, and personal care businesses",
     description: "A beauty salon website template is coming soon for services, galleries, pricing, and appointment requests.",
     image: "assets/images/placeholders/coming-soon-04.png",
@@ -306,7 +306,7 @@ const comingSoonProducts = [
     type: "Coming Soon",
     format: "coming-soon",
     formatTags: ["coming-soon", "wordpress", "business"],
-    businessTags: ["restaurant", "real-estate", "fitness", "beauty-salon", "construction", "consulting", "cleaning-business", "it-services", "wedding", "business"],
+    businessTags: ["construction", "local-business", "business"],
     business: "Construction companies, contractors, builders, and trade service businesses",
     description: "A construction website template is coming soon for project galleries, service areas, estimates, and trust-building proof.",
     image: "assets/images/placeholders/coming-soon-05.png",
@@ -320,7 +320,7 @@ const comingSoonProducts = [
     type: "Coming Soon",
     format: "coming-soon",
     formatTags: ["coming-soon", "html-website", "portfolio", "creative", "business"],
-    businessTags: ["restaurant", "real-estate", "fitness", "beauty-salon", "construction", "consulting"],
+    businessTags: ["home-design", "portfolio", "creative"],
     business: "Home design, staging, interiors, and visual portfolio businesses",
     description: "A home design website template is coming soon for portfolios, project stories, services, and inquiry generation.",
     image: "assets/images/placeholders/coming-soon-06.png",
@@ -336,7 +336,18 @@ function formatStorePrice(value) {
 function readCart() {
   try {
     const parsedCart = JSON.parse(localStorage.getItem(STORE_CART_KEY) || "[]");
-    return Array.isArray(parsedCart) ? parsedCart : [];
+    if (!Array.isArray(parsedCart)) return [];
+
+    const normalizedItems = new Map();
+    parsedCart.forEach((item) => {
+      const productId = String(item?.id || "").trim();
+      if (!getProduct(productId)) return;
+      const quantity = Math.max(1, Math.min(99, Number.parseInt(item.quantity, 10) || 1));
+      const existingQuantity = normalizedItems.get(productId) || 0;
+      normalizedItems.set(productId, Math.min(99, existingQuantity + quantity));
+    });
+
+    return Array.from(normalizedItems, ([id, quantity]) => ({ id, quantity }));
   } catch (error) {
     console.warn("Unable to read cart", error);
     return [];
@@ -360,7 +371,7 @@ function addToCart(productId) {
   const existingItem = cart.find((item) => item.id === productId);
 
   if (existingItem) {
-    existingItem.quantity += 1;
+    existingItem.quantity = Math.min(99, existingItem.quantity + 1);
   } else {
     cart.push({ id: productId, quantity: 1 });
   }
@@ -372,8 +383,14 @@ function addToCart(productId) {
 function initializeCartFromUrl() {
   const params = new URLSearchParams(window.location.search);
   const productId = params.get("product");
+  const product = getProduct(productId);
 
-  if (!productId || !addToCart(productId)) return;
+  if (!product || !addToCart(productId)) return;
+  trackStoreEvent("add_to_cart", {
+    currency: "USD",
+    value: product.price,
+    items: [getAnalyticsItem(product, 1)]
+  });
 
   params.delete("product");
   const nextQuery = params.toString();
@@ -382,7 +399,7 @@ function initializeCartFromUrl() {
 }
 
 function updateCartItem(productId, quantity) {
-  const nextQuantity = Math.max(1, Number(quantity) || 1);
+  const nextQuantity = Math.max(1, Math.min(99, Number.parseInt(quantity, 10) || 1));
   const cart = readCart().map((item) =>
     item.id === productId ? { ...item, quantity: nextQuantity } : item
   );
@@ -404,6 +421,26 @@ function getCartTotal(cart) {
   return totalCents / 100;
 }
 
+function getAnalyticsItem(product, quantity = 1) {
+  return {
+    item_id: product.id,
+    item_name: product.name,
+    item_category: product.business,
+    item_variant: product.type,
+    price: product.price,
+    quantity
+  };
+}
+
+function trackStoreEvent(eventName, parameters) {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", eventName, parameters);
+  }
+  // TODO: Load the existing GA4 tag on storefront pages to enable add_to_cart
+  // and begin_checkout reporting. This no-op guard keeps checkout independent
+  // from analytics until site-wide consent/tracking is intentionally enabled.
+}
+
 async function startCartCheckout(button) {
   const checkoutMessage = document.getElementById("checkoutMessage");
   const cart = readCart().filter((item) => getProduct(item.id));
@@ -412,6 +449,12 @@ async function startCartCheckout(button) {
     if (checkoutMessage) checkoutMessage.textContent = "Add a template to your cart before checkout.";
     return;
   }
+
+  trackStoreEvent("begin_checkout", {
+    currency: "USD",
+    value: getCartTotal(cart),
+    items: cart.map((item) => getAnalyticsItem(getProduct(item.id), item.quantity))
+  });
 
   const previousText = button.textContent;
   button.disabled = true;
@@ -458,6 +501,23 @@ function updateCartCount() {
   });
 }
 
+const PRODUCT_PAGE_URLS = {
+  "techpulse-it-wordpress": "techpulse-it-services-wordpress-theme.html",
+  "freshnest": "freshnest-cleaning-website-template.html",
+  "rainblossom-lite": "rain-blossom-lite-wedding-landing-page.html",
+  "rainblossom-pro": "rain-blossom-pro-wedding-website-template.html",
+  "apexmobile-detailing": "apex-mobile-detailing-website-template.html",
+  "beachwave": "beachwave-resort-website-template.html",
+  "abyssalblue-lite": "abyssal-blue-lite-tourism-website-template.html",
+  "abyssalblue-pro": "abyssal-blue-pro-aquarium-website-template.html",
+  "cosmicorbit-lite": "cosmic-orbit-lite-creative-website-template.html",
+  "cosmicorbit-pro": "cosmic-orbit-pro-creative-business-template.html",
+  "velvetui-lite": "velvet-ui-lite-interior-design-template.html",
+  "velvetui-pro": "velvet-ui-pro-interior-design-template.html",
+  "worldviewglobal-lite": "worldview-global-lite-business-template.html",
+  "worldviewglobal-pro": "worldview-global-pro-business-template.html"
+};
+
 function getProductSearchText(product) {
   return [
     product.name,
@@ -480,11 +540,9 @@ function buildProductCard(product) {
   const visibleTags = product.tags || [];
   const tierLabel = isComingSoon ? "Coming Soon" : product.tier === "pro" ? "Pro" : "Lite";
   const searchText = getProductSearchText(product);
-  const demoAttributes = isComingSoon
-    ? ' aria-disabled="true"'
-    : product.demoType === "video"
-      ? ` target="_blank" rel="noopener noreferrer" data-demo-video="${product.demo}" data-demo-title="${product.name} Demo"`
-      : ' target="_blank" rel="noopener noreferrer"';
+  const demoAttributes = product.demoType === "video"
+    ? ` target="_blank" rel="noopener noreferrer" data-demo-video="${product.demo}" data-demo-title="${product.name} Demo"`
+    : ' target="_blank" rel="noopener noreferrer"';
 
   return `
     <article id="${product.id}" class="product-card product-card--compact${isComingSoon ? " product-card--coming-soon" : ""}" data-template-card data-tier="${product.tier}" data-format="${product.format}" data-filter-formats="${formatTags.join(" ")}" data-business="${businessTags.join(" ")}" data-search="${searchText}">
@@ -498,7 +556,7 @@ function buildProductCard(product) {
           <span>${tierLabel}</span>
           <span>${product.type}</span>
         </div>`}
-        <h3>${product.name}</h3>
+        <h3><a class="product-card__title-link" href="${PRODUCT_PAGE_URLS[product.id] || `templates.html?search=${encodeURIComponent(product.name)}`}">${product.name}</a></h3>
         <div class="product-card__tags" aria-label="${product.name} tags">
           ${visibleTags.slice(0, isComingSoon ? 3 : visibleTags.length).map((tag) => `<span class="product-card__tag">${tag}</span>`).join("")}
         </div>
@@ -509,7 +567,9 @@ function buildProductCard(product) {
           <span class="product-sale-label">50% Off Launch Discount</span>
         </div>`}
         <div class="product-card__actions">
-          <a class="store-button store-button--secondary" href="${product.demo}"${demoAttributes}>${isComingSoon ? "Coming Soon" : "View Demo"}</a>
+          ${isComingSoon
+            ? '<button class="store-button store-button--secondary" type="button" disabled>Coming Soon</button>'
+            : `<a class="store-button store-button--secondary" href="${product.demo}"${demoAttributes}>View Demo</a>`}
           ${isComingSoon ? "" : `<button class="store-button store-button--primary js-add-cart" type="button" data-product-id="${product.id}">Add to Cart</button>`}
         </div>
       </div>
@@ -517,12 +577,52 @@ function buildProductCard(product) {
   `;
 }
 
-function renderProductBrowser() {
+function normalizeTemplateFilter(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function productMatchesCategory(product, category) {
+  const normalizedCategory = normalizeTemplateFilter(category);
+  if (!normalizedCategory || normalizedCategory === "all") return true;
+
+  const categoryAliases = {
+    "business-templates": "business",
+    it: "it-services",
+    cleaning: "cleaning-business",
+    html: "html-website"
+  };
+  const matchValue = categoryAliases[normalizedCategory] || normalizedCategory;
+  const categoryValues = [
+    product.name,
+    product.description,
+    product.type,
+    product.format,
+    product.business,
+    ...(product.formatTags || []),
+    ...(product.businessTags || []),
+    ...(product.tags || [])
+  ].map(normalizeTemplateFilter);
+
+  return categoryValues.includes(matchValue);
+}
+
+function getFilteredTemplateProducts(search, category) {
+  const normalizedSearch = String(search || "").trim().toLowerCase();
+  return [...templateProducts, ...comingSoonProducts].filter((product) => {
+    const searchMatches = !normalizedSearch || getProductSearchText(product).includes(normalizedSearch);
+    return searchMatches && productMatchesCategory(product, category);
+  });
+}
+
+function renderProductBrowser(products = [...templateProducts, ...comingSoonProducts]) {
   const resultsGrid = document.querySelector("[data-template-results]");
   if (!resultsGrid) return;
-
-  const allProducts = [...templateProducts, ...comingSoonProducts];
-  resultsGrid.innerHTML = allProducts.map(buildProductCard).join("");
+  resultsGrid.innerHTML = products.map(buildProductCard).join("");
 }
 
 function initializeTemplateBrowser() {
@@ -530,81 +630,44 @@ function initializeTemplateBrowser() {
   if (!browser) return;
 
   const searchInput = browser.querySelector("[data-template-search]");
+  const searchForm = browser.querySelector("[data-template-search-form]");
   const filterToggle = browser.querySelector("[data-template-filter-toggle]");
   const filterOptions = browser.querySelector("[data-template-filter-options]");
-  const clearButton = browser.querySelector("[data-clear-template-filters]");
-  const emptyMessage = browser.querySelector("[data-template-empty]");
-  const formatButtons = Array.from(browser.querySelectorAll('[data-filter-type="format"]'));
-  const businessButtons = Array.from(browser.querySelectorAll('[data-filter-type="business"]'));
-  const tierButtons = Array.from(browser.querySelectorAll('[data-filter-type="tier"]'));
-  const filters = {
-    tier: "all",
-    format: "all",
-    business: "",
-    search: ""
-  };
+  const emptyMessage = document.querySelector("[data-template-empty]");
+  const resultCount = document.querySelector("[data-template-result-count]");
+  const categoryButtons = Array.from(browser.querySelectorAll("[data-template-category]"));
+  const params = new URLSearchParams(window.location.search);
+  const currentSearch = params.get("search")?.trim() || "";
+  const currentCategory = normalizeTemplateFilter(params.get("category") || "all");
+  const isResultsPage = browser.dataset.templateBrowserMode === "results";
 
-  function setActiveButton(buttons, activeValue) {
-    buttons.forEach((button) => {
-      const isActive = button.dataset.filterValue === activeValue;
+  function setActiveCategory(category) {
+    categoryButtons.forEach((button) => {
+      const isActive = normalizeTemplateFilter(button.dataset.templateCategory) === category;
       button.classList.toggle("is-active", isActive);
       button.setAttribute("aria-pressed", String(isActive));
     });
   }
 
-  function applyTemplateFilters() {
-    const cards = Array.from(document.querySelectorAll("[data-template-card]"));
-    let visibleCount = 0;
-
-    cards.forEach((card) => {
-      const cardFormats = (card.dataset.filterFormats || card.dataset.format || "").split(" ").filter(Boolean);
-      const cardBusinessTags = (card.dataset.business || "").split(" ").filter(Boolean);
-      const tierMatches = filters.tier === "all" || card.dataset.tier === filters.tier;
-      const formatMatches = filters.format === "all" || cardFormats.includes(filters.format);
-      const businessMatches = !filters.business || cardBusinessTags.includes(filters.business);
-      const searchMatches = !filters.search || (card.dataset.search || "").includes(filters.search);
-      const isVisible = tierMatches && formatMatches && businessMatches && searchMatches;
-
-      card.hidden = !isVisible;
-      if (isVisible) visibleCount += 1;
-    });
-
-    if (emptyMessage) {
-      emptyMessage.hidden = visibleCount !== 0;
-    }
+  function goToResults(category = currentCategory) {
+    const nextParams = new URLSearchParams();
+    const searchValue = searchInput?.value.trim() || "";
+    if (searchValue) nextParams.set("search", searchValue);
+    if (category) nextParams.set("category", category);
+    const query = nextParams.toString();
+    window.location.href = `templates.html${query ? `?${query}` : ""}`;
   }
 
-  tierButtons.forEach((button) => {
+  categoryButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      filters.tier = button.dataset.filterValue || "all";
-      setActiveButton(tierButtons, filters.tier);
-      applyTemplateFilters();
+      goToResults(normalizeTemplateFilter(button.dataset.templateCategory || "all"));
     });
   });
 
-  formatButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      filters.format = button.dataset.filterValue || "all";
-      setActiveButton(formatButtons, filters.format);
-      applyTemplateFilters();
-    });
+  searchForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    goToResults(currentCategory === "all" ? "" : currentCategory);
   });
-
-  businessButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const selectedValue = button.dataset.filterValue || "";
-      filters.business = filters.business === selectedValue ? "" : selectedValue;
-      setActiveButton(businessButtons, filters.business);
-      applyTemplateFilters();
-    });
-  });
-
-  if (searchInput) {
-    searchInput.addEventListener("input", () => {
-      filters.search = searchInput.value.trim().toLowerCase();
-      applyTemplateFilters();
-    });
-  }
 
   if (filterToggle && filterOptions) {
     filterToggle.addEventListener("click", () => {
@@ -613,24 +676,17 @@ function initializeTemplateBrowser() {
     });
   }
 
-  if (clearButton) {
-    clearButton.addEventListener("click", () => {
-      filters.tier = "all";
-      filters.format = "all";
-      filters.business = "";
-      filters.search = "";
-      if (searchInput) searchInput.value = "";
-      setActiveButton(tierButtons, "all");
-      setActiveButton(formatButtons, "all");
-      setActiveButton(businessButtons, "");
-      applyTemplateFilters();
-    });
-  }
+  if (searchInput && isResultsPage) searchInput.value = currentSearch;
+  setActiveCategory(currentCategory);
 
-  setActiveButton(tierButtons, "all");
-  setActiveButton(formatButtons, "all");
-  setActiveButton(businessButtons, "");
-  applyTemplateFilters();
+  if (isResultsPage) {
+    const matches = getFilteredTemplateProducts(currentSearch, currentCategory);
+    renderProductBrowser(matches);
+    if (resultCount) {
+      resultCount.textContent = `${matches.length} template${matches.length === 1 ? "" : "s"} found`;
+    }
+    if (emptyMessage) emptyMessage.hidden = matches.length !== 0;
+  }
 }
 
 function renderCartPage() {
@@ -669,7 +725,7 @@ function renderCartPage() {
           <strong>${formatStorePrice(product.price * item.quantity)}</strong>
           <label>
             <span class="sr-only">Quantity for ${product.name}</span>
-            <input class="cart-quantity js-cart-quantity" type="number" min="1" value="${item.quantity}" data-product-id="${item.id}">
+            <input class="cart-quantity js-cart-quantity" type="number" min="1" max="99" step="1" value="${item.quantity}" data-product-id="${item.id}">
           </label>
           <button class="cart-remove js-remove-cart" type="button" data-product-id="${item.id}">Remove</button>
         </div>
@@ -816,11 +872,18 @@ function initializeStore() {
     }
 
     if (addButton) {
-      addToCart(addButton.dataset.productId);
-      addButton.textContent = "Added";
-      window.setTimeout(() => {
-        addButton.textContent = "Add to Cart";
-      }, 1200);
+      const product = getProduct(addButton.dataset.productId);
+      if (product && addToCart(product.id)) {
+        trackStoreEvent("add_to_cart", {
+          currency: "USD",
+          value: product.price,
+          items: [getAnalyticsItem(product, 1)]
+        });
+        addButton.textContent = "Added";
+        window.setTimeout(() => {
+          addButton.textContent = "Add to Cart";
+        }, 1200);
+      }
     }
 
     if (removeButton) {

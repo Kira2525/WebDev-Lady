@@ -4065,3 +4065,243 @@ body.store-page > main {
     display: none;
   }
 }
+
+
+/* Template results page */
+.template-search-form,
+.template-search-field {
+  display: block;
+}
+
+.template-results-section {
+  min-height: calc(100vh - 190px);
+}
+
+.template-results-header {
+  align-items: end;
+}
+
+.template-results-header h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  line-height: 1;
+}
+
+.template-results-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.template-results-toolbar p {
+  margin: 0;
+  color: var(--store-muted);
+  font-weight: 800;
+}
+
+.template-filter-empty + .template-results-grid:empty {
+  display: none;
+}
+
+.store-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+
+/* SEO collection and product pages */
+.seo-page-header {
+  align-items: end;
+}
+
+.seo-page-header h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+}
+
+.seo-page-header p {
+  max-width: 760px;
+}
+
+.seo-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  color: var(--store-muted);
+  font-size: 0.88rem;
+}
+
+.seo-breadcrumbs a,
+.seo-product-card h2 a,
+.product-card__title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.seo-breadcrumbs a:hover,
+.seo-product-card h2 a:hover,
+.product-card__title-link:hover {
+  color: var(--store-accent);
+}
+
+.seo-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.seo-product-card {
+  overflow: hidden;
+  border: 1px solid rgba(125, 211, 252, 0.2);
+  border-radius: 18px;
+  background: rgba(8, 18, 40, 0.82);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+}
+
+.seo-product-card > a {
+  display: block;
+  aspect-ratio: 1 / 0.62;
+  overflow: hidden;
+}
+
+.seo-product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.seo-product-card__body {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+}
+
+.seo-product-card__body h2,
+.seo-product-card__body p {
+  margin: 0;
+}
+
+.seo-product-card__body h2 {
+  font-size: 1.1rem;
+}
+
+.seo-product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.seo-product-card__footer strong {
+  font-size: 1.2rem;
+}
+
+.seo-empty-collection {
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+}
+
+.seo-empty-collection h2,
+.seo-empty-collection p {
+  margin: 0;
+}
+
+.seo-product-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+
+.seo-product-detail__media {
+  overflow: hidden;
+  border: 1px solid rgba(125, 211, 252, 0.24);
+  border-radius: 22px;
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
+}
+
+.seo-product-detail__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.seo-product-detail__content {
+  display: grid;
+  gap: 18px;
+}
+
+.seo-product-detail__content h1,
+.seo-product-detail__content p {
+  margin: 0;
+}
+
+.seo-product-detail__content h1 {
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  line-height: 1.04;
+}
+
+.seo-product-detail__description {
+  color: var(--store-muted);
+  line-height: 1.75;
+}
+
+.seo-product-detail__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.seo-product-detail__categories a {
+  padding: 8px 11px;
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  border-radius: 999px;
+  color: var(--store-text);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.seo-product-detail__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.seo-product-detail__price strong {
+  font-size: 2rem;
+}
+
+.seo-product-detail__price span,
+.seo-product-detail__support {
+  color: var(--store-muted);
+}
+
+@media (max-width: 980px) {
+  .seo-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .seo-product-detail {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .seo-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-product-card__footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .seo-page-header .store-button {
+    width: 100%;
+  }
+}

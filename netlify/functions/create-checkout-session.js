@@ -2,21 +2,22 @@ const Stripe = require("stripe");
 const productCatalog = require("../../js/product-catalog.js");
 
 function buildSiteUrl(event) {
+  const configuredUrl = process.env.URL || process.env.DEPLOY_PRIME_URL;
+  if (configuredUrl) return configuredUrl.replace(/\/$/, "");
+
   const origin = event.headers.origin;
-
   if (origin) {
-    return origin;
+    try {
+      const parsedOrigin = new URL(origin);
+      if (["localhost", "127.0.0.1", "::1"].includes(parsedOrigin.hostname)) {
+        return parsedOrigin.origin;
+      }
+    } catch (error) {
+      console.warn("Ignoring invalid request origin.");
+    }
   }
 
-  if (process.env.URL) {
-    return process.env.URL;
-  }
-
-  if (process.env.DEPLOY_PRIME_URL) {
-    return process.env.DEPLOY_PRIME_URL;
-  }
-
-  return "http://localhost:8888";
+  return "https://webdevlady.netlify.app";
 }
 
 function jsonResponse(statusCode, body) {
@@ -98,11 +99,9 @@ exports.handler = async function (event) {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
     const siteUrl = buildSiteUrl(event);
     const productKeys = cartItems.map((item) => item.productKey).join(",");
-    const successUrl = new URL(
-      `thank-you.html?products=${encodeURIComponent(productKeys)}`,
-      `${siteUrl}/`
-    ).href;
-    const cancelUrl = new URL("cart.html", `${siteUrl}/`).href;
+    const quantities = cartItems.map((item) => item.quantity).join(",");
+    const successUrl = `${siteUrl}/thank-you.html?session_id={CHECKOUT_SESSION_ID}`;
+    const cancelUrl = `${siteUrl}/cart.html`;
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
@@ -123,10 +122,10 @@ exports.handler = async function (event) {
       })),
       success_url: successUrl,
       cancel_url: cancelUrl,
-      client_reference_id: cartItems.map((item) => item.productKey).join("|"),
       metadata: {
         productKeys,
-        itemCount: String(cartItems.length)
+        quantities,
+        itemCount: String(cartItems.reduce((total, item) => total + item.quantity, 0))
       }
     });
 

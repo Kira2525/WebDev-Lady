@@ -1,9 +1,5 @@
 User-agent: *
 Allow: /
-
-Disallow: /cart.html
-Disallow: /thank-you.html
-Disallow: /404.html
 Disallow: /preview/
 
 Sitemap: https://webdevlady.netlify.app/sitemap.xml
